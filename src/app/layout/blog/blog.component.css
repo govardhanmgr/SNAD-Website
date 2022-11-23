@@ -1,0 +1,29 @@
+.c {
+  width: 1%;
+
+
+    padding: 100px;
+    margin-top: 20px;
+    padding-left: -100pt;
+
+    box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .c img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+    /* background-color: white; */
+    box-shadow: 0 3px 20px 11px rgba(0, 0, 0, 0.09);
+  }
+  
+  .c .top-sec {
+    margin-top: -30px;
+    margin-bottom: 15px;
+  }
+
+  
+.card:hover{
+  transform: scale(1.05);
+box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
