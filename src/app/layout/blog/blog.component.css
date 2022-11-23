@@ -40,7 +40,8 @@ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
   padding: 12px 24px;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 20px;
+  
 }
 
 .container .btn:hover {
@@ -48,4 +49,10 @@ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 }
 .card:focus {
   border: none !important;
+}
+.icon-play{
+  background-size: cover;
+  display: inline-block;
+  height: 15px;
+  width: 15px;
 }
