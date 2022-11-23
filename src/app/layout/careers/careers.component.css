@@ -28,3 +28,15 @@ border-radius: 30px;
 #button{
     border-radius: 30px;
 }
+#open{
+    border-radius: 30px;
+    padding: 12px;
+    width: 80%;
+    height: 30vh;
+
+}
+.hover:hover{
+    border-color: rgb(29, 84, 202);
+    transform: scale(1.1);
+    
+}
