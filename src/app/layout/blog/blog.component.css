@@ -1,0 +1,58 @@
+.c {
+  width: 1%;
+
+
+    padding: 100px;
+    margin-top: 20px;
+    padding-left: -100pt;
+
+    box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .c img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+    /* background-color: white; */
+    box-shadow: 0 3px 20px 11px rgba(248, 245, 245, 0.897);
+  }
+  
+  .c .top-sec {
+    margin-top: -30px;
+    margin-bottom: 15px;
+    
+  }
+
+  
+.card:hover{
+  transform: scale(1.05);
+box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+.container .btn {
+  position: absolute;
+  bottom:  71%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: white;
+  color: rgb(2, 2, 2);
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  
+}
+
+.container .btn:hover {
+  background-color: rgb(225, 223, 236);
+}
+.card:focus {
+  border: none !important;
+}
+.icon-play{
+  background-size: cover;
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+}
