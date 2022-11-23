@@ -112,7 +112,39 @@ h2{
 }
 h1{
     text-align: center;
+
+    
 }
 h5{
+    text-align: left;
+}
+.container .btn {
+
+    position: absolute;
+  
+    bottom:  71%;
+  
+    left: 70%;
+  
+    transform: translate(-50%, -50%);
+  
+    -ms-transform: translate(-50%, -50%);
+  
+    background-color: white;
+  
+    color: rgb(2, 2, 2);
+  
+    font-size: 16px;
+  
+    padding: 12px 24px;
+  
+    border: none;
+  
+    cursor: pointer;
+  
+    border-radius: 20px;
+  }
+.btn btn-primary{
+
     text-align: center;
 }
