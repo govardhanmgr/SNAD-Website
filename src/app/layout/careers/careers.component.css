@@ -37,6 +37,15 @@ border-radius: 30px;
 }
 .hover:hover{
     border-color: rgb(29, 84, 202);
-    transform: scale(1.1);
-    
+    transform: scale(1.1);  
+}
+.button{
+    border-radius: 30px;
+}
+h1{
+    text-align: center;
+}
+.growth{
+    background-color:#edf1fd;
+    height: 10%;
 }
