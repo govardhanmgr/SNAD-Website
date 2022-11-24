@@ -24,10 +24,6 @@
   }
 
   
-.card:hover{
-  transform: scale(1.05);
-box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
-}
 .container .btn {
   position: absolute;
   bottom:  71%;
@@ -73,4 +69,26 @@ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
   border-left: 0;
   border-right: 0;
   border-bottom: 0;
+}
+
+/*
+.card:hover{
+  transform: scale(1.05);
+box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+*/
+
+.zoom:hover{
+  -ms-transform: scale(1.05); /* IE 9 */
+  -webkit-transform: scale(1.075); /* Safari 3-8 */
+  transform: scale(1.075); 
+  overflow: hidden;
+
+}
+
+.zoomf:hover{
+  -ms-transform: scale(1.075); /* IE 9 */
+  -webkit-transform: scale(1.075); /* Safari 3-8 */
+  transform: scale(1.075); 
+
 }
