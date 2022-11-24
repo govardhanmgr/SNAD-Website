@@ -1,0 +1,51 @@
+.header{
+    text-align: center;
+}
+.alljobs{
+    background-color: blue;
+}
+h2{
+    text-align: center;
+}
+.h6{
+    text-align: center;
+}
+.col-md-4{
+    padding:10px;
+    margin-top:1%;
+}
+.card.mb-2{
+padding: 4%;
+max-width: 540px;
+border-radius: 30px;
+}
+.row{
+    padding:15px;
+}
+.img{
+    background-image:s;
+}
+#button{
+    border-radius: 30px;
+}
+#open{
+    border-radius: 30px;
+    padding: 12px;
+    width: 80%;
+    height: 30vh;
+
+}
+.hover:hover{
+    border-color: rgb(29, 84, 202);
+    transform: scale(1.1);  
+}
+.button{
+    border-radius: 30px;
+}
+h1{
+    text-align: center;
+}
+.growth{
+    background-color:#edf1fd;
+    height: 10%;
+}
