@@ -82,12 +82,13 @@ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
   -ms-transform: scale(1.05); /* IE 9 */
   -webkit-transform: scale(1.075); /* Safari 3-8 */
   transform: scale(1.075); 
+  overflow: hidden;
 
 }
 
 .zoomf:hover{
-  -ms-transform: scale(1.125); /* IE 9 */
-  -webkit-transform: scale(1.125); /* Safari 3-8 */
-  transform: scale(1.05); 
+  -ms-transform: scale(1.075); /* IE 9 */
+  -webkit-transform: scale(1.075); /* Safari 3-8 */
+  transform: scale(1.075); 
 
 }
