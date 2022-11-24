@@ -9,7 +9,13 @@ import { CareersComponent } from './careers/careers.component';
 import { BlogComponent } from './blog/blog.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { ErrorComponent } from './error/error.component';
-
+import { BusinessApplicationComponent } from './business-application/business-application.component';
+import { ManagedInfrastructureComponent } from './managed-infrastructure/managed-infrastructure.component';
+import { DatabaseManagementComponent } from './database-management/database-management.component';
+import { CloudTransformationComponent } from './cloud-transformation/cloud-transformation.component';
+import { ManagedItServicesComponent } from './managed-it-services/managed-it-services.component';
+import { MigrationStabilizationComponent } from './migration-stabilization/migration-stabilization.component';
+import { DigitalTransformationComponent } from './digital-transformation/digital-transformation.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +25,15 @@ import { ErrorComponent } from './error/error.component';
     CareersComponent,
     BlogComponent,
     ContactusComponent,
-    ErrorComponent
+    ErrorComponent,
+    BusinessApplicationComponent,
+    ManagedInfrastructureComponent,
+    DatabaseManagementComponent,
+    CloudTransformationComponent,
+    ManagedItServicesComponent,
+    MigrationStabilizationComponent,
+    DigitalTransformationComponent
+
   ],
   imports: [
     CommonModule,
