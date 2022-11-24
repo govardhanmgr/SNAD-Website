@@ -10,7 +10,7 @@ h2{
 .h6{
     text-align: center;
 }
-.col-md-4{
+.job{
     padding:10px;
     margin-top:1%;
 }
@@ -51,4 +51,32 @@ h1{
 }
 .margin{
     margin-left: 5%;
+}
+.a{
+    border:1px solid rgb(238, 232, 232);
+    width:8rem;
+    height: 12vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #edf1fd;
+    display: flex
+}
+.position{
+    background-color:#2f5acd;
+}
+.write{
+    color: #edf1fd;
+}
+.b{
+    border:1px solid #eaeaf6;
+    width: 50%;
+    height: 6vh;
+    text-align: center;
+    background-color: #eaeaf6;
+    margin-left: 36%;
+}
+.linked{
+    margin-top: 1.5%;
+    margin-right: 5%;
+    border-radius: 30px;
 }
