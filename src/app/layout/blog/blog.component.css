@@ -24,20 +24,16 @@
   }
 
   
-.card:hover{
-  transform: scale(1.05);
-box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
-}
 .container .btn {
   position: absolute;
   bottom:  71%;
-  left: 70%;
+  left: 80%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   background-color: white;
   color: rgb(2, 2, 2);
   font-size: 16px;
-  padding: 12px 24px;
+  padding: 12px 32px;
   border: none;
   cursor: pointer;
   border-radius: 20px;
@@ -56,3 +52,140 @@ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
   height: 15px;
   width: 15px;
 }
+
+.mydiv {
+  
+  background-color: rgb(41, 91, 230);    
+  height: 400px;
+  text-align: center;
+  color: white;
+  padding: 150px 0;
+
+
+}
+.card{
+  border-radius: 20px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+/*
+.card:hover{
+  transform: scale(1.05);
+box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+*/
+
+.zoom:hover{
+  -ms-transform: scale(1.05); /* IE 9 */
+  -webkit-transform: scale(1.075); /* Safari 3-8 */
+  transform: scale(1.075); 
+  overflow: hidden;
+
+}
+.buttonin{
+  width: 350px;
+  height: 100px;
+}
+.input{
+  height: 70px;
+  border-radius: 35px;
+  width: 350px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+
+}
+.button{
+  background-color:  rgba(13, 12, 14, 0.959);
+  color: white;
+  height: 70px;
+  border-radius: 35px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  width: 150px;
+  align-self: flex-end;
+
+
+}
+.descar{
+  height: 80px;
+  border-bottom: 2px;
+  border-color: black;
+  background-color: rgb(225, 223, 236);
+  width: 520px;
+  border-radius: 30px;
+  text-align: center;
+  padding: 12px;
+}
+/*
+.btndes{
+  background-color: rgba(6, 6, 7, 0.856);
+  color: white;
+  height: 80px;
+  
+  
+ 
+}
+*/
+.all{
+  
+  background-color: blue;
+  color: white;
+  height: 50px;
+  width: 75px;
+  border-radius: 25px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  
+}
+
+.bussiness{
+  
+  background-color: blue;
+  color: white;
+  height: 50px;
+  width: 100px;
+  border-radius: 25px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.finances{
+  
+  background-color: blue;
+  color: white;
+  height: 50px;
+  width: 95px;
+  border-radius: 25px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.management{
+  
+  background-color: blue;
+  color: white;
+  height: 50px;
+  width: 135px;
+  border-radius: 25px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+ .descar.button{
+  padding-left: 30px;
+  padding-bottom: 700px;
+ }
