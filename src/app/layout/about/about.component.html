@@ -65,26 +65,27 @@
     </div>
   </div>
   <br>
-  <div class="row">
+  <div *ngFor="let Ourpeople of Ourpeoples">
+  <div class="rowr44">
     <!--Grid column-->
     <div class="col-lg-4 col-md-12 mb-4">
       <div class="card" style="width: 18rem;">
 
-          <img  src="{{About.fields.teamimage.fields.file.url}}" class="card-img-top" alt="..." >
-          <button class="btn"> <b>{{About.fields.teamshotjson.c}}</b></button>
+          <img  src="{{Ourpeople.fields.profileimage.fields.file.url}}" class="card-img-top" alt="..." >
+          <button class="btn"> <b>{{Ourpeople.fields.role}}</b></button>
           
 
           <div class="card-body">
-            <h5 class="card-title">{{About.fields.teamshotjson.a}}</h5>
-            <p class="card-text">{{About.fields.teamshotjson.b}}</p>
+            <h5 class="card-title">{{Ourpeople.fields.name}}</h5>
+            <p class="card-text">{{Ourpeople.fields.description}}</p>
           </div>
         </div>
     </div> 
     
-    <div class="col-lg-4 col-md-12 mb-4">
+    <!-- <div class="col-lg-4 col-md-12 mb-4">
       <div class="card" style="width: 18rem;">
 
-          <img src="{{About.fields.teamimage1.fields.file.url}}" class="card-img-top" alt="snad img">
+          <img src="{{Ourpeople.fields.profileimage.fields.file.url}}" class="card-img-top" alt="snad img">
           <button class="btn"> <b>{{About.fields.teamshort1json.b}}</b></button>
           <div class="card-body">
             <h5 class="card-title">{{About.fields.teamshort1json.a}}</h5>
@@ -140,8 +141,9 @@
           </div>
         </div>
     </div> 
-    
-  </div>
+  </div> -->
+</div>
+</div>
 </section>
 <div style="text-align:center;">
   <button  type="button" class="btn btn-primary">{{About.fields.joinourteam}}</button>
