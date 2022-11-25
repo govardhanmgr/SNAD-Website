@@ -19,7 +19,7 @@ header{
     font-family: 'Poppins', sans-serif;
     position: sticky;
     top: 0px;
-    background-color: #ffffff; 
+    background-color: #ffffff;
     width: 100%;
     z-index: 1000;
     padding: 0;
@@ -40,6 +40,7 @@ section{
     padding: 0 2rem;
     margin: 0 auto;
     margin-top: 2rem;
+    margin-bottom: 3rem;
     display: flex;
     position: relative;
 }
@@ -67,7 +68,7 @@ section{
     justify-content: center;
     align-items: center;
     flex: 1;
-   
+
 }
 
 
@@ -103,7 +104,7 @@ section{
 }
 
 .nav-link > a{
-    line-height: 3rem;
+    line-height: 4rem;
     color: rgb(0, 0, 0);
     padding: 0 .8rem;
     letter-spacing: 1px;
@@ -296,10 +297,10 @@ section{
     .nav-btn{
         position: fixed;
         height: calc(100vh - 3rem);
-        top: 4rem;
+        top: 5.5rem;
         left: 0;
         width: 100%;
-        background-color: #c5b7ef;
+        background-color: #ffffff;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
@@ -355,7 +356,7 @@ section{
         background-color: #3183ac;
         display: none;
     }
-    
+
     .nav-link:hover > .dropdown,
     .dropdown-link:hover > .dropdown{
         display: block;
