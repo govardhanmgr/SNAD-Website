@@ -1,0 +1,73 @@
+.vrfooter-section {
+    background-color: #ffffff;
+}
+
+
+
+.vr-logo {
+    width: 56px;
+    height: 36px;
+}
+
+
+
+.vr-footer-section-icon-container {
+    width: 2rem;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 40px;
+    background-color: #0f2fe3;
+    color: white;
+}
+
+
+
+.icon {
+    color: #5a7184;
+    font-size: 18px;
+}
+
+
+
+.vr-footer-section-text {
+    color: #5a7184;
+    font-family: "roboto";
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 5px;
+
+
+
+}
+
+
+
+.vr-footer-section-heading {
+    color: #5a7184;
+    font-family: "roboto";
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+
+.vr-footer-section-list {
+    list-style-type: none;
+}
+
+
+
+.hr-line {
+    background-color: #5a7184;
+}
+
+
+
+.vr-footer-section-copyright {
+    color: #959ead;
+    font-family: "roboto";
+    font-size: 16px;
+    font-weight: 400;
+}
