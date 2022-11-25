@@ -11,10 +11,10 @@ export class CmsservicesService {
     space: environment.Abouted.spaceId,
     accessToken: environment.Abouted.token,
   })
-  private Bloged = createClient({
-    space: environment.Blog.spaceId,
-    accessToken: environment.Blog.token
-  })
+  // private Bloged = createClient({
+  //   space: environment.Blog.spaceId,
+  //   accessToken: environment.Blog.token
+  // })
   constructor() { }
 
 
