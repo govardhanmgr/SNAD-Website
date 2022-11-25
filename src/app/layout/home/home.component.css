@@ -22,3 +22,15 @@ border-radius: 30px;
         transform-style: preserve-3d;
         padding:10px;
     }
+
+.a{
+    border: 1px solid black;
+    width: 3rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.slider{
+    margin-left: 30%;
+}
+
