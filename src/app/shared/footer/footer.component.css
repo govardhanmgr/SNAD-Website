@@ -33,21 +33,17 @@
 
 .vr-footer-section-text {
     color: #5a7184;
-    font-family: "roboto";
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     margin-bottom: 5px;
-
-
 
 }
 
 
 
 .vr-footer-section-heading {
-    color: #5a7184;
-    font-family: "roboto";
-    font-size: 18px;
+    color: #000000;
+    font-size: 1.2rem;
     font-weight: 700;
 }
 
@@ -61,13 +57,28 @@
 
 .hr-line {
     background-color: #5a7184;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
 }
 
 
 
 .vr-footer-section-copyright {
-    color: #959ead;
-    font-family: "roboto";
+    color: #000000;
     font-size: 16px;
     font-weight: 400;
+}
+
+.bottomline{
+   
+    border-bottom: 1px solid #b0c9de;
+    border-top: 2px solid #b0c9de;
+}
+
+.mafortop{
+    margin-top: 3rem;
+}
+
+li{
+    list-style: none;
 }
