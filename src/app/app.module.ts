@@ -8,9 +8,11 @@ import { AboutComponent } from './layout/about/about.component';
 import { SharedModule } from './shared/shared.module';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
+  
     
   ],
   imports: [
