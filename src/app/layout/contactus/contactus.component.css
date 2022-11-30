@@ -24,19 +24,39 @@
 
 .smalldash {
   width: 100%;
-  max-width: 43px;
+  max-width: 60px;
   min-height: 2px;
-  margin-right: 20px;
+  margin-right: 25px;
   background-color: #2f5acd;
 }
 
 .us {
   color: #2f5acd;
-  font-size: 16px;
-  line-height: 1.125em;
-  font-weight: 700;
-  letter-spacing: 0.07em;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
 }
+
+.get {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.lorem {
+  font-size: 1.2rem;
+  font-weight: 480;
+  color: #4c4d4e;
+  margin-bottom: 3rem;
+}
+
+.contactnum {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000000;
+}
+
 body {
   background-color: blue;
 }
