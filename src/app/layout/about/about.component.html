@@ -1,292 +1,287 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-    <div *ngFor="let About of Abouts">
-  <div class="img"  ></div>
-<div class="">
- <div style="text-align: center;">
-  <h1>{{About.fields.ourstorytitel}}</h1>
- </div>
- <div style="text-align: center; ">
-  <h6>{{About.fields.ourshort}}</h6>
- </div>
- <br>
- <div style="text-align:center; ">
-  <button  type="button" class="btn btn-primary" >{{About.fields.read}}</button>
-</div>
-</div>
-<div class="">
-  <h6 class="text-left" style="color: blue;">{{About.fields.ourstorytitle2}}</h6>
-  <div class="row text-left">
-      <div class="col-md-6">
-          
+
+
+
+
+  <div class="container" *ngFor="let About of Abouts">
+    <div class="img"></div>
+    <div class="">
+      <div style="text-align: center;">
+        <h1>{{About.fields.ourstorytitel}}</h1>
+      </div>
+      <div style="text-align: center; ">
+        <h6>{{About.fields.ourshort}}</h6>
+      </div>
+      <br>
+      <div style="text-align:center; ">
+        <button type="button" class="btn btn-primary">{{About.fields.read}}</button>
+      </div>
+    </div>
+    <div class="">
+      <h6 class="text-left" style="color: blue;">{{About.fields.ourstorytitle2}}</h6>
+      <div class="row text-left">
+        <div class="col-md-6 ">
+
           <h2 class="text-left">{{About.fields.ourstorytext}}</h2>
           <p>{{About.fields.ourstorylongtext}}</p>
-      </div>
-      <div class="col-md-6">
-        <img class="" src="{{About.fields.ourstoryimage.fields.file.url}}" width="250px">
-          
-      </div>
-  </div>
+        </div>
+        <div class="col-md-6">
+          <img class="" src="{{About.fields.ourstoryimage.fields.file.url}}" width="250px">
 
-  <h6 class="text-align:right" style="color: blue;">{{About.fields.mission}}</h6>
-  <div class="row text-right">
-      <div class="col-md-6">
-        <img class="" src="{{About.fields.missionimage.fields.file.url}}" width="250px">
-          
+        </div>
       </div>
-      <div class="col-md-6">
-        <h2 class="text-left">{{About.fields.missiontext}}</h2>
+
+      <h6 class="text-align:" style="color: blue;">{{About.fields.mission}}</h6>
+      <div class="row text-right container">
+        <div class="col-md-6 text-center " >
+          <img class="" src="{{About.fields.missionimage.fields.file.url}}" width="250px">
+
+        </div>
+        <div class="col-md-6">
+          <h2 class="text-left">{{About.fields.missiontext}}</h2>
           <p>{{About.fields.missionlongtext}}</p>
+        </div>
       </div>
-  </div>
-
-  
-</div>
 
 
-<section class="our-webcoderskull padding-lg">
-  <div class="container">
-    <div class="">
-      <div style="text-align:center ; color:blue;">
-        <h5>{{About.fields.teamtitle}}</h5>
-      </div>
-      <div style="text-align:center ;">
-
-       <h1>{{About.fields.teamtext.a}}</h1>
-       <h1>{{About.fields.teamtext.b}}</h1>
-
-      </div>
     </div>
-  </div>
-  <br>
-  <div *ngFor="let Ourpeople of Ourpeoples">
-  <div class="rowr44">
-    <!--Grid column-->
-    <div class="col-lg-4 col-md-12 mb-4">
-      <div class="card" style="width: 18rem;">
 
-          <img  src="{{Ourpeople.fields.profileimage.fields.file.url}}" class="card-img-top" alt="..." >
-          <button class="btn"> <b>{{Ourpeople.fields.role}}</b></button>
+
+     <section class="our-webcoderskull padding-lg">
+      <div class="container">
+        <div class="col-4">
+          <div style="text-align:center ; color:blue;">
+            <h5>{{About.fields.teamtitle}}</h5>
+          </div>
+          <div style="text-align:center ;">
+
+            <h1>{{About.fields.teamtext.a}}</h1>
+            <h1>{{About.fields.teamtext.b}}</h1>
+
+          </div>
+        </div>
+      </div>
+      <br>
+
+       
+          <div class="d-flex flex-row">
+            <div class="col-md-4    m-2">
+      <div *ngFor="let Ourpeople of Ourpeoples">
+        
+          <div class="  m-2">
+            <div class="">
+           
+        
+              
+        
+        
+          <!--Grid column-->
           
+            <div class="card" style="width: 18rem;">
 
-          <div class="card-body">
-            <h5 class="card-title">{{Ourpeople.fields.name}}</h5>
-            <p class="card-text">{{Ourpeople.fields.description}}</p>
+              <img src="{{Ourpeople.fields.profileimage.fields.file.url}}" class="card-img-top" alt="...">
+              <button class="btn"> <b>{{Ourpeople.fields.role}}</b></button>
+
+
+              <div class="card-body">
+                <h5 class="card-title">{{Ourpeople.fields.name}}</h5>
+                <p class="card-text">{{Ourpeople.fields.description}}</p>
+              </div>
+            </div>
           </div>
         </div>
-    </div> 
+        </div>
+      </div>
+
+
+      </div>
+
+
+      
+    </section>
     
-    <!-- <div class="col-lg-4 col-md-12 mb-4">
-      <div class="card" style="width: 18rem;">
-
-          <img src="{{Ourpeople.fields.profileimage.fields.file.url}}" class="card-img-top" alt="snad img">
-          <button class="btn"> <b>{{About.fields.teamshort1json.b}}</b></button>
-          <div class="card-body">
-            <h5 class="card-title">{{About.fields.teamshort1json.a}}</h5>
-            <p class="card-text">{{About.fields.teamshort1json.c}}</p>
-          </div>
-        </div>
-    </div> 
-    
-    <div class="col-lg-4 col-md-12 mb-4">
-      <div class="card" style="width: 18rem;">
-
-          <img src="{{About.fields.teamimage2.fields.file.url}}" class="card-img-top" alt="snad img">
-          <button class="btn"> <b>{{About.fields.teamshort2json.b}}</b></button>
-          <div class="card-body">
-            <h5 class="card-title">{{About.fields.teamshort2json.a}}</h5>
-            <p class="card-text">{{About.fields.teamshort2json.c}}</p>
-          </div>
-        </div>
-    </div> 
-    
-    <div class="col-lg-4 col-md-12 mb-4">
-      <div class="card" style="width: 18rem;">
-
-          <img src="{{About.fields.teamimage3.fields.file.url}}" class="card-img-top" alt="snad img">
-          <button class="btn"> <b>{{About.fields.teamshort3json.b}}</b></button>    
-          <div class="card-body">
-            <h5 class="card-title">{{About.fields.teamshort3json.a}}</h5>
-            <p class="card-text">{{About.fields.teamshort3json.c}}</p>
-          </div>
-        </div>
-    </div> 
-    
-    <div class="col-lg-4 col-md-12 mb-4">
-      <div class="card" style="width: 18rem;">
-
-          <img src="{{About.fields.teamimage4.fields.file.url}}" class="card-img-top" alt="snad img">
-          <button class="btn"> <b>{{About.fields.teamshort3json.b}}</b></button>
-          <div class="card-body">
-            <h5 class="card-title">{{About.fields.teamshort4json.a}}</h5>
-            <p class="card-text">{{About.fields.teamshort4json.c}}</p>
-          </div>
-        </div>
-    </div> 
-    
-    <div class="col-lg-4 col-md-12 mb-4">
-      <div class="card" style="width: 18rem;">
-
-          <img src="{{About.fields.teamimage5.fields.file.url}}" class="card-img-top" alt="snad img">
-          <button class="btn"> <b>{{About.fields.teamshort5json.b}}</b></button>
-          <div class="card-body">
-            <h5 class="card-title">{{About.fields.teamshort5json.a}}</h5>
-            <p class="card-text">{{About.fields.teamshort5json.c}}</p>
-          </div>
-        </div>
-    </div> 
-  </div> -->
-</div>
-</div>
-</section>
-<div style="text-align:center;">
-  <button  type="button" class="btn btn-primary">{{About.fields.joinourteam}}</button>
-</div>
-<br>
-
-<br>
-<div class="">
-  <h5 class="header" style="color: blue;">{{About.fields.ourvalues}}</h5>
-  
-  <h2 >{{About.fields.ourvaluesjson.a}} </h2>
-  <h2>{{About.fields.ourvalues.b}} </h2>
-  <br>
-  <div style="text-align:right;">
-    <button  type="button" class="btn btn-primary">{{About.fields.joinourteam}}</button>
+   
+      <div class="row "  >
+      <div class="col-lg-4 col-md-6 mb-4 " *ngFor="let Ourpeople of Ourpeoples">
+       <div>           
+  <div class="card" style="width: 18rem;">
+    <img src="{{Ourpeople.fields.profileimage.fields.file.url}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
   </div>
-  <br>
-  <!--Grid row-->
-  <div class="row">
-    <!--Grid column-->
-    <div class="col-lg-4 col-md-12 mb-4">
-      <div class="card" style="width: 18rem;">
-          <img src="{{About.fields.ourjson.c}}" class="card-img-top" alt="snad img">
-          <div class="card-body">
-            <h5 class="card-title">{{About.fields.ourjson.a}}</h5>
-            <p class="card-text">{{About.fields.ourjson.b}}</p>
+</div></div></div>
 
+
+
+
+
+    <div class="col-lg-6 col-md-12 mb-6">
+      <div class="card mb-2" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4545d4cd0a1_icon-2-company-perks-startup-x-template.svg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
           </div>
         </div>
     </div>
-    <!--Grid column-->
-    <!--Grid column-->
-    <div class="col-lg-4 col-md-6 mb-4">
-      <div class="card" style="width: 18rem;">
-          <img src="{{About.fields.ourjson1.c}}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">{{About.fields.ourjson1.a}}</h5>
-            <p class="card-text">{{About.fields.ourjson2.b}}</p>
+    <div style="text-align:center;">
+      <button type="button" class="btn btn-primary">{{About.fields.joinourteam}}</button>
+    </div>
+    <br>
+
+    <br>
+    <div class="">
+      <h5 class="header" style="color: blue;">{{About.fields.ourvalues}}</h5>
+
+      <h2>{{About.fields.ourvaluesjson.a}} </h2>
+      <h2>{{About.fields.ourvalues.b}} </h2>
+      <br>
+      <div style="text-align:right;">
+        <button type="button" class="btn btn-primary">{{About.fields.joinourteam}}</button>
+      </div>
+      <br>
+      <!--Grid row-->
+      <div class="row">
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card" style="width: 18rem;">
+            <img src="{{About.fields.ourjson.c}}" class="card-img-top" alt="snad img">
+            <div class="card-body">
+              <h5 class="card-title">{{About.fields.ourjson.a}}</h5>
+              <p class="card-text">{{About.fields.ourjson.b}}</p>
+
+            </div>
           </div>
         </div>
-    </div>
-    <!--Grid column-->
-    <!--Grid column-->
-    <div class="col-lg-4 col-md-6 mb-4">
-      <div class="card" style="width: 18rem;">
-          <img src="{{About.fields.ourjson2.c}}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">{{About.fields.ourjson2.a}}</h5>
-            <p class="card-text">{{About.fields.ourjson2.b}}</p>
 
+
+
+        
+
+        
+        <!--Grid column-->
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card" style="width: 18rem;">
+            <img src="{{About.fields.ourjson1.c}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{About.fields.ourjson1.a}}</h5>
+              <p class="card-text">{{About.fields.ourjson2.b}}</p>
+            </div>
           </div>
         </div>
-    </div>
-    <!--Grid column-->
+        <!--Grid column-->
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card" style="width: 18rem;">
+            <img src="{{About.fields.ourjson2.c}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{About.fields.ourjson2.a}}</h5>
+              <p class="card-text">{{About.fields.ourjson2.b}}</p>
 
+            </div>
+          </div>
+        </div>
+
+
+        
+        <!--Grid column-->
+
+      
+      <!--Grid row-->
+      <!--Grid row-->
+      
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card" style="width: 18rem;">
+            <img src="{{About.fields.ourjson3.c}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{About.fields.ourjson3.a}}</h5>
+              <p class="card-text">{{About.fields.ourjson3.b}}</p>
+            </div>
+          </div>
+        </div>
+        <!--Grid column-->
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card" style="width: 18rem;">
+            <img src="{{About.fields.ourjson4.c}}" class="card-img-top" alt="...">
+
+            <div class="card-body">
+              <h5 class="card-title">{{About.fields.ourjson4.b}}</h5>
+              <p class="card-text">{{About.fields.ourjson4.a}}</p>
+            </div>
+          </div>
+        </div>
+        <!--Grid column-->
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card" style="width: 18rem;">
+
+            <img src="{{About.fields.ourjson5.c}}" class="card-img-top" alt="...">
+
+            <div class="card-body">
+              <h5 class="card-title">{{About.fields.ourjson5.b}}</h5>
+              <p class="card-text">{{About.fields.ourjson5.a}}</p>
+            </div>
+          </div>
+        </div>
+    
+        <!--Grid column-->
+      </div>
+
+    </div>
+
+    <br><br>
+    <div class="row">
+      <div style="text-align: center;">
+        <h1>{{About.fields.numberjson.a}}</h1><br>
+      </div>
+      <div class="col-lg-3 col-md-4 mb-4">
+        <h1>{{About.fields.numberjson.b}}<span style="color: blue">{{About.fields.numberjson.c}}</span></h1>
+        <div style="text-align: center;">
+          <h4>{{About.fields.numberjson.d}}</h4>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mb-4">
+        <h1>{{About.fields.numberjson.e}}<span style="color: blue">{{About.fields.numberjson.f}}</span></h1>
+        <div style="text-align: center;">
+          <h4>{{About.fields.numberjson.g}}</h4>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mb-4">
+        <h1>{{About.fields.numberjson.h}}<span style="color: blue">{{About.fields.numberjson.i}}</span></h1>
+        <div style="text-align: center;">
+          <h4>{{About.fields.numberjson.j}}</h4>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-4 mb-4">
+        <h1>{{About.fields.numberjson.k}}<span style="color:blue">{{About.fields.numberjson.l}}</span></h1>
+        <div style="text-align: center;">
+          <h4>{{About.fields.numberjson.m}}
+          </h4>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <div class="">
+      <div style="text-align:center ;">
+        <h1>{{About.fields.touchjson.a}}<br>
+          {{About.fields.touchjson.b}}</h1><br>
+        <button type="button" class="btn btn-primary">{{About.fields.touchjson.c}}</button>
+      </div>
+
+    </div>
   </div>
-  <!--Grid row-->
-  <!--Grid row-->
-  <div class="row">
-    <!--Grid column-->
-    <div class="col-lg-4 col-md-12 mb-4">
-      <div class="card" style="width: 18rem;">
-          <img src="{{About.fields.ourjson3.c}}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">{{About.fields.ourjson3.a}}</h5>
-            <p class="card-text">{{About.fields.ourjson3.b}}</p>
-          </div>
-        </div>
-    </div>
-    <!--Grid column-->
-    <!--Grid column-->
-    <div class="col-lg-4 col-md-6 mb-4">
-      <div class="card" style="width: 18rem;">
-          <img src="{{About.fields.ourjson4.c}}" class="card-img-top" alt="...">
-
-          <div class="card-body">
-            <h5 class="card-title">{{About.fields.ourjson4.b}}</h5>
-            <p class="card-text">{{About.fields.ourjson4.a}}</p>
-          </div>
-        </div>
-    </div>
-    <!--Grid column-->
-    <!--Grid column-->
-    <div class="col-lg-4 col-md-6 mb-4">
-      <div class="card" style="width: 18rem;">
-
-          <img src="{{About.fields.ourjson5.c}}" class="card-img-top" alt="...">
-
-          <div class="card-body">
-            <h5 class="card-title">{{About.fields.ourjson5.b}}</h5>
-            <p class="card-text">{{About.fields.ourjson5.a}}</p>
-          </div>
-        </div>
-    </div>
-    <!--Grid column-->
-  </div>
-
-</div>
-
-<br><br>
-<div class="row">
-<div style="text-align: center;">
-  <h1>{{About.fields.numberjson.a}}</h1><br>
- </div>
- <div class="col-lg-3 col-md-4 mb-4">
-  <h1>{{About.fields.numberjson.b}}<span style="color: blue">{{About.fields.numberjson.c}}</span></h1>
-  <div style="text-align: center;">
-  <h4>{{About.fields.numberjson.d}}</h4>
-</div>
- </div>
- <div class="col-lg-3 col-md-4 mb-4">
-  <h1>{{About.fields.numberjson.e}}<span style="color: blue">{{About.fields.numberjson.f}}</span></h1>
-  <div style="text-align: center;">
-  <h4>{{About.fields.numberjson.g}}</h4>
-</div>
- </div>
- <div class="col-lg-3 col-md-4 mb-4">
-  <h1>{{About.fields.numberjson.h}}<span style="color: blue">{{About.fields.numberjson.i}}</span></h1>
-  <div style="text-align: center;">
-  <h4>{{About.fields.numberjson.j}}</h4>
-</div>
- </div>
- <div class="col-lg-3 col-md-4 mb-4">
-  <h1>{{About.fields.numberjson.k}}<span style="color:blue">{{About.fields.numberjson.l}}</span></h1>
- <div style="text-align: center;">
-  <h4>{{About.fields.numberjson.m}}
-  </h4>
- </div>
- </div>
-</div>
-
-<br>
-<br>
-<div class="">
-<div style="text-align:center ;">
-  <h1>{{About.fields.touchjson.a}}<br>
-    {{About.fields.touchjson.b}}</h1><br>
-    <button type="button" class="btn btn-primary">{{About.fields.touchjson.c}}</button>
-</div>
-
-</div>
-</div>
-
-</body>
-</html>
 
