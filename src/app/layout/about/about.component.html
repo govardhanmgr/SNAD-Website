@@ -20,27 +20,29 @@
   <button  type="button" class="btn btn-primary" >{{About.fields.read}}</button>
 </div>
 </div>
-<div class="">
-  <h6 class="text-left" style="color: blue;">{{About.fields.ourstorytitle2}}</h6>
+<br>
+<div class="ourstory"   >
+  <!-- <h6 style="margin-left:10"  class="text-left" style="color: blue;" >{{About.fields.ourstorytitle2}}</h6> -->
   <div class="row text-left">
-      <div class="col-md-6">
-          
+      <div class="col-md-6" >
+        <h6 class="text-left" style="color: blue;" >{{About.fields.ourstorytitle2}}</h6>
           <h2 class="text-left">{{About.fields.ourstorytext}}</h2>
           <p>{{About.fields.ourstorylongtext}}</p>
       </div>
-      <div class="col-md-6">
-        <img class="" src="{{About.fields.ourstoryimage.fields.file.url}}" width="250px">
+      <div class="col-md-6" style="text-align:left" >
+        <img class="" src="{{About.fields.ourstoryimage.fields.file.url}}" width="70%" height="90%">
           
       </div>
   </div>
 
-  <h6 class="text-align:right" style="color: blue;">{{About.fields.mission}}</h6>
-  <div class="row text-right">
+  <!-- <h6 class="text-right" style="color: blue;" >{{About.fields.mission}}</h6> -->
+  <div class="row text-left" style="text-align:center"  >
       <div class="col-md-6">
-        <img class="" src="{{About.fields.missionimage.fields.file.url}}" width="250px">
+        <img class="" src="{{About.fields.missionimage.fields.file.url}}" width="80%" height="90%">
           
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6" style="text-align:left;">
+        <h6 class="text-left" style="color: blue;" >{{About.fields.mission}}</h6>
         <h2 class="text-left">{{About.fields.missiontext}}</h2>
           <p>{{About.fields.missionlongtext}}</p>
       </div>
@@ -53,7 +55,7 @@
 <section class="our-webcoderskull padding-lg">
   <div class="container">
     <div class="">
-      <div style="text-align:center ; color:blue;">
+      <div style=" text-align:center; color:blue;">
         <h5>{{About.fields.teamtitle}}</h5>
       </div>
       <div style="text-align:center ;">
@@ -65,10 +67,10 @@
     </div>
   </div>
   <br>
-  <div *ngFor="let Ourpeople of Ourpeoples">
+  <div >
   <div class="rowr44">
     <!--Grid column-->
-    <div class="col-lg-4 col-md-12 mb-4">
+    <div class="col-lg-4 col-md-12 mb-4" *ngFor="let Ourpeople of Ourpeoples">
       <div class="card" style="width: 18rem;">
 
           <img  src="{{Ourpeople.fields.profileimage.fields.file.url}}" class="card-img-top" alt="..." >
@@ -151,15 +153,17 @@
 <br>
 
 <br>
-<div class="">
-  <h5 class="header" style="color: blue;">{{About.fields.ourvalues}}</h5>
+<div class="ourvalues" >
+  <h5 class="header"  style="text-align:left" >{{About.fields.ourvalues}}</h5>
   
-  <h2 >{{About.fields.ourvaluesjson.a}} </h2>
+  <h2>{{About.fields.ourvaluesjson.a}} 
+    <button  type="button" class="btn btn-primary">{{About.fields.joinourteam}}</button>
+   </h2>
   <h2>{{About.fields.ourvalues.b}} </h2>
   <br>
-  <div style="text-align:right;">
+  <!-- <div style="text-align:right;">
     <button  type="button" class="btn btn-primary">{{About.fields.joinourteam}}</button>
-  </div>
+  </div> -->
   <br>
   <!--Grid row-->
   <div class="row">
@@ -277,16 +281,154 @@
 
 <br>
 <br>
-<div class="">
-<div style="text-align:center ;">
-  <h1>{{About.fields.touchjson.a}}<br>
+
+<div style="background-color: #2f5acd">
+<div style="text-align:center ;" >
+  <h1 style="color:white">{{About.fields.touchjson.a}}<br>
     {{About.fields.touchjson.b}}</h1><br>
-    <button type="button" class="btn btn-primary">{{About.fields.touchjson.c}}</button>
+    <button type="button" class="btn btn-primary" style="color:black;">{{About.fields.touchjson.c}}</button>
+</div>
+</div>
 </div>
 
-</div>
-</div>
 
 </body>
 </html>
 
+
+
+
+
+
+
+
+
+
+<!-- <br><br><br>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+      <div class="card">
+          <img src="https://media.istockphoto.com/id/1369199911/photo/portrait-of-a-handsome-young-businessman-working-in-office.jpg?s=612x612&w=0&k=20&c=fRFcgB0qERJq7Pb-3fjrYUcQr1h6wEf-nMfXftaYPyM=" class="card-img-top" alt="...">
+          <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some dummy text to make up the card's content. You can replace it anytime.</p>
+          </div>
+          <div class="card-footer">
+              <small class="text-muted">Last updated 5 mins ago</small>
+          </div>
+      </div>
+  </div>
+  <div class="col">
+      <div class="card">
+          <img src="https://media.istockphoto.com/id/1369199911/photo/portrait-of-a-handsome-young-businessman-working-in-office.jpg?s=612x612&w=0&k=20&c=fRFcgB0qERJq7Pb-3fjrYUcQr1h6wEf-nMfXftaYPyM=" class="card-img-top" alt="...">
+          <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some dummy text to make up the card's content. You can replace it anytime.</p>
+          </div>
+          <div class="card-footer">
+              <small class="text-muted">Last updated 5 mins ago</small>
+          </div>
+      </div>
+  </div>
+  <div class="col">
+      <div class="card">
+          <img src="https://media.istockphoto.com/id/1369199911/photo/portrait-of-a-handsome-young-businessman-working-in-office.jpg?s=612x612&w=0&k=20&c=fRFcgB0qERJq7Pb-3fjrYUcQr1h6wEf-nMfXftaYPyM=" class="card-img-top" alt="...">
+          <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some dummy text to make up the card's content. You can replace it anytime.</p>
+          </div>
+          <div class="card-footer">
+              <small class="text-muted">Last updated 5 mins ago</small>
+          </div>
+      </div>
+  </div>
+  <div class="col">
+      <div class="card">
+          <img src="https://media.istockphoto.com/id/1369199911/photo/portrait-of-a-handsome-young-businessman-working-in-office.jpg?s=612x612&w=0&k=20&c=fRFcgB0qERJq7Pb-3fjrYUcQr1h6wEf-nMfXftaYPyM=" class="card-img-top" alt="...">
+          <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some dummy text to make up the card's content. You can replace it anytime.</p>
+          </div>
+          <div class="card-footer">
+              <small class="text-muted">Last updated 5 mins ago</small>
+          </div>
+      </div>
+  </div>
+  <div class="col">
+    <div class="card">
+        <img src="https://media.istockphoto.com/id/1369199911/photo/portrait-of-a-handsome-young-businessman-working-in-office.jpg?s=612x612&w=0&k=20&c=fRFcgB0qERJq7Pb-3fjrYUcQr1h6wEf-nMfXftaYPyM=" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some dummy text to make up the card's content. You can replace it anytime.</p>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">Last updated 5 mins ago</small>
+        </div>
+    </div>
+</div>
+<div class="col">
+  <div class="card">
+      <img src="https://media.istockphoto.com/id/1369199911/photo/portrait-of-a-handsome-young-businessman-working-in-office.jpg?s=612x612&w=0&k=20&c=fRFcgB0qERJq7Pb-3fjrYUcQr1h6wEf-nMfXftaYPyM=" class="card-img-top" alt="...">
+      <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some dummy text to make up the card's content. You can replace it anytime.</p>
+      </div>
+      <div class="card-footer">
+          <small class="text-muted">Last updated 5 mins ago</small>
+      </div>
+  </div>
+</div>
+</div> -->
+<!-- <br><br><br>
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active slide-one">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>A Fitness Wearable where technical clothing becomes a pragmatic sports buddy</h5>
+            <p>Engineered a native mobile application for this innovative health and fitness wearable that focuses on Neuro Muscular Electro Stimulation(NMES). The product is the world's forst fully integrated sports smartwear which pairs the smartkins with a powerful smartphone opening up a whole new world of possibilities</p>
+             <h3>58</h3>
+             <h5>centers</h5>
+          </div>
+
+          <div class="col-md-6">
+            <div class="img-box">
+              <img src="https://media.istockphoto.com/id/1213710695/photo/crowd-from-above-forming-a-growth-graph.jpg?s=612x612&w=is&k=20&c=qMnd4c0bcVskqk5PPq0pUGpVRzRlTrT7PioDovonJn4=" class="pic-one">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item slide-two">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>A Smart Health and Fitness Wearable where technical clothing becomes a pragmatic sports buddy
+            </h5>
+            <h6>Engineered a native mobile application for this innovative health and fitness <br> wearable that focuses on Neuro Muscular Electro <br>
+              Stimulation(NMES). The product is the world's forst fully integrated sports <br> smartwear which pairs the smartkins with a powerful<br> smartphone opening up a whole new world of possibilities</h6>
+             <h1>45%</h1>
+             <h5>User Adoption</h5>
+          </div>
+
+          <div class="col-md-6">
+            <div class="img-box">
+              <img src="https://media.istockphoto.com/id/1174511028/photo/stack-of-hands-unity-and-teamwork-concept.jpg?s=612x612&w=is&k=20&c=TD-0YLHcCiEsrHjmNJD2v0q9SHQDIF1DmAR0Hqglxu0=" class="img-one">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <button class="carousel-control-prev" type="button" style="color:black" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> -->
