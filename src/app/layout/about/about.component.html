@@ -98,20 +98,36 @@
 
       
     </section>
-    
-   
-      <div class="row "  >
-      <div class="col-lg-4 col-md-6 mb-4 " *ngFor="let Ourpeople of Ourpeoples">
-       <div>           
-  <div class="card" style="width: 18rem;">
-    <img src="{{Ourpeople.fields.profileimage.fields.file.url}}" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
-</div></div></div>
+
+
+</div>
+</div>
+</section>
+<div style="text-align:center;">
+  <button  type="button" class="btn btn-primary">{{About.fields.joinourteam}}</button>
+</div>
+<br>
+
+<br>
+<div class="ourvalues" >
+  <h5 class="header"  style="text-align:left" >{{About.fields.ourvalues}}</h5>
+  
+  <h2>{{About.fields.ourvaluesjson.a}} 
+    <button  type="button" class="btn btn-primary">{{About.fields.joinourteam}}</button>
+   </h2>
+  <h2>{{About.fields.ourvalues.b}} </h2>
+  <br>
+
+  <br>
+  <!--Grid row-->
+  <div class="row">
+    <!--Grid column-->
+    <div class="col-lg-4 col-md-12 mb-4">
+      <div class="card" style="width: 18rem;">
+          <img src="{{About.fields.ourjson.c}}" class="card-img-top" alt="snad img">
+          <div class="card-body">
+            <h5 class="card-title">{{About.fields.ourjson.a}}</h5>
+            <p class="card-text">{{About.fields.ourjson.b}}</p>
 
 
 
