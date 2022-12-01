@@ -40,7 +40,7 @@ section{
     padding: 0 2rem;
     margin: 0 auto;
     margin-top: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     display: flex;
     position: relative;
 }
@@ -68,7 +68,7 @@ section{
     justify-content: center;
     align-items: center;
     flex: 1;
-
+   
 }
 
 
@@ -296,8 +296,8 @@ section{
 
     .nav-btn{
         position: fixed;
-        height: calc(100vh - 3rem);
-        top: 5.5rem;
+        height: calc(100vh - 0rem);
+        top: -0.5rem;
         left: 0;
         width: 100%;
         background-color: #ffffff;
@@ -341,7 +341,7 @@ section{
 
     .nav-link:hover > a{
         transform: scale(1);
-        background-color: #50a9d6;
+        background-color: #ffffff;
     }
 
     .dropdown, .dropdown.second{
@@ -356,7 +356,7 @@ section{
         background-color: #3183ac;
         display: none;
     }
-
+    
     .nav-link:hover > .dropdown,
     .dropdown-link:hover > .dropdown{
         display: block;

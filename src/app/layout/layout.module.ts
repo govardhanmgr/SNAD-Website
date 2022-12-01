@@ -10,6 +10,7 @@ import { BlogComponent } from './blog/blog.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { ErrorComponent } from './error/error.component';
 import { JobrequirmentComponent } from './jobrequirment/jobrequirment.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { JobrequirmentComponent } from './jobrequirment/jobrequirment.component'
     BlogComponent,
     ContactusComponent,
     ErrorComponent,
-    JobrequirmentComponent
+    JobrequirmentComponent,
+    ProfileComponent
   ],
   imports: [
     CommonModule,
