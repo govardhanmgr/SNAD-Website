@@ -172,28 +172,78 @@ text-align: center;
     color: blue;
 }
 .background{
- background-color: blue;
- 
+ background-color:#2f5acd;
+ height:8%;
 }
-.container{
+.ourvalue{
     background-color:#edf1fd;
     height:30%;
+    
 }
 .ourstory{
     background-color:#edf1fd;
-    height:38%;
+    height:35%;
+    
+    
+    
+}
+.core{
+    margin-left: 10%;
+    margin-right:10%;
+
 }
 
+.values{
+    border-radius:30px ;
+    overflow: hidden;
+    
+}
 
+.value{
+    margin-left: 10px; ;
+    margin-right: 10px;
+    margin-top:10px ;
+    margin-bottom:10px ;
+}
+.perk{
+    padding-left:52px ;
+    padding-top: 40px;
+    padding-bottom: 52px;
+    padding-right:40px ;
+justify-content: center;
+align-items: flex-start;
+}
+.join{
+    margin-left: 35%;
+    border-radius: 12px;
+    
+}
+.light:hover{
+    border-radius: 12px;
+    
+}
+.team{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+    margin-left: 2%;
+    
+}
+.text-right{
+    text-align: left;
+    margin-right: 5%;
+}
+.img1{
+    border-radius:5% ;
+}
+.img2{
+    border-radius: 5%;
+    margin-left: 5%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.cards{
+    margin-left: 4%;
+    margin-right: 4%;
+    border-radius: 3%;
+}
