@@ -16,6 +16,8 @@ import { CloudTransformationComponent } from './cloud-transformation/cloud-trans
 import { ManagedItServicesComponent } from './managed-it-services/managed-it-services.component';
 import { MigrationStabilizationComponent } from './migration-stabilization/migration-stabilization.component';
 import { DigitalTransformationComponent } from './digital-transformation/digital-transformation.component';
+import { ProfileComponent } from './profile/profile.component';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { DigitalTransformationComponent } from './digital-transformation/digital
     CloudTransformationComponent,
     ManagedItServicesComponent,
     MigrationStabilizationComponent,
-    DigitalTransformationComponent
+    DigitalTransformationComponent,
+    ProfileComponent  
 
   ],
   imports: [

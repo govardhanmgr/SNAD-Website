@@ -6,6 +6,7 @@ import { CareersComponent } from './careers/careers.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { ErrorComponent } from './error/error.component';
 import { HomeComponent } from './home/home.component';
+import { ProfileComponent } from './profile/profile.component';
 import { ServicesComponent } from './services/services.component';
 import { BusinessApplicationComponent } from './business-application/business-application.component';
 import { CloudTransformationComponent} from './cloud-transformation/cloud-transformation.component';
@@ -37,6 +38,9 @@ const routes: Routes = [
   { path: "managedinfrastructure", component: ManagedInfrastructureComponent },
   { path: "manageditservices", component:ManagedItServicesComponent},
   { path: "migrationstabilization", component:MigrationStabilizationComponent},
+  { path: "profile",component:ProfileComponent},
+
+
 
 
   //this path should be in the last line for Error Exceptions

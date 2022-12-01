@@ -8,11 +8,15 @@
 
     box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.1);
   }
+  .font{
+    font-size: 55px;
+    text-align: center;
+  }
   
   .c img {
     width: 100%;
     object-fit: cover;
-    border-radius: 3px;
+    border-radius: 50px;
     /* background-color: white; */
     box-shadow: 0 3px 20px 11px rgba(248, 245, 245, 0.897);
   }
@@ -26,7 +30,7 @@
   
 .container .btn {
   position: absolute;
-  bottom:  71%;
+  bottom:  79%;
   left: 80%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -64,7 +68,7 @@
 
 }
 .card{
-  border-radius: 20px;
+  border-radius: 40px;
   border-top: 0;
   border-left: 0;
   border-right: 0;
@@ -83,6 +87,7 @@ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
   -webkit-transform: scale(1.075); /* Safari 3-8 */
   transform: scale(1.075); 
   overflow: hidden;
+  border-radius: 25px;
 
 }
 .buttonin{
@@ -118,10 +123,11 @@ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
   border-bottom: 2px;
   border-color: black;
   background-color: rgb(225, 223, 236);
-  width: 520px;
+  width: 600px;
   border-radius: 30px;
   text-align: center;
   padding: 12px;
+  margin-right: 20px;
 }
 /*
 .btndes{
@@ -136,7 +142,7 @@ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 .all{
   
   background-color: blue;
-  color: white;
+  color: rgba(7, 5, 5, 0.884);
   height: 50px;
   width: 75px;
   border-radius: 25px;
@@ -149,8 +155,8 @@ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 
 .bussiness{
   
-  background-color: blue;
-  color: white;
+  background-color: white;
+  color: rgb(5, 5, 5);
   height: 50px;
   width: 100px;
   border-radius: 25px;
@@ -162,8 +168,8 @@ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 
 .finances{
   
-  background-color: blue;
-  color: white;
+  background-color: white;
+  color: rgb(5, 5, 5);
   height: 50px;
   width: 95px;
   border-radius: 25px;
@@ -175,8 +181,8 @@ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 
 .management{
   
-  background-color: blue;
-  color: white;
+  background-color:white;
+  color: rgb(3, 3, 3);
   height: 50px;
   width: 135px;
   border-radius: 25px;
@@ -189,3 +195,15 @@ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
   padding-left: 30px;
   padding-bottom: 700px;
  }
+.design{
+  margin-left: 20%;
+}
+
+.round{
+  border-radius: 25px;
+}
+
+
+.container .bussiness:hover,.management:hover,.finances:hover ,.all:hover{
+  background-color: rgb(200, 233, 146);
+} 

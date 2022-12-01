@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bgi {
+  background-image: url("https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4645e4ccfc4_image-home-v3-hero-startup-x-template-p-2000.jpeg");
+  height: 60vh;
+  background-size: cover;
+  will-change: transform;
+  transform: translate3d(0px, -16.1773px, 0px) scale3d(1.06471, 1.06471, 1)
+    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+  padding: 10px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  -webkit-box-align: center;
+}
+
+.smalldash {
+  width: 100%;
+  max-width: 60px;
+  min-height: 2px;
+  margin-right: 25px;
+  background-color: #2f5acd;
+}
+
+.us {
+  color: #2f5acd;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.get {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.lorem {
+  font-size: 1.2rem;
+  font-weight: 480;
+  color: #4c4d4e;
+  margin-bottom: 3rem;
+}
+
+.contactnum {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+body {
+  background-color: blue;
+}
+.card {
+  border: none;
+}
+.image {
+  position: relative;
+}
+.image span {
+  background-color: blue;
+  color: #fff;
+  padding: 6px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  font-size: 13px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -0px;
+  right: 0px;
+}
+.user-details h4 {
+  color: blue;
+}
+.ratings {
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color: #f9b43a;
+}
+.user-details span {
+  text-align: left;
+}
+.inputs label {
+  display: flex;
+  margin-left: 3px;
+  font-weight: 500;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+.inputs input {
+  font-size: 14px;
+  height: 40px;
+  border: 1px solid #ced4da;
+}
+.inputs input:focus {
+  box-shadow: none;
+  border: 1px solid blue;
+}
+.about-inputs label {
+  display: flex;
+  margin-left: 3px;
+  font-weight: 500;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+.about-inputs textarea {
+  font-size: 14px;
+  height: 100px;
+  border: 2px solid #ced4da;
+  resize: none;
+}
+.about-inputs textarea:focus {
+  box-shadow: none;
+}
+.btn {
+  font-weight: 600;
+}
+.btn:focus {
+  box-shadow: none;
+}
