@@ -9,6 +9,7 @@ import { CareersComponent } from './careers/careers.component';
 import { BlogComponent } from './blog/blog.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { ErrorComponent } from './error/error.component';
+import { JobrequirmentComponent } from './jobrequirment/jobrequirment.component';
 import { ProfileComponent } from './profile/profile.component';
 
 
@@ -21,6 +22,7 @@ import { ProfileComponent } from './profile/profile.component';
     BlogComponent,
     ContactusComponent,
     ErrorComponent,
+    JobrequirmentComponent,
     ProfileComponent
   ],
   imports: [

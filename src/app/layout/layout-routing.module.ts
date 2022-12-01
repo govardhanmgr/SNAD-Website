@@ -6,6 +6,7 @@ import { CareersComponent } from './careers/careers.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { ErrorComponent } from './error/error.component';
 import { HomeComponent } from './home/home.component';
+import { JobrequirmentComponent } from './jobrequirment/jobrequirment.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ServicesComponent } from './services/services.component';
 
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: "contactus", component: ContactusComponent },
   { path: "services", component: ServicesComponent },
   { path: "careers", component: CareersComponent },
+  {path:"jobrequirment",component:JobrequirmentComponent},
   { path: "profile",component:ProfileComponent},
 
 
