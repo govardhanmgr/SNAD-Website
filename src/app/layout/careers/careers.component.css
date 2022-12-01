@@ -34,3 +34,21 @@ h1{
   .ring{
     background-color:#2f5acd;
   }
+  .ima{
+    position: relative;
+  }
+  
+  /* Bottom right text */
+  .text-block {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .val{
+    margin: 0%;
+    width: 100%;
+  }
