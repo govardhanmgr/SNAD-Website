@@ -118,12 +118,18 @@ body {
   font-size: 13px;
   margin-bottom: 4px;
 }
-.about-inputs textarea {
+.inputs textarea {
   font-size: 14px;
   height: 100px;
   border: 2px solid #ced4da;
   resize: none;
 }
+
+.inputs textarea:focus {
+  box-shadow: none;
+  border: 1px solid blue;
+}
+
 .about-inputs textarea:focus {
   box-shadow: none;
 }
