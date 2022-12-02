@@ -41,7 +41,9 @@ const routes: Routes = [
   { path: "manageditservices", component: ManagedItServicesComponent },
   { path: "migrationstabilization", component: MigrationStabilizationComponent },
   { path: "profile", component: ProfileComponent },
+  { path: "jobrequirement", component: JobrequirmentComponent },
   { path: "blogsection", component: BlogsectionComponent },
+
 
 
 
