@@ -1,11 +1,25 @@
+/* open positions */
 .opening{
-    border-radius: 20px;
+    border-radius: 30px;
     height: 8cm;
 }
+.openpos{
+  float: left;
+}
+.fixb{
+  width:30rem ;
+}
+.rdbn{
+ 
+  
+}
+
 .matter{
     margin-top: 5%; 
     margin-left: 3%;
 }
+
+
 .margin{
     margin-left: 4%;
 }
@@ -14,7 +28,6 @@
 }
 .growth{
     background-color:#edf1fd;
-    height: 10%;
 }
 h1{
     text-align: center;
@@ -33,6 +46,7 @@ h1{
   }
   .ring{
     background-color:#2f5acd;
+    overflow:hidden ;
   }
   .ima{
     position: relative;
@@ -51,4 +65,67 @@ h1{
   .val{
     margin: 0%;
     width: 100%;
+  }
+  .circle {
+    background: #0981BD;
+    border-radius: 50%;
+    height: 13em;
+    width: 13em;
+    opacity: 10;
+    margin-left: -50px;
+    margin-bottom: -150px;
+  }
+  
+  .ajo{
+    margin-top: 10%;
+    float: right;
+    border-radius: 30px;
+  }
+  h2{
+    text-align: center;
+  }
+  .core{
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+  .values{
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  h6{
+    text-align: center;
+    color: blue;
+  }
+  .value{
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10%;
+  }
+  h1{
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  .perk{
+    padding-top:37px ;
+    padding-left: 44px;
+    padding-right: 44px;
+    padding-bottom: 47px;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  .txtcl{
+    color: #edf1fd;
+  }
+  .open{
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  /* growth */
+
+  .grow{
+    margin-top: 2%;
+    margin-bottom: 2%;
+
   }
