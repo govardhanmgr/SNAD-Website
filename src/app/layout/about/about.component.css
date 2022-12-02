@@ -220,7 +220,7 @@ align-items: flex-start;
 }
 .light:hover{
     border-radius: 12px;
-    
+    border-color:#3c3c3c;
 }
 .team{
     text-align: center;
