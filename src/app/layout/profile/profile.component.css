@@ -1,23 +1,34 @@
 .card{
+   border-radius: 25px;
+   text-align: center;
     height: 900px;
-    width: 900px;
-    margin: 0 auto; /* Added */
-    float: none; /* Added */
-    margin-bottom: 10px; /* Added */
-    /* content: justify; */
+    width: 800px;
+    margin: 0 auto;
+    float: none; 
+    margin-bottom: 10px; 
+   
 }
 .card-text{
     text-align: left;
+    margin-left: 40px;
+    margin-right: 40px;
+    color: #6f7278;
+    
+    font-family: Thicccboi, sans-serif;
+    font-size: 18px;
+    line-height: 1.833em;
+    font-weight: 500;
 }
 .card-title{
     text-align: left;
+    margin-left: 40px;
+    margin-right: 40px;
 }
-.networks:hover .fa-facebook {
-    color: rgb(59,89,152);
-  }
-  #facebook.networks-outer:hover {
-    border-color: rgb(59,89,152);
-  }
+.card-footer{
+  text-align: left;
+  margin-left: 40px;
+    margin-right: 40px;
+}
   .btn btn-primary {
 text-align: right;
   }
@@ -27,3 +38,52 @@ text-align: right;
   .background{
     color: blue;
   }
+  .btn{
+    float: right;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-top:10px ;
+    padding-bottom: 10px;
+    padding-right: 10px;
+  }
+  .fa {
+ 
+    padding: 10px;
+  font-size: 10px;
+  width: 30px;
+  text-align:center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  
+  
+  }
+  
+  .fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+  .networks{
+    text-align: right;
+    margin-top: 30px;
+    margin-left: 10px;
+    
+  }
+  
+    
+  
