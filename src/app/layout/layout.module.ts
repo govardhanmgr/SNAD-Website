@@ -17,6 +17,7 @@ import { ManagedItServicesComponent } from './managed-it-services/managed-it-ser
 import { MigrationStabilizationComponent } from './migration-stabilization/migration-stabilization.component';
 import { DigitalTransformationComponent } from './digital-transformation/digital-transformation.component';
 import { ProfileComponent } from './profile/profile.component';
+import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 import { BlogsectionComponent } from './blogsection/blogsection.component';
 
 
@@ -42,7 +43,10 @@ import { BlogsectionComponent } from './blogsection/blogsection.component';
   ],
   imports: [
     CommonModule,
-    LayoutRoutingModule
-  ]
+    LayoutRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
 })
-export class LayoutModule { }
+export class LayoutModule {}
