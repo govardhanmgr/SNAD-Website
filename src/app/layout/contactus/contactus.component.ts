@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { ICdetails } from './cDetails-model';
 
 @Component({
   selector: 'app-contactus',
@@ -7,21 +8,13 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./contactus.component.css'],
 })
 export class ContactusComponent implements OnInit {
-  repeatpass: string = 'none';
+  contactformd = {} as ICdetails;
+
   constructor() {}
 
   ngOnInit(): void {}
 
-  contactForm = new FormGroup({
-    firstname: new FormControl(''),
-    email: new FormControl(''),
-    phone: new FormControl(''),
-    organisation: new FormControl(''),
-    country: new FormControl(''),
-    service: new FormControl(''),
-    suggestion: new FormControl(''),
-    message: new FormControl(''),
-  });
-
-  contactSubmit() {}
+  contactSubmit(f: NgForm) {
+    console.log(this.contactformd);
+  }
 }

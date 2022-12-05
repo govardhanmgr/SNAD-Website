@@ -77,7 +77,11 @@
       <div class="col-md-8 justify-content-end">
         <div class="container p-3">
           <div class="m-4 p-4">
-            <form (ngSubmit)="contactSubmit()">
+            <form
+              name="contactform"
+              #contactForm="ngForm"
+              (ngSubmit)="contactForm.valid && contactSubmit(contactForm)"
+            >
               <div class="card rounded-4 shadow p-3 text-center">
                 <div class="d-flex flex-row justify-content-center mb-3"></div>
                 <div class="row">
@@ -85,15 +89,36 @@
                     <div class="inputs">
                       <input
                         type="text"
+                        id="firstname"
                         class="form-control"
                         type="text"
                         placeholder="firstname"
                         name="firstname"
-                        formControlName="firstname"
+                        required
+                        #firstname="ngModel"
+                        [(ngModel)]="contactformd.firstname"
+                        pattern="[a-zA-Z].*"
                       />
                     </div>
-                    <div div class="text-start form-text text-danger">
-                      Please Enter Name
+                    <div
+                      *ngIf="
+                        (firstname.invalid && firstname.touched) ||
+                        (firstname.invalid && contactForm.submitted)
+                      "
+                      class="alert"
+                    >
+                      <div
+                        *ngIf="firstname.errors?.['required']"
+                        class="form-text text-danger text-start"
+                      >
+                        Enter Your Nmae
+                      </div>
+                      <div
+                        *ngIf="firstname.errors?.['pattern']"
+                        class="form-text text-danger text-start"
+                      >
+                        First Name start with Alphabet
+                      </div>
                     </div>
                   </div>
 
@@ -102,27 +127,62 @@
                       <input
                         type="email"
                         class="form-control"
-                        type="text"
                         placeholder="Email"
-                        formControlName="email"
+                        ngModel
+                        email
+                        required
+                        #email="ngModel"
+                        name="email"
+                        pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                        [(ngModel)]="contactformd.email"
                       />
                     </div>
-                    <div div class="text-start form-text text-danger">
-                      Please Enter email
+                    <div
+                      class="text-start form-text text-danger"
+                      *ngIf="
+                        (email.invalid && email.touched) ||
+                        (email.invalid && contactForm.submitted)
+                      "
+                    >
+                      Please Enter valid email
                     </div>
                   </div>
                   <div class="col-md-6 p-3">
                     <div class="inputs">
                       <input
-                        type="text"
+                        type="number"
                         class="form-control"
-                        type="text"
-                        placeholder="Phone"
-                        formControlName="phone"
+                        placeholder="Enetr Phone number"
+                        ngModel
+                        required
+                        name="mobile"
+                        #mobile="ngModel"
+                        pattern="^((\\+91-?)|0)?[0-9]{10}$"
+                        minlength="10"
+                        id="mobile"
+                        [(ngModel)]="contactformd.mobile"
                       />
-                    </div>
-                    <div div class="text-start form-text text-danger">
-                      Please Enter phone number
+
+                      <div
+                        *ngIf="
+                          (mobile.invalid && mobile.touched) ||
+                          (mobile.invalid && contactForm.submitted)
+                        "
+                        class="alert"
+                      >
+                        <div
+                          *ngIf="mobile.errors?.['required']"
+                          class="form-text text-danger text-start"
+                        >
+                          Contact Number is required
+                        </div>
+                        <div
+                          *ngIf="mobile.errors?.['pattern']"
+                          class="form-text text-danger text-start"
+                        >
+                          Please enter a valid contact number
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="col-md-6 p-3">
@@ -132,10 +192,21 @@
                         class="form-control"
                         type="text"
                         placeholder="Organisation"
-                        formControlName="organisation"
+                        ngModel
+                        required
+                        name="organisation"
+                        #organisation="ngModel"
+                        [(ngModel)]="contactformd.organisation"
                       />
                     </div>
-                    <div div class="text-start form-text text-danger">
+                    <div
+                      div
+                      class="text-start form-text text-danger"
+                      *ngIf="
+                        (organisation.invalid && organisation.touched) ||
+                        (organisation.invalid && contactForm.submitted)
+                      "
+                    >
                       Please Enter organisation
                     </div>
                   </div>
@@ -145,11 +216,22 @@
                         type="text"
                         class="form-control"
                         type="text"
-                        placeholder="Coutry"
-                        formControlName="country"
+                        placeholder="Country"
+                        ngModel
+                        required
+                        name="country"
+                        #country="ngModel"
+                        [(ngModel)]="contactformd.country"
                       />
                     </div>
-                    <div div class="text-start form-text text-danger">
+                    <div
+                      div
+                      class="text-start form-text text-danger"
+                      *ngIf="
+                        (country.invalid && country.touched) ||
+                        (country.invalid && contactForm.submitted)
+                      "
+                    >
                       Please Enter country
                     </div>
                   </div>
@@ -160,10 +242,21 @@
                         class="form-control"
                         type="text"
                         placeholder="Service interested"
-                        formControlName="service"
+                        ngModel
+                        required
+                        name="service"
+                        #service="ngModel"
+                        [(ngModel)]="contactformd.service"
                       />
                     </div>
-                    <div div class="text-start form-text text-danger">
+                    <div
+                      div
+                      class="text-start form-text text-danger"
+                      *ngIf="
+                        (service.invalid && service.touched) ||
+                        (service.invalid && contactForm.submitted)
+                      "
+                    >
                       Please Enter service
                     </div>
                   </div>
@@ -173,10 +266,20 @@
                         class="form-control"
                         type="text"
                         placeholder="How can We Help You?"
-                        formControlName="suggestion"
+                        ngModel
+                        required
+                        name="text"
+                        #text="ngModel"
+                        [(ngModel)]="contactformd.text"
                       />
                     </div>
-                    <div div class="text-start form-text text-danger">
+                    <div
+                      class="text-start form-text text-danger"
+                      *ngIf="
+                        (text.invalid && text.touched) ||
+                        (text.invalid && contactForm.submitted)
+                      "
+                    >
                       Please Enter text
                     </div>
                   </div>
@@ -188,11 +291,21 @@
                         type="message"
                         class="form-control"
                         placeholder="What's Your Message"
-                        formControlName="message"
+                        ngModel
+                        required
+                        name="message"
+                        #message="ngModel"
+                        [(ngModel)]="contactformd.message"
                       >
                       </textarea>
                     </div>
-                    <div class="text-start form-text text-danger">
+                    <div
+                      class="text-start form-text text-danger"
+                      *ngIf="
+                        (message.invalid && message.touched) ||
+                        (message.invalid && contactForm.submitted)
+                      "
+                    >
                       Please Enter message
                     </div>
                   </div>
