@@ -18,6 +18,8 @@ import { MigrationStabilizationComponent } from './migration-stabilization/migra
 import { DigitalTransformationComponent } from './digital-transformation/digital-transformation.component';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
+import { BlogsectionComponent } from './blogsection/blogsection.component';
+
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
     MigrationStabilizationComponent,
     DigitalTransformationComponent,
     ProfileComponent,
+    BlogsectionComponent  
+
   ],
   imports: [
     CommonModule,

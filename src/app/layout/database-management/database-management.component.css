@@ -1,0 +1,37 @@
+.card {
+    background-image: url("https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/63770bc325cdcb0bc742ad5b_pexels-sevenstorm-juhaszimrus-443383.webp");
+    background-size: cover;
+    height: 400px;
+    width: 150%
+    
+}
+
+.title {
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+    padding: 10px;
+}
+
+.paragraph {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.button {
+    width: 20%;
+    margin: 10px;
+    height: 40px;
+    border-radius: 80px;
+    color: white;
+    background-color: gray;
+}
+
+.button:hover {
+    border-color: rgb(22, 156, 201);
+    color: rgb(23, 165, 212);
+    transform: scale(1.1);
+    transition: all 0.3s linear;
+}

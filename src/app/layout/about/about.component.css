@@ -174,10 +174,12 @@ text-align: center;
 .background{
  background-color:#2f5acd;
  height:8%;
+ overflow: hidden;
+ 
 }
 .ourvalue{
     background-color:#edf1fd;
-    height:30%;
+    height: 10%;
     
 }
 .ourstory{
@@ -220,7 +222,7 @@ align-items: flex-start;
 }
 .light:hover{
     border-radius: 12px;
-    
+    border-color:#337ab7;
 }
 .team{
     text-align: center;
@@ -246,4 +248,108 @@ align-items: flex-start;
     margin-left: 4%;
     margin-right: 4%;
     border-radius: 3%;
+
 }
+.btn{
+    border-radius: 100px;
+    border-color: black;
+    width: 10%;
+    padding-left: 1%;
+    padding-top:1% ;
+    padding-bottom: 1%;
+    padding-right:1% ;
+
+}
+.button{
+    border-radius: 100px;
+    padding-left: 15px;
+    padding-top:15px ;
+    padding-bottom: 15px;
+    padding-right:15px ;
+    background-color:#2f5acd;
+    
+}
+.circle {
+
+    background: #0981BD;
+
+    border-radius: 50%;
+
+    height: 13em;
+
+    width: 13em;
+
+    opacity: 10;
+
+    margin-left: -100px;
+
+    margin-top: -100px;
+
+  }
+  .impact{
+    overflow: hidden;
+  }
+  .crc{
+    float: right;
+    margin-right: -90px;
+  }
+  .flat{
+    float: right;
+    margin-bottom: -10px;
+    margin-top: 20px;
+    background-color: blue;
+    color: white;
+  }
+
+  .cores{
+    padding-top:37px ;
+    padding-left: 44px;
+    padding-right: 44px;
+    padding-bottom: 47px;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  .hero-text{
+    z-index: -1;
+    position: absolute;
+  }
+  .header{
+    
+    height:100vh;
+  }
+  .video-background{
+    position:absolute;
+    right:0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width:auto;
+    height:auto;
+    z-index: -1;
+  }
+  @media(min-aspect-ratio:){
+    .video-background{
+        width:100%;
+        height:100%
+    }
+  }
+  
+
+
+
+  .style{
+    text-align: left;
+    color: white;
+  }
+  .welcome{
+   color: white;
+  }
+.buttons{
+    /* padding-left: ;
+    padding-top: ; */
+    padding-bottom:60px ;
+    /* padding-right: ;
+    margin-bottom: 20px; */
+}
+     
+
