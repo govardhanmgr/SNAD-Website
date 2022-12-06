@@ -12,6 +12,41 @@
   padding-bottom: 40px;
 
 }
+ 
+.butstyl {
+  position: absolute;
+  bottom:  79%;
+  left: 83%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: white;
+  color: rgb(2, 2, 2);
+  font-size: 16px;
+  padding: 12px 32px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  
+}
+
+.butstyli1{
+  position: absolute;
+  bottom:  85%;
+  left: 87%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: white;
+  color: rgb(2, 2, 2);
+  font-size: 16px;
+  padding: 12px 32px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  
+}
+.butstyl:hover,.butstyli1:hover {
+  background-color: rgb(225, 223, 236);
+}
 h1{
   padding-bottom: 40px;
 }
@@ -60,7 +95,7 @@ h1{
   height: 400px;
   text-align: center;
   color: white;
-  margin-top: 200px;
+  margin-top: 180px;
   padding: 150px 0;
   
 }
@@ -68,6 +103,7 @@ h1{
 .buttonin{
   width: 350px;
   height: 100px;
+ 
 }
 
 .input{
@@ -92,4 +128,5 @@ h1{
   border-bottom: 0;
   width: 150px;
   align-self: flex-end;
+  
 }
