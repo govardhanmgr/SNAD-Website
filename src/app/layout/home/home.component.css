@@ -14,16 +14,7 @@
 
 }
 
-.img {
 
-    background-image: url('https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4645e4ccfc4_image-home-v3-hero-startup-x-template-p-2000.jpeg');
-    height: 60vh;
-    background-size: cover;
-    will-change: transform;
-    transform: translate3d(0px, -16.1773px, 0px) scale3d(1.06471, 1.06471, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;
-    padding: 10px;
-}
 
 .a {
     border: 1px solid black;
@@ -82,3 +73,82 @@
 .img-one {
     width: 90%;
 }
+
+
+ /* header image */
+
+ .header{
+ 
+    height: 100vh;
+   }
+   .img-background{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    max-width: 100%;
+    width: auto;
+    height:auto;
+    z-index: -1;
+    
+   }
+  
+   @media (min-aspect-ratio:16/9) {
+    .img-background{
+      width: 100%;
+      height: auto;
+    }
+    
+   }
+  
+   @media (max-aspect-ratio:16/9) {
+    .img-background{
+      width: auto;
+      height: 100%;
+    }
+    
+   }
+  
+   .text-content{
+    color: white;
+    margin-left: 10%;
+    margin-top: 12%;
+   }
+   .text{
+    font-size: 50px;
+   }
+   .perk{
+    border-radius: 30px;
+    padding:40px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #dadcec;
+    box-shadow: 0 4px 10px 0 rgb(41 44 50 / 3%);
+   }
+   .growth{
+    background-color: #2f5acd;
+
+   }
+   .num{
+    text-align: center;
+    color: white;
+   }
+   .impact{
+    color: white;
+   }
+   
+   .our
+   {
+    background-color: #dadcec;
+    margin-top: 10%;
+   }
+
+   .clients{
+    text-align: center;
+     padding-top: 92px;
+    padding-bottom: 92px;
+   }
+   .header{
+    height:100vh;
+   }
+  
