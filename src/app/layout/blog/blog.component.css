@@ -130,3 +130,12 @@ h1{
   align-self: flex-end;
   
 }
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: rgb(46, 48, 180);
+  text-decoration: none;
+}
