@@ -1,16 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { ICdetails } from './cDetails-model';
 
 @Component({
   selector: 'app-contactus',
   templateUrl: './contactus.component.html',
-  styleUrls: ['./contactus.component.css']
+  styleUrls: ['./contactus.component.css'],
 })
 export class ContactusComponent implements OnInit {
+  contactformd = {} as ICdetails;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  contactSubmit(f: NgForm) {
+    console.log(this.contactformd);
   }
-
 }
