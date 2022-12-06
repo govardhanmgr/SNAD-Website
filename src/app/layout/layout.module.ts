@@ -17,6 +17,7 @@ import { ManagedItServicesComponent } from './managed-it-services/managed-it-ser
 import { MigrationStabilizationComponent } from './migration-stabilization/migration-stabilization.component';
 import { DigitalTransformationComponent } from './digital-transformation/digital-transformation.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AnimationComponent } from './animation/animation.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { ProfileComponent } from './profile/profile.component';
     ManagedItServicesComponent,
     MigrationStabilizationComponent,
     DigitalTransformationComponent,
-    ProfileComponent  
+    ProfileComponent,
+    AnimationComponent  
 
   ],
   imports: [

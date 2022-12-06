@@ -16,6 +16,7 @@ import { DigitalTransformationComponent } from './digital-transformation/digital
 import { ManagedInfrastructureComponent } from './managed-infrastructure/managed-infrastructure.component';
 import { ManagedItServicesComponent } from './managed-it-services/managed-it-services.component';
 import { MigrationStabilizationComponent } from './migration-stabilization/migration-stabilization.component';
+import { AnimationComponent } from './animation/animation.component';
 
 
 
@@ -38,8 +39,9 @@ const routes: Routes = [
   { path: "digitaltransformation", component: DigitalTransformationComponent },
   { path: "managedinfrastructure", component: ManagedInfrastructureComponent },
   { path: "manageditservices", component:ManagedItServicesComponent},
-  { path: "migrationstabilization", component:MigrationStabilizationComponent},
+  { path: "migrationstabilization", component:MigrationStabilizationComponent},       
   { path: "profile",component:ProfileComponent},
+  { path:"animation",component:AnimationComponent},
 
 
 
