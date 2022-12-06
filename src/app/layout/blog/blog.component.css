@@ -211,3 +211,9 @@ a, a:hover, a:focus, a:active {
   text-decoration: none;
   color: inherit;
 }
+.line{
+
+  background-color: rgba(126, 114, 114, 0.911);
+  height: 1px;
+  
+}
