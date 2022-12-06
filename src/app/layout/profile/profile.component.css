@@ -34,6 +34,8 @@ text-align: right;
   }
   .img{
     margin-left: 30%;
+    
+
   }
   .background{
     color: blue;
@@ -80,8 +82,15 @@ text-align: right;
 }
   .networks{
     text-align: right;
-    margin-top: 30px;
+    margin-top: 3%;
     margin-left: 10px;
+    
+    
+  }
+  .container{
+    background-color: #3B5998;
+    width: 100%;
+    
     
   }
   
