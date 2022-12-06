@@ -326,6 +326,7 @@ align-items: flex-start;
     width:auto;
     height:auto;
     z-index: -1;
+
   }
   @media(min-aspect-ratio:){
     .video-background{
@@ -343,6 +344,8 @@ align-items: flex-start;
   }
   .welcome{
    color: white;
+   margin-top: 10%;
+   margin-left: 8%;
   }
 .buttons{
     /* padding-left: ;
@@ -351,5 +354,7 @@ align-items: flex-start;
     /* padding-right: ;
     margin-bottom: 20px; */
 }
-     
+.card-img-top :hover{
+
+}
 
