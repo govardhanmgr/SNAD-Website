@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import * as Aos from 'aos';
 import { Entry } from 'contentful';
 
 import { CmsservicesService } from 'src/app/cmsservices.service';
@@ -10,12 +11,21 @@ import { CmsservicesService } from 'src/app/cmsservices.service';
 })
 export class AboutComponent implements OnInit {
 
+scroll(el: HTMLElement) {
+ el.scrollIntoView({behavior: 'smooth'});
+ }
+
+
+
   Abouts: Entry<any>[] = [];
   Ourpeoples: Entry<any>[] = [];
 
   constructor(private router: Router, private CmsservicesService: CmsservicesService) { }
 
   ngOnInit(): void {
+    Aos.init({
+      duration: 1200,
+    })
 
     this.CmsservicesService.getAbouts()
       .then((About: Entry<any>[]) => {
