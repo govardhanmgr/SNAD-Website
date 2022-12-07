@@ -27,6 +27,7 @@
   cursor: pointer;
   border-radius: 20px;
   display: inline-block;
+  width: auto;
   
 }
 
@@ -96,7 +97,7 @@ h1{
 }
 .container-fluid{
   background-color: rgb(41, 91, 230);    
-  height: 400px;
+
   text-align: center;
   color: white;
   margin-top: 180px;
@@ -105,9 +106,9 @@ h1{
 }
 
 .buttonin{
-  width: 350px;
-  height: 100px;
-  display: inline-block;
+  
+  margin: auto;
+  width: fit-content;
  
 }
 
@@ -158,4 +159,19 @@ a:hover, a:focus {
 .left{
   margin-left: -10px;
   width: 70px;
+}
+
+.btn:hover{
+  border-color: black;
+  color: black;
+
+
+}
+.btnbot{
+  border-radius: 0%;
+  background-color:  rgb(41, 91, 230);
+  color: white;
+  padding: 20px;
+  min-width: 100%;
+
 }
