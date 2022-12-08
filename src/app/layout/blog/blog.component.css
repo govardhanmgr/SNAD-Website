@@ -5,6 +5,9 @@
   
 
 }
+h1{
+  font-size: 50px;
+}
 
 .i1 {
   margin: auto;
@@ -105,12 +108,6 @@ h1{
   
 }
 
-.buttonin{
-  
-  margin: auto;
-  width: fit-content;
- 
-}
 
 .input{
   height: 70px;
@@ -167,11 +164,35 @@ a:hover, a:focus {
 
 
 }
-.btnbot{
-  border-radius: 0%;
-  background-color:  rgb(41, 91, 230);
-  color: white;
-  padding: 20px;
-  min-width: 100%;
 
+label{
+  position: relative;
+}
+input[type="text"]{
+  border: none;
+  width: 600px;
+  height: 80px;
+  padding: 0 16px;
+  border-radius: 75px;
+  border-color: white;
+  
+
+}
+.get{
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  bottom: 7px;
+  background-color: rgb(41, 91, 230);
+  color: white;
+  padding: 0 16px;
+  letter-spacing: 3px;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+}
+.get:hover{
+  transition: .8s;
+  background-color: #6c6c6c;
 }
