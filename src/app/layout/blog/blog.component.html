@@ -6,11 +6,11 @@
 
 
 <div class="i1" data-aos="fade-up" data-aos-anchor-placement="top-center">
-  <a href="">
+  <a href="./business-article">
 <div class="card i1" >
   <img src="assets/b1.jpeg" class="card-img-top" alt="..." class="zoom" >
   
-  <button class="btn" class="butstyli1"> <b>Bussines</b></button>
+  <button class="btn" class="butstyli1"><img src="/assets/br.png" alt="Bootstrap" width="32" height="32"> <b>Business</b></button>
   <div class="card-body">
     <div class="bottom-sec">
       <h3>Is it smart to invest in cryptocurrency in 2021? What you need to know</h3>
@@ -31,21 +31,28 @@
 <div class="container"  data-aos="fade-up" data-aos-anchor-placement="top-center"  >
   <div class="row">
     <div class="col col-12  col-sm-12 col-md-6 col-lg-6 col-xxl-6"><h1 class="h1left">Latest articles</h1></div>
-    <div class="col col-12  col-sm-12 col-md-12 col-lg-12 col-xxl-6">
+    <div class="col col-12  col-sm-12 col-md-6 col-lg-6 col-xxl-6">
       <div class="bg">
       <div class="btn-group" role="group" aria-label="Basic radio toggle button group" class="b1">
         <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
         <label class="btn btn-outline-primary left" for="btnradio1">  <b> All</b>  </label>
-        
-      
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-        <label class="btn btn-outline-primary " for="btnradio2"><img src="/assets/br.png" alt="Bootstrap" width="32" height="32"><b>Bussines</b></label>
-      
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btnradio3"><img src="/assets/fin.png" alt="Bootstrap" width="32" height="32"><b>Finances</b></label>
 
-        <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
-        <label class="btn btn-outline-primary" for="btnradio4"><img src="/assets/m.png" alt="Bootstrap" width="32" height="32"><b>Management</b></label>
+        <a [routerLink]="['/businessarticles']" routerLinkActive="router-link-active" >
+          
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+        <label class="btn btn-outline-primary " for="btnradio2"><img src="/assets/br.png" alt="Bootstrap" width="32" height="32"><b>Business</b></label>
+        </a>
+      
+      
+        <a [routerLink]="['/financearticles']" routerLinkActive="router-link-active" >
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+          <label class="btn btn-outline-primary" for="btnradio3"><img src="/assets/fin.png" alt="Bootstrap" width="32" height="32"><b>Finances</b></label>
+        </a>
+
+        <a [routerLink]="['/managementarticles']" routerLinkActive="router-link-active" >
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+          <label class="btn btn-outline-primary" for="btnradio4"><img src="/assets/m.png" alt="Bootstrap" width="32" height="32"><b>Management</b></label>
+        </a>
       </div>
       </div>
     </div>
@@ -61,7 +68,7 @@
         <a href="">
          <div class="card" >
           <img src="assets/bt4.jpeg" class="card-img-top" alt="..." class="zoom">
-          <button class="btn" class="butstyl"> <b>Bussines</b></button>
+          <button class="btn" class="butstyl"> <b>Business</b></button>
   
           <div class="card-body">
             <h3 class="card-title">Is it smart to invest in cryptocurrency in 2021? What you need to know</h3>
