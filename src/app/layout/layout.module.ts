@@ -20,6 +20,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 import { BlogsectionComponent } from './blogsection/blogsection.component';
 import { AnimationComponent } from './animation/animation.component';
+import { BusinessarticlesComponent } from './businessarticles/businessarticles.component';
+import { FinancearticlesComponent } from './financearticles/financearticles.component';
+import { ManagementarticlesComponent } from './managementarticles/managementarticles.component';
 
 
 @NgModule({
@@ -40,7 +43,10 @@ import { AnimationComponent } from './animation/animation.component';
     DigitalTransformationComponent,
     ProfileComponent,
     BlogsectionComponent,  
-    AnimationComponent 
+    AnimationComponent, 
+    BusinessarticlesComponent, 
+    FinancearticlesComponent,
+    ManagementarticlesComponent, 
 
   ],
   imports: [

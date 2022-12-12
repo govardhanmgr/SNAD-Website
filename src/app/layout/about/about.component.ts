@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import * as Aos from 'aos';
 import { Entry } from 'contentful';
 
-import { CmsservicesService } from 'src/app/cmsservices.service';
+
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -10,23 +11,22 @@ import { CmsservicesService } from 'src/app/cmsservices.service';
 })
 export class AboutComponent implements OnInit {
 
-  Abouts: Entry<any>[] = [];
-  Ourpeoples: Entry<any>[] = [];
+scroll(el: HTMLElement) {
+ el.scrollIntoView({behavior: 'smooth'});
+ }
 
-  constructor(private router: Router, private CmsservicesService: CmsservicesService) { }
+
+
+  
+
+  constructor() { }
 
   ngOnInit(): void {
+    Aos.init({
+      duration: 1200,
+    })
 
-    this.CmsservicesService.getAbouts()
-      .then((About: Entry<any>[]) => {
-        this.Abouts = About
-        console.log(this.Abouts)
-      });
-    this.CmsservicesService.getOurpeoples()
-      .then((Our: Entry<any>[]) => {
-        this.Ourpeoples = Our
-        console.log(this.Ourpeoples)
-      })
+   
   }
   // select(About:any){
   //   localStorage.getItem("",JSON.stringify(About) );

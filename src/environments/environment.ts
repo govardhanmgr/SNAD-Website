@@ -4,15 +4,9 @@
 
 export const environment = {
   production: false,
-  Abouted:{
-    spaceId:'18z2tj3s8y9j',
-    token:'5_1gfiD1ZFeXKsz9DFHigyKPz_oITzTKaAzG5GNGUcU'
-  },
-  Blog:{
-    spaceId:'18z2tj3s8y9j',
-    token:'5_1gfiD1ZFeXKsz9DFHigyKPz_oITzTKaAzG5GNGUcU'
-  }
+  Apiurl:"http://127.0.0.1:1337/api/"
 };
+
 
 /*
  * For easier debugging in development mode, you can import the following file

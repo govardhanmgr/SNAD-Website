@@ -1,13 +1,24 @@
 <!--head image-->
-
+<button type="button" class="btn btn-info scroll-to-top" (click)="gotoTop()">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+  </svg>
+</button>
 <section class="header">
-  <img src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4645e4ccfc4_image-home-v3-hero-startup-x-template-p-2000.jpeg" class="img-background">
+  <img
+    src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4645e4ccfc4_image-home-v3-hero-startup-x-template-p-2000.jpeg"
+    class="img-background" data-aos="fade-up">
   <div class="text-content">
-
-    <b><p class="text">The most transparent <br>& Secured banking ever</p></b>
-    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.<br>
-       Consectetur tortor nunc aliquam consectetur semper augue at
-      </p>
+    <div class="contact">
+      <div class="smalldash"></div>
+      <div class="us">INSPIRED TO HELP</div>
+    </div>
+    <b>
+      <p class="text" data-aos="fade-up" data-aos-delay="1500">The most transparent <br>& Secured banking ever</p>
+    </b>
+    <p data-aos="fade-up" data-aos-delay="1500">Lorem ipsum dolor sit amet consectetur adipiscing elit.<br>
+      Consectetur tortor nunc aliquam consectetur semper augue at
+    </p>
   </div>
 </section>
 
@@ -15,73 +26,92 @@
 
 <!--core values-->
 <div class="container">
-  <h2><b>Core Values</b></h2>
+  <h2 data-aos="fade-up"><b>Core Values</b></h2>
   <br>
-  <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisc elit viverra dignissim <br>pellentesque in acolmine.</p>
+  <p style="text-align: center;" data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisc elit viverra
+    dignissim <br>pellentesque in acolmine.</p>
   <h5></h5>
-  
- <div class="row row-cols-1 row-cols-md-3 g-4 core">
-  <!--column-->
-  <div class="col">
-    <div class="card values">
-      <img src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b404ea4cd082_image-1-services-startup-x-template.svg" class="card-img-top" alt="...">
-      <div class="card-body value">
-        <h4 class="card-title"><b>Investment management</b></h4>
-        <p class="card-text">Lorem ipsum dolor sit amet, dol si consectetur adipiscing elit. Sit odio olo erat donec sed non. Lectus eu vel.</p>
-      </div>
-    </div>
-  </div>
-   <!--column-->
-  <div class="col">
+
+  <div class="row row-cols-1 row-cols-md-3 g-4 core" data-aos="fade-up">
+    <!--column-->
+    <div class="col">
       <div class="card values">
-          <img src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4f2ca4cd117_image-2-services-startup-x-template.svg" class="card-img-top" alt="...">
-          <div class="card-body value">
-              <h4 class="card-title"><b>Portfolio diversification</b></h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, dol si consectetur adipiscing elit. Sit odio olo erat donec sed non. Lectus eu vel</p>
-          </div>
-      </div>
-  </div>
-   <!--column-->
-  <div class="col">
-      <div class="card values">
-          <img src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b472394cd080_image-3-services-startup-x-template.svg" class="card-img-top" alt="...">
-          <div class="card-body value">
-            <h4 class="card-title"><b>Investment strategy</b></h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, dol si consectetur adipiscing elit. Sit odio olo erat donec sed non. Lectus eu vel.</p>
-          </div>
-      </div>
-  </div>
-   <!--column-->
-  <div class="col">
-      <div class="card values">
-          <img src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4cf3b4cd083_image-4-services-startup-x-template.svg" class="card-img-top" alt="...">
-          <div class="card-body value">
-            <h4 class="card-title"><b>Cash management</b></h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, dol si consectetur adipiscing elit. Sit odio olo erat donec sed non. Lectus eu vel.</p>
-          </div>
-      </div>
-  </div>
-   <!--column-->
-   <div class="col">
-     <div class="card values ">
-        <img src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b44e684cd085_image-5-services-startup-x-template.svg" class="card-img-top" alt="...">
+        <img
+          src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b404ea4cd082_image-1-services-startup-x-template.svg"
+          class="card-img-top" alt="...">
         <div class="card-body value">
-          <h4 class="card-title"><b>Wealth transfer</b></h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, dol si consectetur adipiscing elit. Sit odio olo erat donec sed non. Lectus eu vel.</p>
+          <h4 class="card-title"><b>Investment management</b></h4>
+          <p class="card-text">Lorem ipsum dolor sit amet, dol si consectetur adipiscing elit. Sit odio olo erat donec
+            sed non. Lectus eu vel.</p>
         </div>
       </div>
     </div>
- <!--column-->
- <div class="col ">
-   <div class="card values">
-      <img src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b46f7a4cd084_image-6-services-startup-x-template.svg" class="card-img-top" alt="...">
-      <div class="card-body value">
-        <h4 class="card-title"><b>Tax planning</b></h4>
-          <p class="card-text">Lorem ipsum dolor sit amet, dol si consectetur adipiscing elit. Sit odio olo erat donec sed non. Lectus eu vel.</p>
+    <!--column-->
+    <div class="col">
+      <div class="card values">
+        <img
+          src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4f2ca4cd117_image-2-services-startup-x-template.svg"
+          class="card-img-top" alt="...">
+        <div class="card-body value">
+          <h4 class="card-title"><b>Portfolio diversification</b></h4>
+          <p class="card-text">Lorem ipsum dolor sit amet, dol si consectetur adipiscing elit. Sit odio olo erat donec
+            sed non. Lectus eu vel</p>
+        </div>
       </div>
-   </div>
+    </div>
+    <!--column-->
+    <div class="col">
+      <div class="card values">
+        <img
+          src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b472394cd080_image-3-services-startup-x-template.svg"
+          class="card-img-top" alt="...">
+        <div class="card-body value">
+          <h4 class="card-title"><b>Investment strategy</b></h4>
+          <p class="card-text">Lorem ipsum dolor sit amet, dol si consectetur adipiscing elit. Sit odio olo erat donec
+            sed non. Lectus eu vel.</p>
+        </div>
+      </div>
+    </div>
+    <!--column-->
+    <div class="col">
+      <div class="card values">
+        <img
+          src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4cf3b4cd083_image-4-services-startup-x-template.svg"
+          class="card-img-top" alt="...">
+        <div class="card-body value">
+          <h4 class="card-title"><b>Cash management</b></h4>
+          <p class="card-text">Lorem ipsum dolor sit amet, dol si consectetur adipiscing elit. Sit odio olo erat donec
+            sed non. Lectus eu vel.</p>
+        </div>
+      </div>
+    </div>
+    <!--column-->
+    <div class="col">
+      <div class="card values ">
+        <img
+          src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b44e684cd085_image-5-services-startup-x-template.svg"
+          class="card-img-top" alt="...">
+        <div class="card-body value">
+          <h4 class="card-title"><b>Wealth transfer</b></h4>
+          <p class="card-text">Lorem ipsum dolor sit amet, dol si consectetur adipiscing elit. Sit odio olo erat donec
+            sed non. Lectus eu vel.</p>
+        </div>
+      </div>
+    </div>
+    <!--column-->
+    <div class="col ">
+      <div class="card values">
+        <img
+          src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b46f7a4cd084_image-6-services-startup-x-template.svg"
+          class="card-img-top" alt="...">
+        <div class="card-body value">
+          <h4 class="card-title"><b>Tax planning</b></h4>
+          <p class="card-text">Lorem ipsum dolor sit amet, dol si consectetur adipiscing elit. Sit odio olo erat donec
+            sed non. Lectus eu vel.</p>
+        </div>
+      </div>
+    </div>
   </div>
- </div>
 </div>
 <br>
 
@@ -90,83 +120,96 @@
 
 <div class="container">
   <div class="perks">
-  <h6>COMPANY PERKS</h6>
-  <h1><b>The great perks of working <br> at Startuper X</b></h1>
- </div>
- <div class="row row-cols-1 row-cols-md-2 g-4 core">
+    <h6 data-aos="fade-up">COMPANY PERKS</h6>
+    <h1 data-aos="fade-up"><b>The great perks of working <br> at Startuper X</b></h1>
+  </div>
+  <div class="row row-cols-1 row-cols-md-2 g-4 core" data-aos="fade-up">
 
     <!--column-->
-  <div class="col">
-    <div class="card mb-3 perk" >
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4bb554cd09e_icon-1-company-perks-startup-x-template.svg" class="img-fluid rounded-start" alt="...">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <div class="col">
+      <div class="card mb-3 perk">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4bb554cd09e_icon-1-company-perks-startup-x-template.svg"
+              class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!--c0lumn-->
+    <div class="col">
+      <div class="card mb-3 perk">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4545d4cd0a1_icon-2-company-perks-startup-x-template.svg"
+              class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--c0lumn-->
+    <div class="col">
+      <div class="card mb-3 perk">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4a0e04cd09f_icon-3-company-perks-startup-x-template.svg"
+              class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--c0lumn-->
+    <div class="col">
+      <div class="card mb-3 perk">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b426ff4cd0a0_icon-4-company-perks-startup-x-template.svg"
+              class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
-
-  <!--c0lumn-->
-    <div class="col">
-      <div class="card mb-3 perk">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4545d4cd0a1_icon-2-company-perks-startup-x-template.svg" class="img-fluid rounded-start" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--c0lumn-->
-    <div class="col">
-      <div class="card mb-3 perk">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4a0e04cd09f_icon-3-company-perks-startup-x-template.svg" class="img-fluid rounded-start" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--c0lumn-->
-    <div class="col">
-      <div class="card mb-3 perk">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b426ff4cd0a0_icon-4-company-perks-startup-x-template.svg" class="img-fluid rounded-start" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
- </div>
-   <div class="bon">
-    <button (click)="scroll(target)" type="button" class="btn btn-lg oppo">Open positions</button>
-   </div>
+  <div class="bon">
+    <button (click)="scroll(target)" type="button" class="btn btn-lg oppo" data-aos="fade-up" data-aos-delay="1300">Open
+      positions</button>
+  </div>
 </div>
 
 <br>
@@ -174,26 +217,28 @@
 
 <!--All Job Openings-->
 <div class="ring">
-
-<div class="container allopen">
+  <div><img
+      src=" https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b443b44ccfb5_shape-2-cta-2-startup-x-template.svg"
+      class="des"></div>
+  <div class="container allopen">
     <div class="row row-cols-1 row-cols-md-2 g-4 open">
 
       <!--column-->
-    <div class="col">
-      <div class=" mb-3 alljobopen txtcl" >
-       <h1>What are we looking for in a employee?</h1>
-      </div>
-    </div>
-  
-    <!--c0lumn-->
       <div class="col">
-        <div class=" mb-3 alljobopen">
-          <button  type="button" class="btn btn-lg btn-light ajo" >All job opening</button>
+        <div class=" mb-3 alljobopen txtcl">
+          <h1 data-aos="fade-up">What are we looking for in a employee?</h1>
         </div>
       </div>
-  
+
       <!--c0lumn-->
       <div class="col">
+        <div class=" mb-3 alljobopen">
+          <button type="button" class="btn btn-lg btn-light ajo" data-aos="fade-up">All job opening</button>
+        </div>
+      </div>
+
+      <!--c0lumn-->
+      <div class="col" data-aos="fade-up">
         <div class=" mb-3 alljobopen">
           <div class="row g-0">
             <div class="col-md-4">
@@ -201,16 +246,17 @@
             </div>
             <div class="col-md-8">
               <div class="card-body txtcl">
-                <h5 class="card-title" >Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-  
+
       <!--c0lumn-->
-      <div class="col">
+      <div class="col" data-aos="fade-up">
         <div class="mb-3 alljobopen">
           <div class="row g-0">
             <div class="col-md-4">
@@ -219,7 +265,8 @@
             <div class="col-md-8">
               <div class="card-body txtcl">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
               </div>
             </div>
           </div>
@@ -227,7 +274,7 @@
       </div>
 
       <!--c0lumn-->
-      <div class="col">
+      <div class="col" data-aos="fade-up">
         <div class=" mb-3 alljobopen">
           <div class="row g-0">
             <div class="col-md-4">
@@ -236,7 +283,8 @@
             <div class="col-md-8">
               <div class="card-body txtcl">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
               </div>
             </div>
           </div>
@@ -244,7 +292,7 @@
       </div>
 
       <!--c0lumn-->
-      <div class="col">
+      <div class="col" data-aos="fade-up">
         <div class=" mb-3 alljobopen">
           <div class="row g-0">
             <div class="col-md-4">
@@ -253,207 +301,215 @@
             <div class="col-md-8">
               <div class="card-body txtcl">
                 <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                  content. This content is a little bit longer.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-  
-   </div>
 
-</div>
-<div class="circle"></div>
+    </div>
+
+  </div>
+  <div class="circle" data-aos="fade-up"></div>
 </div>
 
 
 
 <!--Growth-->
 <div class="growth">
- <div class="container">
-  <br>
-  <br>
-  <br>
-  <br>
+  <div class="container">
+    <br>
+    <br>
+    <br>
+    <br>
     <div style="text-align: center;">
-      <h4 style="color: blue;">Growth</h4>
-      <h1>How our employees have grown with us</h1>
+      <h4 style="color: blue;" data-aos="fade-up">Growth</h4>
+      <h1 data-aos="fade-up">How our employees have grown with us</h1>
       <br>
-     </div>
-  <div class="row row-cols-1 row-cols-md-4 g-4 ">
-   <!--column-->
-   <div class="col ">
-    <h1>98<span style="color: blue">%</span></h1>
-    <div style="text-align: center;">
-    <h4>Customer satisfaction</h4>
     </div>
+    <div class="row row-cols-1 row-cols-md-4 g-4 " data-aos="fade-up">
+      <!--column-->
+      <div class="col ">
+        <h1>98<span style="color: blue">%</span></h1>
+        <div style="text-align: center;">
+          <h4>Customer satisfaction</h4>
+        </div>
+      </div>
+
+      <!--column-->
+      <div class="col ">
+        <h1>205<span style="color: blue">M</span></h1>
+        <div style="text-align: center;">
+          <h4>Monthly active users</h4>
+        </div>
+      </div>
+
+      <!--column-->
+      <div class="col ">
+        <h1>100<span style="color: blue">k</span></h1>
+        <div style="text-align: center;">
+          <h4>New users per week</h4>
+        </div>
+      </div>
+
+      <!--column-->
+      <div class="col ">
+        <h1>55<span style="color:blue">%</span></h1>
+        <div style="text-align: center;">
+          <h4>Growth year-over-year </h4>
+        </div>
+      </div>
+
     </div>
-
-    <!--column-->
-    <div class="col ">
-      <h1>205<span style="color: blue">M</span></h1>
-      <div style="text-align: center;">
-      <h4>Monthly active users</h4>
-    </div>
-    </div>
-
-     <!--column-->
-   <div class="col ">
-    <h1>100<span style="color: blue">k</span></h1>
-    <div style="text-align: center;">
-    <h4>New users per week</h4>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
   </div>
-  </div>
-
-   <!--column-->
-   <div class="col ">
-    <h1>55<span style="color:blue">%</span></h1>
-   <div style="text-align: center;">
-    <h4>Growth year-over-year </h4>
-   </div>
-  </div>
-
-   </div>
-   <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  </div>
- </div>
+</div>
 
 <!--Open positions-->
 <div #target>
-<div class="container opens" >
-  <div class="row row-cols-1 row-cols-md-2 g-4 core">
+  <div class="container opens">
+    <div class="row row-cols-1 row-cols-md-2 g-4 core">
 
-     <!--column-->
-     <div class="col">
-      <div class=" mb-3 " >
-       <h1 class="openpos"><b>Open positions</b></h1>
+      <!--column-->
+      <div class="col" data-aos="fade-up">
+        <div class=" mb-3 ">
+          <h1 class="openpos"><b>Open positions</b></h1>
+        </div>
       </div>
-    </div>
-  
-    <!--c0lumn-->
-      <div class="col">
+
+      <!--c0lumn-->
+      <div class="col" data-aos="fade-up">
         <div class=" mb-3">
           <div class="card d-flex flex-row sdbt pop">
             <div class="rdbn">
-          <div class=" row ">
-            <!--column-->
-           <div class="col">
-            <button class="btn btn-primary button" type="submit">All</button>
-           </div>
-            <!--column-->
-            <div class="col">
-              <button class="btn btn-light button" type="submit">Design</button>
+              <div class=" row ">
+                <!--column-->
+                <div class="col">
+                  <button class="btn btn-primary button" type="submit">All</button>
+                </div>
+                <!--column-->
+                <div class="col">
+                  <button class="btn btn-light button" type="submit">Design</button>
+                </div>
+                <!--column-->
+                <div class="col ">
+                  <button class="btn btn-light button" type="submit">Development</button>
+                </div>
+                <!--column-->
+                <div class="col">
+                  <button class="btn btn-light button" type="submit">Business</button>
+                </div>
+
+              </div>
             </div>
-             <!--column-->
-           <div class="col ">
-            <button class="btn btn-light button" type="submit">Development</button>
-          </div>
-           <!--column-->
-           <div class="col">
-            <button class="btn btn-light button" type="submit">Business</button>
-          </div>
-
-        </div>
-        </div>
           </div>
         </div>
       </div>
 
-    <!--column-->
-    <div class="col ">
-      <div class="card opening">
-        <div class="card-body matter">
-          <h4 class="card-title ho"><b>Junior Frontend Developer</b></h4>
-          <p class="card-text">Lorem ipsum dolor sit amet, dol si consectetur adipiscing elit. Sit odio olo erat donec sed non. Lectus eu vel.</p>
-          <br>
-          <a href="/jobrequirement" class="card-link"  type="button" class="btn button hove">Development</a>    
-          <a href="/jobrequirement" class="card-link"  type="button" class="btn button margin hove">Another link</a>
-        </div>
-      </div>
-    </div>
-     
-
       <!--column-->
-     <div class="col">
-      <div class="card opening" >
-        <div class="card-body matter">
-          <h4 class="card-title"><b>UI/UX Developer</b></h4>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <br>
-          <a href="/jobrequirement" class="card-link"  type="button" class="btn button hove">Card link</a>    
-          <a href="/jobrequirement" class="card-link"  type="button" class="btn button margin hove">Another link</a>
-        </div>
-      </div>
-     </div>
-
-      <!--column-->
-     <div class="col">
-      <div class="card opening">
-        <div class="card-body matter">
-          <h5 class="card-title ">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <br>
-          <a href="/jobrequirement" class="card-link"  type="button" class="btn button hove">Card link</a>    
-          <a href="/jobrequirement" class="card-link"  type="button" class="btn button margin hove">Another link</a>
-        </div>
-      </div>
-      </div>
-
-      <!--column-->
-     <div class="col">
+      <div class="col " data-aos="fade-up">
         <div class="card opening">
-         <div class="card-body matter">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <br>
-          <a href="/jobrequirement" class="card-link"  type="button" class="btn button hove">Card link</a>    
-          <a href="/jobrequirement" class="card-link"  type="button" class="btn button margin hove">Another link</a>
-         </div>
-       </div>
-     </div>
+          <div class="card-body matter">
+            <h4 class="card-title ho"><b>Junior Frontend Developer</b></h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, dol si consectetur adipiscing elit. Sit odio olo erat donec
+              sed non. Lectus eu vel.</p>
+            <br>
+            <a href="/jobrequirement" class="card-link" type="button" class="btn button hove">Development</a>
+            <a href="/jobrequirement" class="card-link" type="button" class="btn button margin hove">Another link</a>
+          </div>
+        </div>
+      </div>
 
-<!--column-->
-<div class="col">
-  <div class="card opening" >
-    <div class="card-body matter">
-      <h4 class="card-title"><b>UI/UX Developer</b></h4>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <br>
-      <a href="/jobrequirement" class="card-link"  type="button" class="btn button hove">Card link</a>    
-      <a href="/jobrequirement" class="card-link"  type="button" class="btn button margin hove">Another link</a>
+
+      <!--column-->
+      <div class="col" data-aos="fade-up">
+        <div class="card opening">
+          <div class="card-body matter">
+            <h4 class="card-title"><b>UI/UX Developer</b></h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <br>
+            <a href="/jobrequirement" class="card-link" type="button" class="btn button hove">Card link</a>
+            <a href="/jobrequirement" class="card-link" type="button" class="btn button margin hove">Another link</a>
+          </div>
+        </div>
+      </div>
+
+      <!--column-->
+      <div class="col" data-aos="fade-up">
+        <div class="card opening">
+          <div class="card-body matter">
+            <h5 class="card-title ">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <br>
+            <a href="/jobrequirement" class="card-link" type="button" class="btn button hove">Card link</a>
+            <a href="/jobrequirement" class="card-link" type="button" class="btn button margin hove">Another link</a>
+          </div>
+        </div>
+      </div>
+
+      <!--column-->
+      <div class="col" data-aos="fade-up">
+        <div class="card opening">
+          <div class="card-body matter">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <br>
+            <a href="/jobrequirement" class="card-link" type="button" class="btn button hove">Card link</a>
+            <a href="/jobrequirement" class="card-link" type="button" class="btn button margin hove">Another link</a>
+          </div>
+        </div>
+      </div>
+
+      <!--column-->
+      <div class="col" data-aos="fade-up">
+        <div class="card opening">
+          <div class="card-body matter">
+            <h4 class="card-title"><b>UI/UX Developer</b></h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <br>
+            <a href="/jobrequirement" class="card-link" type="button" class="btn button hove">Card link</a>
+            <a href="/jobrequirement" class="card-link" type="button" class="btn button margin hove"> Another link</a>
+          </div>
+        </div>
+      </div>
+
+      <!--column-->
+      <div class="col" data-aos="fade-up">
+        <div class="card opening">
+          <div class="card-body matter">
+            <h5 class="card-title ">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <br>
+            <a href="/jobrequirement" class="card-link" type="button" class="btn button hove">Card link</a>
+
+            <a href="/jobrequirement" class="card-link" type="button" class="btn button margin hove"> Another link</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
- </div>
-
-  <!--column-->
- <div class="col">
-  <div class="card opening">
-    <div class="card-body matter">
-      <h5 class="card-title ">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <br>
-      <a href="/jobrequirement" class="card-link"  type="button" class="btn button hove">Card link</a>    
-      <a href="/jobrequirement" class="card-link"  type="button" class="btn button margin hove">Another link</a>
-    </div>
-  </div>
-  </div>
-
-  </div>
-</div>
 </div>
 
 
 
 <!--Find the right position-->
-<div class="find">
+<div class="find" data-aos="fade-up" data-aos-delay="1400">
   <h4><b>Can't find the right position ?</b></h4>
   <br>
-  <p style="text-align: center;" class="position">Lorem ipsum dolor sit amet consectetur adipisc elit <br> viverra dignissim pellentesque in ac.</p>
+  <p style="text-align: center;" class="position">Lorem ipsum dolor sit amet consectetur adipisc elit <br> viverra
+    dignissim pellentesque in ac.</p>
   <br>
   <a href="/contactus" type="button" class="btn btn-lg get">Get in touch</a>
 </div>
-
