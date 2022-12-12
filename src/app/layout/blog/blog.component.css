@@ -1,37 +1,22 @@
-.c {
-  width: 1%;
+.line{
 
-
-    padding: 100px;
-    margin-top: 20px;
-    padding-left: -100pt;
-
-    box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.1);
-  }
-  .font{
-    font-size: 55px;
-    text-align: center;
-  }
+  background-color: rgba(126, 114, 114, 0.911);
+  height: 1px;
   
-  .c img {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 50px;
-    /* background-color: white; */
-    box-shadow: 0 3px 20px 11px rgba(248, 245, 245, 0.897);
-  }
-  
-  .c .top-sec {
-    margin-top: -30px;
-    margin-bottom: 15px;
-    
-  }
 
-  
-.container .btn {
+}
+
+.i1 {
+  margin: auto;
+  width: 65%;
+  padding-bottom: 40px;
+
+}
+ 
+.butstyl {
   position: absolute;
   bottom:  79%;
-  left: 80%;
+  left: 83%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   background-color: white;
@@ -44,29 +29,42 @@
   
 }
 
-.container .btn:hover {
+.butstyli1{
+  position: absolute;
+  bottom:  85%;
+  left: 87%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: white;
+  color: rgb(2, 2, 2);
+  font-size: 16px;
+  padding: 12px 32px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  
+}
+.butstyl:hover,.butstyli1:hover {
   background-color: rgb(225, 223, 236);
 }
-.card:focus {
-  border: none !important;
+h1{
+  padding-bottom: 40px;
 }
-.icon-play{
-  background-size: cover;
-  display: inline-block;
-  height: 15px;
-  width: 15px;
+.i2{
+  padding-top: 40px;
+  margin: auto;
+  width: 65%;
 }
 
-.mydiv {
-  
-  background-color: rgb(41, 91, 230);    
-  height: 400px;
-  text-align: center;
-  color: white;
-  padding: 150px 0;
-
+.zoom:hover{
+  -ms-transform: scale(1.05); /* IE 9 */
+  -webkit-transform: scale(1.075); /* Safari 3-8 */
+  transform: scale(1.019); 
+  overflow: hidden;
+  border-radius: 25px;
 
 }
+
 .card{
   border-radius: 40px;
   border-top: 0;
@@ -74,26 +72,40 @@
   border-right: 0;
   border-bottom: 0;
 }
-
-/*
-.card:hover{
-  transform: scale(1.05);
-box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+.h1left{
+  padding-left: 30px;
 }
-*/
-
-.zoom:hover{
-  -ms-transform: scale(1.05); /* IE 9 */
-  -webkit-transform: scale(1.075); /* Safari 3-8 */
-  transform: scale(1.075); 
-  overflow: hidden;
+.btn-group{
+  
+  width: 85%;
+  
+  
+}
+.btn-check{
   border-radius: 25px;
-
 }
+.bg{
+  padding: 25px;
+  background-color: rgb(225, 223, 236);
+  width: 95%;
+  border-radius: 25pt;
+}
+.container-fluid{
+  background-color: rgb(41, 91, 230);    
+  height: 400px;
+  text-align: center;
+  color: white;
+  margin-top: 180px;
+  padding: 150px 0;
+  
+}
+
 .buttonin{
   width: 350px;
   height: 100px;
+ 
 }
+
 .input{
   height: 70px;
   border-radius: 35px;
@@ -104,6 +116,7 @@ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
   border-bottom: 0;
 
 }
+
 .button{
   background-color:  rgba(13, 12, 14, 0.959);
   color: white;
@@ -115,95 +128,14 @@ box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
   border-bottom: 0;
   width: 150px;
   align-self: flex-end;
-
-
-}
-.descar{
-  height: 80px;
-  border-bottom: 2px;
-  border-color: black;
-  background-color: rgb(225, 223, 236);
-  width: 600px;
-  border-radius: 30px;
-  text-align: center;
-  padding: 12px;
-  margin-right: 20px;
-}
-/*
-.btndes{
-  background-color: rgba(6, 6, 7, 0.856);
-  color: white;
-  height: 80px;
-  
-  
- 
-}
-*/
-.all{
-  
-  background-color: blue;
-  color: rgba(7, 5, 5, 0.884);
-  height: 50px;
-  width: 75px;
-  border-radius: 25px;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 0;
   
 }
-
-.bussiness{
-  
-  background-color: white;
-  color: rgb(5, 5, 5);
-  height: 50px;
-  width: 100px;
-  border-radius: 25px;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 0;
+a {
+  color: black;
+  text-decoration: none;
 }
 
-.finances{
-  
-  background-color: white;
-  color: rgb(5, 5, 5);
-  height: 50px;
-  width: 95px;
-  border-radius: 25px;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 0;
+a:hover, a:focus {
+  color: rgb(46, 48, 180);
+  text-decoration: none;
 }
-
-.management{
-  
-  background-color:white;
-  color: rgb(3, 3, 3);
-  height: 50px;
-  width: 135px;
-  border-radius: 25px;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 0;
-}
- .descar.button{
-  padding-left: 30px;
-  padding-bottom: 700px;
- }
-.design{
-  margin-left: 20%;
-}
-
-.round{
-  border-radius: 25px;
-}
-
-
-.container .bussiness:hover,.management:hover,.finances:hover ,.all:hover{
-  background-color: rgb(200, 233, 146);
-} 

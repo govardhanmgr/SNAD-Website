@@ -15,6 +15,6 @@ export class ContactusComponent implements OnInit {
   ngOnInit(): void {}
 
   contactSubmit(f: NgForm) {
-    console.log(this.contactformd);
+    console.log(f.value);
   }
 }

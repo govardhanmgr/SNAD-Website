@@ -165,7 +165,7 @@
 
  </div>
    <div class="bon">
-    <button type="button" class="btn btn-lg oppo">Open positions</button>
+    <button (click)="scroll(target)" type="button" class="btn btn-lg oppo">Open positions</button>
    </div>
 </div>
 
@@ -180,21 +180,21 @@
 
       <!--column-->
     <div class="col">
-      <div class=" mb-3 perk txtcl" >
+      <div class=" mb-3 alljobopen txtcl" >
        <h1>What are we looking for in a employee?</h1>
       </div>
     </div>
   
     <!--c0lumn-->
       <div class="col">
-        <div class=" mb-3 perk">
-          <button type="button" class="btn btn-lg btn-light ajo" >All job opening</button>
+        <div class=" mb-3 alljobopen">
+          <button  type="button" class="btn btn-lg btn-light ajo" >All job opening</button>
         </div>
       </div>
   
       <!--c0lumn-->
       <div class="col">
-        <div class=" mb-3 perk">
+        <div class=" mb-3 alljobopen">
           <div class="row g-0">
             <div class="col-md-4">
               <div class=" number">1</div>
@@ -211,7 +211,7 @@
   
       <!--c0lumn-->
       <div class="col">
-        <div class="mb-3 perk">
+        <div class="mb-3 alljobopen">
           <div class="row g-0">
             <div class="col-md-4">
               <div class=" number">2</div>
@@ -228,7 +228,7 @@
 
       <!--c0lumn-->
       <div class="col">
-        <div class=" mb-3 perk">
+        <div class=" mb-3 alljobopen">
           <div class="row g-0">
             <div class="col-md-4">
               <div class=" number">3</div>
@@ -245,7 +245,7 @@
 
       <!--c0lumn-->
       <div class="col">
-        <div class=" mb-3 perk">
+        <div class=" mb-3 alljobopen">
           <div class="row g-0">
             <div class="col-md-4">
               <div class=" number">4</div>
@@ -322,15 +322,14 @@
   </div>
  </div>
 
-
 <!--Open positions-->
-
-<div class="container">
+<div #target>
+<div class="container opens" >
   <div class="row row-cols-1 row-cols-md-2 g-4 core">
 
      <!--column-->
      <div class="col">
-      <div class=" mb-3 perk" >
+      <div class=" mb-3 " >
        <h1 class="openpos"><b>Open positions</b></h1>
       </div>
     </div>
@@ -368,11 +367,11 @@
     <div class="col ">
       <div class="card opening">
         <div class="card-body matter">
-          <h4 class="card-title"><b>Junior Frontend Developer</b></h4>
+          <h4 class="card-title ho"><b>Junior Frontend Developer</b></h4>
           <p class="card-text">Lorem ipsum dolor sit amet, dol si consectetur adipiscing elit. Sit odio olo erat donec sed non. Lectus eu vel.</p>
           <br>
-          <a href="#" class="card-link"  type="button" class="btn btn-light button">Development</a>    
-          <a href="#" class="card-link"  type="button" class="btn btn-light button margin">Another link</a>
+          <a href="/jobrequirement" class="card-link"  type="button" class="btn button hove">Development</a>    
+          <a href="/jobrequirement" class="card-link"  type="button" class="btn button margin hove">Another link</a>
         </div>
       </div>
     </div>
@@ -385,8 +384,8 @@
           <h4 class="card-title"><b>UI/UX Developer</b></h4>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           <br>
-          <a href="#" class="card-link"  type="button" class="btn btn-light button">Card link</a>    
-          <a href="#" class="card-link"  type="button" class="btn btn-light button margin">Another link</a>
+          <a href="/jobrequirement" class="card-link"  type="button" class="btn button hove">Card link</a>    
+          <a href="/jobrequirement" class="card-link"  type="button" class="btn button margin hove">Another link</a>
         </div>
       </div>
      </div>
@@ -398,8 +397,8 @@
           <h5 class="card-title ">Card title</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           <br>
-          <a href="#" class="card-link"  type="button" class="btn btn-light button">Card link</a>    
-          <a href="#" class="card-link"  type="button" class="btn btn-light button margin">Another link</a>
+          <a href="/jobrequirement" class="card-link"  type="button" class="btn button hove">Card link</a>    
+          <a href="/jobrequirement" class="card-link"  type="button" class="btn button margin hove">Another link</a>
         </div>
       </div>
       </div>
@@ -411,8 +410,8 @@
           <h5 class="card-title">Card title</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           <br>
-          <a href="#" class="card-link"  type="button" class="btn btn-light button">Card link</a>    
-          <a href="#" class="card-link"  type="button" class="btn btn-light button margin">Another link</a>
+          <a href="/jobrequirement" class="card-link"  type="button" class="btn button hove">Card link</a>    
+          <a href="/jobrequirement" class="card-link"  type="button" class="btn button margin hove">Another link</a>
          </div>
        </div>
      </div>
@@ -424,8 +423,8 @@
       <h4 class="card-title"><b>UI/UX Developer</b></h4>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       <br>
-      <a href="#" class="card-link"  type="button" class="btn btn-light button">Card link</a>    
-      <a href="#" class="card-link"  type="button" class="btn btn-light button margin">Another link</a>
+      <a href="/jobrequirement" class="card-link"  type="button" class="btn button hove">Card link</a>    
+      <a href="/jobrequirement" class="card-link"  type="button" class="btn button margin hove">Another link</a>
     </div>
   </div>
  </div>
@@ -437,13 +436,14 @@
       <h5 class="card-title ">Card title</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
       <br>
-      <a href="#" class="card-link"  type="button" class="btn btn-light button">Card link</a>    
-      <a href="#" class="card-link"  type="button" class="btn btn-light button margin">Another link</a>
+      <a href="/jobrequirement" class="card-link"  type="button" class="btn button hove">Card link</a>    
+      <a href="/jobrequirement" class="card-link"  type="button" class="btn button margin hove">Another link</a>
     </div>
   </div>
   </div>
 
   </div>
+</div>
 </div>
 
 
@@ -454,6 +454,6 @@
   <br>
   <p style="text-align: center;" class="position">Lorem ipsum dolor sit amet consectetur adipisc elit <br> viverra dignissim pellentesque in ac.</p>
   <br>
-  <button type="button" class="btn btn-lg get">Get in touch</button>
+  <a href="/contactus" type="button" class="btn btn-lg get">Get in touch</a>
 </div>
 

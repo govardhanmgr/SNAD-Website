@@ -1,17 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-
-
 import * as Aos from 'aos';
 
-
-
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-animation',
+  templateUrl: './animation.component.html',
+  styleUrls: ['./animation.component.css']
 })
-export class HomeComponent implements OnInit {
-
+export class AnimationComponent implements OnInit {
 
   constructor() { }
 
@@ -20,5 +15,6 @@ export class HomeComponent implements OnInit {
       duration: 1200,
     })
   }
+  
 
 }

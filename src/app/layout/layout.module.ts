@@ -19,6 +19,7 @@ import { DigitalTransformationComponent } from './digital-transformation/digital
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 import { BlogsectionComponent } from './blogsection/blogsection.component';
+import { AnimationComponent } from './animation/animation.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { BlogsectionComponent } from './blogsection/blogsection.component';
     MigrationStabilizationComponent,
     DigitalTransformationComponent,
     ProfileComponent,
-    BlogsectionComponent  
+    BlogsectionComponent,  
+    AnimationComponent 
 
   ],
   imports: [
