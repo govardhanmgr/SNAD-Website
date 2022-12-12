@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import * as Aos from 'aos';
-import { CmsservicesService } from 'src/app/cmsservices.service';
+
 
 @Component({
   selector: 'app-blog',
@@ -10,7 +10,7 @@ import { CmsservicesService } from 'src/app/cmsservices.service';
 })
 export class BlogComponent implements OnInit {
 
-  constructor(private router:Router ,private CmsservicesService:CmsservicesService ) { }
+  constructor( ) { }
 
   ngOnInit(): void {
     Aos.init({
