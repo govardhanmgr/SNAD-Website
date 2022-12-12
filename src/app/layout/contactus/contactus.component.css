@@ -3,6 +3,10 @@
   box-sizing: border-box;
 }
 
+.c{
+   background: linear-gradient(90deg,rgb(255, 255, 255) 0%,rgb(255, 255, 255) 30%,#001aff 30%,#001aff 100%);
+}
+
 .bgi {
   background-image: url("https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4645e4ccfc4_image-home-v3-hero-startup-x-template-p-2000.jpeg");
   height: 60vh;
