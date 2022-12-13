@@ -21,10 +21,10 @@
   background-color: white;   
 }
 
-.opening:hover {
+  .opening:hover {
   transform: translate(0, -10px);
   border-color: blue;
-
+  text-decoration: none;
 }
 
 
@@ -117,13 +117,14 @@ h1 {
 }
 
 .des {
+  position: absolute;
   border-radius: 50%;
   height: 20em;
   width: 20em;
   opacity: 10;
   float: right;
-  margin-right: -80px;
-  margin-top: -210px;
+  right: -7%;
+  margin-top: -12%;
   animation: rotation 30s infinite linear;
 }
 
@@ -289,28 +290,27 @@ h1 {
 }
 
 .get:hover {
+  transform: translate(0, -8px);
   border-color: blue;
   color: blue;
 }
 
 /* header image */
 
-.header {
-
+.header{
   height: 100vh;
-}
+ }
 
-.img-background {
+ .img-background{
   position: absolute;
   right: 0;
   bottom: 0;
   min-width: 100%;
   max-width: 100%;
   width: auto;
-  height: auto;
+  height:auto;
   z-index: -1;
-
-}
+ }
 
 @media (min-aspect-ratio:16/9) {
   .img-background {
@@ -390,3 +390,5 @@ h1 {
   box-shadow: 0 0 10px rgba(0,0,0,0.25);
   
 }
+
+

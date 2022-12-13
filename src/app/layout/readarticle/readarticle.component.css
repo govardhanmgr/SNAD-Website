@@ -1,0 +1,179 @@
+.container-fluid{
+    color: white;
+    
+        background: linear-gradient(to bottom,#5e6bf5 0%,#5e6bf5 100%) no-repeat;
+      background-size: calc(200%) calc(80%);
+      background-position: top;
+      
+}
+      
+   
+    
+
+h1{
+    padding-top: 100px;
+    font-size: 40pt;
+
+}
+.padbt{
+    padding-bottom: 100px;
+}
+img{
+    width: 64%;
+    border-radius: 35px;
+}
+.card{
+    border-radius: 35px;
+    border-top: 0ch;
+    border-bottom: 0ch;
+    border-left: 0ch;
+    border-right:0ch ;
+    margin-left: 200px;
+
+}
+.r1{
+    padding-top: 100px;
+    text-align: center;
+}
+
+a:hover, a:focus {
+    color: rgb(46, 48, 180);
+    text-decoration: none;
+  }
+  
+a {
+    color: black;
+    text-decoration: none;
+  }
+  
+.btn{
+  
+    width: 150px;
+    background-color: white;
+    color: black;
+   border-color:#a9aab1;
+   border-radius: 25px;
+   padding: 10px;
+  }
+  i{
+    padding-right: 10px;
+  }
+  
+.btn:hover{
+    background-color: blue;
+  
+  }
+  
+.card-text{
+  
+  color: #6f7278;
+  
+  font-family: Thicccboi, sans-serif;
+  font-size: 18px;
+  line-height: 1.833em;
+  font-weight: 500;
+}
+.mid{
+  color: #6f7278;
+  
+  font-family: Thicccboi, sans-serif;
+  font-size: 18px;
+  line-height: 1.833em;
+  font-weight: 500;
+  text-align: center;
+}
+.color{
+  background-color: rgb(45, 84, 192);
+  color: white;
+  padding: 110px;
+  width: 900px;
+  border-radius: 35px;
+}
+.dec{
+  font-family: Thicccboi, sans-serif;
+  font-size: 25px;
+  line-height: 1.833em;
+  font-weight: 500;
+  text-align: center;
+}
+
+.design{
+  border-radius: 25px;
+  text-align: center;
+   height: 900px;
+   width: 800px;
+   margin: 0 auto;
+   float: none; 
+   margin-bottom: 10px; 
+  
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.networks{
+  text-align: right;
+  /* margin-top: 3%; */
+  /* margin-left: 10px; */
+  /* line-height: 12px; */
+   /* width: 18px; */
+   font-size: 8pt;
+   /* font-family: tahoma; */
+   margin-top: 20px;
+   margin-right: 20px;
+   /* margin: 80px; */
+   position:absolute;
+   top:0;
+   right:0;
+   margin-bottom: 100px;
+}
+
+.fa {
+ 
+  padding: 10px;
+font-size: 10px;
+width: 30px;
+text-align:center;
+text-decoration: none;
+margin: 5px 2px;
+border-radius: 50%;
+margin-right: 15px;
+
+
+
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.card-title1{
+  text-align: left;
+  margin-left: 40px;
+  margin-right: 40px;
+  color:black;
+}
+.de1{
+  border-color: #6f7278;
+  border-width: 5px;
+}
+.mydes{
+  margin-left: 300px;
+}
+.mydes.card{
+  border-width: 5px;
+  border-color: #5e6bf5;
+}

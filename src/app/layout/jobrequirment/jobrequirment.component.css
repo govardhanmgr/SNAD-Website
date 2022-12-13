@@ -89,3 +89,8 @@ hr{
     background-color: white;
     border-color: black;
 }
+
+.job-requirement{
+    text-decoration: none;
+    color: black;
+}
