@@ -1,0 +1,64 @@
+.container-fluid{
+    color: white;
+    
+        background: linear-gradient(to bottom,#5e6bf5 0%,#5e6bf5 100%) no-repeat;
+      background-size: calc(200%) calc(80%);
+      background-position: top;
+      
+}
+      
+   
+    
+
+h1{
+    padding-top: 100px;
+    font-size: 40pt;
+
+}
+.padbt{
+    padding-bottom: 100px;
+}
+img{
+    width: 67%;
+}
+.card{
+    border-radius: 35px;
+    border-top: 0ch;
+    border-bottom: 0ch;
+    border-left: 0ch;
+    border-right:0ch ;
+    margin-left: 200px;
+
+}
+.container{
+    padding-top: 100px;
+    text-align: center;
+}
+
+a:hover, a:focus {
+    color: rgb(46, 48, 180);
+    text-decoration: none;
+  }
+  
+a {
+    color: black;
+    text-decoration: none;
+  }
+  
+.btn{
+  
+    width: 150px;
+    background-color: white;
+    color: black;
+   border-color: black;
+   border-radius: 25px;
+   padding: 10px;
+  }
+  i{
+    padding-right: 10px;
+  }
+  
+.btn:hover{
+    background-color: blue;
+  
+  }

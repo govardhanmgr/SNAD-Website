@@ -1,6 +1,6 @@
 import { FinancearticlesComponent } from './financearticles/financearticles.component';
 import { ManagementarticlesComponent } from './managementarticles/managementarticles.component';
-import { BusinessarticlesComponent } from './businessarticles/businessarticles.component';
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
@@ -20,6 +20,9 @@ import { ManagedInfrastructureComponent } from './managed-infrastructure/managed
 import { ManagedItServicesComponent } from './managed-it-services/managed-it-services.component';
 import { MigrationStabilizationComponent } from './migration-stabilization/migration-stabilization.component';
 import { BlogsectionComponent } from './blogsection/blogsection.component';
+
+import { ReadarticleComponent } from './readarticle/readarticle.component';
+import { BusinessarticlesComponent } from './businessarticles/businessarticles.component';
 import { AnimationComponent } from './animation/animation.component';
 
 
@@ -47,10 +50,12 @@ const routes: Routes = [
   { path: "profile", component: ProfileComponent },
   { path: "jobrequirement", component: JobrequirmentComponent },
   { path: "blogsection", component: BlogsectionComponent },
-  { path:"animation",component:AnimationComponent},
-  { path:"businessarticles",component:BusinessarticlesComponent},
+ {path:'animation',component:AnimationComponent},
+   {path:'businessarticles',component:BusinessarticlesComponent},
   { path:"managementarticles",component:ManagementarticlesComponent},
   { path:"financearticles",component:FinancearticlesComponent},
+  { path:"readarticle",component:ReadarticleComponent},
+
 
 
 
