@@ -15,10 +15,6 @@ scroll(el: HTMLElement) {
  el.scrollIntoView({behavior: 'smooth'});
  }
 
-
-
-  
-
   constructor() { }
 
   ngOnInit(): void {
@@ -28,9 +24,6 @@ scroll(el: HTMLElement) {
 
    
   }
-  // select(About:any){
-  //   localStorage.getItem("",JSON.stringify(About) );
-  //   this.router.navigate([""])
-  // }
+  
 
 }
