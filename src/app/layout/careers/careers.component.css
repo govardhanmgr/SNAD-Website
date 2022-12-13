@@ -21,10 +21,10 @@
   background-color: white;   
 }
 
-.opening:hover {
+  .opening:hover {
   transform: translate(0, -10px);
   border-color: blue;
-
+  text-decoration: none;
 }
 
 
@@ -290,28 +290,27 @@ h1 {
 }
 
 .get:hover {
+  transform: translate(0, -8px);
   border-color: blue;
   color: blue;
 }
 
 /* header image */
 
-.header {
-
+.header{
   height: 100vh;
-}
+ }
 
-.img-background {
+ .img-background{
   position: absolute;
   right: 0;
   bottom: 0;
   min-width: 100%;
   max-width: 100%;
   width: auto;
-  height: auto;
+  height:auto;
   z-index: -1;
-
-}
+ }
 
 @media (min-aspect-ratio:16/9) {
   .img-background {
