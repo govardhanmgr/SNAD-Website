@@ -1,3 +1,4 @@
+import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -20,9 +21,11 @@ import { ProfileComponent } from './profile/profile.component';
 import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 import { BlogsectionComponent } from './blogsection/blogsection.component';
 import { AnimationComponent } from './animation/animation.component';
-import { BusinessarticlesComponent } from './businessarticles/businessarticles.component';
+
 import { FinancearticlesComponent } from './financearticles/financearticles.component';
 import { ManagementarticlesComponent } from './managementarticles/managementarticles.component';
+import { ReadarticleComponent } from './readarticle/readarticle.component';
+import { BusinessarticlesComponent } from './businessarticles/businessarticles.component';
 
 
 @NgModule({
@@ -44,9 +47,11 @@ import { ManagementarticlesComponent } from './managementarticles/managementarti
     ProfileComponent,
     BlogsectionComponent,  
     AnimationComponent, 
-    BusinessarticlesComponent, 
+   
     FinancearticlesComponent,
-    ManagementarticlesComponent, 
+    ManagementarticlesComponent,
+    ReadarticleComponent, 
+    BusinessarticlesComponent
 
   ],
   imports: [
@@ -55,6 +60,7 @@ import { ManagementarticlesComponent } from './managementarticles/managementarti
     FormsModule,
     ReactiveFormsModule,
     FormsModule,
+   
   ],
 })
 export class LayoutModule {}
