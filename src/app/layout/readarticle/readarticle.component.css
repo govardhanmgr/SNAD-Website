@@ -172,8 +172,94 @@ margin-right: 15px;
 }
 .mydes{
   margin-left: 300px;
+  
 }
 .mydes.card{
   border-width: 5px;
   border-color: #5e6bf5;
 }
+.line{
+
+  background-color: rgba(126, 114, 114, 0.911);
+  height: 1px;
+  margin-right: 140px;
+  
+
+}
+
+.btn-group{
+  
+  width: 100%;
+  
+  
+}
+ .btdes{
+  border-radius: 15px;
+  color: black;
+  background-color: whitesmoke;  
+  border-color:whitesmoke;
+  text-align: center;
+  width: 200px;
+  margin-top: 100px;
+  padding: 20px;
+  margin-left: 270px;
+
+  
+  
+} 
+.redes{
+  
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+
+}
+
+.i2{
+  padding-top: 65px;
+  margin: auto;
+  width: 100%;
+}
+ 
+.zoom:hover{
+  -ms-transform: scale(1.05); /* IE 9 */
+  -webkit-transform: scale(1.075); /* Safari 3-8 */
+  transform: scale(1.019); 
+  overflow: hidden;
+  border-radius: 25px;
+ 
+
+}
+.zoom{
+  border-radius: 25px;
+}
+
+.butstyl {
+  position: absolute;
+  bottom:  79%;
+  left: 83%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: white;
+  color: rgb(2, 2, 2);
+  font-size: 16px;
+  padding: 12px 32px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  display: inline-block;
+  width: auto;
+  
+}
+
+.btn{
+  border-radius: 15px;
+  margin-right:30px;
+  color: black;
+  background-color: whitesmoke;  
+  border-color:whitesmoke;
+  text-align: center;
+  
+}
+
