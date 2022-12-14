@@ -1,9 +1,11 @@
 <div class="bgi"></div>
 
-<div class="container">
-  <div class="c">
-    <div class="row d-flex flex-row justify-content-evenly align-items-center">
-      <div class="col-md-4 p-4">
+<div class="container-fluid p-4 c">
+  <div class="container p-4">
+    <div
+      class="row d-flex flex-row justify-content-evenly align-items-center p-4"
+    >
+      <div class="col-sm-10 col-md-12 col-lg-5 p-2">
         <div class="contact">
           <div class="smalldash"></div>
           <div class="us">CONTACT US</div>
@@ -74,254 +76,311 @@
         </div>
       </div>
 
-      <div class="col-md-8 justify-content-end">
-        <div class="container p-3">
-          <div class="m-4 p-4">
-            <form
-              name="contactform"
-              #contactForm="ngForm"
-              (ngSubmit)="contactForm.valid && contactSubmit(contactForm)"
-            >
-              <div class="card rounded-4 shadow p-3 text-center">
-                <div class="d-flex flex-row justify-content-center mb-3"></div>
-                <div class="row">
-                  <div class="col-md-6 p-3">
-                    <div class="inputs">
-                      <input
-                        type="text"
-                        id="firstname"
-                        class="form-control"
-                        type="text"
-                        placeholder="firstname"
-                        name="firstname"
-                        required
-                        #firstname="ngModel"
-                        [(ngModel)]="contactformd.firstname"
-                        pattern="[a-zA-Z].*"
-                      />
-                    </div>
-                    <div
-                      *ngIf="
-                        (firstname.invalid && firstname.touched) ||
-                        (firstname.invalid && contactForm.submitted)
-                      "
-                      class="alert"
-                    >
-                      <div
-                        *ngIf="firstname.errors?.['required']"
-                        class="form-text text-danger text-start"
-                      >
-                        Enter Your Nmae
-                      </div>
-                      <div
-                        *ngIf="firstname.errors?.['pattern']"
-                        class="form-text text-danger text-start"
-                      >
-                        First Name start with Alphabet
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-6 p-3">
-                    <div class="inputs">
-                      <input
-                        type="email"
-                        class="form-control"
-                        placeholder="Email"
-                        ngModel
-                        email
-                        required
-                        #email="ngModel"
-                        name="email"
-                        pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
-                        [(ngModel)]="contactformd.email"
-                      />
-                    </div>
-                    <div
-                      class="text-start form-text text-danger"
-                      *ngIf="
-                        (email.invalid && email.touched) ||
-                        (email.invalid && contactForm.submitted)
-                      "
-                    >
-                      Please Enter valid email
-                    </div>
-                  </div>
-                  <div class="col-md-6 p-3">
-                    <div class="inputs">
-                      <input
-                        type="number"
-                        class="form-control"
-                        placeholder="Enetr Phone number"
-                        ngModel
-                        required
-                        name="mobile"
-                        #mobile="ngModel"
-                        pattern="^((\\+91-?)|0)?[0-9]{10}$"
-                        minlength="10"
-                        id="mobile"
-                        [(ngModel)]="contactformd.mobile"
-                      />
-
-                      <div
-                        *ngIf="
-                          (mobile.invalid && mobile.touched) ||
-                          (mobile.invalid && contactForm.submitted)
-                        "
-                        class="alert"
-                      >
-                        <div
-                          *ngIf="mobile.errors?.['required']"
-                          class="form-text text-danger text-start"
-                        >
-                          Contact Number is required
-                        </div>
-                        <div
-                          *ngIf="mobile.errors?.['pattern']"
-                          class="form-text text-danger text-start"
-                        >
-                          Please enter a valid contact number
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 p-3">
-                    <div class="inputs">
-                      <input
-                        type="text"
-                        class="form-control"
-                        type="text"
-                        placeholder="Organisation"
-                        ngModel
-                        required
-                        name="organisation"
-                        #organisation="ngModel"
-                        [(ngModel)]="contactformd.organisation"
-                      />
-                    </div>
-                    <div
-                      div
-                      class="text-start form-text text-danger"
-                      *ngIf="
-                        (organisation.invalid && organisation.touched) ||
-                        (organisation.invalid && contactForm.submitted)
-                      "
-                    >
-                      Please Enter organisation
-                    </div>
-                  </div>
-                  <div class="col-md-6 p-3">
-                    <div class="inputs">
-                      <input
-                        type="text"
-                        class="form-control"
-                        type="text"
-                        placeholder="Country"
-                        ngModel
-                        required
-                        name="country"
-                        #country="ngModel"
-                        [(ngModel)]="contactformd.country"
-                      />
-                    </div>
-                    <div
-                      div
-                      class="text-start form-text text-danger"
-                      *ngIf="
-                        (country.invalid && country.touched) ||
-                        (country.invalid && contactForm.submitted)
-                      "
-                    >
-                      Please Enter country
-                    </div>
-                  </div>
-                  <div class="col-md-6 p-3">
-                    <div class="inputs">
-                      <input
-                        type="text"
-                        class="form-control"
-                        type="text"
-                        placeholder="Service interested"
-                        ngModel
-                        required
-                        name="service"
-                        #service="ngModel"
-                        [(ngModel)]="contactformd.service"
-                      />
-                    </div>
-                    <div
-                      div
-                      class="text-start form-text text-danger"
-                      *ngIf="
-                        (service.invalid && service.touched) ||
-                        (service.invalid && contactForm.submitted)
-                      "
-                    >
-                      Please Enter service
-                    </div>
-                  </div>
-                  <div class="col-md-12 p-3">
-                    <div class="inputs">
-                      <input
-                        class="form-control"
-                        type="text"
-                        placeholder="How can We Help You?"
-                        ngModel
-                        required
-                        name="text"
-                        #text="ngModel"
-                        [(ngModel)]="contactformd.text"
-                      />
-                    </div>
-                    <div
-                      class="text-start form-text text-danger"
-                      *ngIf="
-                        (text.invalid && text.touched) ||
-                        (text.invalid && contactForm.submitted)
-                      "
-                    >
-                      Please Enter text
-                    </div>
-                  </div>
+      <div class="col-sm-12 col-md-12 col-lg-7 p-4">
+        <form
+          name="contactform"
+          #contactForm="ngForm"
+          (ngSubmit)="contactForm.valid && contactSubmit(contactForm)"
+        >
+          <div class="card rounded-4 shadow p-4 text-center">
+            <div class="row">
+              <div class="col-md-12 col-lg-6 p-4" style="position: relative">
+                <div class="inputs input-group">
+                  <input
+                    type="text"
+                    id="firstname"
+                    class="form-control p-4"
+                    type="text"
+                    placeholder="firstname"
+                    name="firstname"
+                    required
+                    #firstname="ngModel"
+                    [(ngModel)]="contactformd.firstname"
+                    pattern="[a-zA-Z].*"
+                  />
+                  <span
+                    class="input-group-text p-1"
+                    style="
+                      background-color: white;
+                      color: rgb(151, 146, 146);
+                      font-size: 22px;
+                    "
+                    id="basic-addon2"
+                    ><i class="bi bi-person"></i
+                  ></span>
                 </div>
-                <div class="row">
-                  <div class="col-md-12 p-3">
-                    <div class="inputs">
-                      <textarea
-                        type="message"
-                        class="form-control"
-                        placeholder="What's Your Message"
-                        ngModel
-                        required
-                        name="message"
-                        #message="ngModel"
-                        [(ngModel)]="contactformd.message"
-                      >
-                      </textarea>
-                    </div>
-                    <div
-                      class="text-start form-text text-danger"
-                      *ngIf="
-                        (message.invalid && message.touched) ||
-                        (message.invalid && contactForm.submitted)
-                      "
-                    >
-                      Please Enter message
-                    </div>
-                  </div>
-                </div>
-                <div class="mt-3 gap-2 d-flex justify-content-start">
-                  <button
-                    class="px-3 btn btn-lg btn-primary p-3 rounded-pill"
-                    type="submit"
+
+                <div
+                  *ngIf="
+                    (firstname.invalid && firstname.touched) ||
+                    (firstname.invalid && contactForm.submitted)
+                  "
+                  class="alert"
+                >
+                  <div
+                    *ngIf="firstname.errors?.['required']"
+                    class="form-text text-danger text-start"
                   >
-                    Send message
-                  </button>
+                    Enter Your Nmae
+                  </div>
+                  <div
+                    *ngIf="firstname.errors?.['pattern']"
+                    class="form-text text-danger text-start"
+                  >
+                    First Name start with Alphabet
+                  </div>
                 </div>
               </div>
-            </form>
+
+              <div class="col-md-12 col-lg-6 p-4">
+                <div class="inputs input-group input-group">
+                  <input
+                    type="email"
+                    class="form-control p-4"
+                    placeholder="Email"
+                    ngModel
+                    email
+                    required
+                    #email="ngModel"
+                    name="email"
+                    pattern="[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                    [(ngModel)]="contactformd.email"
+                  />
+                  <span
+                    class="input-group-text p-1"
+                    style="
+                      background-color: white;
+                      color: rgb(151, 146, 146);
+                      font-size: 22px;
+                    "
+                    id="basic-addon2"
+                    ><i class="bi bi-at"></i
+                  ></span>
+                </div>
+                <div
+                  class="text-start form-text text-danger"
+                  *ngIf="
+                    (email.invalid && email.touched) ||
+                    (email.invalid && contactForm.submitted)
+                  "
+                >
+                  Please Enter valid email
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6 p-4">
+                <div class="inputs input-group">
+                  <input
+                    type="number"
+                    class="form-control p-4"
+                    placeholder="Enetr Phone number"
+                    ngModel
+                    required
+                    name="mobile"
+                    #mobile="ngModel"
+                    pattern="^((\\+91-?)|0)?[0-9]{10}$"
+                    minlength="10"
+                    id="mobile"
+                    [(ngModel)]="contactformd.mobile"
+                  />
+                  <span
+                    class="input-group-text p-1"
+                    style="
+                      background-color: white;
+                      color: rgb(151, 146, 146);
+                      font-size: 22px;
+                    "
+                    id="basic-addon2"
+                    ><i class="bi bi-telephone"></i
+                  ></span>
+                </div>
+
+                <div
+                  *ngIf="
+                    (mobile.invalid && mobile.touched) ||
+                    (mobile.invalid && contactForm.submitted)
+                  "
+                  class="alert"
+                >
+                  <div
+                    *ngIf="mobile.errors?.['required']"
+                    class="form-text text-danger text-start"
+                  >
+                    Contact Number is required
+                  </div>
+                  <div
+                    *ngIf="mobile.errors?.['pattern']"
+                    class="form-text text-danger text-start"
+                  >
+                    Please enter a valid contact number
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6 p-4">
+                <div class="inputs input-group">
+                  <input
+                    type="text"
+                    class="form-control p-4"
+                    type="text"
+                    placeholder="Organisation"
+                    ngModel
+                    required
+                    name="organisation"
+                    #organisation="ngModel"
+                    [(ngModel)]="contactformd.organisation"
+                  />
+                  <span
+                    class="input-group-text p-1"
+                    style="
+                      background-color: white;
+                      color: rgb(151, 146, 146);
+                      font-size: 22px;
+                    "
+                    id="basic-addon2"
+                    ><i class="bi bi-journals"></i
+                  ></span>
+                </div>
+                <div
+                  div
+                  class="text-start form-text text-danger"
+                  *ngIf="
+                    (organisation.invalid && organisation.touched) ||
+                    (organisation.invalid && contactForm.submitted)
+                  "
+                >
+                  Please Enter organisation
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6 p-4">
+                <div class="inputs input-group">
+                  <input
+                    type="text"
+                    class="form-control p-4"
+                    type="text"
+                    placeholder="Country"
+                    ngModel
+                    required
+                    name="country"
+                    #country="ngModel"
+                    [(ngModel)]="contactformd.country"
+                  />
+                  <span
+                    class="input-group-text p-1"
+                    style="
+                      background-color: white;
+                      color: rgb(151, 146, 146);
+                      font-size: 22px;
+                    "
+                    id="basic-addon2"
+                    ><i class="bi bi-geo-alt"></i
+                  ></span>
+                </div>
+                <div
+                  div
+                  class="text-start form-text text-danger"
+                  *ngIf="
+                    (country.invalid && country.touched) ||
+                    (country.invalid && contactForm.submitted)
+                  "
+                >
+                  Please Enter country
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6 p-4">
+                <div class="inputs input-group">
+                  <input
+                    type="text"
+                    class="form-control p-4"
+                    type="text"
+                    placeholder="Service interested"
+                    ngModel
+                    required
+                    name="service"
+                    #service="ngModel"
+                    [(ngModel)]="contactformd.service"
+                  />
+                  <span
+                    class="input-group-text p-1"
+                    style="
+                      background-color: white;
+                      color: rgb(151, 146, 146);
+                      font-size: 22px;
+                      margin-left: none;
+                    "
+                    id="basic-addon2"
+                    ><i class="bi bi-laptop"></i
+                  ></span>
+                </div>
+                <div
+                  div
+                  class="text-start form-text text-danger"
+                  *ngIf="
+                    (service.invalid && service.touched) ||
+                    (service.invalid && contactForm.submitted)
+                  "
+                >
+                  Please Enter service
+                </div>
+              </div>
+              <div class="col-md-12 p-4">
+                <div class="inputs">
+                  <input
+                    class="form-control p-4"
+                    type="text"
+                    placeholder="How can We Help You?"
+                    ngModel
+                    required
+                    name="text"
+                    #text="ngModel"
+                    [(ngModel)]="contactformd.text"
+                  />
+                </div>
+                <div
+                  class="text-start form-text text-danger"
+                  *ngIf="
+                    (text.invalid && text.touched) ||
+                    (text.invalid && contactForm.submitted)
+                  "
+                >
+                  Please Enter text
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 p-4">
+                <div class="inputs">
+                  <textarea
+                    type="message"
+                    class="form-control p-4"
+                    placeholder="What's Your Message"
+                    ngModel
+                    required
+                    name="message"
+                    #message="ngModel"
+                    [(ngModel)]="contactformd.message"
+                  >
+                  </textarea>
+                </div>
+                <div
+                  class="text-start form-text text-danger"
+                  *ngIf="
+                    (message.invalid && message.touched) ||
+                    (message.invalid && contactForm.submitted)
+                  "
+                >
+                  Please Enter message
+                </div>
+              </div>
+            </div>
+            <div class="mt-3 gap-2 d-flex justify-content-start">
+              <button
+                class="px-3 btn btn-lg btn-primary p-3 rounded-pill"
+                type="submit"
+              >
+                Send message
+              </button>
+            </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   </div>
