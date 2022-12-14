@@ -27,6 +27,7 @@ import { ManagementarticlesComponent } from './managementarticles/managementarti
 import { ReadarticleComponent } from './readarticle/readarticle.component';
 import { BusinessarticlesComponent } from './businessarticles/businessarticles.component';
 import { PositionsComponent } from './positions/positions.component';
+import { BrowsearticlesComponent } from './browsearticles/browsearticles.component';
 
 
 @NgModule({
@@ -52,7 +53,9 @@ import { PositionsComponent } from './positions/positions.component';
     FinancearticlesComponent,
     ManagementarticlesComponent,
     ReadarticleComponent, 
-    BusinessarticlesComponent, PositionsComponent
+    BusinessarticlesComponent,
+     PositionsComponent, 
+    BrowsearticlesComponent
 
   ],
   imports: [
