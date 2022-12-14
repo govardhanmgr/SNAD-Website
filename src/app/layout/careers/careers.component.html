@@ -1,30 +1,44 @@
 <!--head image-->
+
+
 <button type="button" class="btn btn-info scroll-to-top" (click)="gotoTop()">
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up"
+    viewBox="0 0 16 16">
+    <path fill-rule="evenodd"
+      d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
   </svg>
 </button>
+
+
 <section class="header">
   <img
     src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4645e4ccfc4_image-home-v3-hero-startup-x-template-p-2000.jpeg"
-    class="img-background" data-aos="fade-up">
+    class="img-background">
   <div class="text-content">
     <div class="contact">
       <div class="smalldash"></div>
       <div class="us">INSPIRED TO HELP</div>
     </div>
-    <b>
-      <p class="text" data-aos="fade-up" data-aos-delay="1500">The most transparent <br>& Secured banking ever</p>
-    </b>
-    <p data-aos="fade-up" data-aos-delay="1500">Lorem ipsum dolor sit amet consectetur adipiscing elit.<br>
+    <p data-aos="fade-up" id="header"></p>
+
+    <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipiscing elit.<br>
       Consectetur tortor nunc aliquam consectetur semper augue at
     </p>
+
   </div>
+  
 </section>
+
+<button type="button" class="btn btn-info scroll-to-top" (click)="gotoTop()">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+  </svg>
+</button>
 
 
 
 <!--core values-->
+
 <div class="container">
   <h2 data-aos="fade-up"><b>Core Values</b></h2>
   <br>
@@ -207,7 +221,7 @@
 
   </div>
   <div class="bon">
-    <button (click)="scroll(target)" type="button" class="btn btn-lg oppo" data-aos="fade-up" data-aos-delay="1300">Open
+    <button (click)="scroll(target)" type="button" class="btn btn-lg oppo" data-aos="fade-up">Open
       positions</button>
   </div>
 </div>
@@ -391,21 +405,20 @@
               <div class=" row ">
                 <!--column-->
                 <div class="col">
-                  <button class="btn btn-primary button" type="submit">All</button>
+                  <a href="/careers"  class="btn btn-primary button" type="button">All</a>
                 </div>
                 <!--column-->
                 <div class="col">
-                  <button class="btn btn-light button" type="submit">Design</button>
+                  <a   href="/positions" type="button" class="btn btn-light button" type="submit">Design</a>
                 </div>
                 <!--column-->
                 <div class="col ">
-                  <button class="btn btn-light button" type="submit">Development</button>
+                  <a href="/positions" class="btn btn-light button" type="button">Development</a>
                 </div>
                 <!--column-->
                 <div class="col">
-                  <button class="btn btn-light button" type="submit">Business</button>
+                  <a href="/positions" class="btn btn-light button" type="button">Business</a>
                 </div>
-
               </div>
             </div>
           </div>
@@ -419,9 +432,9 @@
             <h4 class="card-title ho"><b>Junior Frontend Developer</b></h4>
             <p class="card-text">Lorem ipsum dolor sit amet, dol si consectetur adipiscing elit. Sit odio olo erat donec
               sed non. Lectus eu vel.</p>
-            <br>
-            <a href="/jobrequirement" class="card-link" type="button" class="btn button hove">Development</a>
-            <a href="/jobrequirement" class="card-link" type="button" class="btn button margin hove">Another link</a>
+            <br>           
+            <a  class="card-link" type="button" class="btn button hove">Development</a>
+            <a class="card-link" type="button" class="btn button margin hove">Another link</a>
           </div>
         </div>
       </div>
@@ -505,7 +518,7 @@
 
 
 <!--Find the right position-->
-<div class="find" data-aos="fade-up" data-aos-delay="1400">
+<div class="find" data-aos="fade-up">
   <h4><b>Can't find the right position ?</b></h4>
   <br>
   <p style="text-align: center;" class="position">Lorem ipsum dolor sit amet consectetur adipisc elit <br> viverra

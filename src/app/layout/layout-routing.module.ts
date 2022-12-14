@@ -24,6 +24,7 @@ import { BlogsectionComponent } from './blogsection/blogsection.component';
 import { ReadarticleComponent } from './readarticle/readarticle.component';
 import { BusinessarticlesComponent } from './businessarticles/businessarticles.component';
 import { AnimationComponent } from './animation/animation.component';
+import { PositionsComponent } from './positions/positions.component';
 
 
 
@@ -50,11 +51,12 @@ const routes: Routes = [
   { path: "profile", component: ProfileComponent },
   { path: "jobrequirement", component: JobrequirmentComponent },
   { path: "blogsection", component: BlogsectionComponent },
- {path:'animation',component:AnimationComponent},
+  {path:'animation',component:AnimationComponent},
    {path:'businessarticles',component:BusinessarticlesComponent},
   { path:"managementarticles",component:ManagementarticlesComponent},
   { path:"financearticles",component:FinancearticlesComponent},
   { path:"readarticle",component:ReadarticleComponent},
+  {path:"positions",component:PositionsComponent},
 
 
 
