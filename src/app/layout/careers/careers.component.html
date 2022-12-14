@@ -19,22 +19,9 @@
       <div class="smalldash"></div>
       <div class="us">INSPIRED TO HELP</div>
     </div>
-    <p data-aos="fade-up" id="header"></p>
-
-    <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipiscing elit.<br>
-      Consectetur tortor nunc aliquam consectetur semper augue at
-    </p>
-
+    <p data-aos="fade-up" id="app"></p>
   </div>
-  
 </section>
-
-<button type="button" class="btn btn-info scroll-to-top" (click)="gotoTop()">
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
-  </svg>
-</button>
-
 
 
 <!--core values-->
@@ -322,7 +309,6 @@
           </div>
         </div>
       </div>
-
     </div>
 
   </div>
@@ -387,7 +373,7 @@
 
 <!--Open positions-->
 <div #target>
-  <div class="container opens">
+  <div class="container d-flex">
     <div class="row row-cols-1 row-cols-md-2 g-4 core">
 
       <!--column-->
@@ -399,27 +385,13 @@
 
       <!--c0lumn-->
       <div class="col" data-aos="fade-up">
-        <div class=" mb-3">
-          <div class="card d-flex flex-row sdbt pop">
-            <div class="rdbn">
-              <div class=" row ">
-                <!--column-->
-                <div class="col">
-                  <a href="/careers"  class="btn btn-primary button" type="button">All</a>
-                </div>
-                <!--column-->
-                <div class="col">
-                  <a   href="/positions" type="button" class="btn btn-light button" type="submit">Design</a>
-                </div>
-                <!--column-->
-                <div class="col ">
-                  <a href="/positions" class="btn btn-light button" type="button">Development</a>
-                </div>
-                <!--column-->
-                <div class="col">
-                  <a href="/positions" class="btn btn-light button" type="button">Business</a>
-                </div>
-              </div>
+        <div class="card button-card " style="width: fit-content;">
+          <div class="multiple-button">
+            <div class="d-flex flex-row" style="gap:10px;">
+              <a href="/careers" type="button" class="btn buttons all-button">All</a>
+              <a href="/positions" type="button" class="btn buttons design-button">Design</a>
+              <a href="/positions" type="button" class="btn buttons">Development</a>
+              <a href="/positions" type="button" class="btn buttons">Bussiness</a>
             </div>
           </div>
         </div>
@@ -427,90 +399,16 @@
 
       <!--column-->
       <div class="col " data-aos="fade-up">
-        <div class="card opening">
-          <div class="card-body matter">
-            <h4 class="card-title ho"><b>Junior Frontend Developer</b></h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, dol si consectetur adipiscing elit. Sit odio olo erat donec
-              sed non. Lectus eu vel.</p>
-            <br>           
-            <a  class="card-link" type="button" class="btn button hove">Development</a>
-            <a class="card-link" type="button" class="btn button margin hove">Another link</a>
-          </div>
-        </div>
-      </div>
-
-
-      <!--column-->
-      <div class="col" data-aos="fade-up">
-        <div class="card opening">
-          <div class="card-body matter">
-            <h4 class="card-title"><b>UI/UX Developer</b></h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
+        <div class="card " *ngFor="let openpos of jobtab">
+          <div class="card-body ">
+            <h4 class="card-title">{{openpos.name}}</h4>
+            <p class="card-text">{{openpos['job-description-excerpt']}}</p>
             <br>
-            <a href="/jobrequirement" class="card-link" type="button" class="btn button hove">Card link</a>
-            <a href="/jobrequirement" class="card-link" type="button" class="btn button margin hove">Another link</a>
+            <a class="card-link" type="button" class="btn button">Development</a>
+            <a class="card-link" type="button" class="btn button">{{openpos['job-location']}}</a>
           </div>
         </div>
       </div>
-
-      <!--column-->
-      <div class="col" data-aos="fade-up">
-        <div class="card opening">
-          <div class="card-body matter">
-            <h5 class="card-title ">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <br>
-            <a href="/jobrequirement" class="card-link" type="button" class="btn button hove">Card link</a>
-            <a href="/jobrequirement" class="card-link" type="button" class="btn button margin hove">Another link</a>
-          </div>
-        </div>
-      </div>
-
-      <!--column-->
-      <div class="col" data-aos="fade-up">
-        <div class="card opening">
-          <div class="card-body matter">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <br>
-            <a href="/jobrequirement" class="card-link" type="button" class="btn button hove">Card link</a>
-            <a href="/jobrequirement" class="card-link" type="button" class="btn button margin hove">Another link</a>
-          </div>
-        </div>
-      </div>
-
-      <!--column-->
-      <div class="col" data-aos="fade-up">
-        <div class="card opening">
-          <div class="card-body matter">
-            <h4 class="card-title"><b>UI/UX Developer</b></h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <br>
-            <a href="/jobrequirement" class="card-link" type="button" class="btn button hove">Card link</a>
-            <a href="/jobrequirement" class="card-link" type="button" class="btn button margin hove"> Another link</a>
-          </div>
-        </div>
-      </div>
-
-      <!--column-->
-      <div class="col" data-aos="fade-up">
-        <div class="card opening">
-          <div class="card-body matter">
-            <h5 class="card-title ">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <br>
-            <a href="/jobrequirement" class="card-link" type="button" class="btn button hove">Card link</a>
-
-            <a href="/jobrequirement" class="card-link" type="button" class="btn button margin hove"> Another link</a>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </div>
