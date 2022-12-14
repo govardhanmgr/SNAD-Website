@@ -290,19 +290,25 @@ section {
   }
 }
 
+@media screen and (max-width: 992px) {
+  .lo {
+    display: none;
+  }
+}
+
 @media (max-width: 991px) {
   .dnon {
     display: block;
   }
 }
 
-@media (width: 920px) {
+@media (width: 990px) {
   .sr {
     display: none;
   }
 }
 
-@media (max-width: 920px) {
+@media (max-width: 990px) {
   .hamburger-menu-container {
     display: flex;
   }
@@ -314,7 +320,7 @@ section {
   .nav-btn {
     position: fixed;
     height: calc(100vh - 0rem);
-    top: -0.5rem;
+    top: 3.7rem;
     left: 0;
     width: 100%;
     background-color: #ffffff;
