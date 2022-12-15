@@ -52,10 +52,6 @@ section {
   z-index: 1001;
 }
 
-.lo {
-  margin-left: 2rem;
-}
-
 .nav-btn {
   flex: 3;
   display: flex;
@@ -127,15 +123,25 @@ section {
   transform: scale(1.1);
 }
 
+.db > ul > li {
+  display: inline-block;
+  padding: 0.5rem;
+  text-align: start;
+  justify-content: left;
+}
+
 .dropdown {
   position: absolute;
   top: 100%;
   left: 0;
-  width: 10rem;
+  width: 25rem;
+  padding: 0rem;
   transform: translateY(10px);
   opacity: 0;
   pointer-events: none;
   transition: 0.5s;
+  text-align: start;
+  justify-content: left;
 }
 
 .dropdown ul {
@@ -147,7 +153,7 @@ section {
   background-color: #fff;
   color: #3498db;
   padding: 0.5rem 1rem;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   align-items: center;
   justify-content: space-between;
   transition: 0.3s;
@@ -255,17 +261,13 @@ section {
 #check {
   position: absolute;
   top: 50%;
-  right: -0.5rem;
+  right: 1rem;
   transform: translateY(-50%);
   width: 2.5rem;
   height: 2.5rem;
   z-index: 90000;
   cursor: pointer;
   opacity: 0;
-  display: none;
-}
-
-.dnon {
   display: none;
 }
 
@@ -292,24 +294,6 @@ section {
   }
 }
 
-@media screen and (max-width: 992px) {
-  .lo {
-    display: none;
-  }
-}
-
-@media (max-width: 991px) {
-  .dnon {
-    display: block;
-  }
-}
-
-@media (width: 990px) {
-  .sr {
-    display: none;
-  }
-}
-
 @media (max-width: 990px) {
   .hamburger-menu-container {
     display: flex;
@@ -317,6 +301,11 @@ section {
 
   #check {
     display: block;
+  }
+
+  .db > ul > li {
+    display: inline;
+    padding: 1rem;
   }
 
   .nav-btn {
