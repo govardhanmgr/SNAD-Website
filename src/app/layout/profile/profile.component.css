@@ -37,8 +37,15 @@ background-position: top;
   margin-left: 40px;
     margin-right: 40px;
 }
-  .btn btn-primary {
-text-align: right;
+  .btn-primary {
+     text-align: right;
+     margin-left: 80px;
+     margin-right: 80px;
+  }
+  h2{
+    text-align: left;
+     margin-left: 70px;
+     margin-right: 70px;
   }
   .img{
     margin-left: 30%;
