@@ -396,12 +396,12 @@ h1 {
 
 .multiple-button{
  padding: 16px;
- gap: 10%;
 }
 
 .button-card{
   border-radius: 50px;
   background-color: #eaeaf6;
+  float: right;
 }
 
 .buttons{
