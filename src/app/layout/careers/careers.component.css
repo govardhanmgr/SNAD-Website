@@ -396,12 +396,12 @@ h1 {
 
 .multiple-button{
  padding: 16px;
+ gap: 10%;
 }
 
 .button-card{
   border-radius: 50px;
   background-color: #eaeaf6;
-  float: right;
 }
 
 .buttons{
@@ -418,4 +418,33 @@ h1 {
 .buttons:hover{
   background-color:#2f5acd;
   color: white;
+}
+
+
+
+/* OPEN POSITION STYLINGS */
+
+.open-positionsCard{
+  border-radius: 30px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #c9e3e2;
+  box-shadow: 0 10px 10px 0 rgb(41 44 50 / 3%);
+}
+
+.openpositions-body{
+  padding: 40px;
+}
+
+.open-positions-button{
+  border-radius: 25px;
+  padding:10px 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #c9e3e2;
+  box-shadow: 0 10px 10px 0 rgb(41 44 50 / 3%);
+}
+
+.open-position-button-gap{
+  margin-left: 2%;
 }
