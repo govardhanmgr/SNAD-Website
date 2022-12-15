@@ -384,15 +384,17 @@
       </div>
 
       <!--c0lumn-->
-      <div class="card col-sm-12 col-md-3 d-flex flex-row button-card" data-aos="fade-up" style="width: fit-content;">
-        <div class="multiple-button">
-          <div>
-            <a href="/careers" type="button" class="btn buttons all-button">All</a>
-            <a href="/positions" type="button" class="btn buttons design-button">Design</a>
-            <a href="/positions" type="button" class="btn buttons">Development</a>
-            <a href="/positions" type="button" class="btn buttons">Bussiness</a>
-          </div>
-        </div>
+      <div class="col">
+        <div class="card button-card " style="width: fit-content;">
+          <div class="multiple-button">
+        <div class="d-flex flex-row" style="gap:10px;">
+          <a type="button" class="btn buttons all-button">All</a>
+          <a type="button" class="btn buttons design-button">Design</a>
+          <a type="button" class="btn buttons">Development</a>
+          <a type="button" class="btn buttons">Bussiness</a>
+       </div>
+       </div>
+       </div>
       </div>
     </div>
   </div>
@@ -406,9 +408,8 @@
               <br>
               <p class="card-text">{{openpos['job-description-excerpt']}}</p>
               <br>
-              <a class="card-link" type="button" class="btn open-positions-button">Development</a>
-              <a class="card-link" type="button"
-                class="btn open-positions-button open-position-button-gap">{{openpos['job-location']}}</a>
+              <a href="/jobrequirement" type="button" class="btn open-positions-button">Development</a>
+              <a href="/jobrequirement" type="button" class="btn open-positions-button open-position-button-gap">{{openpos['job-location']}}</a>
             </div>
           </div>
         </div>
