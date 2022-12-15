@@ -151,6 +151,7 @@ h5{
 } */
 .btn btn-primary{
     text-align:right;
+    
 }
 /* .ourvalues{
     background-color:#edf1fd;
@@ -228,6 +229,7 @@ align-items: flex-start;
 
 .team{
     text-align: center;
+
 }
 .text-left{
     text-align: left;
@@ -272,25 +274,15 @@ align-items: flex-start;
     padding-bottom: 15px;
     padding-right:15px ;
     background-color:#2f5acd;
-    
-    
 }
 .circle {
-
     background: #0981BD;
-
     border-radius: 50%;
-
     height: 13em;
-
     width: 13em;
-
     opacity: 10;
-
     margin-left: -100px;
-
     margin-top: -100px;
-
   }
   .impact{
     overflow: hidden;
@@ -305,8 +297,6 @@ align-items: flex-start;
     will-change: transform;
     /* overflow: hidden;
 overflow-y: hidden; */
-margin-bottom: -30px;
-    margin-top: 20px;
   }
   .flat{
     float: right;
@@ -349,9 +339,6 @@ margin-bottom: -30px;
         height:100%
     }
   }
-  
-
-
 
   .style{
     text-align: left;
@@ -387,8 +374,6 @@ margin-bottom: -30px;
     background-color:#0981BD;
     color: black;
     border-radius: 30px;
-    
-
 }
 .light{
     border-radius: 30px;
@@ -400,9 +385,7 @@ margin-bottom: -30px;
     color:blue ;
     border-radius: 30px;
 }
-.header{
-    
-}
+
 .circle-lg{
     transform: translate3d(0px,0px,0px) scale3d (1,1,1)
     rotateX(0deg) rotateY(0deg) rotateZ('360deg')skew(0deg,0deg);
@@ -411,9 +394,7 @@ margin-bottom: -30px;
     will-change: transform;
 
 }
-.w-h-100{
-    
-}
+
 .des {
     position: absolute;
     border-radius: 50%;
@@ -436,3 +417,11 @@ margin-bottom: -30px;
     }
   }
   
+
+
+  /* OUR TEAM */
+
+  .profile-link{
+    text-decoration: none;
+    color: black;
+  }
