@@ -16,7 +16,8 @@ export class CareersComponent implements OnInit {
 
   getCareerItemById: any;
   Careers = {} as any
-  arrayresponse = [];
+  jobtab = [] as any
+  // arrayresponse = [];
   
 
 
@@ -42,6 +43,7 @@ export class CareersComponent implements OnInit {
       duration: 1200,
     })
     this.career();
+    this.jobtabs();
    
 
 
@@ -55,7 +57,7 @@ export class CareersComponent implements OnInit {
         let data = response.data
 
         this.Careers = response.data
-        const app =  document.getElementById('header') 
+        const app =  document.getElementById('app') 
          const n =  document.createElement('section')
          n.innerHTML =this.Careers['job-description']
         app?.append(n)
@@ -66,6 +68,7 @@ export class CareersComponent implements OnInit {
       error: (reason: any) => console.log(reason)
     });
   }
+
   jobcategory(itemid: string) {
     this.subscription = this.webflow.getData(`careercategoriesitembyid/${itemid}`).subscribe({
       next: (data: any) => {
@@ -75,4 +78,27 @@ export class CareersComponent implements OnInit {
       error: (reason: any) => console.log(reason)
     });
   }
+
+jobtabs() {
+  this.subscription = this.webflow.getData("allitems/6375d4747684b4ac2c4ccf78").subscribe({
+    next: (response: any) => {
+      console.log(response);
+      let data = response.data
+        this.jobtab = response.data
+    },
+    error:(reason:any)=>{
+      console.error(reason);  
+    }
+  });
 }
+ngOnDestroy():void{
+  if (this.subscription){
+    this.subscription.unsubscribe()
+  }
+}
+}
+
+
+
+
+

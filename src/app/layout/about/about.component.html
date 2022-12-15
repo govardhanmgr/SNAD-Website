@@ -72,16 +72,16 @@
   <div class="row row-cols-1 row-cols-md-3 g-4 core">
     <!--column-->
     <div class="col">
-      <div class="card values" data-aos="fade-up">
-         <a href="/profile"><img src="https://uploads-ssl.webflow.com/6375d4747684b438e84ccf70/6375d4747684b44cd84cd1c7_john-carter-profile-picture-small-startup-x-webflow-template.jpg" alt="Snow" class="card-img-top" style="width:100%"></a> 
-          <div class="img3" type="button"><b>CEO & Founder</b></div>
+      <div class="card values" data-aos="fade-up" *ngFor="let profile of Abouts">
+         <img src="{{profile.imageurl }}" alt="Snow" class="card-img-top" style="width:100%" />
+          <div class="img3" type="button"><b>{{profile["team-job-title"]}}</b></div>
           <div class="card-body value">
-          <h4 class="card-title"><b>John Carter</b></h4>
-          <p class="card-text">Lorem ipsum dolor sit amet, dol si consectetur adipiscing elit.</p>
+          <h4 class="card-title"><b>{{profile.name}}</b></h4>
+          <p class="card-text">{{profile["team-about-card-excerpt"]}}</p>
         </div>
       </div>
     </div>
-     <!--column-->
+     <!-- column
     <div class="col">
         <div class="card values" data-aos="fade-up">
           <a href="/profile"><img src="https://uploads-ssl.webflow.com/6375d4747684b438e84ccf70/6375d4747684b4f4634cd1c8_sophie-moore-profile-picture-small-startup-x-webflow-template.jpg" class="card-img-top" alt="..."></a>
@@ -92,8 +92,8 @@
             </div>
         </div>
     </div>
-     <!--column-->
-  <div class="col">
+     <--column-->
+  <!-- <div class="col">
     <div class="card values"data-aos="fade-up">
       <a href="/profile"><img src="https://uploads-ssl.webflow.com/6375d4747684b438e84ccf70/6375d4747684b44fd04cd1c9_matt-cannon-profile-picture-small-startup-x-webflow-template.jpg" class="card-img-top" alt="..."></a>
         <div class="img3"><b>VP of Product</b></div>
@@ -102,9 +102,9 @@
             <p class="card-text">Lorem ipsum dolor sit amet, dol si consectetur adipiscing elit.</p>
         </div>
     </div>
-</div>
+</div> -->
  <!--column-->
-<div class="col">
+<!-- <div class="col">
     <div class="card values"data-aos="fade-up">
       <a href="/profile"><img src="https://uploads-ssl.webflow.com/6375d4747684b438e84ccf70/6375d4747684b410534cd1ca_lily-woods-profile-picture-small-startup-x-webflow-template.jpg" class="card-img-top" alt="..."></a>
         <div class="img3"><b>VP of Design</b></div>
@@ -113,9 +113,9 @@
             <p class="card-text">Lorem ipsum dolor sit amet, dol si consectetur adipiscing elit.</p>
         </div>
     </div>
-</div>
+</div> -->
  <!--column-->
- <div class="col">
+ <!-- <div class="col">
    <div class="card values"data-aos="fade-up">
     <a href="/profile"> <img src="https://uploads-ssl.webflow.com/6375d4747684b438e84ccf70/6375d4747684b4a3964cd1cb_jeremy-matthews-profile-picture-small-startup-x-webflow-template.jpg" class="card-img-top" alt="..."></a>
       <div class="img3"><b>VP of Security</b></div>
@@ -124,9 +124,9 @@
           <p class="card-text">Lorem ipsum dolor sit amet, dol si consectetur adipiscing elit.</p>
       </div>
     </div>
-  </div>
+  </div> -->
 <!--column-->
-<div class="col ">
+<!-- <div class="col ">
  <div class="card values"data-aos="fade-up">
   <a href="/profile"><img src="https://uploads-ssl.webflow.com/6375d4747684b438e84ccf70/6375d4747684b4a6d34cd1cc_andy-smith-profile-picture-small-startup-x-webflow-template.jpg" class="card-img-top" alt="..."></a>
     <div class="img3"><b>Head of People</b></div>
@@ -136,7 +136,7 @@
     </div>
 </div>
 </div>
-</div>
+</div> -->
 <br><br>
 <div class="team"data-aos="fade-up">
     <a href="/careers" type="button" class="btn btn-primary" >Join our team</a>
