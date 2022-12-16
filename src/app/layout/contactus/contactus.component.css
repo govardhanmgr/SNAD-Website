@@ -132,3 +132,20 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+/* stylen */
+
+.stylen {
+  font-size: 3rem;
+  font-weight: 750;
+}
+
+.styles {
+  font-size: 1.4rem;
+  font-weight: 750;
+}
+
+.we {
+  font-size: 2.5rem;
+  font-weight: 65 0;
+}
