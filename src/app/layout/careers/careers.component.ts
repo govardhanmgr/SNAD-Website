@@ -18,7 +18,7 @@ export class CareersComponent implements OnInit {
   Careers = {} as any
   jobtab = [] as any
   // arrayresponse = [];
-  
+
 
 
   scroll(el: HTMLElement) {
@@ -44,7 +44,7 @@ export class CareersComponent implements OnInit {
     })
     this.career();
     this.jobtabs();
-   
+
 
 
   }
@@ -57,45 +57,52 @@ export class CareersComponent implements OnInit {
         let data = response.data
 
         this.Careers = response.data
-        const app =  document.getElementById('app') 
-         const n =  document.createElement('section')
-         n.innerHTML =this.Careers['job-description']
-        app?.append(n)
+         const app =  document.getElementById('app') 
+          const n =  document.createElement('section')
+          n.innerHTML =this.Careers['job-description']
+         app?.append(n)
         let id = Object(data)["career-job-category"] as string
-        this.jobcategory(id)
+
 
       },
       error: (reason: any) => console.log(reason)
     });
   }
 
-  jobcategory(itemid: string) {
+  jobcategory(itemid: string, res: any) {
+
     this.subscription = this.webflow.getData(`careercategoriesitembyid/${itemid}`).subscribe({
-      next: (data: any) => {
 
-        console.log(data)
+      next: (data: any) => {
+        res.category = data.data.name
       },
       error: (reason: any) => console.log(reason)
     });
   }
 
-jobtabs() {
-  this.subscription = this.webflow.getData("allitems/6375d4747684b4ac2c4ccf78").subscribe({
-    next: (response: any) => {
-      console.log(response);
-      let data = response.data
+  jobtabs() {
+    this.subscription = this.webflow.getData("allitems/6375d4747684b4ac2c4ccf78").subscribe({
+      next: (response: any) => {
+        console.log(response);
+        let data = response.data
         this.jobtab = response.data
-    },
-    error:(reason:any)=>{
-      console.error(reason);  
-    }
-  });
-}
-ngOnDestroy():void{
-  if (this.subscription){
-    this.subscription.unsubscribe()
+        this.jobtab.forEach(
+          (element: any) => {
+            let id = Object(element)["career-job-category"] as string
+            this.jobcategory(id, element)
+          });
+        console.log(this.jobtab)
+      },
+      error: (reason: any) => {
+        console.error(reason);
+      }
+    });
   }
-}
+  ngOnDestroy(): void {
+    if (this.subscription) {
+      this.subscription.unsubscribe()
+    }
+  }
 }
 
 
