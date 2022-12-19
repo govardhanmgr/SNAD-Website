@@ -1,36 +1,23 @@
 <div class="maindiv d-flex">
 
-    <div class="buttones d-flex  ">
+    <div class="buttones d-flex ">
         <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-            <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#business"
-                type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Business Application
-                Development</button>
-            <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#managed"
-                type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Managed
-                Infrastructure Services</button>
-            <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#database"
-                type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Database Management
-                Services</button>
-            <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#cloud"
-                type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Cloud Transformation
-                Services</button>
-            <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#itservices"
-                type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Managed IT
-                Services</button>
-            <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#migration"
-                type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Migration and
-                Stabilization Services</button>
-            <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#digital"
-                type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Digital
-                Transformation</button>
+            <div  *ngFor="let item of services">
+                <button class="nav-link " id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#business"
+                    type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">{{item.name}}
+                    </button>
+               
+                    
+            </div>
         </div>
+       
         <div class="tab-content" id="v-pills-tabContent">
             <div class="tab-pane fade show active" id="business" role="tabpanel" aria-labelledby="v-pills-home-tab">
                 <div class="container ">
                     <div class="row">
                         <div class="card" id="Personal">
 
-                            <div class="card-title ">Business Application Development
+                            <div class="card-title "> Business Application Development
                                 <div class="paragraph">Our mission at SNAD Developers is to provide innovative,
                                     cutting-edge solutions to our clients that help them stay ahead of the
                                     competition.
