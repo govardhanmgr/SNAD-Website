@@ -98,7 +98,21 @@
     box-shadow: 0 10px 10px 0 rgb(41 44 50 / 3%);
   }
 
+  @media(){
+    .button{
+      width: 100%;
+      margin-bottom: 5px;
+    }
+    .button-card{
+      flex: auto;
+    }
+  }
+
   .buttons:hover{
     background-color: blue;
     color: white;
   }
+
+
+
+ 
