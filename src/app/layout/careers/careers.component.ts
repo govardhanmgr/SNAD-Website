@@ -1,6 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import * as Aos from 'aos';
 import { Subscription } from 'rxjs';
 import { WebflowserviceService } from 'src/app/services/webflowservice.service';
@@ -33,9 +33,17 @@ export class CareersComponent implements OnInit {
     });
   }
 
+  jobReq(id: string) {
+    console.log(id);
+    
+
+    this.router?.navigate([`/jobrequirement/${id}`])
+  }
+
   constructor(
     private router: Router,
-    private webflow: WebflowserviceService
+    private webflow: WebflowserviceService,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
@@ -44,9 +52,7 @@ export class CareersComponent implements OnInit {
     })
     this.career();
     this.jobtabs();
-
-
-
+    // this.route.paramMap.subscribe((params:ParamMap)=>+)
   }
   career() {
     this.subscription = this.webflow.getData("careeritembyid/6375d4747684b4d78e4cd061").subscribe({
@@ -57,10 +63,10 @@ export class CareersComponent implements OnInit {
         let data = response.data
 
         this.Careers = response.data
-         const app =  document.getElementById('app') 
-          const n =  document.createElement('section')
-          n.innerHTML =this.Careers['job-description']
-         app?.append(n)
+        const app = document.getElementById('app')
+        const n = document.createElement('section')
+        n.innerHTML = this.Careers['job-description']
+        app?.append(n)
         let id = Object(data)["career-job-category"] as string
 
 
@@ -103,6 +109,8 @@ export class CareersComponent implements OnInit {
       this.subscription.unsubscribe()
     }
   }
+
+
 }
 
 
