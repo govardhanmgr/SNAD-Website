@@ -1,0 +1,32 @@
+.us {
+
+    color: #fff;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+
+}
+.perk {
+    border-radius: 30px;
+    padding: 40px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #dadcec;
+    box-shadow: 0 4px 10px 0 rgb(41 44 50 / 3%);
+}
+.smalldash {
+
+    width: 100%;
+
+    max-width: 60px;
+
+    min-height: 2px;
+
+    margin-right: 25px;
+
+    background-color: #fff;
+
+}

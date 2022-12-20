@@ -398,19 +398,25 @@
       </div>
 
       <!--column-->
-      <div class="col " data-aos="fade-up">
-        <div class="card " *ngFor="let openpos of jobtab">
-          <div class="card-body ">
-            <h4 class="card-title">{{openpos.name}}</h4>
-            <p class="card-text">{{openpos['job-description-excerpt']}}</p>
-            <br>
-            <a class="card-link" type="button" class="btn button">Development</a>
-            <a class="card-link" type="button" class="btn button">{{openpos['job-location']}}</a>
-          </div>
-        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row ">
+  <div class="col-sm-12 col-md-6 d-flex flex-row  " data-aos="fade-up"  *ngFor="let openpos of jobtab"  >
+    <div class="card m-2">
+      <div class="card-body ">
+        <h4 class="card-title">{{openpos.name}}</h4>
+        <p class="card-text">{{openpos['job-description-excerpt']}}</p>
+        <br>
+        <a class="card-link" type="button" class="btn button">Development</a>
+        <a class="card-link" type="button" class="btn button">{{openpos['job-location']}}</a>
       </div>
     </div>
   </div>
+</div>
 </div>
 
 
