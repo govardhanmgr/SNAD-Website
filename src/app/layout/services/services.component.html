@@ -1,10 +1,166 @@
-<div>
-    <a routerLink="/businessapplication"><h4>Business Application Development</h4></a>
-    <a routerLink="/managedinfrastructure"><h4>Managed Infrastructure Services</h4></a>
-     <a routerLink="/databasemanagement"><h4>Database Management Services</h4></a>
-     <a routerLink="/cloudtransformation"><h4>Cloud Transformation Services</h4></a>
-     <a routerLink="/manageditservices"><h4>Managed IT Services</h4></a>
-     <a routerLink="/migrationstabilization"><h4>Migration and Stabilization Services</h4></a>
-     <a routerLink="/digitaltransformation"><h4>Digital Transformation</h4></a>
+<div class="maindiv d-flex">
+
+    <div class="buttones d-flex ">
+        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <div  *ngFor="let item of services">
+                <button class="nav-link " id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#business"
+                    type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">{{item.name}}
+                    </button>
+               
+                    
+            </div>
+        </div>
+       
+        <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="business" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                <div class="container ">
+                    <div class="row">
+                        <div class="card" id="Personal">
+
+                            <div class="card-title "> Business Application Development
+                                <div class="paragraph">Our mission at SNAD Developers is to provide innovative,
+                                    cutting-edge solutions to our clients that help them stay ahead of the
+                                    competition.
+                                    We are dedicated to providing the best possible service and customer experience.
+                                </div>
+                                <button type="button" class="btn btn-secondary">Learn More</button>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="tab-pane fade" id="managed" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                <div class="container">
+                    <div class="row">
+                        <div class="card bg-dark" id="Personal">
+
+                            <div class="card-title"> Managed Infrastructure Services
+                                <div class="paragraph">Our mission at SNAD Developers is to provide innovative,
+                                    cutting-edge solutions to our clients that help them stay ahead of the
+                                    competition.
+                                    We are dedicated to providing the best possible service and customer experience.
+                                </div>
+                                <button type="button" class="btn btn-secondary">Learn More</button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="tab-pane fade" id="database" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                <div class="container">
+                    <div class="row">
+                        <div class="card bg-dark" id="Personal">
+
+                            <div class="card-title">Database Management Services
+                                <div class="paragraph">Our mission at SNAD Developers is to provide innovative,
+                                    cutting-edge solutions to our clients that help them stay ahead of the
+                                    competition.
+                                    We are dedicated to providing the best possible service and customer experience.
+                                </div>
+                                <button type="button" class="btn btn-secondary">Learn More</button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="tab-pane fade" id="cloud" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                <div class="container">
+                    <div class="row">
+                        <div class="card bg-dark" id="Personal">
+
+                            <div class="card-title">Cloud Transformation Services
+                                <div class="paragraph">Our mission at SNAD Developers is to provide innovative,
+                                    cutting-edge solutions to our clients that help them stay ahead of the
+                                    competition.
+                                    We are dedicated to providing the best possible service and customer experience.
+                                </div>
+                                <button type="button" class="btn btn-secondary">Learn More</button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="tab-pane fade" id="itservices" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                <div class="container">
+                    <div class="row">
+                        <div class="card bg-dark" id="Personal">
+
+                            <div class="card-title">Managed IT Services
+                                <div class="paragraph">Our mission at SNAD Developers is to provide innovative,
+                                    cutting-edge solutions to our clients that help them stay ahead of the
+                                    competition.
+                                    We are dedicated to providing the best possible service and customer experience.
+                                </div>
+                                <button type="button" class="btn btn-secondary">Learn More</button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="tab-pane fade" id="migration" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                <div class="container">
+                    <div class="row">
+                        <div class="card bg-dark" id="Personal">
+
+                            <div class="card-title">Migration and Stabilization Services
+                                <div class="paragraph">Our mission at SNAD Developers is to provide innovative,
+                                    cutting-edge solutions to our clients that help them stay ahead of the
+                                    competition.
+                                    We are dedicated to providing the best possible service and customer experience.
+                                </div>
+                                <button type="button" class="btn btn-secondary">Learn More</button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="tab-pane fade" id="digital" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                <div class="container">
+                    <div class="row">
+                        <div class="card bg-dark" id="Personal">
+
+                            <div class="card-title">Digital Transformation
+                                <div class="paragraph">Our mission at SNAD Developers is to provide innovative,
+                                    cutting-edge solutions to our clients that help them stay ahead of the
+                                    competition.
+                                    We are dedicated to providing the best possible service and customer experience.
+                                </div>
+                                <button type="button" class="btn btn-secondary">Learn More</button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </div>
-   
