@@ -4,55 +4,61 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import * as Aos from 'aos';
 
-
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.css']
+  styleUrls: ['./blog.component.css'],
 })
 export class BlogComponent implements OnInit {
-  subscription!: Subscription; 
+  subscription!: Subscription;
 
-  Blogs= [] as any
-  arrayupdate =[];
+  Blogs = [] as any;
+  arrayupdate = [];
 
-
-  constructor( private router:Router,
-    private webflow:WebflowserviceService) { }
+  constructor(private router: Router, private webflow: WebflowserviceService) {}
 
   ngOnInit(): void {
     Aos.init({
       duration: 500,
-    })
-  this.blog();
+    });
+    this.blog();
   }
- blog(){
-  this.subscription=this.webflow.getData("allitems/6375d4747684b45e464ccf77").subscribe({
-    next: (update:any)=> {
-      console.log(update);
+  blog() {
+    this.subscription = this.webflow
+      .getData('allitems/6375d4747684b45e464ccf77')
+      .subscribe({
+        next: (update: any) => {
+          console.log(update);
 
-      this.Blogs = update.data
+          this.Blogs = update.data;
 
-      this.Blogs.forEach(
-        (element: any) => {
-          element.imageurl = element['post-main-image'].url
-        });
-        console.log(this.Blogs);
+          this.Blogs.forEach((element: any) => {
+            element.imageurl = element['post-main-image'].url;
+          });
+          console.log(this.Blogs);
 
-      let data = update.data
-       this.Blogs = update.data
-       
-      const app = document.getElementById('des')
-      const add = document.getElementById('title')
-      const n =  document.createElement('section')
-      const p =  document.createElement('section')
-         n.innerHTML =this.Blogs[0]['post-excerpt']
-         p.innerHTML =this.Blogs[0]['name']
-        app?.append(n)
-        add?.append(p)
 
-    },
-    error: (reason: any) => console.log(reason)
-  });
- }
+          const app = document.getElementById('des');
+          const add = document.getElementById('title');
+          const n = document.createElement('section');
+          const p = document.createElement('section');
+          n.innerHTML = this.Blogs[0]['post-excerpt'];
+          p.innerHTML = this.Blogs[0]['name'];
+          app?.append(n);
+          add?.append(p);
+        },
+        error: (reason: any) => console.log(reason),
+      });
+  }
+
+  blogcategory(itemid: string, ref: any) {
+    this.subscription = this.webflow
+      .getData(`blogitembyid/${itemid}`)
+      .subscribe({
+        next: (data: any) => {
+          ref.category = data;
+        },
+        error: (reason: any) => console.log(reason),
+      });
+  }
 }
