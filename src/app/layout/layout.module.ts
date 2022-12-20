@@ -21,6 +21,8 @@ import { ReadarticleComponent } from './readarticle/readarticle.component';
 import { BusinessarticlesComponent } from './businessarticles/businessarticles.component';
 import { PositionsComponent } from './positions/positions.component';
 import { BrowsearticlesComponent } from './browsearticles/browsearticles.component';
+import { GetintouchComponent } from '../shared/getintouch/getintouch.component';
+
 
 
 @NgModule({
@@ -50,6 +52,7 @@ import { BrowsearticlesComponent } from './browsearticles/browsearticles.compone
     FormsModule,
     ReactiveFormsModule,
     FormsModule,
+    SharedModule
    
   ],
 })
