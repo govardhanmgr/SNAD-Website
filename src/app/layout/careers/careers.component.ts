@@ -35,8 +35,6 @@ export class CareersComponent implements OnInit {
 
   jobReq(id: string) {
     console.log(id);
-    
-
     this.router?.navigate([`/jobrequirement/${id}`])
   }
 
