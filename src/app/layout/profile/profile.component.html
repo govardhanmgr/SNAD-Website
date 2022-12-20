@@ -10,10 +10,10 @@
        width="180" height="180"  class="rounded-circle img"  alt="Cinque Terre">
        
     </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">John Carter</h5>
-        <h5 class="card-title" style="color:blue">CEO & Founder</h5>
+    <div class="col-md-8" >
+      <div class="card-body" >
+        <h5 class="card-title">{{profile.name}}</h5>
+        <h5 class="card-title" style="color:blue">{{profile['team-job-title']}}</h5>
         
         <div class="networks">
           <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,31 +22,19 @@
           <a href="#" class="fa fa-twitter"></a>
           <a href="#" class="fa fa-linkedin"></a>
         </div>
-        <p class="card-text">Lorem ipsum dolor sit amet consectetur <br> 
-          adipiscing elit viverra fusce augue dignissim quis <br> nisl non 
-          penatibus etiam nisi nunc mauris sed id.</p>
+        <p class="card-text">{{profile['team-about-summary']}}</p>
       </div>
     </div>
   </div>
 </div>
 <hr>
-<div class="card-body">
+<div class="card-body" >
   <h5 class="card-title"><b>About John Carter </b> </h5>
-  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipiscing elit
-       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-       Massa sed elementum tempus egestas sed sed risus pretium quam. Amet
-       nulla facilisi morbi tempus iaculis urna. Et malesuada fames ac turpis
-       egestas. Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper
-        morbi.</p>
+  <p class="card-text" id="app"></p>
 </div>
 <div class="card-body">
   <h5 class="card-title"><b >Past experience</b></h5>
-  <p class="card-text">Velit sed ullamcorper morbi tincidunt ornare massa 
-      eget volutpat est velit egestas dui id ornare arcu. Facilisis sed odio
-       morbi quis commodo. Vitae proin sagittis nisl rhoncus mattis rhoncus.
-       Nunc scelerisque viverra mauris in. Vitae suscipit tellus mauris a.
-       Purus in massa tempor nec feugiat nisl pretium fusce id. Nunc sed velit
-        dignissim sodales.</p>
+  <p class="card-text" id="des"></p>
 </div> 
 </div>
 </div> 
