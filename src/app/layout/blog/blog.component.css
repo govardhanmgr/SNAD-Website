@@ -142,7 +142,7 @@ a {
   text-decoration: none;
 }
 
-a:hover, a:focus {
+.latest-articles:hover, .latest-articles:focus {
   color: rgb(46, 48, 180);
   text-decoration: none;
 }
