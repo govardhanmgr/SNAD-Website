@@ -49,14 +49,14 @@ const routes: Routes = [
   { path: "manageditservices", component: ManagedItServicesComponent },
   { path: "migrationstabilization", component: MigrationStabilizationComponent },
   { path: "profile", component: ProfileComponent },
-  { path: "jobrequirement", component: JobrequirmentComponent },
+  { path: "jobrequirement/:itemid", component: JobrequirmentComponent },
   { path: "blogsection", component: BlogsectionComponent },
-  {path:'animation',component:AnimationComponent},
-   {path:'businessarticles',component:BusinessarticlesComponent},
-  { path:"managementarticles",component:ManagementarticlesComponent},
-  { path:"financearticles",component:FinancearticlesComponent},
-  { path:"readarticle",component:ReadarticleComponent},
-  {path:"positions",component:PositionsComponent},
+  { path: 'animation', component: AnimationComponent },
+  { path: 'businessarticles', component: BusinessarticlesComponent },
+  { path: "managementarticles", component: ManagementarticlesComponent },
+  { path: "financearticles", component: FinancearticlesComponent },
+  { path: "readarticle", component: ReadarticleComponent },
+  { path: "positions", component: PositionsComponent },
 
 
 
