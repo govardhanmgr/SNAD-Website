@@ -34,8 +34,6 @@ export class AboutComponent implements OnInit, OnDestroy {
 
         console.log(response);
 
-
-
         this.Abouts = response.data
 
         this.Abouts.forEach(
@@ -44,8 +42,6 @@ export class AboutComponent implements OnInit, OnDestroy {
           });
           console.log(this.Abouts);
           
-
-       
         const app = document.getElementById('app')
         const n = document.createElement('section')
         n.innerHTML = this.Abouts['team-about']

@@ -387,45 +387,55 @@
       <div class="col">
         <div class="card button-card " style="width: fit-content;">
           <div class="multiple-button">
-        <div class="d-flex flex-row" style="gap:10px;">
-          <a type="button" class="btn buttons all-button">All</a>
-          <a type="button" class="btn buttons design-button">Design</a>
-          <a type="button" class="btn buttons">Development</a>
-          <a type="button" class="btn buttons">Bussiness</a>
-       </div>
-       </div>
-       </div>
-      </div>
-    </div>
-  </div>
-</div>
-    <div class="container">
-      <div class="row ">
-        <div class="col-sm-6 col-md-6 d-flex flex-row  " data-aos="fade-up" *ngFor="let openpos of jobtab">
-          <div class="card m-2 open-positionsCard">
-            <div class="card-body openpositions-body">
-              <h4 class="card-title">{{openpos.name}}</h4>
-              <br>
-              <p class="card-text">{{openpos['job-description-excerpt']}}</p>
-              <br>
-              <a href="/jobrequirement" type="button" class="btn open-positions-button">Development</a>
-              <a href="/jobrequirement" type="button" class="btn open-positions-button open-position-button-gap">{{openpos['job-location']}}</a>
+            <div class="d-flex flex-row" style="gap:10px;"  >
+              <button   type="button" class="btn buttons all-button" (click)="jobFilter()">All</button>
+              <div *ngFor="let cat of Jobcategory " >
+
+
+              <button   type="button" class="btn buttons all-button" (click)="jobFilter(cat)">{{cat}}</button>
+              <!-- <a onclick="filterSelection('category='design')" type="button" class="btn buttons design-button">Design</a>
+              <a [routerLink]="['/positions']" type="button" class="btn buttons">Development</a>
+              <a [routerLink]="['/positions']" type="button" class="btn buttons">Business</a> -->
+            </div>
             </div>
           </div>
         </div>
       </div>
+
     </div>
+  </div>
+</div>
 
-
-
-
-
-    <!--Find the right position-->
-    <div class="find" data-aos="fade-up">
-      <h4><b>Can't find the right position ?</b></h4>
-      <br>
-      <p style="text-align: center;" class="position">Lorem ipsum dolor sit amet consectetur adipisc elit <br> viverra
-        dignissim pellentesque in ac.</p>
-      <br>
-      <a href="/contactus" type="button" class="btn btn-lg get">Get in touch</a>
+<div class="container">
+  <div class="row ">
+    <div class="col-sm-6 col-md-6 d-flex flex-row  " data-aos="fade-up" *ngFor="let openpos of filteredJobOpening">
+      <div>
+      <div class="card m-2 open-positionsCard filterDiv(openpos.category)"  (click)="jobReq(openpos._id)">
+        <div class="card-body openpositions-body">
+          <h4 class="card-title">{{openpos.name}}</h4>
+          <br>
+          <p class="card-text">{{openpos['job-description-excerpt']}}</p>
+          <br>
+          <a type="button" class="btn open-positions-button">{{openpos.category}}</a>
+          <a type="button"
+            class="btn open-positions-button open-position-button-gap">{{openpos['job-location']}}</a>
+        </div>
+      </div>
     </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!--Find the right position-->
+<div class="find" data-aos="fade-up">
+  <h4><b>Can't find the right position ?</b></h4>
+  <br>
+  <p style="text-align: center;" class="position">Lorem ipsum dolor sit amet consectetur adipisc elit <br> viverra
+    dignissim pellentesque in ac.</p>
+  <br>
+  <a href="/contactus" type="button" class="btn btn-lg get">Get in touch</a>
+</div>

@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { GetintouchComponent } from './shared/getintouch/getintouch.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
     HttpClientModule,
   
   ],
-  providers: [],
+  providers: [GetintouchComponent],
   bootstrap: [AppComponent],
+  
 })
 export class AppModule {}

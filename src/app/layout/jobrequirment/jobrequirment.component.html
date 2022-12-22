@@ -12,7 +12,7 @@
         <div class="col">
          <div class="">
           <div class="card-body">
-            <h2><b>Junior Frontend Developer</b></h2>
+            <h2><b>{{jobs.name}}</b></h2>
             <br>
             <a href="#" class="card-link"  type="button" class="btn btn-light button pop">Card link</a>    
             <a href="#" class="card-link"  type="button" class="btn btn-light button margin pop">Another link</a>
@@ -26,11 +26,10 @@
         <div class="">
          <div class="card-adj">
           <b><h3>Job description</h3></b>
-           <br>
-           <p class="card-text">Lorem ipsum dolor sit amet consectetur adipiscing elit. Tellus augue sagittis erat consectetur est. Blandit blandit nec mauris pulvinar. Lectus duis amet tortor, sit tincidunt. Rhoncus tincidunt imperdiet penatibus vitae risus, vitae. Blandit auctor justo nisl massa.
+           <p class="card-text" id="app">
             <br>
             <br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus dictum ultrices lacus sodales nunc felis eu, consectetur arcu. Vitae nulla scelerisque id pellentesque feugiat vel eu</p>
+          {{jobs["job-description-excerpt"]}}</p>
           </div>
         </div>
     </div>
@@ -41,12 +40,8 @@
          <div class="card-adj">
            <b><h3>Responsibilities</h3></b>
            <br>
-           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus dictum ultrices lacus sodales nunc felis eu, consectetur arcu. Vitae nulla scelerisque id pellentesque feugiat vel eu.</p>
-          <ul>
-            <li>Neque sodales ut etiam sit amet nisl purus. Non tellus orci ac auctor.</li>
-            <li>Adipiscing elit ut aliquam purus sit amet. Viverra suspendisse potenti .</li>
-            <li>Adipiscing elit ut aliquam purus sit amet. Viverra suspendisse potenti .</li>
-          </ul>
+           <p class="card-text" id="des"></p>
+          
           </div>
         </div>
     </div>
@@ -58,12 +53,8 @@
          <div class="card-adj">
           <b><h3>Job requirements</h3></b>
            <br>
-           <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus dictum ultrices lacus sodales nunc felis eu, consectetur arcu. Vitae nulla scelerisque id pellentesque feugiat vel eu.</p>
-           <ul>
-             <li>Neque sodales ut etiam sit amet nisl purus. Non tellus orci ac auctor.</li>
-             <li>Adipiscing elit ut aliquam purus sit amet. Viverra suspendisse potenti .</li>
-             <li>Adipiscing elit ut aliquam purus sit amet. Viverra suspendisse potenti .</li>
-           </ul>
+           <p class="card-text" id="req"></p>
+           
            <br>
            <a type="button" class="btn btn-primary btn-lg but">Apply Now</a>
           </div>
@@ -110,7 +101,7 @@
         <!--column-->
       <div class="col">
         <div class=" mb-3 perk txtcl" >
-         <h1 style="color: white;"  data-aos="fade-up" >More Job Openings</h1>
+         <h1 style="color: white;"  data-aos="fade-up">More Job Openings</h1>
         </div>
       </div>
     

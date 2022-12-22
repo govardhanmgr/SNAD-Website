@@ -11,20 +11,14 @@ import { ErrorComponent } from './error/error.component';
 import { HomeComponent } from './home/home.component';
 import { JobrequirmentComponent } from './jobrequirment/jobrequirment.component';
 import { ProfileComponent } from './profile/profile.component';
-import { ServicesComponent } from './services/services.component';
-import { BusinessApplicationComponent } from './business-application/business-application.component';
-import { CloudTransformationComponent } from './cloud-transformation/cloud-transformation.component';
-import { DatabaseManagementComponent } from './database-management/database-management.component';
-import { DigitalTransformationComponent } from './digital-transformation/digital-transformation.component';
-import { ManagedInfrastructureComponent } from './managed-infrastructure/managed-infrastructure.component';
-import { ManagedItServicesComponent } from './managed-it-services/managed-it-services.component';
-import { MigrationStabilizationComponent } from './migration-stabilization/migration-stabilization.component';
+import { ServicesComponent } from './services/services.component'
 import { BlogsectionComponent } from './blogsection/blogsection.component';
 
 import { ReadarticleComponent } from './readarticle/readarticle.component';
 import { BusinessarticlesComponent } from './businessarticles/businessarticles.component';
 import { AnimationComponent } from './animation/animation.component';
 import { PositionsComponent } from './positions/positions.component';
+import { ServiceheroimageComponent } from './serviceheroimage/serviceheroimage.component';
 
 
 
@@ -41,22 +35,16 @@ const routes: Routes = [
   { path: "contactus", component: ContactusComponent },
   { path: "services", component: ServicesComponent },
   { path: "careers", component: CareersComponent },
-  { path: "businessapplication", component: BusinessApplicationComponent },
-  { path: "cloudtransformation", component: CloudTransformationComponent },
-  { path: "databasemanagement", component: DatabaseManagementComponent },
-  { path: "digitaltransformation", component: DigitalTransformationComponent },
-  { path: "managedinfrastructure", component: ManagedInfrastructureComponent },
-  { path: "manageditservices", component: ManagedItServicesComponent },
-  { path: "migrationstabilization", component: MigrationStabilizationComponent },
   { path: "profile", component: ProfileComponent },
-  { path: "jobrequirement", component: JobrequirmentComponent },
+  { path: "jobrequirement/:itemid", component: JobrequirmentComponent },
   { path: "blogsection", component: BlogsectionComponent },
-  {path:'animation',component:AnimationComponent},
-   {path:'businessarticles',component:BusinessarticlesComponent},
-  { path:"managementarticles",component:ManagementarticlesComponent},
-  { path:"financearticles",component:FinancearticlesComponent},
-  { path:"readarticle",component:ReadarticleComponent},
-  {path:"positions",component:PositionsComponent},
+  { path: 'animation', component: AnimationComponent },
+  { path: 'businessarticles', component: BusinessarticlesComponent },
+  { path: "managementarticles", component: ManagementarticlesComponent },
+  { path: "financearticles", component: FinancearticlesComponent },
+  { path: "readarticle", component: ReadarticleComponent },
+  { path: "positions", component: PositionsComponent },
+  {path:"serviceheroimage",component:ServiceheroimageComponent},
 
 
 
