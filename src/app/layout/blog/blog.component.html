@@ -1,68 +1,65 @@
-<br><br>
+<br /><br />
 <div class="container-fluid" class="line"></div>
-<br><br><br>
+<br /><br /><br />
 <h1 class="text-center">Articles & Resources</h1>
-
-
 
 <div class="i1" data-aos="fade-up" data-aos-anchor-placement="top-center">
   <a href="./readarticle">
     <div class="card i1">
-      <img src="assets/b1.jpeg" class="card-img-top" alt="..." class="zoom">
+      <img src="assets/b1.jpeg" class="card-img-top" alt="..." class="zoom" />
 
-      <button class="btn" class="butstyli1"><img src="/assets/br.png" alt="Bootstrap" width="32" height="32">
-        <b>Business</b></button>
+      <button class="btn" class="butstyli1">
+        <img src="/assets/br.png" alt="Bootstrap" width="32" height="32" />
+        <b>Business</b>
+      </button>
       <div class="card-body">
         <div class="bottom-sec">
           <h3 id="title"></h3>
           <p class="card-text" class="text-muted" id="des"></p>
 
-          <br>
+          <br />
           <b>
-            <p class="card-text" class="text-muted">John Carter -- may 14,2022</p>
+            <p class="card-text" class="text-muted">
+              John Carter -- may 14,2022
+            </p>
           </b>
         </div>
-
       </div>
-
     </div>
   </a>
 </div>
-
-
 
 <div class="container" data-aos="fade-up" data-aos-anchor-placement="top-center">
   <div class="row">
-    <div class="col col-12  col-sm-12 col-md-6 col-lg-6 col-xxl-6">
+    <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xxl-6">
       <h1 class="h1left">Latest articles</h1>
     </div>
-    <div class="col col-12  col-sm-12 col-md-6 col-lg-6 col-xxl-6">
+    <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xxl-6">
       <div class="bg">
         <div class="btn-group" role="group" aria-label="Basic radio toggle button group" class="b1">
-
           <a [routerLink]="['/blog']" routerLinkActive="router-link-active">
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-            <label class="btn btn-outline-primary left" for="btnradio1"> <b> All</b> </label>
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked />
+            <label class="btn btn-outline-primary left" for="btnradio1">
+              <b> All</b>
+            </label>
           </a>
 
           <a [routerLink]="['/businessarticles']" routerLinkActive="router-link-active">
-
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-            <label class="btn btn-outline-primary " for="btnradio2"><img src="/assets/br.png" alt="Bootstrap" width="32"
-                height="32"><b>Business</b></label>
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" />
+            <label class="btn btn-outline-primary" for="btnradio2"><img src="/assets/br.png" alt="Bootstrap" width="32"
+                height="32" /><b>Business</b></label>
           </a>
 
-
           <a [routerLink]="['/financearticles']" routerLinkActive="router-link-active">
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" />
             <label class="btn btn-outline-primary" for="btnradio3"><img src="/assets/fin.png" alt="Bootstrap" width="32"
-                height="32"><b>Finances</b></label>
+                height="32" /><b>Finances</b></label>
           </a>
 
           <a [routerLink]="['/managementarticles']" routerLinkActive="router-link-active">
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" />
             <label class="btn btn-outline-primary" for="btnradio4"><img src="/assets/m.png" alt="Bootstrap" width="32"
-                height="32"><b>Management</b></label>
+                height="32" /><b>Management</b></label>
           </a>
         </div>
       </div>
@@ -70,146 +67,42 @@
   </div>
 </div>
 
-
-<br>
+<br />
 
 <div class="container">
-  <a href="./readarticle"> 
-  <div class="row">
-
-    <div class="col-sm-6 col-md-6 d-flex flex-row" data-aos="fade-up" data-aos-anchor-placement="top-center"
-      *ngFor="let im of Blogs">
-
- 
+  <a href="./readarticle">
+    <div class="row">
+      <div class="col-sm-6 col-md-6 d-flex flex-row" data-aos="fade-up" data-aos-anchor-placement="top-center"
+        *ngFor="let im of Blogs">
         <div class="card latest-articles">
-          <img src="{{im.imageurl}}" class="card-img-top im-hv" alt="..." class="zoom">
-          <button class="btn" class="butstyl"> <b>Business</b></button>
+          <img src="{{ im.imageurl }}" class="card-img-top im-hv" alt="..." class="zoom" />
+          <button class="btn" class="butstyl"><b>Business</b></button>
 
           <div class="card-body">
-            <h3 class="card-title">{{im.name}}</h3>
-            <br>
-            <p class="card-text" class="text-muted">John Carter -- may 14,2022</p>
+            <h3 class="card-title">{{ im.name }}</h3>
+            <br />
+            <p class="card-text" class="text-muted">
+              John Carter -- may 14,2022
+            </p>
           </div>
         </div>
-
-
-
+      </div>
     </div>
-
-
-
-    <!--    
-     <div class="col"  data-aos="fade-up" data-aos-anchor-placement="top-center" >
-      <a href="./readarticle">
-      <div class="card" >
-        <img src="assets/b1.jpeg" class="card-img-top" alt="..." class="zoom" >
-        <button class="btn" class="butstyl"> <b>Management</b></button>
-
-        <div class="card-body">
-          <h3 class="card-title">Is it smart to invest in cryptocurrency in 2021? What you need to know</h3>
-              <br>
-              <p class="card-text" class="text-muted">John Carter   -- may 14,2022</p>
-        </div>
-      </div>
-    </a>
-    </div>
-    
-
-   
-     <div class="col"  data-aos="fade-up" data-aos-anchor-placement="top-center" >
-      <a href="./readarticle">
-      <div class="card" >
-        <img src="assets/bt4.jpeg" class="card-img-top" alt="..." class="zoom" >
-        <button class="btn" class="butstyl"> <b>Management</b></button>
-
-        <div class="card-body">
-          <h3 class="card-title">Is it smart to invest in cryptocurrency in 2021? What you need to know</h3>
-              <br>
-              <p class="card-text" class="text-muted">John Carter   -- may 14,2022</p>
-        </div>
-      </div>
-    </a>
-    </div>
-   
-
-      <div class="col"  data-aos="fade-up" data-aos-anchor-placement="top-center" >
-        <a href="./readarticle">
-        <div class="card" >
-          <img src="assets/bt5.jpeg" class="card-img-top" alt="..." class="zoom" >
-          <button class="btn" class="butstyl"> <b>Finances</b></button>
-  
-          <div class="card-body">
-            <h3 class="card-title">Is it smart to invest in cryptocurrency in 2021? What you need to know</h3>
-                <br>
-                <p class="card-text" class="text-muted">John Carter   -- may 14,2022</p>
-          </div>
-        </div>
-      </a>
-      </div>
-    
-    
-      <div class="col"  data-aos="fade-up" data-aos-anchor-placement="top-center" >
-        <a href="./readarticle">
-        <div class="card" >
-          <img src="assets/bt3.jpeg" class="card-img-top" alt="..." class="zoom" >
-          <button class="btn" class="butstyl"> <b>Management</b></button>
-  
-          <div class="card-body">
-            <h3 class="card-title">Is it smart to invest in cryptocurrency in 2021? What you need to know</h3>
-            <br>
-            <p class="card-text" class="text-muted">John Carter   -- may 14,2022</p>
-          </div>
-        </div>
-      </a>
-      </div>
-
-      <div class="col"  data-aos="fade-up" data-aos-anchor-placement="top-center" >
-        <a href="./readarticle">
-        <div class="card">
-          <img src="assets/bt2.jpeg" class="card-img-top" alt="..." class="zoom" >
-          <button class="btn" class="butstyl"> <b>Management</b></button>
-  
-          <div class="card-body">
-            <h3 class="card-title">Is it smart to invest in cryptocurrency in 2021? What you need to know</h3>
-                <br>
-                <p class="card-text" class="text-muted">John Carter   -- may 14,2022</p>
-          </div>
-        </div>
-      </a>
-      </div>
-
-      <div class="col" data-aos="fade-up" data-aos-anchor-placement="top-center" >
-        <a href="./readarticle">
-        <div class="card" >
-          <img src="assets/bt1.jpeg" class="card-img-top" alt="..." class="zoom" >
-          <button class="btn" class="butstyl"> <b>Finances</b></button>
-  
-          <div class="card-body">
-            <h3 class="card-title">Is it smart to invest in cryptocurrency in 2021? What you need to know</h3>
-                <br>
-                <p class="card-text" class="text-muted">John Carter   -- may 14,2022</p>
-          </div>
-        </div>
-      </a>
-      </div>  -->
-  </div>
   </a>
 </div>
 
-
-
-
-<div class="container-fluid" id="pad" data-aos="fade-up" data-aos-anchor-placement="top-center">
+<div class="flex-container-fluid" data-aos="fade-up" data-aos-anchor-placement="top-center">
   <div class="row">
-    <div class="col col-12  col-sm-12 col-md-6 col-lg-6 col-xxl-6">
-      <h1 class="text-center "><b>Subscribe to our newsletter</b></h1>
-      <h5>Lorem ipsum dolor sit
-        amet consectetur adipiscing elit
-        sed do eiusmod tempor incididunt.</h5>
+    <div class="col-6">
+      <h1 class="text-center"><b>Subscribe to our newsletter</b></h1>
+      <h5>
+        Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod
+        tempor incididunt.
+      </h5>
     </div>
-    <div class="col col-12  col-sm-12 col-md-12 col-lg-6 col-xxl-6">
+    <div class="col-6 media">
       <label>
-        <input type="text" placeholder="Enter Your Email">
+        <input type="text" placeholder="Enter Your Email" />
         <button class="get"><b>Get started</b></button>
       </label>
     </div>

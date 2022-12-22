@@ -18,6 +18,7 @@ import { ReadarticleComponent } from './readarticle/readarticle.component';
 import { BusinessarticlesComponent } from './businessarticles/businessarticles.component';
 import { AnimationComponent } from './animation/animation.component';
 import { PositionsComponent } from './positions/positions.component';
+import { ServiceheroimageComponent } from './serviceheroimage/serviceheroimage.component';
 
 
 
@@ -43,6 +44,7 @@ const routes: Routes = [
   { path: "financearticles", component: FinancearticlesComponent },
   { path: "readarticle", component: ReadarticleComponent },
   { path: "positions", component: PositionsComponent },
+  {path:"serviceheroimage",component:ServiceheroimageComponent},
 
 
 
