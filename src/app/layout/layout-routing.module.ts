@@ -19,6 +19,7 @@ import { BusinessarticlesComponent } from './businessarticles/businessarticles.c
 import { AnimationComponent } from './animation/animation.component';
 import { PositionsComponent } from './positions/positions.component';
 import { ServiceheroimageComponent } from './serviceheroimage/serviceheroimage.component';
+import { SubservicesComponent } from './subservices/subservices.component';
 
 
 
@@ -45,6 +46,7 @@ const routes: Routes = [
   { path: "readarticle", component: ReadarticleComponent },
   { path: "positions", component: PositionsComponent },
   {path:"serviceheroimage",component:ServiceheroimageComponent},
+  {path:"subservices", component:SubservicesComponent},
 
 
 
