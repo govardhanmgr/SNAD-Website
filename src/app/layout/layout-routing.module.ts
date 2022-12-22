@@ -35,7 +35,7 @@ const routes: Routes = [
   { path: "contactus", component: ContactusComponent },
   { path: "services", component: ServicesComponent },
   { path: "careers", component: CareersComponent },
-  { path: "profile", component: ProfileComponent },
+  { path: "profile/:itemid", component: ProfileComponent },
   { path: "jobrequirement/:itemid", component: JobrequirmentComponent },
   { path: "blogsection", component: BlogsectionComponent },
   { path: 'animation', component: AnimationComponent },

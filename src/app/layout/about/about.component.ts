@@ -14,9 +14,15 @@ import { WebflowserviceService } from 'src/app/services/webflowservice.service';
 export class AboutComponent implements OnInit, OnDestroy {
   subscription!: Subscription;
   Abouts = [] as any
+  getProfileItemById: any;
 
   scroll(el: HTMLElement) {
     el.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  profileid(id: string) {
+    console.log(id);
+    this.router?.navigate([`/profile/${id}`])
   }
 
   constructor(private router: Router,
@@ -28,6 +34,18 @@ export class AboutComponent implements OnInit, OnDestroy {
     })
     this.About()
   }
+
+  individualprofile(itemid: string, res: any) {
+
+    this.subscription = this.webflow.getData(`temmemberitembyid/${itemid}`).subscribe({
+
+      next: (data: any) => {
+        res.category = data.data.name
+      },
+      error: (reason: any) => console.log(reason)
+    });
+  }
+
   About() {
     this.subscription = this.webflow.getData("allitems/6375d4747684b46aeb4ccf75").subscribe({
       next: (response: any) => {
