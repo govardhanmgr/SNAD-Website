@@ -32,8 +32,9 @@ img{
 
 }
 .r1{
-    padding-top: 100px;
+    margin-top: 100px;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 a:hover, a:focus {
@@ -262,5 +263,30 @@ margin-right: 15px;
   background-color: whitesmoke;  
   border-color:whitesmoke;
   text-align: center;
+  
+}
+.flex-container{
+  display: flex;
+  flex-direction: row;
+
+}
+.buttonalign{
+  margin-left: 25%;
+}
+.profilealign{
+margin-left: 15%;
+}
+
+.readtext{
+    margin-left: 300px;
+    margin-bottom: 50px;
+    font-size: 14pt;
+    
+  }
+  
+@media only screen and (max-width: 768px) {
+  /* For desktop: */
+  
+  .col-5 {width: 100%;}
   
 }

@@ -77,6 +77,11 @@ h1{
 .zoom{
   border-radius: 25px;
 }
+@media screen and (max-width: 600px) {
+  div.zoom {
+    font-size: 1px;
+  }
+}
 
 .card{
   
@@ -101,14 +106,21 @@ h1{
   border-radius: 85px;
   text-align: center;
 }
-.container-fluid{
+@media screen and (max-width: 980px) {
+  div.bg {
+    border-radius: 35px;
+   
+  }
+}
+
+.flex-container-fluid{
   background-color: rgb(41, 91, 230);    
 
   text-align: center;
   color: white;
   margin-top: 180px;
   padding: 150px 0;
-  
+
 }
 
 
@@ -121,7 +133,7 @@ h1{
   border-right: 0;
   border-bottom: 0;
 
-}
+} 
 
 .button{
   background-color:  rgba(13, 12, 14, 0.959);
@@ -201,3 +213,55 @@ input[type="text"]{
   transition: .8s;
   background-color: #6c6c6c;
 }
+
+
+
+  
+@media only screen and (max-width: 1200px) {
+  /* For desktop: */
+  
+  .col-6 {width: 100%;}
+  
+}
+ 
+@media only screen and (max-width: 600px) {
+  /* For desktop: */
+  
+input[type="text"]{
+  border: none;
+  width: max-content;
+  height: 80px;
+  padding: 0 16px;
+  border-radius: 75px;
+  border-color: white;
+  
+
+}
+
+
+.get{
+  position: absolute;
+  /* top: 7px;
+  right: 7px;
+  bottom: 7px; */
+  background-color: rgb(41, 91, 230);
+  color: white;
+  /* padding: 0 16px; */
+  letter-spacing: 3px;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+}
+ 
+.bg{
+  padding : 2px;
+  background-color: rgb(225, 223, 236);
+  border-radius: 85px;
+  text-align: center;
+}
+
+
+  
+}
+

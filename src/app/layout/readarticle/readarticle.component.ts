@@ -55,10 +55,6 @@ this. readarticle();
       error: (reason: any) => console.log(reason)
     });
 
-  }
-    
-  
-        
-        
+  }     
 
 }
