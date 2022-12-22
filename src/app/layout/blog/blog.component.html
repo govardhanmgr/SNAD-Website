@@ -5,11 +5,11 @@
 
 <div class="i1" data-aos="fade-up" data-aos-anchor-placement="top-center">
   <a href="./readarticle">
-    <div class="card i1">
+    <div class="card i11">
       <img src="assets/b1.jpeg" class="card-img-top" alt="..." class="zoom" />
 
       <button class="btn" class="butstyli1">
-        <img src="/assets/br.png" alt="Bootstrap" width="32" height="32" />
+        <img src="/assets/br.png" alt="Bootstrap" width="25" height="25" />
         <b>Business</b>
       </button>
       <div class="card-body">
@@ -46,20 +46,20 @@
 
           <a [routerLink]="['/businessarticles']" routerLinkActive="router-link-active">
             <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" />
-            <label class="btn btn-outline-primary" for="btnradio2"><img src="/assets/br.png" alt="Bootstrap" width="32"
-                height="32" /><b>Business</b></label>
+            <label class="btn btn-outline-primary" for="btnradio2"><img src="/assets/br.png" alt="Bootstrap" width="25"
+                height="25" /><b>Business</b></label>
           </a>
 
           <a [routerLink]="['/financearticles']" routerLinkActive="router-link-active">
             <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" />
-            <label class="btn btn-outline-primary" for="btnradio3"><img src="/assets/fin.png" alt="Bootstrap" width="32"
-                height="32" /><b>Finances</b></label>
+            <label class="btn btn-outline-primary" for="btnradio3"><img src="/assets/fin.png" alt="Bootstrap" width="25"
+                height="25" /><b>Finances</b></label>
           </a>
 
           <a [routerLink]="['/managementarticles']" routerLinkActive="router-link-active">
             <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" />
-            <label class="btn btn-outline-primary" for="btnradio4"><img src="/assets/m.png" alt="Bootstrap" width="32"
-                height="32" /><b>Management</b></label>
+            <label class="btn btn-outline-primary" for="btnradio4"><img src="/assets/m.png" alt="Bootstrap" width="25"
+                height="25" /><b>Management</b></label>
           </a>
         </div>
       </div>
@@ -70,11 +70,10 @@
 <br />
 
 <div class="container">
-  <a href="./readarticle">
     <div class="row">
       <div class="col-sm-6 col-md-6 d-flex flex-row" data-aos="fade-up" data-aos-anchor-placement="top-center"
         *ngFor="let im of Blogs">
-        <div class="card latest-articles">
+        <div class="card latest-articles" (click)="readart(im._id)" >
           <img src="{{ im.imageurl }}" class="card-img-top im-hv" alt="..." class="zoom" />
           <button class="btn" class="butstyl"><b>Business</b></button>
 
@@ -88,7 +87,6 @@
         </div>
       </div>
     </div>
-  </a>
 </div>
 
 <div class="flex-container-fluid" data-aos="fade-up" data-aos-anchor-placement="top-center">

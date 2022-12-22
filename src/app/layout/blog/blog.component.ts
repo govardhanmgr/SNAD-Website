@@ -1,7 +1,7 @@
 import { WebflowserviceService } from './../../services/webflowservice.service';
 import { Subscription } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import * as Aos from 'aos';
 
 @Component({
@@ -10,12 +10,36 @@ import * as Aos from 'aos';
   styleUrls: ['./blog.component.css'],
 })
 export class BlogComponent implements OnInit {
+
   subscription!: Subscription;
+  Blogcategory = new Set<string>()
 
   Blogs = [] as any;
   arrayupdate = [];
 
-  constructor(private router: Router, private webflow: WebflowserviceService) {}
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  
+  gotoTop() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+
+  constructor(
+    private router: Router,
+     private webflow: WebflowserviceService,
+     private route : ActivatedRoute) {}
+
+     readart(id: string) {
+      console.log(id);
+      this.router?.navigate([`/readarticle/${id}`])
+    }
+
 
   ngOnInit(): void {
     Aos.init({
@@ -23,6 +47,9 @@ export class BlogComponent implements OnInit {
     });
     this.blog();
   }
+
+
+
   blog() {
     this.subscription = this.webflow
       .getData('allitems/6375d4747684b45e464ccf77')
@@ -51,14 +78,19 @@ export class BlogComponent implements OnInit {
       });
   }
 
+
   blogcategory(itemid: string, ref: any) {
-    this.subscription = this.webflow
-      .getData(`blogitembyid/${itemid}`)
-      .subscribe({
+    this.subscription = this.webflow.getData(`blogitembyid/${itemid}`).subscribe({
         next: (data: any) => {
-          ref.category = data;
+          ref.category = data.data.name;
+          this.Blogcategory.add(data.data.name)
         },
         error: (reason: any) => console.log(reason),
       });
+  }
+  ngOnDestroy(): void {
+    if (this.subscription) {
+      this.subscription.unsubscribe()
+    }
   }
 }

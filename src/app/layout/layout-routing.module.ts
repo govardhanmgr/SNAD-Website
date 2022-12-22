@@ -43,7 +43,7 @@ const routes: Routes = [
   { path: 'businessarticles', component: BusinessarticlesComponent },
   { path: "managementarticles", component: ManagementarticlesComponent },
   { path: "financearticles", component: FinancearticlesComponent },
-  { path: "readarticle", component: ReadarticleComponent },
+  { path: "readarticle/:itemid", component: ReadarticleComponent },
   { path: "positions", component: PositionsComponent },
   {path:"serviceheroimage",component:ServiceheroimageComponent},
   {path:"subservices", component:SubservicesComponent},
