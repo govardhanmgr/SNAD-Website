@@ -31,6 +31,7 @@ export class CareersComponent implements OnInit {
       behavior: 'smooth'
     });
   }
+  
   // function to navigate for the id
   jobReq(id: string) {
     console.log(id);

@@ -9,45 +9,57 @@
   <img src="assets/art.jpeg" alt="" class="rounded mx-auto d-block" />
 </div>
 
-<div class="flex-container r1">
-  <div class="profilealign">
-    <a href="./profile">
-      <div class="card mb-3" style="max-width: 300px">
-        <div class="row g-0">
-          <div class="col-4">
-            <img
-              src="assets/profile.jpg"
-              alt="..."
-              style="width: 85px; border-radius: 45px"
-            />
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">John Carter</h5>
-              <h6 class="card-text">
-                <small class="text-muted">November 21,2022</small>
-              </h6>
-            </div>
-          </div>
-        </div>
-      </div>
-    </a>
-  </div>
+<br><br><br>
 
-  <div class="buttonalign">
-    <a href="/businessarticles">
-      <button type="button" class="btn btn-primary">
-        <i class="bi bi-briefcase"></i><b>Business</b>
-      </button>
-    </a>
+<div class="container">
+  <div class="row">
+    <div class="col col-sm-12 col-md-6 col-xs-12 col-lg-6 ">
+      
+        <a href="./profile">
+          <div class="card mb-3 profilealign" style="max-width: 300px">
+            <div class="row g-0">
+              <div class="col-4">
+                <img src="assets/profile.jpg" alt="..." style="width: 85px; border-radius: 45px" />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">John Carter</h5>
+                  <h6 class="card-text">
+                    <small class="text-muted">November 21,2022</small>
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div> 
+         
+          
+        </a>
+      
+    </div>
+
+
+    <div class="col  col-sm-12 col-md-6 col-xs-12 col-lg-6">
+     
+        <a href="/businessarticles">
+          <button type="button" class="btn btn-primary buttonalign">
+            <i class="bi bi-briefcase"></i><b>Business</b>
+          </button>
+        </a>
+      
+    </div>
   </div>
 </div>
 
-<div class="row justify-content-center">
+
+
+
+
+<div class="row justify-content-center ">
   <div class="col col-5 " id="des">
   </div>
-  
+
 </div>
+<br><br><br>
 
 <div class="container">
   <div class="row">
@@ -56,11 +68,7 @@
         <div class="card mb-3" style="width: 775px">
           <div class="row g-0">
             <div class="col-md-4">
-              <img
-                src="assets/profile.jpg"
-                alt="..."
-                style="width: 200px; border-radius: 1055px"
-              />
+              <img src="assets/profile.jpg" alt="..." style="width: 200px; border-radius: 1055px" />
             </div>
             <div class="col-md-8">
               <div class="card-body">
@@ -76,23 +84,12 @@
                 </h5>
 
                 <div class="networks">
-                  <meta
-                    name="viewport"
-                    content="width=device-width, initial-scale=1"
-                  />
-                  <link
-                    rel="stylesheet"
-                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-                  />
-                  <a
-                    href="https://www.facebook.com/"
-                    class="fa fa-facebook"
-                  ></a>
+                  <meta name="viewport" content="width=device-width, initial-scale=1" />
+                  <link rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+                  <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
                   <a href="https://twitter.com/" class="fa fa-twitter"></a>
-                  <a
-                    href="https://www.linkedin.com/"
-                    class="fa fa-linkedin"
-                  ></a>
+                  <a href="https://www.linkedin.com/" class="fa fa-linkedin"></a>
                 </div>
               </div>
             </div>
@@ -117,21 +114,9 @@
       </div>
       <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xxl-6">
         <div class="bg">
-          <div
-            class="btn-group"
-            role="group"
-            aria-label="Basic radio toggle button group"
-            class="b1"
-          >
+          <div class="btn-group" role="group" aria-label="Basic radio toggle button group" class="b1">
             <a [routerLink]="['/blog']" routerLinkActive="router-link-active">
-              <input
-                type="radio"
-                class="btn-check"
-                name="btnradio"
-                id="btnradio1"
-                autocomplete="off"
-                checked
-              />
+              <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked />
               <label class="btn btn-outline-primary left btdes" for="btnradio1">
                 <b> Browse all articles</b>
               </label>
