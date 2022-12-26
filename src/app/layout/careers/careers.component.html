@@ -16,7 +16,7 @@
 <!--Scroll up button-->
 
 <button type="button" class="btn btn-info scroll-to-top" (click)="gotoTop()">
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up"
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-arrow-up"
     viewBox="0 0 16 16">
     <path fill-rule="evenodd"
       d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
@@ -231,20 +231,20 @@
     <br>
     <br>
     <br>
-    <div class="row row-cols-1 row-cols-md-2 g-4 ">
+    <br>
+    <div class="row row-cols-1 row-cols-md-2 g-4 all-job-open">
 
       <!--column-->
       <div class="col">
-        <div class=" mb-3 ">
-          <h1 data-aos="fade-up">What are we looking for in a employee?</h1>
+        <div class=" mb-3 all-job-opening-text">
+          <h1 data-aos="fade-up all-job-header">What are we looking for in a employee?</h1>
         </div>
       </div>
 
       <!--c0lumn-->
       <div class="col">
         <div class=" mb-3">
-          <button type="button" class="btn btn-lg btn-light all-job-opening-button" data-aos="fade-up">All job
-            opening</button>
+          <button type="button" class="btn btn-lg btn-light all-job-opening-button" data-aos="fade-up">All job opening</button>
         </div>
       </div>
 
@@ -252,15 +252,14 @@
       <div class="col" data-aos="fade-up">
         <div class=" mb-3 ">
           <div class="row g-0">
-            <div class="col-md-4">
+            <div class="col-md-4 all-job-number">
               <div class="number">1</div>
             </div>
             <div class="col-md-8">
               <div class="card-body all-job-opening-text">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                  additional
-                  content. This content is a little bit longer.</p>
+                <h3 class="card-title">Execution</h3>
+                <br>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisci elit eque ips odio justo.</p>
               </div>
             </div>
           </div>
@@ -271,15 +270,14 @@
       <div class="col" data-aos="fade-up">
         <div class="mb-3 ">
           <div class="row g-0">
-            <div class="col-md-4">
+            <div class="col-md-4 all-job-number">
               <div class=" number">2</div>
             </div>
             <div class="col-md-8">
               <div class="card-body all-job-opening-text">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                  additional
-                  content. This content is a little bit longer.</p>
+                <h3 class="card-title">Transparency</h3>
+                <br>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisci elit eque ips odio justo.</p>
               </div>
             </div>
           </div>
@@ -290,15 +288,14 @@
       <div class="col" data-aos="fade-up">
         <div class=" mb-3 ">
           <div class="row g-0">
-            <div class="col-md-4">
+            <div class="col-md-4 all-job-number">
               <div class=" number">3</div>
             </div>
             <div class="col-md-8">
               <div class="card-body all-job-opening-text">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                  additional
-                  content. This content is a little bit longer.</p>
+                <h3 class="card-title">Team Work</h3>
+                <br>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisci elit eque ips odio justo.</p>
               </div>
             </div>
           </div>
@@ -309,15 +306,14 @@
       <div class="col" data-aos="fade-up">
         <div class=" mb-3">
           <div class="row g-0">
-            <div class="col-md-4">
+            <div class="col-md-4 all-job-number">
               <div class=" number">4</div>
             </div>
             <div class="col-md-8">
               <div class="card-body all-job-opening-text">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                  additional
-                  content. This content is a little bit longer.</p>
+                <h3 class="card-title">Growth</h3>
+                <br>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisci elit eque ips odio justo.</p>
               </div>
             </div>
           </div>
@@ -325,6 +321,7 @@
       </div>
 
     </div>
+    <br>
     <br>
     <br>
     <br>
@@ -348,7 +345,7 @@
         <br>
       </div>
 
-      <div class="row row-cols-1 row-cols-md-4 g-4 " data-aos="fade-up">
+      <div class="row row-cols-1 row-cols-md-4 g-4 growth" data-aos="fade-up">
         <!--column-->
         <div class="col ">
           <h1 style="text-align: center;">98<span style="color: blue">%</span></h1>
@@ -418,6 +415,7 @@
           </div>
         </div>
       </div>
+         
     </div>
   </div>
 </div>
@@ -432,8 +430,8 @@
             <br>
             <p class="card-text">{{openpos['job-description-excerpt']}}</p>
             <br>
-            <a type="button" class="btn open-positions-button">{{openpos.category}}</a>
-            <a type="button" class="btn open-positions-button open-position-button-gap">{{openpos['job-location']}}</a>
+            <a type="button" class="btn open-positions-button"><i class="bi bi-briefcase" style="color: green;"></i> {{openpos.category}}</a>
+            <a type="button" class="btn open-positions-button open-position-button-gap"><i class="bi bi-geo-alt" style="color: green;"></i> {{openpos['job-location']}}</a>
           </div>
         </div>
       </div>
