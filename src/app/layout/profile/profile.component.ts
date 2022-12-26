@@ -81,6 +81,9 @@ export class ProfileComponent implements OnInit {
     });
   }
 
+  articles(){
+    
+  }
   ngOnDestroy(): void {
     if (this.subscription) {
       this.subscription.unsubscribe();
