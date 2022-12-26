@@ -7,7 +7,10 @@ import { FooterComponent } from './footer/footer.component';
 import { GetintouchComponent } from './getintouch/getintouch.component';
 import { ServicescardsComponent } from './servicescards/servicescards.component';
 import { ImpactfullnumbersComponent } from './impactfullnumbers/impactfullnumbers.component';
-
+import { HeroimgComponent } from './heroimg/heroimg.component';
+import { CASESTUDIESComponent } from './casestudies/casestudies.component';
+import { TESTIMONIALSComponent } from './testimonials/testimonials.component';
+import { LatestarticlesComponent } from './latestarticles/latestarticles.component';
 
 @NgModule({
   declarations: [
@@ -15,18 +18,21 @@ import { ImpactfullnumbersComponent } from './impactfullnumbers/impactfullnumber
     FooterComponent,
     GetintouchComponent,
     ServicescardsComponent,
-    ImpactfullnumbersComponent
+    ImpactfullnumbersComponent,
+    HeroimgComponent,
+    CASESTUDIESComponent,
+    TESTIMONIALSComponent,
+    LatestarticlesComponent,
   ],
-  imports: [
-    CommonModule,
-    SharedRoutingModule
-  ],
-  exports:[
+  imports: [CommonModule, SharedRoutingModule],
+  exports: [
     HeaderComponent,
     FooterComponent,
     GetintouchComponent,
     ServicescardsComponent,
-    ImpactfullnumbersComponent
-  ]
+    ImpactfullnumbersComponent,
+    HeroimgComponent,
+    CASESTUDIESComponent,
+  ],
 })
-export class SharedModule { }
+export class SharedModule {}

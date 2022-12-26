@@ -35,7 +35,7 @@ export class ContactusComponent implements OnInit {
   contactSubmit(f: NgForm) {
     if (f.value == f.value) {
       this.a = false;
-      this.succes = 'success';
+
       this.b = true;
     } else {
     }
