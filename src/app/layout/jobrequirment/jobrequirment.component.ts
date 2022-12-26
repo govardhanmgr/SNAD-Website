@@ -17,7 +17,7 @@ export class JobrequirmentComponent implements OnInit, OnDestroy {
     private router: Router,
     private webflow: WebflowserviceService,
     private route: ActivatedRoute
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     Aos.init({
@@ -42,8 +42,11 @@ export class JobrequirmentComponent implements OnInit, OnDestroy {
       .subscribe({
         next: (res: any) => {
           console.log(res);
-          let data = res.data;
+
           this.jobs = res.data;
+          let id = Object(this.jobs)["career-job-category"] as string
+          this.getJobCategory(id, this.jobs)
+
           const app = document.getElementById('app');
           const n = document.createElement('section');
           n.innerHTML = this.jobs['job-description'];
@@ -61,6 +64,17 @@ export class JobrequirmentComponent implements OnInit, OnDestroy {
           console.error(reason);
         },
       });
+  }
+
+
+  getJobCategory(itemid: string, res: any) {
+    this.subscription = this.webflow.getData(`careercategoriesitembyid/${itemid}`).subscribe({
+      next: (data: any) => {
+        res.category = data.data.name
+
+      },
+      error: (reason: any) => console.log(reason)
+    });
   }
 
   ngOnDestroy(): void {
