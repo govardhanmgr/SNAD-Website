@@ -38,20 +38,18 @@
       <div class="card button-card" style="width: fit-content">
         <div class="multiple-button">
           <div class="d-flex flex-row" style="gap: 10px">
-            <button type="button" class="btn buttons all-button" (click)="blogFilter()">
-              All
+            <button type="button" class="btn buttons all-button1" (click)="blogFilter()">
+              <b>All</b>
             </button>
             <div *ngFor="let cat of Blogcategory">
               <button type="button" class="btn buttons all-button" (click)="blogFilter(cat)">
-                {{ cat }}
+                <b>{{ cat }}</b>
               </button>
-              <!-- <a onclick="filterSelection('category='design')" type="button" class="btn buttons design-button">Design</a>
-            <a [routerLink]="['/positions']" type="button" class="btn buttons">Development</a>
-            <a [routerLink]="['/positions']" type="button" class="btn buttons">Business</a> -->
             </div>
           </div>
         </div>
       </div>
+
     </div>
 
   </div>
