@@ -75,21 +75,17 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-md-4 d-flex flex-row" data-aos="fade-up" *ngFor="let profile of Abouts">
-      <a href="/profile" class="profile-link">
-       <div class="card m-3">
+       <div class="card m-3"  (click)="profileid(profile._id)">
         <img src="{{profile.imageurl }}" alt="Snow" class="card-img-top" style="width:100%" />
          <div class="img3" type="button"><b>{{profile["team-job-title"]}}</b></div>
            <div class="card-body value">
           <h4 class="card-title"><b>{{profile.name}}</b></h4>
           <p class="card-text">{{profile["team-about-card-excerpt"]}}</p>
          </div>
-      
       </div>
-      </a>
-    </div>
+          </div>
     </div>
   </div>
-
   <br><br>
   <div class="team" data-aos="fade-up">
     <a href="/careers" type="button" class="btn btn-primary">Join our team</a>

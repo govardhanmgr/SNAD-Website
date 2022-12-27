@@ -8,10 +8,13 @@
   background: linear-gradient(
     90deg,
     rgb(255, 255, 255) 0%,
-    rgb(255, 255, 255) 50%,
+    rgb(255, 255, 255) 53%,
     #2f5acd 40%,
     #2f5acd 100%
   );
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
 .bgi {
@@ -83,7 +86,7 @@
   display: flex;
   margin-left: 3px;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 15px;
   margin-bottom: 4px;
 }
 .inputs input {
@@ -131,4 +134,47 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+/* stylen */
+
+.stylen {
+  font-size: 3rem;
+  font-weight: 750;
+}
+
+.styles {
+  font-size: 1.4rem;
+  font-weight: 750;
+}
+
+.we {
+  font-size: 2.5rem;
+  font-weight: 65 0;
+}
+
+input,
+input::-webkit-input-placeholder {
+  font-size: 1.1rem;
+  color: #424040;
+  font-weight: 400;
+}
+
+textarea,
+::-webkit-input-placeholder {
+  font-size: 1.1rem;
+  color: #424040;
+  font-weight: 400;
+}
+
+@media (max-width: 990px) {
+  .c {
+    background: linear-gradient(
+      180deg,
+      rgb(255, 255, 255) 0%,
+      rgb(255, 255, 255) 58%,
+      #2f5acd 40%,
+      #2f5acd 100%
+    );
+  }
 }

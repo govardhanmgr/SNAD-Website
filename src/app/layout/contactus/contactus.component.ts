@@ -3,6 +3,7 @@ import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { ICdetails } from './cDetails-model';
 
 import * as Aos from 'aos';
+import { faL } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-contactus',
@@ -11,6 +12,12 @@ import * as Aos from 'aos';
 })
 export class ContactusComponent implements OnInit {
   contactformd = {} as ICdetails;
+  a = true;
+  b = false;
+
+  succes = {} as any;
+
+  errors = {} as any;
 
   constructor() {}
 
@@ -20,7 +27,19 @@ export class ContactusComponent implements OnInit {
     });
   }
 
+  showform() {
+    this.a = true;
+    this.b = false;
+  }
+
   contactSubmit(f: NgForm) {
+    if (f.value == f.value) {
+      this.a = false;
+
+      this.b = true;
+    } else {
+    }
+
     console.log(f.value);
   }
 }
