@@ -9,20 +9,18 @@ import { SharedModule } from './shared/shared.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { GetintouchComponent } from './shared/getintouch/getintouch.component';
 
-
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule,
+
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-  
+    SharedModule,
   ],
   providers: [GetintouchComponent],
   bootstrap: [AppComponent],
-  
 })
 export class AppModule {}
