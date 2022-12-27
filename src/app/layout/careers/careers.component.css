@@ -72,13 +72,14 @@
   height: 50px;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0,0,0,0.25);
-  background-color: #2f5acd;
+  background-color: #282cfe;
 }
 
 /* CORE VALUES */
 
 .core-value-column{
-  margin: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .core-value-card{
@@ -101,7 +102,8 @@
 }
 
 .company-perk-column{
-  margin: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .company-perk-card{
@@ -133,10 +135,6 @@
    background-color: #2f5acd;
 }
 
-.all-job-open{
-  margin-left: 5%;
-  margin-right: 5%;
-}
 
 .all-job-header{
   padding-left: 40px;
@@ -180,11 +178,6 @@
 
 .growth-div{
   background-color: #edf1fd;
-}
-
-.growth{
-  margin-left: 2%;
-  margin-right: 2%;
 }
 
 
