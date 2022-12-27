@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { WebflowserviceService } from 'src/app/services/webflowservice.service';
 import { GetintouchComponent } from 'src/app/shared/getintouch/getintouch.component';
@@ -14,9 +14,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css'],
   
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit,OnDestroy {
   subscription!: Subscription;
   casestudy = [] as any
+  testimonial = {} as any
+  testimonialContents = [] as any
 
 
 
@@ -28,13 +30,48 @@ export class HomeComponent implements OnInit {
       duration: 1200,
     })
     this.casestudies();
+    this.testimonials()
   }
   casestudies() {
     this.subscription = this.webflow.getData("allitems/6377559a25cdcb16c047617e").subscribe({
       next: (response: any) => {
         console.log(response);
-        let data = response.data
+        
           this.casestudy = response.data
+      },
+      error:(reason:any)=>{
+        console.error(reason);  
+      }
+    });
+  }
+ 
+  testimonials() {
+    this.subscription = this.webflow.getData("testmonialitembyid/639c187235742cc3c747f88e").subscribe({
+      next: (response: any) => {
+        console.log(response);
+        
+          this.testimonial = response.data
+          this.testimonial.testmonialscontent.forEach((element:any)=>{
+            // let id = Object(element)["career-job-category"] as string
+            this.testimonialContent(element)
+            
+
+          })
+          console.log(this.testimonialContents);
+          
+      },
+      error:(reason:any)=>{
+        console.error(reason);  
+      }
+    });
+  }
+  
+  testimonialContent(itemid:string) {
+    this.subscription = this.webflow.getData(`testmonialscontentitembyid/${itemid}`).subscribe({
+      next: (response: any) => {
+       
+        this.testimonialContents.push(response.data)
+      
       },
       error:(reason:any)=>{
         console.error(reason);  
@@ -47,4 +84,7 @@ export class HomeComponent implements OnInit {
     }
   }
 
-}
+  }
+ 
+
+
