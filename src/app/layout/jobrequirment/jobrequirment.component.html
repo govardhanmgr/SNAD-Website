@@ -1,88 +1,100 @@
-
 <!--job requirement-->
 <div class="back">
-   <a href="./careers" class="job-requirement" ><h5>&#x2190; Back to all Jobs</h5></a>
+  <a href="./careers" class="job-requirement">
+    <h5>&#x2190; Back to all Jobs</h5>
+  </a>
 </div>
 <div class="container-fluid req">
-    <div class="row">
-              
-  <div class="card job">
-       <div class="row row-cols-1 row-cols-md-1 g-4">
+  <div class="row">
+
+    <div class="card job">
+      <div class="row row-cols-1 row-cols-md-1 g-4">
         <!--column-->
         <div class="col">
-         <div class="">
-          <div class="card-body">
-            <h2><b>{{jobs.name}}</b></h2>
-            <br>
-            <a href="#" class="card-link"  type="button" class="btn btn-light button pop">{{jobs.category}}</a>    
-            <a href="#" class="card-link"  type="button" class="btn btn-light button margin pop">{{jobs['job-location']}}</a>
-           </div>
-         </div>
-         <hr>
+          <div class="">
+            <div class="card-body">
+              <h2><b>{{jobs.name}}</b></h2>
+              <br>
+              <a href="#" class="card-link" type="button" class="btn btn-light button"><i class="bi bi-briefcase" style="color: green;"></i> {{jobs.category}}</a>
+              <a href="#" class="card-link" type="button"
+                class="btn btn-light button margin "> <i class="bi bi-geo-alt" style="color: green;"></i> {{jobs['job-location']}}</a>
+            </div>
+          </div>
+          <hr>
         </div>
+
+        <!--column-->
+        <div class="col">
+          <div class="">
+            <div class="card-adj">
+              <b>
+                <h3>Job description</h3>
+              </b>
+              <p class="card-text" id="app">
+                <br>
+                <br>
+                {{jobs["job-description-excerpt"]}}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!--column-->
+        <div class="col">
+          <div class="">
+            <div class="card-adj">
+              <b>
+                <h3>Responsibilities</h3>
+              </b>
+              <br>
+              <p class="card-text" id="des"></p>
+
+            </div>
+          </div>
+        </div>
+
+
+        <!--column-->
+        <div class="col">
+          <div class="">
+            <div class="card-adj">
+              <b>
+                <h3>Job requirements</h3>
+              </b>
+              <br>
+              <p class="card-text" id="req"></p>
+
+              <br>
+              <a type="button" class="btn btn-primary btn-lg but">Apply Now</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <!--column-->
     <div class="col">
-        <div class="">
-         <div class="card-adj">
-          <b><h3>Job description</h3></b>
-           <p class="card-text" id="app">
-            <br>
-            <br>
-          {{jobs["job-description-excerpt"]}}</p>
+
+      <div class="card cred" style="width: 22rem;">
+        <img
+          src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b461fd4cd0a2_icon-career-apply-startup-x-template.svg"
+          class="img-fluid rounded-start img" alt="..." width="120" height="120">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <br>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <br>
+          <div class="text-center">
+            <a type="button" class="btn btn-primary btn-lg but">Apply Now</a>
           </div>
         </div>
-    </div>
-   
-     <!--column-->
-     <div class="col">
-        <div class="">
-         <div class="card-adj">
-           <b><h3>Responsibilities</h3></b>
-           <br>
-           <p class="card-text" id="des"></p>
-          
-          </div>
-        </div>
-    </div>
+      </div>
 
-   
-     <!--column-->
-     <div class="col">
-        <div class="">
-         <div class="card-adj">
-          <b><h3>Job requirements</h3></b>
-           <br>
-           <p class="card-text" id="req"></p>
-           
-           <br>
-           <a type="button" class="btn btn-primary btn-lg but">Apply Now</a>
-          </div>
-         
-        </div>
-     </div>
     </div>
   </div>
-        
-
-     <!--column-->
-     <div class="col">
-
-  <div class="card cred" style="width: 22rem;">
-    <img src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b461fd4cd0a2_icon-career-apply-startup-x-template.svg" class="img-fluid rounded-start img" alt="..." width="120" height="120">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <br>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <br>
-      <div class="text-center">
-      <a type="button" class="btn btn-primary btn-lg but">Apply Now</a>
-    </div>
-    </div>
-  </div>
-     
-  </div>
-</div>
 </div>
 
 <br>
@@ -96,54 +108,52 @@
 <div class="ring">
 
   <div class="container allopen">
-      <div class="row row-cols-1 row-cols-md-2 g-5 open">
-  
-        <!--column-->
-      <div class="col">
-        <div class=" mb-3 perk txtcl" >
-         <h1 style="color: white;"  data-aos="fade-up">More Job Openings</h1>
-        </div>
-      </div>
-    
-      <!--c0lumn-->
-        <div class="col">
-          <div class=" mb-3 perk">
-            <a href="/careers" type="button" class="btn btn-lg btn-light flt"  data-aos="fade-up" >All job opening</a>
-          </div>
-        </div>
-   
-         <!--column-->
-    <div class="col "  data-aos="fade-up" data-aos-delay="1300">
-      <div class="card opening">
-        <div class="card-body matter">
-          <h4 class="card-title"><b>Junior Frontend Developer</b></h4>
-          <br>
-          <p class="card-text">Lorem ipsum dolor sit amet, dol si consectetur adipiscing elit. Sit odio olo erat donec sed non. Lectus eu vel.</p>
-          <br>
-          <a href="#" class="card-link"  type="button" class="btn  button">Design</a>    
-          <a href="#" class="card-link"  type="button" class="btn  button margin">Remote</a>
-        </div>
-      </div>
-    </div>
-     
+    <div class="row row-cols-1 row-cols-md-2 g-5 open">
 
       <!--column-->
-     <div class="col"  data-aos="fade-up" data-aos-delay="1300">
-      <div class="card opening" >
-        <div class="card-body matter">
-          <h4 class="card-title"><b>UI/UX Developer</b></h4>
-          <br>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <br>
-          <a href="#" class="card-link"  type="button" class="btn  button">Design</a>    
-          <a href="#" class="card-link"  type="button" class="btn button margin">Remote</a>
+      <div class="col">
+        <div class=" mb-3 perk txtcl">
+          <h1 style="color: white;" data-aos="fade-up">More Job Openings</h1>
         </div>
       </div>
-     </div>
-    
-     </div>
-  
-  </div>
-  </div>
 
+      <!--c0lumn-->
+      <div class="col">
+        <div class=" mb-3 perk">
+          <a href="/careers" type="button" class="btn btn-lg btn-light flt" data-aos="fade-up">All job opening</a>
+        </div>
+      </div>
 
+      <!--column-->
+     
+      <div class="col " data-aos="fade-up" data-aos-delay="1300" *ngFor="let op of jobopen" >
+        <div class="card opening" >
+          <div class="card-body matter"  >
+            <h4 class="card-title"><b>{{op.name}}</b></h4>
+            <br>
+            <p class="card-text">{{jobs["job-description"]}}</p>
+            <br>
+            <a href="#" class="card-link" type="button" class="btn  button "><i class="bi bi-briefcase" style="color: green;"></i> Design</a>
+            <a href="#" class="card-link" type="button" class="btn  button margin"> <i class="bi bi-geo-alt" style="color: green;"></i> Remote</a>
+          </div>
+        </div>
+      </div>
+
+      <!--column-->
+      <div class="col" data-aos="fade-up" data-aos-delay="1300">
+        <div class="card opening">
+          <div class="card-body matter">
+            <h4 class="card-title"><b>UI/UX Developer</b></h4>
+            <br>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <br>
+            <a href="#" class="card-link" type="button" class="btn  button">Design</a>
+            <a href="#" class="card-link" type="button" class="btn button margin">Remote</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
