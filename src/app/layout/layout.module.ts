@@ -23,6 +23,7 @@ import { PositionsComponent } from './positions/positions.component';
 import { BrowsearticlesComponent } from './browsearticles/browsearticles.component';
 import { GetintouchComponent } from '../shared/getintouch/getintouch.component';
 import { ServiceheroimageComponent } from './serviceheroimage/serviceheroimage.component';
+import { SubservicesComponent } from './subservices/subservices.component';
 
 
 
@@ -44,7 +45,7 @@ import { ServiceheroimageComponent } from './serviceheroimage/serviceheroimage.c
     ReadarticleComponent, 
     BusinessarticlesComponent,
      PositionsComponent, 
-    BrowsearticlesComponent, ServiceheroimageComponent
+    BrowsearticlesComponent, ServiceheroimageComponent, SubservicesComponent
 
   ],
   imports: [

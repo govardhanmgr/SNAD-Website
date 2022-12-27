@@ -19,6 +19,7 @@ import { BusinessarticlesComponent } from './businessarticles/businessarticles.c
 import { AnimationComponent } from './animation/animation.component';
 import { PositionsComponent } from './positions/positions.component';
 import { ServiceheroimageComponent } from './serviceheroimage/serviceheroimage.component';
+import { SubservicesComponent } from './subservices/subservices.component';
 
 
 
@@ -35,7 +36,7 @@ const routes: Routes = [
   { path: "contactus", component: ContactusComponent },
   { path: "services", component: ServicesComponent },
   { path: "careers", component: CareersComponent },
-  { path: "profile", component: ProfileComponent },
+  { path: "profile/:itemid", component: ProfileComponent },
   { path: "jobrequirement/:itemid", component: JobrequirmentComponent },
   { path: "blogsection", component: BlogsectionComponent },
   { path: 'animation', component: AnimationComponent },
@@ -45,6 +46,7 @@ const routes: Routes = [
   { path: "readarticle/:itemid", component: ReadarticleComponent },
   { path: "positions", component: PositionsComponent },
   {path:"serviceheroimage",component:ServiceheroimageComponent},
+  {path:"subservices", component:SubservicesComponent},
 
 
 
