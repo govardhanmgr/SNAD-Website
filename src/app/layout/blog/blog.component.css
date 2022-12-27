@@ -282,3 +282,33 @@ input[type="text"]{
   
 }
 
+
+.buttons:hover{
+  background-color:#2f5acd;
+  color: white;
+}
+
+.button-card{
+  border-radius: 50px;
+  background-color: #eaeaf6;
+  /* float: right; */
+}
+
+.multiple-button{
+  padding: 4px;
+ }
+ .all-button1{
+  margin-left: 26px;
+ }
+
+ 
+.buttons{
+  padding: 12px 25px;
+  border-radius: 30px;
+  background-color: white;
+  color: black;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #c9e3e2;
+  box-shadow: 0 10px 10px 0 rgb(41 44 50 / 3%);
+}
