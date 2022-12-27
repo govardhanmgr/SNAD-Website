@@ -2,6 +2,8 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { WebflowserviceService } from 'src/app/services/webflowservice.service';
+import * as Aos from 'aos';
+
 
 @Component({
   selector: 'app-services',
@@ -20,6 +22,9 @@ export class ServicesComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
+    Aos.init({
+      duration: 1200,
+    })
       this.getServices()
 
 
