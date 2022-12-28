@@ -11,9 +11,7 @@ export class ManagementarticlesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    Aos.init({
-      duration: 500,
-    })
+   
   }
 
 }
