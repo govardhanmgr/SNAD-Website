@@ -1,4 +1,3 @@
-import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -24,8 +23,8 @@ import { BrowsearticlesComponent } from './browsearticles/browsearticles.compone
 import { GetintouchComponent } from '../shared/getintouch/getintouch.component';
 import { ServiceheroimageComponent } from './serviceheroimage/serviceheroimage.component';
 import { SubservicesComponent } from './subservices/subservices.component';
-
-
+import { SharedModule } from '../shared/shared.module';
+import { NavheaderComponent } from './navheader/navheader.component';
 
 @NgModule({
   declarations: [
@@ -37,16 +36,17 @@ import { SubservicesComponent } from './subservices/subservices.component';
     ContactusComponent,
     ErrorComponent,
     ProfileComponent,
-    BlogsectionComponent,  
-    AnimationComponent, 
-   
+    BlogsectionComponent,
+    AnimationComponent,
     FinancearticlesComponent,
     ManagementarticlesComponent,
-    ReadarticleComponent, 
+    ReadarticleComponent,
     BusinessarticlesComponent,
-     PositionsComponent, 
-    BrowsearticlesComponent, ServiceheroimageComponent, SubservicesComponent
-
+    PositionsComponent,
+    BrowsearticlesComponent,
+    ServiceheroimageComponent,
+    SubservicesComponent,
+    NavheaderComponent,
   ],
   imports: [
     CommonModule,
@@ -54,8 +54,7 @@ import { SubservicesComponent } from './subservices/subservices.component';
     FormsModule,
     ReactiveFormsModule,
     FormsModule,
-    SharedModule
-   
+    SharedModule,
   ],
 })
 export class LayoutModule {}
