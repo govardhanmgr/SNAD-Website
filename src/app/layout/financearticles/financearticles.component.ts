@@ -11,9 +11,7 @@ export class FinancearticlesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    Aos.init({
-      duration: 500,
-    })
+   
   }
 
 }

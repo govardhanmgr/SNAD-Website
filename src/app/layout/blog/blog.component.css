@@ -31,10 +31,6 @@
   height: 50px;
   position: absolute;
 }
-.butstyl:hover,
-.butstyli1:hover {
-  background-color: rgb(225, 223, 236);
-}
 .zoom:hover {
   -ms-transform: scale(1.05);
   -webkit-transform: scale(1.075);
@@ -90,7 +86,7 @@ a {
   background-color: whitesmoke;
   border-color: whitesmoke;
   text-align: center;
-}
+} 
 input[type="text"] {
   border: none;
   width: 600px;
@@ -104,24 +100,16 @@ input[type="text"] {
   background-color: #eaeaf6;
 }
 .multiple-button {
-  text-align: center;
-  float: none;
   padding-left: 30px;
 }
 .buttons {
   padding: 12px 25px;
   border-radius: 30px;
-  background-color: white;
-  color: black;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #c9e3e2;
-  box-shadow: 0 10px 10px 0 rgb(41 44 50 / 3%);
 }
 .buttons:hover {
   background-color: #2f5acd;
   color: white;
-  border-color: aliceblue;
+  border-color: aliceblue; 
 }
 @media only screen and (max-width: 600px) {
   .butstyl {
