@@ -18,6 +18,7 @@ export class BlogComponent implements OnInit {
   blogtab = [] as any;
   arrayupdate = [];
 
+ 
   scroll(el: HTMLElement) {
     el.scrollIntoView({ behavior: 'smooth' });
   }
