@@ -17,7 +17,7 @@ h1{
 }
 
 .i11 {
-  margin: auto;
+  margin: auto; 
   width: 65%;
   padding-bottom: 40px;
 
@@ -59,7 +59,7 @@ h1{
   position: absolute;
 
   
-}
+} 
 .butstyl:hover,.butstyli1:hover {
   background-color: rgb(225, 223, 236);
 }
@@ -83,11 +83,6 @@ h1{
 }
 .zoom{
   border-radius: 25px;
-}
-@media screen and (max-width: 600px) {
-  div.zoom {
-    font-size: 1px;
-  }
 }
 
 .card{
@@ -192,7 +187,7 @@ a {
 label{
   position: relative;
 }
-input[type="text"]{
+ input[type="text"]{
   border: none;
   width: 600px;
   height: 80px;
@@ -215,7 +210,7 @@ input[type="text"]{
   border: none;
   cursor: pointer;
   border-radius: 50px;
-}
+} 
 .get:hover{
   transition: .8s;
   background-color: #6c6c6c;
@@ -233,17 +228,7 @@ input[type="text"]{
  
 @media only screen and (max-width: 600px) {
   /* For desktop: */
-  
-input[type="text"]{
-  border: none;
-  width: max-content;
-  height: 80px;
-  padding: 0 16px;
-  border-radius: 75px;
-  border-color: white;
-  
-
-}
+ 
 
 
 .get{
@@ -251,7 +236,7 @@ input[type="text"]{
   top: 7px;
   right: 7px;
   bottom: 7px;
-  background-color: rgb(41, 91, 230);
+  /* background-color: rgb(41, 91, 230); */
   color: white;
   padding: 0 16px; 
   letter-spacing: 3px;
@@ -259,7 +244,11 @@ input[type="text"]{
   border: none;
   cursor: pointer;
   border-radius: 35px;
-  width: 95px;
+  width: 95px; 
+}
+
+label{
+  position: fixed;
 }
  
 .bg{
@@ -280,57 +269,10 @@ h1{
   font-size: 50px;
 }
 
-.i1 {
-  margin: auto;
-  width: 65%;
-  padding-bottom: 40px;
 
-}
-
-.i11 {
-  margin: auto;
-  width: 65%;
-  padding-bottom: 40px;
-
-}
  
-.butstyl {
-  position: absolute;
-  bottom:  79%;
-  left: 83%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: white;
-  color: rgb(2, 2, 2);
-  font-size: 16px;
-  padding: 12px 32px;
-  border: none;
-  cursor: pointer;
-  border-radius: 20px;
-  display: inline-block;
-  width: auto;
-  
-}
 
-.butstyli1{
-  position: absolute;
-  bottom:  85%;
-  left: 87%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: white;
-  color: rgb(2, 2, 2);
-  font-size: 100%;
-  border: none;
-  cursor: pointer;
-  border-radius: 20px;
-  display: inline-block;
-  width: 130px;
-  height: 50px;
-  position: absolute;
 
-  
-}
 .butstyl:hover,.butstyli1:hover {
   background-color: rgb(225, 223, 236);
 }
@@ -355,11 +297,6 @@ h1{
 .zoom{
   border-radius: 25px;
 }
-@media screen and (max-width: 600px) {
-  div.zoom {
-    font-size: 1px;
-  }
-}
 
 .card{
   
@@ -383,6 +320,7 @@ h1{
   background-color: rgb(225, 223, 236);
   border-radius: 85px;
   text-align: center;
+}
 }
 @media screen and (max-width: 980px) {
   div.bg {
@@ -505,9 +443,38 @@ input[type="text"]{
 @media only screen and (max-width: 600px) {
   /* For desktop: */
   
+.butstyl{
+  padding: 6px 12px;
+  width: fit-content;
+  
+
+  
+}
+  
+.butstyli1{
+  padding: 6px 8px;
+  width: fit-content;
+  border-radius: 10px;
+  font-size: medium;
+  height: fit-content;
+  position: absolute;
+  bottom:  89%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  
+}
+  div.zoom {
+    font-size: 1px;
+  }
+
+  div.zoom {
+    font-size: 1px;
+  }
+
 input[type="text"]{
   border: none;
-  width: max-content;
+  width: 250px;
   height: 80px;
   padding: 0 16px;
   border-radius: 75px;
@@ -515,7 +482,14 @@ input[type="text"]{
   
 
 }
+.h1left{
+  font-size: 30px;
+  float: left;
+}
+.topheader{
+  font-size: 30px;
 
+}
 
 .get{
   position: absolute;
@@ -540,14 +514,14 @@ input[type="text"]{
   text-align: center;
 }
 
-
 .i11 {
-  margin: auto;
-  width: 120%;
+ 
+  width: 100%;
   padding-bottom: 40px;
   
+  
 
-}
+} 
 
 
   
@@ -568,9 +542,6 @@ input[type="text"]{
 .multiple-button{
   padding: 4px;
  }
- .all-button1{
-  margin-left: 26px;
- }
 
  
 .buttons{
@@ -587,12 +558,13 @@ input[type="text"]{
 
 
   
-}
+
 
 
 .buttons:hover{
   background-color:#2f5acd;
   color: white;
+  border-color: aliceblue;
 }
 
 .button-card{
@@ -604,9 +576,9 @@ input[type="text"]{
 .multiple-button{
   padding: 4px;
  }
- .all-button1{
+ /* .all-button1{
   margin-left: 26px;
- }
+ } */
 
  
 .buttons{
@@ -619,3 +591,43 @@ input[type="text"]{
   border-color: #c9e3e2;
   box-shadow: 0 10px 10px 0 rgb(41 44 50 / 3%);
 }
+
+
+
+@media screen and (max-width: 1226px)  {
+  
+.button-card{
+  border-radius: 20px;
+  background-color: #eaeaf6;
+  text-align: center;
+  
+    
+}
+
+.multiple-button{
+  text-align: center;
+  float: none;
+  padding-left: 40px;
+  
+ }
+  /* .all-button1{
+    padding-left: 19px;
+  } */
+
+ 
+.buttons{
+   padding: 8px 16px; 
+  border-radius: 20px;
+  background-color: white;
+  color: black;
+  border-style: solid;
+  border-color: #c9e3e2;
+  box-shadow: 0 10px 10px 0 rgb(41 44 50 / 3%);
+}
+
+.zoom{
+  border-radius: 15px;
+}
+  
+}
+ 
