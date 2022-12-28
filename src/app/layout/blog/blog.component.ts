@@ -10,36 +10,36 @@ import * as Aos from 'aos';
   styleUrls: ['./blog.component.css'],
 })
 export class BlogComponent implements OnInit {
-
   subscription!: Subscription;
-  Blogcategory = new Set<string>()
+  Blogcategory = new Set<string>();
 
   Blogs = [] as any;
+  filteredbycategory = [] as any;
+  blogtab = [] as any;
   arrayupdate = [];
 
   scroll(el: HTMLElement) {
     el.scrollIntoView({ behavior: 'smooth' });
   }
 
-  
   gotoTop() {
     window.scroll({
       top: 0,
       left: 0,
-      behavior: 'smooth'
+      behavior: 'smooth',
     });
   }
 
   constructor(
     private router: Router,
-     private webflow: WebflowserviceService,
-     private route : ActivatedRoute) {}
+    private webflow: WebflowserviceService,
+    private route: ActivatedRoute
+  ) {}
 
-     readart(id: string) {
-      console.log(id);
-      this.router?.navigate([`/readarticle/${id}`])
-    }
-
+  readart(id: string) {
+    console.log(id);
+    this.router?.navigate([`/readarticle/${id}`]);
+  }
 
   ngOnInit(): void {
     Aos.init({
@@ -48,8 +48,6 @@ export class BlogComponent implements OnInit {
     this.blog();
   }
 
-
-
   blog() {
     this.subscription = this.webflow
       .getData('allitems/6375d4747684b45e464ccf77')
@@ -57,13 +55,19 @@ export class BlogComponent implements OnInit {
         next: (update: any) => {
           console.log(update);
 
-          this.Blogs = update.data;
+          this.Blogs = this.filteredbycategory=  update.data;
 
           this.Blogs.forEach((element: any) => {
             element.imageurl = element['post-main-image'].url;
+            let catId = element['post-category-2']
+            console.log(catId);
+            this.blogcategory(catId,element)
+
+            
+
+
           });
           console.log(this.Blogs);
-
 
           const app = document.getElementById('des');
           const add = document.getElementById('title');
@@ -78,19 +82,34 @@ export class BlogComponent implements OnInit {
       });
   }
 
-
   blogcategory(itemid: string, ref: any) {
-    this.subscription = this.webflow.getData(`blogitembyid/${itemid}`).subscribe({
+    this.subscription = this.webflow
+      .getData(`blogcategoryitembyid/${itemid}`)
+      .subscribe({
         next: (data: any) => {
+         
+          
           ref.category = data.data.name;
-          this.Blogcategory.add(data.data.name)
+          this.Blogcategory.add(data.data.name);
         },
         error: (reason: any) => console.log(reason),
       });
   }
+
+  blogFilter(element?: string) {
+    if (element) {
+      // console.log(element);
+      this.filteredbycategory = this.Blogs.filter(
+        (el: { category: string }) => el.category === element
+      );
+    } else {
+      // console.log("All");
+      this.filteredbycategory = this.Blogs;
+    }
+  }
   ngOnDestroy(): void {
     if (this.subscription) {
-      this.subscription.unsubscribe()
+      this.subscription.unsubscribe();
     }
   }
 }

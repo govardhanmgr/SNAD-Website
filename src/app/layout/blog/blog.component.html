@@ -35,58 +35,46 @@
       <h1 class="h1left">Latest articles</h1>
     </div>
     <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xxl-6">
-      <div class="bg">
-        <div class="btn-group" role="group" aria-label="Basic radio toggle button group" class="b1">
-          <a [routerLink]="['/blog']" routerLinkActive="router-link-active">
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked />
-            <label class="btn btn-outline-primary left" for="btnradio1">
-              <b> All</b>
-            </label>
-          </a>
-
-          <a [routerLink]="['/businessarticles']" routerLinkActive="router-link-active">
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" />
-            <label class="btn btn-outline-primary" for="btnradio2"><img src="/assets/br.png" alt="Bootstrap" width="25"
-                height="25" /><b>Business</b></label>
-          </a>
-
-          <a [routerLink]="['/financearticles']" routerLinkActive="router-link-active">
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" />
-            <label class="btn btn-outline-primary" for="btnradio3"><img src="/assets/fin.png" alt="Bootstrap" width="25"
-                height="25" /><b>Finances</b></label>
-          </a>
-
-          <a [routerLink]="['/managementarticles']" routerLinkActive="router-link-active">
-            <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" />
-            <label class="btn btn-outline-primary" for="btnradio4"><img src="/assets/m.png" alt="Bootstrap" width="25"
-                height="25" /><b>Management</b></label>
-          </a>
+      <div class="card button-card" style="width: fit-content">
+        <div class="multiple-button">
+          <div class="d-flex flex-row" style="gap: 10px">
+            <button type="button" class="btn buttons all-button1" (click)="blogFilter()">
+              <b>All</b>
+            </button>
+            <div *ngFor="let cat of Blogcategory">
+              <button type="button" class="btn buttons all-button" (click)="blogFilter(cat)">
+                <b>{{ cat }}</b>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
+
     </div>
+
   </div>
 </div>
 
 <br />
 
 <div class="container">
-    <div class="row">
-      <div class="col-sm-6 col-md-6 d-flex flex-row" data-aos="fade-up" data-aos-anchor-placement="top-center"
-        *ngFor="let im of Blogs">
-        <div class="card latest-articles" (click)="readart(im._id)" >
-          <img src="{{ im.imageurl }}" class="card-img-top im-hv" alt="..." class="zoom" />
-          <button class="btn" class="butstyl"><b>Business</b></button>
+  <div class="row">
+    <div class="col-sm-6 col-md-6 d-flex flex-row" data-aos="fade-up" data-aos-anchor-placement="top-center"
+      *ngFor="let im of filteredbycategory">
+      <div class="card latest-articles" (click)="readart(im._id)">
+        <img src="{{ im.imageurl }}" class="card-img-top im-hv" alt="..." class="zoom" />
+        <button class="btn" class="butstyl">
+          <b>{{ im.category }}</b>
+        </button>
 
-          <div class="card-body">
-            <h3 class="card-title">{{ im.name }}</h3>
-            <br />
-            <p class="card-text" class="text-muted">
-              John Carter -- may 14,2022
-            </p>
-          </div>
+        <div class="card-body">
+          <h3 class="card-title">{{ im.name }}</h3>
+          <br />
+          <p class="card-text" class="text-muted">John Carter -- may 14,2022</p>
         </div>
       </div>
     </div>
+  </div>
 </div>
 
 <div class="flex-container-fluid" data-aos="fade-up" data-aos-anchor-placement="top-center">
