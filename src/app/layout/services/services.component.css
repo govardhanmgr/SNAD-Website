@@ -29,3 +29,97 @@
     position: relative;
     left: 20%;
 }
+
+/* Hero image styling */
+
+.header{
+    height: 100vh;
+   }
+  
+   .img-background{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    max-width: 100%;
+    width: auto;
+    height:auto;
+    z-index: -1;
+   }
+  
+  @media (min-aspect-ratio:16/9) {
+    .img-background {
+      width: 100%;
+      height: auto;
+    }
+  
+  }
+  
+  @media (max-aspect-ratio:16/9) {
+    .img-background {
+      width: auto;
+      height: 100%;
+    }
+  
+  }
+  
+  .text-content {
+    color: white;
+    margin-left: 10%;
+    margin-top: 8%;
+  }
+  
+  .text {
+    font-size: 50px;
+  }
+  
+  .contact {
+  
+    display: flex;
+  
+    flex-direction: row;
+  
+    align-items: center;
+  
+    margin-bottom: 20px;
+  
+    -webkit-box-align: center;
+  
+  }
+  
+  
+  
+  .smalldash {
+  
+    width: 100%;
+  
+    max-width: 60px;
+  
+    min-height: 2px;
+  
+    margin-right: 25px;
+  
+    background-color: #fff;
+  
+  }
+  
+  .us {
+  
+    color: #fff;
+  
+    font-size: 20px;
+  
+    font-weight: 600;
+  
+    letter-spacing: 0.08em;
+  
+  }
+  .maindiv{
+    margin-top:6%;
+  }
+  .impact{
+    margin-top:6%
+  }
+
+
+

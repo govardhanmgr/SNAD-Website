@@ -12,6 +12,7 @@ import { WebflowserviceService } from 'src/app/services/webflowservice.service';
 export class JobrequirmentComponent implements OnInit, OnDestroy {
   subscription!: Subscription;
   jobs = [] as any;
+  jobopen={} as any;
 
   constructor(
     private router: Router,
@@ -24,6 +25,7 @@ export class JobrequirmentComponent implements OnInit, OnDestroy {
       duration: 1200,
     });
     this.getprof();
+   this.getjobed();
   }
 
   async getprof() {
@@ -42,7 +44,7 @@ export class JobrequirmentComponent implements OnInit, OnDestroy {
       .subscribe({
         next: (res: any) => {
           console.log(res);
-
+        
           this.jobs = res.data;
           let id = Object(this.jobs)["career-job-category"] as string
           this.getJobCategory(id, this.jobs)
@@ -74,6 +76,16 @@ export class JobrequirmentComponent implements OnInit, OnDestroy {
 
       },
       error: (reason: any) => console.log(reason)
+    });
+  }
+
+  getjobed(){
+    this.subscription=this.webflow.getData("allitems/6375d4747684b4ac2c4ccf78").subscribe({
+      next:(res:any)=>{
+        console.log(res);
+        this.jobopen=res.data;
+      },
+      error:(reason:any)=>console.log(reason)
     });
   }
 
