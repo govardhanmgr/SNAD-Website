@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+/* header style */
+.log-sign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 25rem;
+  padding: 0rem;
+  transform: translateY(10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+  text-align: start;
+  justify-content: left;
+}

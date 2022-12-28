@@ -15,12 +15,6 @@ a {
 .nav-links {
   flex: 2;
 }
-.log-sign {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-}
 
 .btn.solid,
 .btn.transparent:hover {
@@ -64,19 +58,7 @@ a {
   text-align: start;
   justify-content: left;
 }
-.dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 25rem;
-  padding: 0rem;
-  transform: translateY(10px);
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.5s;
-  text-align: start;
-  justify-content: left;
-}
+
 .dropdown ul {
   position: relative;
 }

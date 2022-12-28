@@ -1,6 +1,5 @@
 * {
   padding: 0;
-
   box-sizing: border-box;
 }
 
@@ -15,17 +14,6 @@
   min-height: 100vh;
   justify-content: center;
   align-items: center;
-}
-
-.bgi {
-  background-image: url("https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4645e4ccfc4_image-home-v3-hero-startup-x-template-p-2000.jpeg");
-  height: 60vh;
-  background-size: cover;
-  will-change: transform;
-  transform: translate3d(0px, -16.1773px, 0px) scale3d(1.06471, 1.06471, 1)
-    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-  transform-style: preserve-3d;
-  padding: 10px;
 }
 
 .contact {

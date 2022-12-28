@@ -24,6 +24,7 @@ import { GetintouchComponent } from '../shared/getintouch/getintouch.component';
 import { ServiceheroimageComponent } from './serviceheroimage/serviceheroimage.component';
 import { SubservicesComponent } from './subservices/subservices.component';
 import { SharedModule } from '../shared/shared.module';
+import { NavheaderComponent } from './navheader/navheader.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { SharedModule } from '../shared/shared.module';
     BrowsearticlesComponent,
     ServiceheroimageComponent,
     SubservicesComponent,
+    NavheaderComponent,
   ],
   imports: [
     CommonModule,
