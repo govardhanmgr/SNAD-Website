@@ -10,7 +10,7 @@ import { WebflowserviceService } from 'src/app/services/webflowservice.service';
 })
 export class ReadarticleComponent implements OnInit {
   subscription!: Subscription;
-  readarticles = [] as any;
+  Readarticles = [] as any;
 
   constructor( private router:Router,
     private webflow:WebflowserviceService,
@@ -41,22 +41,45 @@ export class ReadarticleComponent implements OnInit {
          console.log(read);
   
         let data = read.data;
-         this.readarticles = read.data;
+         this.Readarticles = read.data;
+
          
+        //  this.Readarticles.forEach((element: any) => {
+        //   let itemid = element['post-author']
+        //   this.getAuthorDetails(itemid,element);
+        // });
+
+         
+
+         
+        this.Readarticles.imageurl = this.Readarticles['post-main-image'].url;
+        // this.Readarticles.imageurlSmallProfile = this.Readarticles['team-profile-picture'].url;
         const app = document.getElementById('des');
         const n =  document.createElement('section');
-        n.innerHTML =this.readarticles['post-body'];
+        n.innerHTML =this.Readarticles['post-body'];
         app?.append(n);
          const add = document.getElementById('title');
          const p =  document.createElement('section');
-           p.innerHTML =this.readarticles['name'];
+           p.innerHTML =this.Readarticles['name'];
           add?.append(p)
       },
       error: (reason: any) => { console.log(reason);
       },
     });
 
-  }   
+  } 
+  
+  getAuthorDetails(item :string ,  ref:any){
+    this.subscription = this.webflow
+      .getData(`temmemberitembyid/${item}`)
+      .subscribe({
+        next: (update: any) => {
+          console.log(update);
+          
+        }
+      })
+    }
+    
   ngOnDestroy(): void {
     if (this.subscription) {
       this.subscription.unsubscribe();
