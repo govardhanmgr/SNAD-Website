@@ -44,7 +44,7 @@ export class BlogComponent implements OnInit {
 
   ngOnInit(): void {
     Aos.init({
-      duration: 500,
+      duration:3500,
     });
     this.blog();
   }

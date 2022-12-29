@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <h1 class="text-center" id="title"></h1>
+  <h1 class="text-center" id="title" ></h1>
   <br />
   <h5 class="text-center padbt">
     Lorem ipsum dolor sit amet consectetur adipiscing elit eque ipsum odio justo
@@ -11,9 +11,9 @@
 
 <br><br><br>
 
-<div class="container">
+<div class="container" style="margin-bottom: 50px;">
   <div class="row">
-    <div class="col col-sm-12 col-md-6 col-xs-12 col-lg-6 ">
+    <div class=" col-lg-6">
       
         <a href="./profile">
           <div class="card mb-3 profilealign" style="max-width: 300px">
@@ -38,11 +38,11 @@
     </div>
 
 
-    <div class="col  col-sm-12 col-md-6 col-xs-12 col-lg-6">
+    <div class="col-lg-6" >
      
         <a href="/businessarticles">
-          <button type="button" class="btn btn-primary buttonalign">
-            <i class="bi bi-briefcase"></i><b>Business</b>
+          <button type="button" class="btn" style="border-color: rgb(151, 141, 141); border-radius: 35px; margin-top: 10px; margin-left: 170px;">
+            <i class="bi bi-briefcase" style="padding-right: 10px;"></i><span style="font-family: sans-serif; ">Business</span>
           </button>
         </a>
       
@@ -54,7 +54,7 @@
 
 
 
-<div class="row justify-content-center ">
+<div class="row justify-content-center img">
   <div class="col col-5 " id="des">
   </div>
 
@@ -77,11 +77,11 @@
                   CEO & FOUNDER
                 </h5>
                 <br />
-                <h5 class="card-text">
+                <p class="card-text" style="font-family: sans-serif; ">
                   Lorem ipsum dolor sit amet consectetur adipiscing elit viverra
                   fusce augue dignissim quis nisl non penatibus etiam nisi nunc
                   mauris sed id.
-                </h5>
+                </p>
 
                 <div class="networks">
                   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -100,10 +100,6 @@
   </div>
 
   <br /><br /><br />
-<!-- 
-  <div class="container">
-    <div class="line"></div>
-  </div> -->
   <hr>
   <br />
   <br />
@@ -117,10 +113,7 @@
         <div class="bg">
           <div class="btn-group" role="group" aria-label="Basic radio toggle button group" class="b1">
             <a [routerLink]="['/blog']" routerLinkActive="router-link-active">
-              <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked />
-              <label class="btn btn-outline-primary left btdes" for="btnradio1">
-                <b> Browse all articles</b>
-              </label>
+              <button class="btn btdes" type="button"><b>Browse all articles</b></button>
             </a>
           </div>
         </div>
