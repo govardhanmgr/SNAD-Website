@@ -1,23 +1,21 @@
 <!--head image-->
 
 <section class="header">
-  <img
-    src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4645e4ccfc4_image-home-v3-hero-startup-x-template-p-2000.jpeg"
-    class="img-background">
-  <div class="text-content">
-    <div class="contact">
-      <div class="smalldash"></div>
-      <div class="header-text">INSPIRED TO HELP</div>
+  <div class="img-background">
+    <div class="text-content">
+      <div class="contact">
+        <div class="smalldash"></div>
+        <div class="header-text">INSPIRED TO HELP</div>
+      </div>
+      <p data-aos="fade-up" id="app"></p>
     </div>
-    <p data-aos="fade-up" id="app"></p>
   </div>
 </section>
 
 <!--Scroll up button-->
 
 <button type="button" class="btn btn-info scroll-to-top" (click)="gotoTop()">
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-arrow-up"
-    viewBox="0 0 16 16">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-arrow-up" viewBox="0 0 16 16">
     <path fill-rule="evenodd"
       d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
   </svg>
@@ -25,7 +23,7 @@
 
 <!--Core Values-->
 
-<div class="container">
+<div class="container core-value">
   <h2 data-aos="fade-up" style="text-align: center;"><b>Core Values</b></h2>
   <br>
   <h5>
@@ -244,7 +242,8 @@
       <!--c0lumn-->
       <div class="col">
         <div class=" mb-3">
-          <button type="button" class="btn btn-lg btn-light all-job-opening-button" data-aos="fade-up">All job opening</button>
+          <button type="button" class="btn btn-lg btn-light all-job-opening-button" data-aos="fade-up">All job
+            opening</button>
         </div>
       </div>
 
@@ -406,7 +405,7 @@
       <div class="col">
         <div class="card button-card " style="width: fit-content;">
           <div class="multiple-button">
-            <div class="d-flex flex-row" style="gap:10px;">
+            <div class="d-flex flex-row flex-wrap " style="gap:10px;">
               <button type="button" class="btn buttons all-button" (click)="jobFilter()">All</button>
               <div *ngFor="let cat of Jobcategory ">
                 <button type="button" class="btn buttons all-button" (click)="jobFilter(cat)">{{cat}}</button>
@@ -415,7 +414,7 @@
           </div>
         </div>
       </div>
-         
+
     </div>
   </div>
 </div>
@@ -430,8 +429,10 @@
             <br>
             <p class="card-text">{{openpos['job-description-excerpt']}}</p>
             <br>
-            <a type="button" class="btn open-positions-button"><i class="bi bi-briefcase" style="color: green;"></i> {{openpos.category}}</a>
-            <a type="button" class="btn open-positions-button open-position-button-gap"><i class="bi bi-geo-alt" style="color: green;"></i> {{openpos['job-location']}}</a>
+            <a type="button" class="btn open-positions-button"><i class="bi bi-briefcase" style="color: green;"></i>
+              {{openpos.category}}</a>
+            <a type="button" class="btn open-positions-button open-position-button-gap"><i class="bi bi-geo-alt"
+                style="color: green;"></i> {{openpos['job-location']}}</a>
           </div>
         </div>
       </div>
