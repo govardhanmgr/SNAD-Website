@@ -1,0 +1,23 @@
+.view {
+  color: black;
+  background-color: white;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  outline: none;
+}
+
+.view:hover {
+  color: blue;
+  border-color: blue;
+}
+
+.imgs {
+  border-radius: 0.8rem;
+}
+
+.aa {
+  align-items: flex-start;
+  justify-content: center;
+}
