@@ -6,8 +6,8 @@
 .c {
   background: linear-gradient(
     90deg,
-    rgb(255, 255, 255) 0%,
-    rgb(255, 255, 255) 53%,
+    #edf1fd 0%,
+    #edf1fd 53%,
     #2f5acd 40%,
     #2f5acd 100%
   );
@@ -159,10 +159,45 @@ textarea,
   .c {
     background: linear-gradient(
       180deg,
-      rgb(255, 255, 255) 0%,
-      rgb(255, 255, 255) 58%,
+      #edf1fd 0%,
+      #edf1fd 58%,
       #2f5acd 40%,
       #2f5acd 100%
     );
   }
+}
+
+/*  */
+
+.future-image-section {
+  background-image: url("https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4645e4ccfc4_image-home-v3-hero-startup-x-template-p-2000.jpeg");
+  height: 75vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.usa {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.smalldasha {
+  width: 100%;
+  max-width: 60px;
+  min-height: 2px;
+  margin-right: 25px;
+  background-color: #fefefe;
+}
+
+.herocon {
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.herotx {
+  color: white;
+  line-height: 2.5rem;
 }
