@@ -18,7 +18,6 @@ export class BlogComponent implements OnInit {
   blogtab = [] as any;
   arrayupdate = [];
 
- 
   scroll(el: HTMLElement) {
     el.scrollIntoView({ behavior: 'smooth' });
   }
@@ -44,7 +43,7 @@ export class BlogComponent implements OnInit {
 
   ngOnInit(): void {
     Aos.init({
-      duration: 500,
+      duration: 3500,
     });
     this.blog();
   }
@@ -56,17 +55,16 @@ export class BlogComponent implements OnInit {
         next: (update: any) => {
           console.log(update);
 
-          this.Blogs = this.filteredbycategory=  update.data;
+          this.Blogs = this.filteredbycategory = update.data;
 
           this.Blogs.forEach((element: any) => {
             element.imageurl = element['post-main-image'].url;
-            let catId = element['post-category-2']
+            element.date =  element['updated-on']
+            let catId = element['post-category-2'];
+            let itemid = element['post-author']
             console.log(catId);
-            this.blogcategory(catId,element)
-
-            
-
-
+            this.blogcategory(catId, element);
+            this.getAuthorDetails(itemid, element);
           });
           console.log(this.Blogs);
 
@@ -87,11 +85,11 @@ export class BlogComponent implements OnInit {
     this.subscription = this.webflow
       .getData(`blogcategoryitembyid/${itemid}`)
       .subscribe({
-        next: (data: any) => {
-         
+        next: (res: any) => {
+          console.log(res);
           
-          ref.category = data.data.name;
-          this.Blogcategory.add(data.data.name);
+          ref.category = res.data.name;
+          this.Blogcategory.add(res.data.name);
         },
         error: (reason: any) => console.log(reason),
       });
@@ -108,6 +106,18 @@ export class BlogComponent implements OnInit {
       this.filteredbycategory = this.Blogs;
     }
   }
+  getAuthorDetails(item :string, ref:any){
+    this.subscription = this.webflow
+      .getData(`temmemberitembyid/${item}`)
+      .subscribe({
+        next: (update: any) => {
+          console.log(update);
+          ref.profileName = update.data.name
+        }
+      })
+    }
+
+
   ngOnDestroy(): void {
     if (this.subscription) {
       this.subscription.unsubscribe();
