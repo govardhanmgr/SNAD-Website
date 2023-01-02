@@ -12,8 +12,9 @@ import { WebflowserviceService } from 'src/app/services/webflowservice.service';
 export class JobrequirmentComponent implements OnInit, OnDestroy {
   subscription!: Subscription;
   jobs = [] as any;
-  jobopen = {} as any;
+  jobopen = [] as any;
   item!: string;
+
 
   constructor(
     private router: Router,
@@ -47,9 +48,9 @@ export class JobrequirmentComponent implements OnInit, OnDestroy {
         next: (res: any) => {
           console.log(res);
 
-          this.jobs = res.data;
-          let id = Object(this.jobs)['career-job-category'] as string;
-          this.getJobCategory(id, this.jobs);
+          this.jobopen = res.data;
+          let id = Object(this.jobopen)['career-job-category'] as string;
+          this.getJobCategory(id, this.jobopen);
 
           const app = document.getElementById('app');
           const n = document.createElement('section');
@@ -63,6 +64,7 @@ export class JobrequirmentComponent implements OnInit, OnDestroy {
           const r = document.createElement('section');
           r.innerHTML = this.jobs['job-requirements'];
           apps?.append(r);
+          
         },
         error: (reason: any) => {
           console.error(reason);
@@ -87,15 +89,20 @@ export class JobrequirmentComponent implements OnInit, OnDestroy {
       .subscribe({
         next: (res: any) => {
           console.log(res);
+          //this.jobopen=res.data
           let data = res.data;
           let count = 0;
           for (let i = 0; i <= data.length; i++) {
             if (data[i]['_id'] != this.item && count < 2) {
               count++;
-              this.jobopen = data[i];
+              this.jobopen.push(data[i]);
               console.log(this.jobopen);
             }
           }
+          this.jobopen.forEach((element:any)=>{
+            let id=Object(element)["career-job-category"] as string
+            this.getJobCategory(id,element)
+          })
         },
         error: (reason: any) => console.log(reason),
       });

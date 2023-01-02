@@ -6,6 +6,7 @@
   overflow: hidden;
   background: url( https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4645e4ccfc4_image-home-v3-hero-startup-x-template-p-2000.jpeg) no-repeat center;
   background-size: cover;
+  fill-opacity: 0.5px;
  }
 
 .text-content {
