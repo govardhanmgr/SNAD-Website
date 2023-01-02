@@ -2,9 +2,7 @@
   <h1 class="text-center" id="title" ></h1>
   <br />
   <h5 class="text-center padbt">
-    Lorem ipsum dolor sit amet consectetur adipiscing elit eque ipsum odio justo
-    amet <br />
-    urna auctor congue vulputate au
+   {{Readarticles.postExcerpt }}
   </h5>
   <img src="{{Readarticles.imageurl}}" alt="" class="rounded mx-auto d-block" style="width: 64% ; border-radius: 35px;"/>
 </div>
@@ -19,13 +17,13 @@
           <div class="card mb-3 profilealign" style="max-width: 300px">
             <div class="row g-0">
               <div class="col-4">
-                <img src="assets/profile.jpg" alt="..." style="width: 85px; border-radius: 45px" />
+                <img src="{{Readarticles.profile.smallimageurl}}" alt="..." style="width: 85px; border-radius: 45px" />
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <h5 class="card-title">John Carter</h5>
+                  <h5 class="card-title">{{Readarticles.profile.authorname}}</h5>
                   <h6 class="card-text">
-                    <small class="text-muted">November 21,2022</small>
+                    <small class="text-muted">{{Readarticles.profile.date | date}}</small>
                   </h6>
                 </div>
               </div>
@@ -68,19 +66,17 @@
         <div class="card mb-3" style="width: 775px">
           <div class="row g-0">
             <div class="col-md-4">
-              <img src="assets/profile.jpg" alt="..." style="width: 200px; border-radius: 1055px" />
+              <img src="{{Readarticles.profile.imageurlbig}}" alt="..." style="width: 200px; border-radius: 1055px" />
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h5 class="card-title">John Carter</h5>
+                <h5 class="card-title">{{Readarticles.profile.authorname}}</h5>
                 <h5 class="card-title" style="color: rgb(34, 75, 209)">
-                  CEO & FOUNDER
+                  {{Readarticles.profile.position}}
                 </h5>
                 <br />
                 <p class="card-text" style="font-family: sans-serif; ">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit viverra
-                  fusce augue dignissim quis nisl non penatibus etiam nisi nunc
-                  mauris sed id.
+                  {{Readarticles.profile.teamsummary}}
                 </p>
 
                 <div class="networks">
