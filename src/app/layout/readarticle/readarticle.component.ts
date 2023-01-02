@@ -50,6 +50,7 @@ export class ReadarticleComponent implements OnInit {
         
          
         this.Readarticles.imageurl = this.Readarticles['post-main-image'].url;
+        this.Readarticles.postExcerpt = this.Readarticles['post-excerpt'];
         const app = document.getElementById('des');
         const n =  document.createElement('section');
         n.innerHTML =this.Readarticles['post-body'];
@@ -75,6 +76,7 @@ export class ReadarticleComponent implements OnInit {
           update.data.smallimageurl=update.data['team-profile-picture-small'].url
           update.data.position=update.data['team-job-title']
           update.data.authorname=update.data['name']
+          update.data.teamsummary=update.data['team-about-summary']
           update.data.date =  update.data['updated-on']
 
 
