@@ -86,6 +86,15 @@ a {
   margin-left: 410px;
   border-radius: 35px;
 } 
-/* img{
-  width: 300px !important ;
-}  */
+
+
+img{
+  
+  object-fit: contain !important;
+} 
+
+/* 
+#des{
+  max-width: 200px !important;
+  max-height: 1000px !important ;
+} */
