@@ -10,7 +10,7 @@ import { WebflowserviceService } from 'src/app/services/webflowservice.service';
 })
 export class ReadarticleComponent implements OnInit {
   subscription!: Subscription;
-  Readarticles = [] as any;
+  Readarticles =  {} as any;
 
   constructor( private router:Router,
     private webflow:WebflowserviceService,
@@ -42,18 +42,15 @@ export class ReadarticleComponent implements OnInit {
   
         let data = read.data;
          this.Readarticles = read.data;
-
          
-        //  this.Readarticles.forEach((element: any) => {
-        //   let itemid = element['post-author']
-        //   this.getAuthorDetails(itemid,element);
-        // });
-
-         
-
+       
+          let itemid = this.Readarticles['post-author']
+          console.log(itemid)
+          this.getAuthorDetails(itemid,this.Readarticles);
+        
          
         this.Readarticles.imageurl = this.Readarticles['post-main-image'].url;
-        // this.Readarticles.imageurlSmallProfile = this.Readarticles['team-profile-picture'].url;
+        this.Readarticles.postExcerpt = this.Readarticles['post-excerpt'];
         const app = document.getElementById('des');
         const n =  document.createElement('section');
         n.innerHTML =this.Readarticles['post-body'];
@@ -75,7 +72,15 @@ export class ReadarticleComponent implements OnInit {
       .subscribe({
         next: (update: any) => {
           console.log(update);
-          
+          update.data.imageurlbig=update.data['team-profile-picture'].url
+          update.data.smallimageurl=update.data['team-profile-picture-small'].url
+          update.data.position=update.data['team-job-title']
+          update.data.authorname=update.data['name']
+          update.data.teamsummary=update.data['team-about-summary']
+          update.data.date =  update.data['updated-on']
+
+
+          ref.profile= update.data
         }
       })
     }
