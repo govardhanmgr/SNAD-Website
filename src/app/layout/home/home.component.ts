@@ -5,32 +5,31 @@ import { GetintouchComponent } from 'src/app/shared/getintouch/getintouch.compon
 
 import * as Aos from 'aos';
 import { Router } from '@angular/router';
-
-
-
+import { SibComService } from 'src/app/services/sib-com.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-
 })
 export class HomeComponent implements OnInit, OnDestroy {
   subscription!: Subscription;
-  casestudy = [] as any
-  testimonial = {} as any
-  testimonialContents = [] as any
+  casestudy = [] as any;
+  testimonial = {} as any;
+  testimonialContents = [] as any;
   static = [] as any;
   home = [] as any;
 
-
-  constructor(private router: Router,
-    private webflow: WebflowserviceService) { }
+  constructor(
+    private router: Router,
+    private webflow: WebflowserviceService,
+    private sibService: SibComService
+  ) {}
 
   ngOnInit(): void {
     Aos.init({
       duration: 1200,
-    })
+    });
     this.casestudies();
     // this.testimonials();
     //this.staticdata();
@@ -45,16 +44,16 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   casestudies() {
-    this.subscription = this.webflow.getData("allitems/6377559a25cdcb16c047617e").subscribe({
-      next: (response: any) => {
-
-
-        this.casestudy = response.data
-      },
-      error: (reason: any) => {
-        console.error(reason);
-      }
-    });
+    this.subscription = this.webflow
+      .getData('allitems/6377559a25cdcb16c047617e')
+      .subscribe({
+        next: (response: any) => {
+          this.casestudy = response.data;
+        },
+        error: (reason: any) => {
+          console.error(reason);
+        },
+      });
   }
 
   // testimonials() {
@@ -66,7 +65,6 @@ export class HomeComponent implements OnInit, OnDestroy {
   //       this.testimonial.testmonialscontent.forEach((element: any) => {
   //         // let id = Object(element)["career-job-category"] as string
   //         this.testimonialContent(element)
-
 
   //       })
   //       console.log(this.testimonialContents);
@@ -92,48 +90,49 @@ export class HomeComponent implements OnInit, OnDestroy {
   // }
 
   getStaticdata() {
-    this.subscription = this.webflow.getData("allitems/639c13606fb026c043712033").subscribe({
-      next: (response: any) => {
-        console.log(response);
-        let data = response.data
-        data.forEach((element: any) => {
-          if (element["ref-collections"]) {
-            let rep: Array<string> = element["ref-collections"]
-            let refres = new Array
-            rep.forEach((el) => {
-              this.getReferenceData(el, refres)
-            })
-            element.refdata = refres
-            // this.getReferenceData(rep)
-          }
-        })
-        console.log(data);
-        localStorage.setItem("staticcontent", JSON.stringify(data));
-        
-      },
-      error: err => { console.log(err); }
-
-    })
+    this.subscription = this.webflow
+      .getData('allitems/639c13606fb026c043712033')
+      .subscribe({
+        next: (response: any) => {
+          console.log(response);
+          let data = response.data;
+          data.forEach((element: any) => {
+            if (element['ref-collections']) {
+              let rep: Array<string> = element['ref-collections'];
+              let refres = new Array();
+              rep.forEach((el) => {
+                this.getReferenceData(el, refres);
+              });
+              element.refdata = refres;
+              // this.getReferenceData(rep)
+            }
+          });
+          console.log(data);
+          this.sibService.sendData(data);
+          localStorage.setItem('staticcontent', JSON.stringify(data));
+        },
+        error: (err) => {
+          console.log(err);
+        },
+      });
   }
 
   getReferenceData(itemId: string, res?: any) {
-    this.subscription = this.webflow.getData(`referenceitembyid/${itemId}`).subscribe({
-      next: (response: any) => {
-        res.push(response.data)
-      },
-      error: (reason: any) => {
-        console.error(reason);
-      }
-    });
+    this.subscription = this.webflow
+      .getData(`referenceitembyid/${itemId}`)
+      .subscribe({
+        next: (response: any) => {
+          res.push(response.data);
+        },
+        error: (reason: any) => {
+          console.error(reason);
+        },
+      });
   }
 
   ngOnDestroy(): void {
     if (this.subscription) {
-      this.subscription.unsubscribe()
+      this.subscription.unsubscribe();
     }
   }
-
 }
-
-
-
