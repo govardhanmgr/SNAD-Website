@@ -15,6 +15,7 @@ export class AboutComponent implements OnInit, OnDestroy {
   subscription!: Subscription;
   Abouts = [] as any
   getProfileItemById: any;
+  impact = {} as any;
 
   scroll(el: HTMLElement) {
     el.scrollIntoView({ behavior: 'smooth' });
@@ -33,6 +34,33 @@ export class AboutComponent implements OnInit, OnDestroy {
       duration: 1200,
     })
     this.About()
+    this.impact = {
+      text: "We have impactfull Numbers",
+      number: [
+        {
+          shortnumber: "98",
+          icon: "%",
+          text: "Customer satisfaction"
+        },
+        {
+          shortnumber: "205",
+          icon: "M",
+          text: "Monthly active users"
+        },
+        {
+          shortnumber: "100",
+          icon: "K",
+          text: "New users per week"
+        },
+        {
+          shortnumber: "55",
+          icon: "%",
+          text: "Growth year-over-year"
+        },
+
+      ]
+
+    }
   }
 
   individualprofile(itemid: string, res: any) {
@@ -58,8 +86,8 @@ export class AboutComponent implements OnInit, OnDestroy {
           (element: any) => {
             element.imageurl = element['team-profile-picture'].url
           });
-          console.log(this.Abouts);
-          
+        console.log(this.Abouts);
+
         const app = document.getElementById('app')
         const n = document.createElement('section')
         n.innerHTML = this.Abouts['team-about']
@@ -71,6 +99,7 @@ export class AboutComponent implements OnInit, OnDestroy {
       error: (reason: any) => console.log(reason)
     });
   }
+
   ngOnDestroy(): void {
     if (this.subscription) {
       this.subscription.unsubscribe()
