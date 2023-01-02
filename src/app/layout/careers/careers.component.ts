@@ -16,9 +16,11 @@ export class CareersComponent implements OnInit {
   Jobcategory = new Set<string>()
 
   getCareerItemById: any;
-  Careers = {} as any
-  filteredJobOpening = [] as any
-  jobtab = [] as any
+  Careers = {} as any;
+  filteredJobOpening = [] as any;
+  jobtab = [] as any;
+  Staticdata = {} as any;
+
   // arrayresponse = [];
   scroll(el: HTMLElement) {
     el.scrollIntoView({ behavior: 'smooth' });
@@ -50,6 +52,7 @@ export class CareersComponent implements OnInit {
     })
     this.career();
     this.getJobOpenings();
+ 
 
     // this.Jobcategory.forEach(value =>{
     //   console.log(value);               //Prints 1 2 3 4 5 6
@@ -57,6 +60,10 @@ export class CareersComponent implements OnInit {
 
 
     // this.route.paramMap.subscribe((params:ParamMap)=>+)
+   let data:any = JSON.parse(localStorage.getItem("staticcontent") || '[]');
+   console.log(data);
+   
+
   }
 
 
@@ -116,16 +123,21 @@ export class CareersComponent implements OnInit {
     if (element) {
       // console.log(element);
       this.filteredJobOpening = this.jobtab.filter((el: { category: string; }) => el.category === element);
-
     }
     else {
       // console.log("All");
       this.filteredJobOpening = this.jobtab
-
     }
-
-
   }
+
+  
+  
+ 
+// static data
+
+  
+  
+
   ngOnDestroy(): void {
     if (this.subscription) {
       this.subscription.unsubscribe()

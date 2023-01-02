@@ -62,7 +62,7 @@
                 <h3>Job requirements</h3>
               </b>
               <br>
-              <p class="card-text" id="req"></p>
+              <p class="card-text" id="req">{{jobs["job-requirements"]}}</p>
 
               <br>
               <a type="button" class="btn btn-primary btn-lg but">Apply Now</a>
@@ -75,6 +75,7 @@
 
 
     <!--column-->
+
     <div class="col">
 
       <div class="card cred" style="width: 22rem;">
@@ -111,6 +112,7 @@
     <div class="row row-cols-1 row-cols-md-2 g-5 open">
 
       <!--column-->
+      
       <div class="col">
         <div class=" mb-3 perk txtcl">
           <h1 style="color: white;" data-aos="fade-up">More Job Openings</h1>
@@ -125,30 +127,15 @@
       </div>
 
       <!--column-->
-     
-      <div class="col " data-aos="fade-up" data-aos-delay="1300" *ngFor="let op of jobopen" >
-        <div class="card opening" >
-          <div class="card-body matter"  >
-            <h4 class="card-title"><b>{{op.name}}</b></h4>
+      <div class="col" data-aos="fade-up" data-aos-delay="1300" *ngFor=" let ope of  jobopen">
+        <div class="card opening"  >
+          <div class="card-body matter" >
+            <h4 class="card-title"><b></b>{{ope.name}}</h4>
             <br>
-            <p class="card-text">{{jobs["job-description"]}}</p>
+            <p class="card-text">{{ope['job-description-excerpt']}}</p>
             <br>
-            <a href="#" class="card-link" type="button" class="btn  button "><i class="bi bi-briefcase" style="color: green;"></i> Design</a>
-            <a href="#" class="card-link" type="button" class="btn  button margin"> <i class="bi bi-geo-alt" style="color: green;"></i> Remote</a>
-          </div>
-        </div>
-      </div>
-
-      <!--column-->
-      <div class="col" data-aos="fade-up" data-aos-delay="1300">
-        <div class="card opening">
-          <div class="card-body matter">
-            <h4 class="card-title"><b>UI/UX Developer</b></h4>
-            <br>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <br>
-            <a href="#" class="card-link" type="button" class="btn  button">Design</a>
-            <a href="#" class="card-link" type="button" class="btn button margin">Remote</a>
+            <a href="#" class="card-link" type="button" class="btn  button"> {{ope.category}}</a>
+            <a href="#" class="card-link" type="button" class="btn button margin">{{ope['job-location']}}</a>
           </div>
         </div>
       </div>
