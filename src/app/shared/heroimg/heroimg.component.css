@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.future-image-section {
+  background-image: url("https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4645e4ccfc4_image-home-v3-hero-startup-x-template-p-2000.jpeg");
+  height: 75vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  -webkit-box-align: center;
+}
+
+.smalldash {
+  width: 100%;
+  max-width: 60px;
+  min-height: 2px;
+  margin-right: 25px;
+  background-color: #2f5acd;
+}
+
+.usa {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.herocon {
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.herotx {
+  color: white;
+  line-height: 2.5rem;
+}

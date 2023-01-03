@@ -24,28 +24,6 @@
   -webkit-box-align: center;
 }
 
-.smalldash {
-  width: 100%;
-  max-width: 60px;
-  min-height: 2px;
-  margin-right: 25px;
-  background-color: #2f5acd;
-}
-
-.us {
-  color: #2f5acd;
-  font-size: 20px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-}
-
-.get {
-  font-size: 3rem;
-  font-weight: 600;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-}
-
 .lorem {
   font-size: 1.2rem;
   font-weight: 480;
@@ -126,7 +104,7 @@ input::-webkit-inner-spin-button {
 
 /* stylen */
 
-.stylen {
+/* .stylen {
   font-size: 3rem;
   font-weight: 750;
 }
@@ -136,10 +114,11 @@ input::-webkit-inner-spin-button {
   font-weight: 750;
 }
 
+
 .we {
   font-size: 2.5rem;
   font-weight: 65 0;
-}
+} */
 
 input,
 input::-webkit-input-placeholder {
@@ -167,7 +146,7 @@ textarea,
   }
 }
 
-/*  */
+/*  
 
 .future-image-section {
   background-image: url("https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4645e4ccfc4_image-home-v3-hero-startup-x-template-p-2000.jpeg");
@@ -201,3 +180,4 @@ textarea,
   color: white;
   line-height: 2.5rem;
 }
+*/
