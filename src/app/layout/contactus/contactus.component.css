@@ -126,7 +126,7 @@ input::-webkit-inner-spin-button {
 
 /* stylen */
 
-.stylen {
+/* .stylen {
   font-size: 3rem;
   font-weight: 750;
 }
@@ -136,10 +136,11 @@ input::-webkit-inner-spin-button {
   font-weight: 750;
 }
 
+
 .we {
   font-size: 2.5rem;
   font-weight: 65 0;
-}
+} */
 
 input,
 input::-webkit-input-placeholder {
