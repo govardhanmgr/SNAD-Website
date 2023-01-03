@@ -13,11 +13,11 @@
         <div class="col">
           <div class="">
             <div class="card-body">
-              <h2><b>{{jobs.name}}</b></h2>
+              <h2><b>{{jobDescription.name}}</b></h2>
               <br>
-              <a href="#" class="card-link" type="button" class="btn btn-light button"><i class="bi bi-briefcase" style="color: green;"></i> {{jobs.category}}</a>
+              <a href="#" class="card-link" type="button" class="btn btn-light button"><i class="bi bi-briefcase" style="color: green;"></i> {{jobDescription.category}}</a>
               <a href="#" class="card-link" type="button"
-                class="btn btn-light button margin "> <i class="bi bi-geo-alt" style="color: green;"></i> {{jobs['job-location']}}</a>
+                class="btn btn-light button margin "> <i class="bi bi-geo-alt" style="color: green;"></i> {{jobDescription['job-location']}}</a>
             </div>
           </div>
           <hr>
@@ -33,7 +33,7 @@
               <p class="card-text" id="app">
                 <br>
                 <br>
-                {{jobs["job-description-excerpt"]}}
+                {{jobDescription["job-description-excerpt"]}}
               </p>
             </div>
           </div>
@@ -62,7 +62,7 @@
                 <h3>Job requirements</h3>
               </b>
               <br>
-              <p class="card-text" id="req">{{jobs["job-requirements"]}}</p>
+              <p class="card-text" id="req"></p>
 
               <br>
               <a type="button" class="btn btn-primary btn-lg but">Apply Now</a>
@@ -127,14 +127,14 @@
       </div>
 
       <!--column-->
-      <div class="col" data-aos="fade-up" data-aos-delay="1300" *ngFor=" let ope of  jobopen">
+      <div class="col" data-aos="fade-up" data-aos-delay="1300" *ngFor=" let ope of  jobopenings">
         <div class="card opening"  >
           <div class="card-body matter" >
             <h4 class="card-title"><b></b>{{ope.name}}</h4>
             <br>
             <p class="card-text">{{ope['job-description-excerpt']}}</p>
             <br>
-            <a href="#" class="card-link" type="button" class="btn  button"> {{ope.category}}</a>
+            <a href="#" class="card-link" type="button" class="btn  button"> {{ope.categorybutton}}</a>
             <a href="#" class="card-link" type="button" class="btn button margin">{{ope['job-location']}}</a>
           </div>
         </div>
