@@ -17,24 +17,13 @@ export class BlogComponent implements OnInit {
   filteredbycategory = [] as any;
   blogtab = [] as any;
   arrayupdate = [];
-
-  scroll(el: HTMLElement) {
-    el.scrollIntoView({ behavior: 'smooth' });
-  }
-
-  gotoTop() {
-    window.scroll({
-      top: 0,
-      left: 0,
-      behavior: 'smooth',
-    });
-  }
+ 
 
   constructor(
     private router: Router,
     private webflow: WebflowserviceService,
     private route: ActivatedRoute
-  ) {}
+  ) { }
 
   readart(id: string) {
     console.log(id);
@@ -56,10 +45,11 @@ export class BlogComponent implements OnInit {
           console.log(update);
 
           this.Blogs = this.filteredbycategory = update.data;
+         
 
           this.Blogs.forEach((element: any) => {
             element.imageurl = element['post-main-image'].url;
-            element.date =  element['updated-on']
+            element.date = element['updated-on']
             let catId = element['post-category-2'];
             let itemid = element['post-author']
             console.log(catId);
@@ -81,13 +71,14 @@ export class BlogComponent implements OnInit {
       });
   }
 
+
   blogcategory(itemid: string, ref: any) {
     this.subscription = this.webflow
       .getData(`blogcategoryitembyid/${itemid}`)
       .subscribe({
         next: (res: any) => {
           console.log(res);
-          
+
           ref.category = res.data.name;
           this.Blogcategory.add(res.data.name);
         },
@@ -106,7 +97,7 @@ export class BlogComponent implements OnInit {
       this.filteredbycategory = this.Blogs;
     }
   }
-  getAuthorDetails(item :string, ref:any){
+  getAuthorDetails(item: string, ref: any) {
     this.subscription = this.webflow
       .getData(`temmemberitembyid/${item}`)
       .subscribe({
@@ -115,7 +106,7 @@ export class BlogComponent implements OnInit {
           ref.profileName = update.data.name
         }
       })
-    }
+  }
 
 
   ngOnDestroy(): void {

@@ -4,14 +4,14 @@
   <b>Articles & Resources</b>
 </h1>
 
-<div class="i1" data-aos="fade-up" data-aos-anchor-placement="top-center"
+<div class="i1" data-aos="fade-up" data-aos-anchor-placement="top-center" (click)="readart(Blogs[0]._id)"
   style="margin: auto; width: 65%; padding-bottom: 40px">
-  <a href="./readarticle">
+
     <div class="card i11 latest-articles">
-      <img src="assets/b1.jpeg" class="card-img-top" alt="..." class="zoom" />
+      <img src="{{ Blogs[0].imageurl }}" class="card-img-top" alt="..." class="zoom" />
 
       <button class="btn" class="butstyli1">
-        <b>Business</b>
+        <b>{{Blogs[0].category}}</b>
       </button>
       <div class="card-body">
         <div class="bottom-sec">
@@ -21,13 +21,13 @@
           <br />
           <b>
             <p class="card-text" class="text-muted">
-              John Carter -- may 14,2022
+            {{Blogs[0].profileName}} -- {{Blogs[0].date | date}}
             </p>
           </b>
         </div>
       </div>
     </div>
-  </a>
+  
 </div>
 
 <div class="container" data-aos="fade-up" data-aos-anchor-placement="top-center">

@@ -1,13 +1,16 @@
 .back{
-  background: linear-gradient(to bottom,#5e6bf5 0%,#5e6bf5 100%) no-repeat;
-background-size: calc(100%) calc(50%);
-background-position: top;
-
+ background: linear-gradient(to bottom, #5e6bf5 0%,#5e6bf5 100%) no-repeat;
+ background-size: calc(100%) calc(50%);
+ background-position: top;
+ 
+   /* background-color:blue;
+   background-repeat: no-repeat;
+   background-size: 50% 100%; */
 }
 
 .card{
-   border-radius: 25px;
-   text-align: center;
+    border-radius: 25px;
+    text-align: center;
     height: 900px;
     width: 800px;
     margin: 0 auto;
@@ -20,7 +23,6 @@ background-position: top;
     margin-left: 40px;
     margin-right: 40px;
     color: #6f7278;
-    
     font-family: Thicccboi, sans-serif;
     font-size: 18px;
     line-height: 1.833em;
@@ -33,8 +35,8 @@ background-position: top;
     color:black;
 }
 .card-footer{
-  text-align: left;
-  margin-left: 40px;
+    text-align: left;
+    margin-left: 40px;
     margin-right: 40px;
 }
   .btn-primary {
@@ -43,14 +45,12 @@ background-position: top;
      margin-right: 80px;
   }
   h2{
-    text-align: left;
+     text-align: left;
      margin-left: 70px;
      margin-right: 70px;
   }
   .img{
     margin-left: 30%;
-    
-
   }
   .background{
     color: blue;
@@ -62,19 +62,15 @@ background-position: top;
     padding-top:10px ;
     padding-bottom: 10px;
     padding-right: 10px;
-
   }
   .fa {
- 
-    padding: 10px;
+  padding: 10px;
   font-size: 10px;
   width: 30px;
   text-align:center;
   text-decoration: none;
   margin: 5px 2px;
   border-radius: 50%;
-  
-  
   }
   
   .fa:hover {
@@ -91,19 +87,13 @@ background-position: top;
   color: white;
 }
 
-
 .fa-linkedin {
   background: #007bb5;
   color: white;
 }
   .networks{
     text-align: right;
-    /* margin-top: 3%; */
-    /* margin-left: 10px; */
-    /* line-height: 12px; */
-     /* width: 18px; */
      font-size: 8pt;
-     /* font-family: tahoma; */
      margin-top: 1px;
      margin-right: 2px;
      margin: 80px;
@@ -111,17 +101,7 @@ background-position: top;
      top:0;
      right:0;
   }
-  /* .container{
-    background-color: #3B5998;
-    width: 100%;
-    
-    
-  } */
-  /* .background1{
-    background-color: blue;
-    height: 50vh;
-  } */
-    
+  
   .card-title:hover{
   color:blue;
     
@@ -129,13 +109,13 @@ background-position: top;
 .btn:hover{
 background-color:black;
 }
+
 .im-hv{
-  
 border-radius: 30px;
 }
+
 .im-hv:hover{
  transform: translate(0,-7px);
- 
 }
 
 .btn2{
@@ -149,24 +129,12 @@ border-radius: 30px;
 	width: 100px;
   text-align: center;
 }
-/* div.im-hv:hover a + div.btn2  a{
-  color: #3B5998;
-
-} */
 a:hover, a:focus {
-
   color: rgb(46, 48, 180);
-
   text-decoration: none;
-
 }
 
-
-
 a {
-
   color: black;
-
   text-decoration: none;
-
 }
