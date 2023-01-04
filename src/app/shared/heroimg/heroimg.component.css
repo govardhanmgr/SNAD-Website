@@ -35,7 +35,7 @@
 
 .herocon {
   color: white;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 600;
 }
 
@@ -54,7 +54,7 @@
 
 .centered {
   position: absolute;
-  top: 65%;
+  top: 50%;
   left: 40%;
   transform: translate(-50%, -50%);
 }

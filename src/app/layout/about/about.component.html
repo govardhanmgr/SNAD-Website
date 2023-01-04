@@ -1,4 +1,4 @@
-<!-- <section class="header" >
+<section class="header" >
   <img
     src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4645e4ccfc4_image-home-v3-hero-startup-x-template-p-2000.jpeg"
     class="img-background" data-aos="fade-up">
@@ -8,15 +8,15 @@
     <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur <br> tortor nunc aliquam consectetur semper
       augue at.</p>
   </div>
-</section> -->
-<app-heroimg [heros]="heroimg"></app-heroimg>
+</section>
 
 <div class="" data-aos="fade-up">
   <div style="text-align: center;" data-aos="fade-up">
-    <h1 style="font-size:4vw;"><b>{{static.title}}</b></h1>
+    <h1 style="font-size:4vw;"><b>Our Story</b></h1>
   </div><br>
   <div style="text-align: center; " data-aos="fade-up">
-    <p>{{static['detailed-text']}}</p>
+    <p>Lorem ipsum dolor sit amet consectetur<br> adipiscing elit consectetur tortor nunc aliquam consectetur semper
+      augue at.</p>
   </div>
   <br>
   <div style="text-align:center; " data-aos="fade-up">
@@ -30,14 +30,16 @@
     <div class="row ourstorytext">
       <div class="col-md-6" data-aos="fade-up">
         <br><br><br>
-        <h6 style="margin-left:10" class="ourstorytext" style="color: blue;">{{static.title}}</h6>
-        <h1 class="ourstorytext">{{static.subtitle}}</h1>
-        <p class="ourstorytext">{{static['detailed-text']}}</p>
+        <h6 style="margin-left:10" class="ourstorytext" style="color: blue;">Our story</h6>
+        <h1 class="ourstorytext">The story behind how our <br>company was founded</h1>
+        <p class="ourstorytext">Lorem ipsum dolor sit amet consectetur adipiscing elit eque<br> ipsum odio
+          justo amet urna auctor. At congue vulputate augue <br> praesent mauris eu posuere
+          pretium tellus.Viverra volutpat a<br> est quis egestas id risus cursus venenatis.</p>
       </div>
       <div class="col-md-6" data-aos="zoom-in">
         <br>
         <img
-          src="{{static['big-image'].url}}"
+          src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b45bc84ccfd5_image-1-about-v1-story-startup-x-template-p-800.jpeg"
           width="80%" height="90%" class="ourstoryimg">
 
       </div>
@@ -47,14 +49,17 @@
     <div class="row">
       <div class="col-md-6" data-aos="zoom-in">
         <img
-          src="{{ourmissionv['big-image'].url}}"
+          src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b470fa4ccfd6_image-2-about-v1-story-startup-x-template-p-800.jpeg"
           width="80%" height="90%" class="ourmissionimg">
 
       </div>
       <div class="col-md-6" data-aos="fade-up">
-        <h6 class="ourmissiontext" style="color: blue;">{{ourmissionv.title}}</h6>
-        <h1 class="ourmissiontext">{{ourmissionv.subtitle}}</h1>
-        <p class="ourmissiontext">{{ourmissionv['detailed-text']}}</p>
+        <h6 class="ourmissiontext" style="color: blue;">Our mission</h6>
+        <h1 class="ourmissiontext">We are on the mission to <br>increase banking<br>accessibility worldwide</h1>
+        <p class="ourmissiontext">Lorem ipsum dolor sit amet consectetur adipiscing elit eque <br> ipsum odio justo amet
+          urna auctor. At congue
+          vulputate <br>augue praesent mauris eu posuere pretium tellus. Viverra <br>volutpat a est quis egestas id
+          risus cursus venenatis.</p>
       </div>
     </div>
   </div><br><br><br>
@@ -67,13 +72,13 @@
   </div>
   <br>
 
-  <div class="">
+  <div class="container">
     <div class="row">
       <div class="col-sm-12 col-md-4 d-flex flex-row" data-aos="fade-up" *ngFor="let profile of Abouts">
        <div class="card m-3"  (click)="profileid(profile._id)">
         <img src="{{profile.imageurl }}" alt="Snow" class="card-img-top" style="width:100%" />
          <div class="ourteamimg" type="button"><b>{{profile["team-job-title"]}}</b></div>
-           <div class="card-body value">   
+           <div class="card-body value">
           <h4 class="card-title"><b>{{profile.name}}</b></h4>
           <p class="card-text">{{profile["team-about-card-excerpt"]}}</p>
          </div>
@@ -262,7 +267,7 @@
   </div>
   <!-- <div><img
       src=" https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b443b44ccfb5_shape-2-cta-2-startup-x-template.svg"
-      class="des"></div> 
+      class="des"></div>  -->
 
-</div> -->
+</div>
 <br>
