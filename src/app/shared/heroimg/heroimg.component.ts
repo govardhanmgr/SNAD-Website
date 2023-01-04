@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-heroimg',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroimgComponent implements OnInit {
 
+  @Input() heros!:any
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.heros);
+    
   }
 
 }
