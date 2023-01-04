@@ -20,6 +20,7 @@ import { AnimationComponent } from './animation/animation.component';
 import { PositionsComponent } from './positions/positions.component';
 import { ServiceheroimageComponent } from './serviceheroimage/serviceheroimage.component';
 import { SubservicesComponent } from './subservices/subservices.component';
+import { SubserviceComponent } from './subservice/subservice.component';
 
 
 
@@ -47,7 +48,7 @@ const routes: Routes = [
   { path: "positions", component: PositionsComponent },
   {path:"serviceheroimage",component:ServiceheroimageComponent},
   {path:"subservices", component:SubservicesComponent},
-
+  {path:"subservice",component:SubserviceComponent},
 
 
 
