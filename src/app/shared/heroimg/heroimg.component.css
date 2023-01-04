@@ -35,11 +35,26 @@
 
 .herocon {
   color: white;
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 3.5rem;
+  font-weight: 600;
 }
 
 .herotx {
   color: white;
   line-height: 2.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .herocon {
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
 }
