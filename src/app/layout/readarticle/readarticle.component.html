@@ -4,28 +4,20 @@
   <h5 class="text-center padbt">
     {{ Readarticles.postExcerpt }}
   </h5>
-  <img
-    src="{{ Readarticles.imageurl }}"
-    alt=""
-    class="rounded mx-auto d-block"
-    style="width: 64%; border-radius: 35px"
-  />
+  <img src="{{ Readarticles.imageurl }}" alt="" class="rounded mx-auto d-block"
+    style="width: 64%; border-radius: 35px" />
 </div>
 
 <br /><br /><br />
 
-<div class="container" style="margin-bottom: 50px">
-  <div class="row">
-    <div class="col-lg-6">
+<div class="container " style="margin-bottom: 50px">
+  <div class="row justify-content-center">
+    <div class="col-sm-8">
       <a href="./profile">
         <div class="card mb-3 profilealign" style="max-width: 300px">
           <div class="row g-0">
-            <div class="col-4">
-              <img
-                src="{{ Readarticles.profile.smallimageurl }}"
-                alt="..."
-                style="width: 85px; border-radius: 45px"
-              />
+            <div class="col-md-4">
+              <img src="{{ Readarticles.profile.smallimageurl }}" alt="..." style="width: 85px; border-radius: 45px" />
             </div>
             <div class="col-md-8">
               <div class="card-body">
@@ -35,37 +27,38 @@
                 <h6 class="card-text">
                   <small class="text-muted">{{
                     Readarticles.profile.date | date
-                  }}</small>
+                    }}</small>
                 </h6>
               </div>
             </div>
           </div>
         </div>
       </a>
+
     </div>
 
-    <div class="col-lg-6">
+    
+    <div class="col-sm-4 justify-content-center">
       <a href="/businessarticles">
-        <button
-          type="button"
-          class="btn"
-          style="
-            border-color: rgb(151, 141, 141);
-            border-radius: 35px;
-            margin-top: 10px;
-            margin-left: 170px;
-          "
-        >
-          <i class="bi bi-briefcase" style="padding-right: 10px"></i
-          ><span style="font-family: sans-serif">Business</span>
+        <button type="button" class="btn">
+          <i class="bi bi-briefcase" style="padding-right: 10px"></i><span
+            style="font-family: sans-serif">Business</span>
         </button>
       </a>
     </div>
+
   </div>
 </div>
 
-<div class="row justify-content-center img">
-  <div class="col col-5 justify-content-center" id="des"></div>
+<!-- <div class="row justify-content-center img"> -->
+<!-- <div class="col col-5 justify-content-center" id="des"></div> -->
+<!-- </div> -->
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-7">
+      <div id="des"></div>
+    </div>
+  </div>
 </div>
 <br /><br /><br />
 
@@ -76,11 +69,7 @@
         <div class="card mb-3" style="width: 775px">
           <div class="row g-0">
             <div class="col-md-4">
-              <img
-                src="{{ Readarticles.profile.imageurlbig }}"
-                alt="..."
-                style="width: 200px; border-radius: 1055px"
-              />
+              <img src="{{ Readarticles.profile.imageurlbig }}" alt="..." style="width: 200px; border-radius: 1055px" />
             </div>
             <div class="col-md-8">
               <div class="card-body">
@@ -96,23 +85,12 @@
                 </p>
 
                 <div class="networks">
-                  <meta
-                    name="viewport"
-                    content="width=device-width, initial-scale=1"
-                  />
-                  <link
-                    rel="stylesheet"
-                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-                  />
-                  <a
-                    href="https://www.facebook.com/"
-                    class="fa fa-facebook"
-                  ></a>
+                  <meta name="viewport" content="width=device-width, initial-scale=1" />
+                  <link rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+                  <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
                   <a href="https://twitter.com/" class="fa fa-twitter"></a>
-                  <a
-                    href="https://www.linkedin.com/"
-                    class="fa fa-linkedin"
-                  ></a>
+                  <a href="https://www.linkedin.com/" class="fa fa-linkedin"></a>
                 </div>
               </div>
             </div>
@@ -134,12 +112,7 @@
       </div>
       <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xxl-6">
         <div class="bg">
-          <div
-            class="btn-group"
-            role="group"
-            aria-label="Basic radio toggle button group"
-            class="b1"
-          >
+          <div class="btn-group" role="group" aria-label="Basic radio toggle button group" class="b1">
             <a [routerLink]="['/blog']" routerLinkActive="router-link-active">
               <button class="btn btdes" type="button">
                 <b>Browse all articles</b>
