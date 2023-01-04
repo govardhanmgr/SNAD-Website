@@ -4,13 +4,107 @@
     <h5>&#x2190; Back to all Jobs</h5>
   </a>
 </div>
-<div class="container-fluid req">
+
+<div class="container">
+
+  <div class="row">
+
+    <div class="col-md-8">
+      <div class="card job" >
+        <div class="row row-cols-1 row-cols-md-1 g-4">
+          <!--column-->
+          <div class="col">
+            <div class="">
+              <div class="card-body">
+                <h2><b>{{jobDescription.name}}</b></h2>
+                <br>
+                <a href="#" class="card-link" type="button" class="btn btn-light button"><i class="bi bi-briefcase" style="color: green;"></i> {{jobDescription.category}}</a>
+                <a href="#" class="card-link" type="button"
+                  class="btn btn-light button margin "> <i class="bi bi-geo-alt" style="color: green;"></i> {{jobDescription['job-location']}}</a>
+              </div>
+            </div>
+            <hr>
+          </div>
+  
+          <!--column-->
+          <div class="col">
+            <div class="">
+              <div class="card-adj">
+                <b>
+                  <h3>Job description</h3>
+                </b>
+                <p class="card-text" id="app">
+                  <br>
+                  <br>
+                  {{jobDescription["job-description-excerpt"]}}
+                </p>
+              </div>
+            </div>
+          </div>
+  
+          <!--column-->
+          <div class="col">
+            <div class="">
+              <div class="card-adj">
+                <b>
+                  <h3>Responsibilities</h3>
+                </b>
+                <br>
+                <p class="card-text" id="des"></p>
+  
+              </div>
+            </div>
+          </div>
+  
+  
+          <!--column-->
+          <div class="col">
+            <div class="">
+              <div class="card-adj">
+                <b>
+                  <h3>Job requirements</h3>
+                </b>
+                <br>
+                <p class="card-text" id="req"></p>
+  
+                <br>
+                <a type="button" class="btn btn-primary btn-lg but">Apply Now</a>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card cred" style="width: 22rem;">
+        <img
+          src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b461fd4cd0a2_icon-career-apply-startup-x-template.svg"
+          class="img-fluid rounded-start img" alt="..." width="120" height="120">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <br>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <br>
+          <div class="text-center">
+            <a type="button" class="btn btn-primary btn-lg but">Apply Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- <div class="container-fluid req">
   <div class="row">
 
     <div class="card job">
       <div class="row row-cols-1 row-cols-md-1 g-4">
         <!--column-->
-        <div class="col">
+        <!-- <div class="col">
           <div class="">
             <div class="card-body">
               <h2><b>{{jobDescription.name}}</b></h2>
@@ -21,10 +115,10 @@
             </div>
           </div>
           <hr>
-        </div>
+        </div> -->
 
         <!--column-->
-        <div class="col">
+        <!-- <div class="col">
           <div class="">
             <div class="card-adj">
               <b>
@@ -37,10 +131,10 @@
               </p>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <!--column-->
-        <div class="col">
+        <!-- <div class="col">
           <div class="">
             <div class="card-adj">
               <b>
@@ -51,11 +145,11 @@
 
             </div>
           </div>
-        </div>
+        </div> -->
 
 
         <!--column-->
-        <div class="col">
+        <!-- <div class="col">
           <div class="">
             <div class="card-adj">
               <b>
@@ -71,12 +165,12 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
 
     <!--column-->
 
-    <div class="col">
+    <!-- <div class="col">
 
       <div class="card cred" style="width: 22rem;">
         <img
@@ -96,7 +190,7 @@
 
     </div>
   </div>
-</div>
+</div> --> 
 
 <br>
 <br>

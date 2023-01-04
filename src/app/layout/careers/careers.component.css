@@ -120,6 +120,11 @@
    background-color: #2f5acd;
 }
 
+.all-job-open{
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
 
 .all-job-header{
   padding-left: 40px;
@@ -159,12 +164,40 @@
   color: #edf1fd;
 }
 
+.des {
+  position: absolute;
+  border-radius: 50%;
+  height: 20em;
+  width: 20em;
+  opacity: 10;
+  float: right;
+  right: -8%;
+  margin-top: -14%;
+  animation: rotation 70s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
 /* GROWTH */
 
 .growth-div{
   background-color: #edf1fd;
 }
 
+.growth{
+  padding-bottom: 50px;
+}
+
+.grown{
+  padding: 80px 0px ;
+}
 
 
 /* OPEN POSITION STYLINGS */
