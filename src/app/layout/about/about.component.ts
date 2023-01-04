@@ -14,8 +14,11 @@ import { WebflowserviceService } from 'src/app/services/webflowservice.service';
 export class AboutComponent implements OnInit, OnDestroy {
   subscription!: Subscription;
   Abouts = [] as any
+  static = {} as any
   getProfileItemById: any;
   impact = {} as any;
+  heroimg = {} as any;
+  ourmissionv = {} as any;
 
   scroll(el: HTMLElement) {
     el.scrollIntoView({ behavior: 'smooth' });
@@ -61,6 +64,18 @@ export class AboutComponent implements OnInit, OnDestroy {
       ]
 
     }
+    // this.heroimg= {
+      
+        
+    //    heading:"About",
+    //    text:"Fostering Technology Innovation As A Service though our Strong Leadership",
+    //    smalltext:"Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur tortor nunc aliquam consectetur semper augue at.",
+    //    image:"./assets/p-2000.jpeg",
+    //    istrustedcompanies:false
+
+     
+    // }
+   this.getStaticData();
   }
 
   individualprofile(itemid: string, res: any) {
@@ -74,6 +89,20 @@ export class AboutComponent implements OnInit, OnDestroy {
     });
   }
 
+
+   getStaticData(){
+    let data:any = JSON.parse(localStorage.getItem("staticcontent") || '[]');
+    console.log(data);
+    let ourstory = data.filter((el: { page: string; sections:string;}) => el.page === 'b02282ae3855aff3baab318770f8c16f'&& el.sections === '1bec51b350b32812b859b57a4af4b50f');
+    this.static = ourstory[0]
+    //console.log(this.static);
+    let ourmission = data.filter((el: { page: string; sections:string;}) =>el.page ==='b02282ae3855aff3baab318770f8c16f'&& el.sections ==='25cf67eb7c9fa99025ee0979e9546aaf');
+    this.ourmissionv=ourmission[0]
+    console.log(ourmission);
+    let herodata= data.filter((el: { page: string; sections:string;}) => el.page === 'b02282ae3855aff3baab318770f8c16f' && el.sections === '1af9e7b1f68df63d6d09988bd947b2f8');
+    this.heroimg=herodata[0]
+    //console.log(this.heroimg);
+   }
   About() {
     this.subscription = this.webflow.getData("allitems/6375d4747684b46aeb4ccf75").subscribe({
       next: (response: any) => {
