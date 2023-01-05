@@ -20,13 +20,14 @@ export class HomeComponent implements OnInit, OnDestroy {
   static = [] as any;
   home = [] as any;
   heroimage = [] as any;
-  client =[] as any;
-  case=[] as any;
-  service=[] as any;
+  client = [] as any;
+  case = [] as any;
+  service = [] as any;
 
   constructor(
     private router: Router,
     private webflow: WebflowserviceService,
+    private sibService: SibComService,
 
   ) { }
 
@@ -85,13 +86,18 @@ export class HomeComponent implements OnInit, OnDestroy {
   //     }
   //   });
   // }
-//  getStaticContent(){
-//   let content:any = this.getStaticdata
-//   let hero = content.filter((el: { page: string; sections: string;}) => el.page ==="4d1d25b65780e9a73fe777f3431ab3e2" && el.sections ==="1af9e7b1f68df63d6d09988bd947b2f8");
-//   this.heroimage = hero
-//   console.log(this.heroimage);
-//  }
-  getStaticdata() {
+
+  //  getStaticContent(){
+  //   let content:any = this.getStaticdata
+  //   let hero = content.filter((el: { page: string; sections: string;}) => el.page ==="4d1d25b65780e9a73fe777f3431ab3e2" && el.sections ==="1af9e7b1f68df63d6d09988bd947b2f8");
+  //   this.heroimage = hero
+  //   console.log(this.heroimage);
+  //  }
+
+
+
+
+
 
 
 
@@ -103,40 +109,33 @@ export class HomeComponent implements OnInit, OnDestroy {
         next: async (response: any) => {
           // console.log(response);
           let data = response.data;
-          console.log(data);
 
-         
 
-          data.forEach((element: any) => {
-            if (element['ref-collections']) {
-              let rep: Array<string> = element['ref-collections'];
-              let refres = new Array();
-              rep.forEach((el) => {
-                this.getReferenceData(el, refres);
-              });
-              element.refdata = refres;
-              // this.getReferenceData(rep)
-            }
-          });
+
+
+
           console.log(data);
-          let hero=data.filter((el: { page: string; sections: string;}) => el.page ==="4d1d25b65780e9a73fe777f3431ab3e2" && el.sections ==="1af9e7b1f68df63d6d09988bd947b2f8");
-          this.heroimage=hero[0]  
+          let hero = data.filter((el: { page: string; sections: string; }) => el.page === "4d1d25b65780e9a73fe777f3431ab3e2" && el.sections === "1af9e7b1f68df63d6d09988bd947b2f8");
+          this.heroimage = hero[0]
           console.log(this.heroimage);
-          let ourclient=data.filter((el:{page:string;sections:string})=>el.page ==="4d1d25b65780e9a73fe777f3431ab3e2"&&el.sections==="90b2fd6fca65b3c766e31d3d29e7137c");
-          this.client=ourclient[0]
+          let ourclient = data.filter((el: { page: string; sections: string }) => el.page === "4d1d25b65780e9a73fe777f3431ab3e2" && el.sections === "90b2fd6fca65b3c766e31d3d29e7137c");
+          this.client = ourclient[0]
           console.log(this.client);
-          let casestudies=data.filter((el:{page:string;sections:string})=>el.page==="4d1d25b65780e9a73fe777f3431ab3e2"&&el.sections==="d7189b7dcd3a9276ef1de3fa4d18f35a");
-          this.case=casestudies[0]
+          let casestudies = data.filter((el: { page: string; sections: string }) => el.page === "4d1d25b65780e9a73fe777f3431ab3e2" && el.sections === "d7189b7dcd3a9276ef1de3fa4d18f35a");
+          this.case = casestudies[0]
+          this.sibService.getReferenceCollections(this.case)
           console.log(this.case);
-          let services=data.filter((el:{page:string;sections:string})=>el.page==="4d1d25b65780e9a73fe777f3431ab3e2"&&el.sections==="b4fc5b9d84bac72485f37f58000fd549");
-          this.service=services[0]
+          let services = data.filter((el: { page: string; sections: string }) => el.page === "4d1d25b65780e9a73fe777f3431ab3e2" && el.sections === "b4fc5b9d84bac72485f37f58000fd549");
+          this.service = services[0]
           console.log(this.service);
-          
 
 
-          this.sibService.sendData(data);
+
+
           //console.log(data);
-          
+
+
+          // console.log(data);
 
           // console.log(data);
 
@@ -159,6 +158,8 @@ export class HomeComponent implements OnInit, OnDestroy {
           console.log(err);
         },
       });
+
+
   }
 
 
