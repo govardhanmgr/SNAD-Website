@@ -37,9 +37,25 @@
 
   opacity: 10;
 
-  float: right;
-
   right: 7%;
+
+  margin-top: -7%;
+
+  animation: rotation 70s infinite linear;
+}
+
+.des1 {
+  position: absolute;
+
+  border-radius: 50%;
+
+  height: 20em;
+
+  width: 20em;
+
+  opacity: 10;
+
+  left: 7%;
 
   margin-top: -7%;
 
@@ -54,4 +70,15 @@
   to {
     transform: rotate(359deg);
   }
+}
+
+.circle-lg {
+  transform: translate3d(0px, 0px, 0px) scale3d (1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ("360deg") skew(0deg, 0deg);
+
+  transform-style: preserve-3d;
+
+  opacity: 1;
+
+  will-change: transform;
 }
