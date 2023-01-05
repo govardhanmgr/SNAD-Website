@@ -1,6 +1,6 @@
 /* header image */
 
- .img-background{
+ /* .img-background{
   position: relative;
   height: 600px;
   overflow: hidden;
@@ -40,7 +40,7 @@
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 0.08em;
-}
+} */
 
 /* scroll top button */
 
@@ -185,6 +185,22 @@
   }
 }
 
+.contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  -webkit-box-align: center;
+}
+
+.smalldash {
+  width: 100%;
+  max-width: 60px;
+  min-height: 2px;
+  margin-right: 25px;
+  background-color: #fff;
+}
+
 /* GROWTH */
 
 .growth-div{
@@ -196,8 +212,28 @@
 }
 
 .grown{
-  padding: 80px 0px ;
+  padding: 8% 0%;
 }
+
+.grow{
+  position: absolute;
+  border-radius: 50%;
+  height: 18em;
+  width: 18em;
+  opacity: 6;
+  left: -6%;
+  animation: rotation 70s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
 
 
 /* OPEN POSITION STYLINGS */

@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { WebflowserviceService } from 'src/app/services/webflowservice.service';
 import { GetintouchComponent } from 'src/app/shared/getintouch/getintouch.component';
@@ -27,22 +27,15 @@ export class HomeComponent implements OnInit, OnDestroy {
   constructor(
     private router: Router,
     private webflow: WebflowserviceService,
-    private sibService: SibComService
-  ) {}
+
+  ) { }
+
 
   ngOnInit(): void {
     Aos.init({
       duration: 1200,
     });
     this.casestudies();
-    // this.testimonials();
-    //this.staticdata();
-    // this.static=JSON.parse(localStorage.getItem('allitems/639c13606fb026c043712033')||'{}');
-    // console.log(this.static)
-    // this.home={
-    //   home:parseInt(this.static)
-    // }
-    // console.log(this.home);
 
     this.getStaticdata();
   }
@@ -92,6 +85,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   //     }
   //   });
   // }
+
 //  getStaticContent(){
 //   let content:any = this.getStaticdata
 //   let hero = content.filter((el: { page: string; sections: string;}) => el.page ==="4d1d25b65780e9a73fe777f3431ab3e2" && el.sections ==="1af9e7b1f68df63d6d09988bd947b2f8");
@@ -99,12 +93,17 @@ export class HomeComponent implements OnInit, OnDestroy {
 //   console.log(this.heroimage);
 //  }
   getStaticdata() {
+
+
+
+  async getStaticdata() {
     this.subscription = this.webflow
       .getData('allitems/639c13606fb026c043712033')
       .subscribe({
-        next: (response: any) => {
-          console.log(response);
+        next: async (response: any) => {
+          // console.log(response);
           let data = response.data;
+
           console.log(data);
 
          
@@ -139,7 +138,22 @@ export class HomeComponent implements OnInit, OnDestroy {
           this.sibService.sendData(data);
           //console.log(data);
           
+
+          // console.log(data);
           localStorage.setItem('staticcontent', JSON.stringify(data));
+
+          // await data.forEach(async (element: any) => {
+          //   if (element['ref-collections']) {
+          //     let rep: Array<string> = element['ref-collections'];
+          //     let refres = new Array();
+          //      await rep.forEach(async (el) => {
+          //      await this.getReferenceData(el, refres);
+          //     });
+          //     element.refdata =refres ;
+          //   // this.getReferenceData(rep)
+          //   }
+          // });
+          // console.log("output",data);
         },
         error: (err) => {
           console.log(err);
@@ -147,18 +161,24 @@ export class HomeComponent implements OnInit, OnDestroy {
       });
   }
 
-  getReferenceData(itemId: string, res?: any) {
-    this.subscription = this.webflow
-      .getData(`referenceitembyid/${itemId}`)
-      .subscribe({
-        next: (response: any) => {
-          res.push(response.data);
-        },
-        error: (reason: any) => {
-          console.error(reason);
-        },
-      });
-  }
+
+  // async getReferenceData(itemId: string, res?: any) {
+  //    this.subscription =  this.webflow
+  //     .getData(`referenceitembyid/${itemId}`)
+  //     .subscribe({
+  //       next: (response: any) => {
+
+  //         res.push(response.data);
+
+
+
+
+  //       },
+  //       error: (reason: any) => {
+  //         console.error(reason);
+  //       },
+  //     });
+  // }
 
   ngOnDestroy(): void {
     if (this.subscription) {
