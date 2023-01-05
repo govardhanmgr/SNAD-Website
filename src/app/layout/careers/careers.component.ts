@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as Aos from 'aos';
 import { Subscription } from 'rxjs';
+import { SibComService } from 'src/app/services/sib-com.service';
 import { WebflowserviceService } from 'src/app/services/webflowservice.service';
 
 @Component({
@@ -50,7 +51,8 @@ export class CareersComponent implements OnInit {
   constructor(
     private router: Router,
     private webflow: WebflowserviceService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private sibservice:SibComService,
   ) { }
 
   ngOnInit(): void {
@@ -147,14 +149,32 @@ export class CareersComponent implements OnInit {
     this.heroimage=herodata[0]
     let core = data.filter((el: { page: string; sections:string; }) => el.page ==='f05f46bcffb018a0958c0d1efac26d36' && el.sections === 'a5c62e414ff1ef4dd2512dbd80728022');
     this.corevalues=core[0]
+    this.sibservice.getReferenceCollections(this.corevalues)
+    
+    console.log(this.corevalues);
+    
     let company = data.filter((el: { page: string; sections:string; }) => el.page ==='f05f46bcffb018a0958c0d1efac26d36' && el.sections === '40b42014e46f83f0f5c51ff157c895f3');
     this.companyperks=company[0]
+    this.sibservice.getReferenceCollections(this.companyperks)
+    console.log(this.companyperks);
+    
     let careergrowth = data.filter((el: { page: string; sections:string; }) => el.page ==='f05f46bcffb018a0958c0d1efac26d36' && el.sections === '8808845a39d7b7b5ca84bdd8458f738a');
     this.growth=careergrowth[0]
+    this.sibservice.getReferenceCollections(this.growth)
+    console.log(this.growth);
+    
+
+
     let number = data.filter((el: { page: string; sections:string; }) => el.page ==='f05f46bcffb018a0958c0d1efac26d36' && el.sections === '95ca8e399ad54a5b631713d52406ce19');
     this.one=number[0]
+    this.sibservice.getReferenceCollections(this.one)
+    console.log(this.one);
+
     let positions = data.filter((el: { page: string; sections:string; }) => el.page ==='f05f46bcffb018a0958c0d1efac26d36' && el.sections === '3fbc50998d0dc0874279c27d99b393e2');
     this.position=positions[0]
+   
+    
+    
   }
   
   
