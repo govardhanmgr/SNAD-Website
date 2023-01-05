@@ -111,7 +111,6 @@ export class HomeComponent implements OnInit, OnDestroy {
           let data = response.data;
 
 
-          this.sibService.getReferenceCollections(data)
 
 
 
@@ -124,6 +123,7 @@ export class HomeComponent implements OnInit, OnDestroy {
           console.log(this.client);
           let casestudies = data.filter((el: { page: string; sections: string }) => el.page === "4d1d25b65780e9a73fe777f3431ab3e2" && el.sections === "d7189b7dcd3a9276ef1de3fa4d18f35a");
           this.case = casestudies[0]
+          this.sibService.getReferenceCollections(this.case)
           console.log(this.case);
           let services = data.filter((el: { page: string; sections: string }) => el.page === "4d1d25b65780e9a73fe777f3431ab3e2" && el.sections === "b4fc5b9d84bac72485f37f58000fd549");
           this.service = services[0]
