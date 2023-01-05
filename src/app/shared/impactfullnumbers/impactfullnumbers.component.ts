@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ImpactfullnumbersComponent implements OnInit {
 
-  @Input()numbers!:any
+  @Input() numbers!:any
   constructor() { }
 
   ngOnInit(): void {

@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import * as Aos from 'aos';
 import { Entry } from 'contentful';
 import { Subscription } from 'rxjs';
+import { SibComService } from 'src/app/services/sib-com.service';
 import { WebflowserviceService } from 'src/app/services/webflowservice.service';
 
 
@@ -33,40 +34,15 @@ export class AboutComponent implements OnInit, OnDestroy {
   }
 
   constructor(private router: Router,
-    private webflow: WebflowserviceService) { }
+    private webflow: WebflowserviceService ,
+    private sibService:SibComService) { }
 
   ngOnInit(): void {
     Aos.init({
       duration: 1200,
     })
     this.About()
-    this.impact = {
-      text: "We have impactfull Numbers",
-      number: [
-        {
-          shortnumber: "98",
-          icon: "%",
-          text: "Customer satisfaction"
-        },
-        {
-          shortnumber: "205",
-          icon: "M",
-          text: "Monthly active users"
-        },
-        {
-          shortnumber: "100",
-          icon: "K",
-          text: "New users per week"
-        },
-        {
-          shortnumber: "55",
-          icon: "%",
-          text: "Growth year-over-year"
-        },
-
-      ]
-
-    }
+   
     // this.heroimg= {
       
         
@@ -96,21 +72,36 @@ export class AboutComponent implements OnInit, OnDestroy {
    getStaticData(){
     let data:any = JSON.parse(localStorage.getItem("staticcontent") || '[]');
     console.log(data);
+    
     let ourstory = data.filter((el: { page: string; sections:string;}) => el.page === 'b02282ae3855aff3baab318770f8c16f'&& el.sections === '1bec51b350b32812b859b57a4af4b50f');
     this.static = ourstory[0]
-    //console.log(this.static);
+    // console.log(this.static);
+
     let ourmission = data.filter((el: { page: string; sections:string;}) =>el.page ==='b02282ae3855aff3baab318770f8c16f'&& el.sections ==='25cf67eb7c9fa99025ee0979e9546aaf');
     this.ourmissionv=ourmission[0]
     console.log(ourmission);
+
     let herodata= data.filter((el: { page: string; sections:string;}) => el.page === 'b02282ae3855aff3baab318770f8c16f' && el.sections === '1af9e7b1f68df63d6d09988bd947b2f8');
     this.heroimg=herodata[0]
     //console.log(this.heroimg);
     let team= data.filter((el: { page: string; sections:string;}) => el.page === 'b02282ae3855aff3baab318770f8c16f' && el.sections === '1a4e666444ab7129d11c0faa842acc40');
     this.ourteam=team[0]
+    console.log(this.ourteam);
+
     let value= data.filter((el: { page: string; sections:string;}) => el.page === 'b02282ae3855aff3baab318770f8c16f' && el.sections === '7bccae48fc342f81b0faf390282e8c62');
     this.ourvalue=value[0]
+    
+    
     let touch= data.filter((el: { page: string; sections:string;}) => el.page === 'b02282ae3855aff3baab318770f8c16f' && el.sections === '1af9e7b1f68df63d6d09988bd947b2f8');
     this.getin=touch[0]
+
+    let impactfull= data.filter((el: { page: string; sections:string;}) => el.page === "b02282ae3855aff3baab318770f8c16f" && el.sections === '8808845a39d7b7b5ca84bdd8458f738a');
+    this.impact=impactfull[0]
+    this.sibService.getReferenceCollections(this.impact)
+    console.log(this.impact);
+        
+
+    
    }
 
 
@@ -145,6 +136,5 @@ export class AboutComponent implements OnInit, OnDestroy {
       this.subscription.unsubscribe()
     }
   }
-
 
 }
