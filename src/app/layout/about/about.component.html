@@ -12,11 +12,13 @@
 <app-heroimg [heros]="heroimg"></app-heroimg>
 
 <div class="" data-aos="fade-up">
-  <div style="text-align: center;" data-aos="fade-up">
-    <h1 style="font-size:4vw;"><b>{{static.title}}</b></h1>
-  </div><br>
-  <div style="text-align: center; " data-aos="fade-up">
-    <p>{{static['detailed-text']}}</p>
+  <div class="our-story">
+    <div style="text-align: center;" data-aos="fade-up">
+      <h1 style="font-size:4vw;"><b>{{static.title}}</b></h1>
+    </div><br>
+    <div style="text-align: center; " data-aos="fade-up">
+      <p>{{static['detailed-text']}}</p>
+    </div>
   </div>
   <br>
   <div style="text-align:center; " data-aos="fade-up">
@@ -36,9 +38,7 @@
       </div>
       <div class="col-md-6" data-aos="zoom-in">
         <br>
-        <img
-          src="{{static['big-image'].url}}"
-          width="80%" height="90%" class="ourstoryimg">
+        <img src="{{static['big-image'].url}}" width="80%" height="90%" class="ourstoryimg">
 
       </div>
     </div>
@@ -46,9 +46,7 @@
 
     <div class="row">
       <div class="col-md-6" data-aos="zoom-in">
-        <img
-          src="{{ourmissionv['big-image'].url}}"
-          width="80%" height="90%" class="ourmissionimg">
+        <img src="{{ourmissionv['big-image'].url}}" width="80%" height="90%" class="ourmissionimg">
 
       </div>
       <div class="col-md-6" data-aos="fade-up">
@@ -62,30 +60,30 @@
   <!-- ourteam -->
 
   <div class="" data-aos="fade-up">
-    <h6 style="text-align:center ;">OUR TEAM</h6>
-    <h1>Meet the amazing team <br> behind Startuper X<b></b></h1>
+    <h6 style="text-align:center ;">{{ourteam.title}}</h6>
+    <h1>{{ourteam['detailed-text']}}<b></b></h1>
   </div>
   <br>
 
   <div class="">
     <div class="row">
       <div class="col-sm-12 col-md-4 d-flex flex-row" data-aos="fade-up" *ngFor="let profile of Abouts">
-       <div class="card m-3"  (click)="profileid(profile._id)">
-        <img src="{{profile.imageurl }}" alt="Snow" class="card-img-top" style="width:100%" />
-         <div class="ourteamimg" type="button"><b>{{profile["team-job-title"]}}</b></div>
-           <div class="card-body value">   
-          <h4 class="card-title"><b>{{profile.name}}</b></h4>
-          <p class="card-text">{{profile["team-about-card-excerpt"]}}</p>
-         </div>
-      </div>
+        <div class="card m-3" (click)="profileid(profile._id)">
+          <img src="{{profile.imageurl }}" alt="Snow" class="card-img-top" style="width:100%" />
+          <div class="ourteamimg" type="button"><b>{{profile["team-job-title"]}}</b></div>
+          <div class="card-body value">
+            <h4 class="card-title"><b>{{profile.name}}</b></h4>
+            <p class="card-text">{{profile["team-about-card-excerpt"]}}</p>
           </div>
+        </div>
+      </div>
     </div>
   </div>
   <br><br>
   <div class="join-our-team-bt">
     <button class="join-our-team-button">Join our team</button>
   </div>
-  
+
   <br><br><br>
 
   <!-- our values -->
@@ -98,8 +96,8 @@
         <div class="col ">
           <div class=" mb-3 ">
             <div class="row g-0 " data-aos="fade-up">
-              <h6>Our Values</h6>
-              <h2 style="text-align:left">The values that shape everything <br>we do at Startuper X</h2>
+              <h6>{{ourvalue.title}}</h6>
+              <h2 style="text-align:left">{{ourvalue['detailed-text']}}</h2>
             </div>
           </div>
         </div>
@@ -107,7 +105,7 @@
         <!--column-->
         <div class="col " data-aos="fade-up">
           <div class="mb-3" style="max-width: 650px;">
-            <a href="/careers" type="button" class="button jointeambtn " style="text-decoration: none;">Join our team</a>
+            <a href="/careers" type="button" class="button jointeambtn " style="text-decoration: none;">{{ourvalue.subtitle}}</a>
           </div>
         </div>
 
@@ -248,15 +246,16 @@
 <!-- get in touch -->
 <div class="growthbackground">
   <div style="text-align:center ;" data-aos="fade-up"><br><br><br>
-    <h1 style="color: white;">Take the control of your finances.<br> Create a free account today.</h1><br>
+    <h1 style="color: white;">{{getin['cta-name']
+    }}</h1><br>
     <!-- <a href="/contactus" type="button" class="btn btn-light light">Get in touch</a>--->
-      <app-getintouch></app-getintouch>
-    <br><br><br> 
+    <app-getintouch></app-getintouch>
+    <br><br><br>
     <br>
   </div>
-   <!-- <div class="circle crc"></div>  -->
+  <!-- <div class="circle crc"></div>  -->
 
-   <div class="circle circle-lg">
+  <div class="circle circle-lg">
     <img src="https://uploads-ssl.webflow.com/6375d4737684b479bc…b4420c4ccfd3_shape-1-cta-3-startup-x-template.svg"
       class="w-h-100" alt="...">
   </div>
@@ -265,4 +264,4 @@
       class="des"></div> 
 
 </div> -->
-<br>
+  <br>
