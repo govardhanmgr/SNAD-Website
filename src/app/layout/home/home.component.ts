@@ -22,6 +22,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   testimonialContents = [] as any
   static = [] as any;
   home = [] as any;
+  
+
 
 
   constructor(private router: Router,
@@ -42,6 +44,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     // console.log(this.home);
 
     this.getStaticdata();
+    
   }
 
   casestudies() {
@@ -126,6 +129,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       }
     });
   }
+ 
 
   ngOnDestroy(): void {
     if (this.subscription) {

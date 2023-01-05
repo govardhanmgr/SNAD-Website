@@ -34,6 +34,7 @@ import { LatestarticlesComponent } from './latestarticles/latestarticles.compone
     HeroimgComponent,
     CASESTUDIESComponent,
     LatestarticlesComponent,
+    TESTIMONIALSComponent
   ],
 })
 export class SharedModule {}

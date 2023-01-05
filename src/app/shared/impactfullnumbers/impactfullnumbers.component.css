@@ -1,11 +1,9 @@
-.impact {
-    color: white;
-}
-.growth {
-    background-color: #2f5acd;
-
-}
-.num {
-    text-align: center;
-    color: white;
-}
+.stylen {
+    font-size: 3rem;
+    font-weight: 750;
+  }
+  
+  .styles {
+    font-size: 1.2rem;
+    font-weight: 650;
+  }
