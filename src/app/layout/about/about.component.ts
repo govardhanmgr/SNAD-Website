@@ -19,6 +19,9 @@ export class AboutComponent implements OnInit, OnDestroy {
   impact = {} as any;
   heroimg = {} as any;
   ourmissionv = {} as any;
+  ourteam={} as any;
+  ourvalue={} as any;
+  getin={} as any;
 
   scroll(el: HTMLElement) {
     el.scrollIntoView({ behavior: 'smooth' });
@@ -102,7 +105,15 @@ export class AboutComponent implements OnInit, OnDestroy {
     let herodata= data.filter((el: { page: string; sections:string;}) => el.page === 'b02282ae3855aff3baab318770f8c16f' && el.sections === '1af9e7b1f68df63d6d09988bd947b2f8');
     this.heroimg=herodata[0]
     //console.log(this.heroimg);
+    let team= data.filter((el: { page: string; sections:string;}) => el.page === 'b02282ae3855aff3baab318770f8c16f' && el.sections === '1a4e666444ab7129d11c0faa842acc40');
+    this.ourteam=team[0]
+    let value= data.filter((el: { page: string; sections:string;}) => el.page === 'b02282ae3855aff3baab318770f8c16f' && el.sections === '7bccae48fc342f81b0faf390282e8c62');
+    this.ourvalue=value[0]
+    let touch= data.filter((el: { page: string; sections:string;}) => el.page === 'b02282ae3855aff3baab318770f8c16f' && el.sections === '1af9e7b1f68df63d6d09988bd947b2f8');
+    this.getin=touch[0]
    }
+
+
   About() {
     this.subscription = this.webflow.getData("allitems/6375d4747684b46aeb4ccf75").subscribe({
       next: (response: any) => {
