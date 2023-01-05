@@ -1,16 +1,24 @@
-<div class="container-fluid">
-  <h1 class="text-center" id="title"></h1>
+<div class="container-fluid primary">
+  <div class="row justify-content-center">
+    <div class="col-xxl-7">
+      <h1 class="text-center" id="title"></h1>
+    </div>
+  </div>
   <br />
-  <h5 class="text-center padbt">
-    {{ Readarticles.postExcerpt }}
-  </h5>
-  <img src="{{ Readarticles.imageurl }}" alt="" class="rounded mx-auto d-block"
-    style="width: 64%; border-radius: 35px" />
+  <div class="row justify-content-center">
+    <div class="col-lg-5">
+      <h5 class="text-center" style="margin-bottom: 10%">
+        {{ Readarticles.postExcerpt }}
+      </h5>
+    </div>
+  </div>
+
+  <img src="{{ Readarticles.imageurl }}" alt="" class="rounded mx-auto d-block headerimg" />
 </div>
 
 <br /><br /><br />
 
-<div class="container " style="margin-bottom: 50px">
+<div class="container" style="margin-bottom: 50px">
   <div class="row justify-content-center">
     <div class="col-sm-8">
       <a href="./profile">
@@ -34,10 +42,8 @@
           </div>
         </div>
       </a>
-
     </div>
 
-    
     <div class="col-sm-4 justify-content-center">
       <a href="/businessarticles">
         <button type="button" class="btn">
@@ -46,13 +52,9 @@
         </button>
       </a>
     </div>
-
   </div>
 </div>
 
-<!-- <div class="row justify-content-center img"> -->
-<!-- <div class="col col-5 justify-content-center" id="des"></div> -->
-<!-- </div> -->
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-lg-7">
@@ -62,14 +64,15 @@
 </div>
 <br /><br /><br />
 
-<div class="container">
+<div class="container flex-wrap">
   <div class="row">
     <div class="col-lg-6">
       <a href="./profile">
-        <div class="card mb-3" style="width: 775px">
-          <div class="row g-0">
+        <div class="card mb-3" style="width: fit-content">
+          <div class="row">
             <div class="col-md-4">
-              <img src="{{ Readarticles.profile.imageurlbig }}" alt="..." style="width: 200px; border-radius: 1055px" />
+              <img src="{{ Readarticles.profile.imageurlbig }}" alt="..."
+                style="width: 200px; border-radius: 1055px; margin-right: 500px" />
             </div>
             <div class="col-md-8">
               <div class="card-body">
@@ -99,7 +102,7 @@
       </a>
     </div>
   </div>
-
+</div>
   <br /><br /><br />
   <hr />
   <br />
@@ -126,4 +129,3 @@
 
     <app-browsearticles></app-browsearticles>
   </div>
-</div>
