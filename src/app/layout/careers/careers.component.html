@@ -1,6 +1,6 @@
 <!--head image-->
 
-<section class="header">
+<!-- <section class="header">
   <div class="img-background">
     <div class="text-content">
       <div class="contact">
@@ -10,7 +10,8 @@
       <p data-aos="fade-up" id="app"></p>
     </div>
   </div>
-</section>
+</section> -->
+<app-heroimg [heros]="heroimage"></app-heroimg>
 
 <!--Scroll up button-->
 
@@ -24,11 +25,10 @@
 <!--Core Values-->
 
 <div class="container core-value">
-  <h2 data-aos="fade-up" style="text-align: center;"><b>Core Values</b></h2>
+  <h2 data-aos="fade-up" style="text-align: center;"><b>{{corevalues.title}}</b></h2>
   <br>
   <h5>
-    <p style="text-align: center;" data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisc elit viverra
-      dignissim <br>pellentesque in acolmine.</p>
+    <p style="text-align: center;" data-aos="fade-up">{{corevalues['detailed-text']}}</p>
   </h5>
 
   <div class="row row-cols-1 row-cols-md-3 g-4 core-value-column" data-aos="fade-up">
@@ -125,10 +125,10 @@
 <div class="container">
   <div class="company-perk-header">
     <b>
-      <h6 data-aos="fade-up" style="text-align: center;color: blue;">COMPANY PERKS</h6>
+      <h6 data-aos="fade-up" style="text-align: center;color: blue;">{{companyperks.title}}</h6>
     </b>
     <br>
-    <h1 data-aos="fade-up" style="text-align: center;"><b>The great perks of working <br> at Startuper X</b></h1>
+    <h1 data-aos="fade-up" style="text-align: center;"><b>{{companyperks['detailed-text']}}</b></h1>
   </div>
   <div class="row row-cols-1 row-cols-md-2 g-4 company-perk-column" data-aos="fade-up">
 
@@ -237,7 +237,11 @@
       <!--column-->
       <div class="col">
         <div class=" mb-3 all-job-opening-text">
-          <h1 data-aos="fade-up all-job-header">What are we looking for in a employee?</h1>
+          <div class="contact">
+            <div class="smalldash"></div>
+            <h6 class="header-text">{{one.title}}</h6>
+          </div>
+          <h1 data-aos="fade-up all-job-header">{{one['detailed-text']}}</h1>
         </div>
       </div>
 
@@ -326,14 +330,19 @@
 </div>
 
 <!--Growth-->
-<div class="growth-div">
+<div class="growth-div" style="overflow: hidden;">
+
+  <div style="position: relative">
+    <img src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4bf0e4ccfd2_shape-1-home-v3-achievements-startup-x-template.svg"
+      class="grow">
+  </div>
+
   <div class="container grown">
-
+    
       <div style="text-align: center;" class="growth">
-        <h4 style="color: blue;" data-aos="fade-up">Growth</h4>
-        <h1 data-aos="fade-up">How our employees have grown with us</h1>
+        <h4 style="color: blue;" data-aos="fade-up">{{growth.title}}</h4>
+        <h1 data-aos="fade-up">{{growth['detailed-text']}}</h1>
       </div>
-
 
       <div class="row row-cols-1 row-cols-md-4 g-4" data-aos="fade-up">
         <!--column-->
@@ -428,10 +437,9 @@
 <!--Find the right position-->
 
 <div class="get-in-touch" data-aos="fade-up">
-  <h4 style="text-align: center;"><b>Can't find the right position ?</b></h4>
+  <h4 style="text-align: center;"><b>{{position.title}}</b></h4>
   <br>
-  <p style="text-align: center;" class="position">Lorem ipsum dolor sit amet consectetur adipisc elit <br> viverra
-    dignissim pellentesque in ac.</p>
+  <p style="text-align: center;" class="position">{{position['detailed-text']}}</p>
   <br>
-  <a href="/contactus" type="button" class="btn btn-lg get-in-touch-button">Get in touch</a>
+  <a href="/contactus" type="button" class="btn btn-lg get-in-touch-button">{{position['cta-name']}}</a>
 </div>
