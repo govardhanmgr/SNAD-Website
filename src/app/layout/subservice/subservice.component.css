@@ -1,0 +1,196 @@
+.image-div {
+
+    height: 700px;
+
+    color: white;
+
+
+
+}
+
+
+
+.colour-div{
+
+    height: 700px;
+
+    background-color: brown;
+
+    background-image: url(https://uploads-ssl.webflow.com/6375d4747684b438e84ccf70/6375d4747684b4b8134ccfdf_1586389912204-image14-p-1080.jpg);
+
+    overflow: hidden;
+
+ 
+
+}
+
+
+
+.business{
+
+    margin-top: 30%;
+
+    padding: 0px 20px;
+
+}
+
+
+
+.get-in-touch{
+
+    border-radius: 40px;
+
+    padding: 20px 40px;
+
+    background-color: white;
+
+    color: black;
+
+}
+
+
+
+.get-in-touch:hover{
+
+    background-color: darkcyan;
+
+}
+
+
+
+.sub-service{
+
+    margin-top: 5%;
+
+    margin-bottom: 5%;
+
+}
+
+
+
+
+.card-img-top{
+
+    border-radius: 50%;
+
+    height: 150px;
+
+    width: 150px;
+
+}
+
+
+
+.card{
+
+    padding: 30px 40px;
+
+    border-radius: 30px;
+
+}
+
+
+
+.impact-ful{
+
+    background-color: blue;
+
+  }
+
+
+
+  .growth{
+
+    color: white;
+
+  }
+
+
+
+  .get-in-touch-cta{
+
+    background-color:blue ;
+
+    text-align: center;
+
+  }
+
+
+
+
+.carousel-item{
+
+ height: 90vh;
+
+}
+
+
+
+.img-box{
+
+ width:500px;
+
+
+
+}
+
+.pic-one{
+
+width: 90%;
+
+}
+
+.slide-one{
+
+background-color:white;
+
+}
+
+.carousel-item .row{
+
+margin: 10% 0;
+
+}
+
+.carousel-item .h5{
+
+ margin-top: 10px;
+
+ font-weight: bold;
+
+color: #2a2a2a;
+
+}
+
+.carousel-item .h6{
+
+margin: 20px 0 40px;
+
+ color: #2a2a2a;
+
+}
+
+.slide-two{
+
+background-color:whitesmoke;
+
+}
+
+.slide-two h5,.slide-two h6{
+
+ color:#2a2a2a;
+
+}
+
+.img-one{
+
+width:90%;
+
+}
+
+.casestudies{
+
+    color: blue;
+
+}
+

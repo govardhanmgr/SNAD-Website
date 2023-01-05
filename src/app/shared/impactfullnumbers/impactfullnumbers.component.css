@@ -23,3 +23,35 @@
   text-align: center;
   color: white;
 }
+
+/*  */
+
+.des {
+  position: absolute;
+
+  border-radius: 50%;
+
+  height: 20em;
+
+  width: 20em;
+
+  opacity: 10;
+
+  float: right;
+
+  right: 7%;
+
+  margin-top: -7%;
+
+  animation: rotation 70s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
