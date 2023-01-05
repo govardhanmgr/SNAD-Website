@@ -20,6 +20,13 @@ export class CareersComponent implements OnInit {
   filteredJobOpening = [] as any;
   jobtab = [] as any;
   Staticdata = {} as any;
+  heroimage = {} as any;
+  corevalues = {} as any;
+  companyperks = {} as any;
+  growth = {} as any;
+  one = {} as any;
+  position = {} as any;
+
 
   // arrayresponse = [];
   scroll(el: HTMLElement) {
@@ -52,16 +59,15 @@ export class CareersComponent implements OnInit {
     })
     this.career();
     this.getJobOpenings();
- 
+    this.getStaticData();
 
     // this.Jobcategory.forEach(value =>{
     //   console.log(value);               //Prints 1 2 3 4 5 6
     // });
 
-
     // this.route.paramMap.subscribe((params:ParamMap)=>+)
-   let data:any = JSON.parse(localStorage.getItem("staticcontent") || '[]');
-   console.log(data);
+  //  let data:any = JSON.parse(localStorage.getItem("staticcontent") || '[]');
+  //  console.log(data);
    
 
   }
@@ -134,7 +140,22 @@ export class CareersComponent implements OnInit {
   
  
 // static data
-
+  getStaticData(){
+    let data:any = JSON.parse(localStorage.getItem("staticcontent") || '[]');
+    console.log(data);
+    let herodata = data.filter((el: { page: string; sections:string; }) => el.page ==='f05f46bcffb018a0958c0d1efac26d36' && el.sections === '1af9e7b1f68df63d6d09988bd947b2f8');
+    this.heroimage=herodata[0]
+    let core = data.filter((el: { page: string; sections:string; }) => el.page ==='f05f46bcffb018a0958c0d1efac26d36' && el.sections === 'a5c62e414ff1ef4dd2512dbd80728022');
+    this.corevalues=core[0]
+    let company = data.filter((el: { page: string; sections:string; }) => el.page ==='f05f46bcffb018a0958c0d1efac26d36' && el.sections === '40b42014e46f83f0f5c51ff157c895f3');
+    this.companyperks=company[0]
+    let careergrowth = data.filter((el: { page: string; sections:string; }) => el.page ==='f05f46bcffb018a0958c0d1efac26d36' && el.sections === '8808845a39d7b7b5ca84bdd8458f738a');
+    this.growth=careergrowth[0]
+    let number = data.filter((el: { page: string; sections:string; }) => el.page ==='f05f46bcffb018a0958c0d1efac26d36' && el.sections === '95ca8e399ad54a5b631713d52406ce19');
+    this.one=number[0]
+    let positions = data.filter((el: { page: string; sections:string; }) => el.page ==='f05f46bcffb018a0958c0d1efac26d36' && el.sections === '3fbc50998d0dc0874279c27d99b393e2');
+    this.position=positions[0]
+  }
   
   
 
