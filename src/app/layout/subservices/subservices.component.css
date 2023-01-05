@@ -1,10 +1,9 @@
 .card {
-    background-image: url("https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/63770bc325cdcb0bc742ad5b_pexels-sevenstorm-juhaszimrus-443383.webp");
+    background: rgba(41, 44, 50, 0.86) url("https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/63770bc325cdcb0bc742ad5b_pexels-sevenstorm-juhaszimrus-443383.webp");
     background-size: cover;
-    filter: brightness(80%);
-    background-color: rgba(41, 44, 50, 0.86);
+    background-blend-mode: darken;
     height: 300px;
-    width:70%;
+    width: 50%;
     border-radius: 10px;
     overflow: hidden;
 
@@ -29,3 +28,23 @@
     position: relative;
     left: 20%;
 }
+
+.get {
+  border-radius: 40px;
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+  border-color: white;
+  background-color: white;
+  line-height: 18px;
+
+}
+
+.get:hover {
+  transform: translate(0, -8px);
+  border-color: #3898EC;
+  color: #3898EC;
+}
+
+
