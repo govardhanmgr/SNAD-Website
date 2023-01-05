@@ -150,7 +150,7 @@ export class CareersComponent implements OnInit {
     let core = data.filter((el: { page: string; sections:string; }) => el.page ==='f05f46bcffb018a0958c0d1efac26d36' && el.sections === 'a5c62e414ff1ef4dd2512dbd80728022');
     this.corevalues=core[0]
     this.sibservice.getReferenceCollections(this.corevalues)
-    
+  
     console.log(this.corevalues);
     
     let company = data.filter((el: { page: string; sections:string; }) => el.page ==='f05f46bcffb018a0958c0d1efac26d36' && el.sections === '40b42014e46f83f0f5c51ff157c895f3');
