@@ -1,135 +1,49 @@
-.back{
- background: linear-gradient(to bottom, #5e6bf5 0%,#5e6bf5 100%) no-repeat;
- background-size: calc(100%) calc(50%);
- background-position: top;
-} 
+ .background-div{
+  background-color: blue;
+  height: 500px;
+ }
 
-.card{
-    border-radius: 25px;
-    text-align: center;
-    height: 900px;
-    width: 800px;
-    margin: 0 auto;
-    float: none; 
-    margin-bottom: 10px;   
-}
-.card-text{
-    text-align: left;
-    margin-left: 40px;
-    margin-right: 40px;
-    color: #6f7278;
-    font-family: Thicccboi, sans-serif;
-    font-size: 18px;
-    line-height: 1.833em;
-    font-weight: 500;
-}
-.card-title{
-    text-align: left;
-    margin-left: 40px;
-    margin-right: 40px;
-    color:black;
-}
-.card-footer{
-    text-align: left;
-    margin-left: 40px;
-    margin-right: 40px;
-}
-  .btn-primary {
-     text-align: right;
-     margin-left: 80px;
-     margin-right: 80px;
-  }
-  h2{
-     text-align: left;
-     margin-left: 70px;
-     margin-right: 70px;
-  }
-  .img{
-    margin-left: 30%;
-  }
-  .background{
-    color: blue;
-  }
-  .btn{
-    float: right;
-    border-radius: 20px;
-    padding-left: 10px;
-    padding-top:10px ;
-    padding-bottom: 10px;
-    padding-right: 10px;
-  }
-  .fa {
-  padding: 10px;
-  font-size: 10px;
-  width: 30px;
-  text-align:center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
-  }
+ .card{
+  margin-top: -30%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 8% 8%;
+  border-radius: 30px;
+ 
+ }
+
+ .about{
+  padding: 6% 0%;
+ }
+
+
+
+ /* ARTICLES */
+ .articles{
+  margin-top: 10%;
+  margin-bottom: 10%;
+ 
+ }
+
+ .btn{
+  background-color: blue;
+  color:white;
+  margin-bottom: 10%;
+  margin-top: 12%;
+  margin-left: 50%;
+  border-radius: 20px;
+  padding: 13px;
+ }
+ .btn:hover{
+  background-color: blue;
+  color:black;
+ }
+
+ hr{
+  margin-top: 10%;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 8%;
+  border: 1px solid black;
   
-  .fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-
-.fa-linkedin {
-  background: #007bb5;
-  color: white;
-}
-  .networks{
-    text-align: right;
-     font-size: 8pt;
-     margin-top: 1px;
-     margin-right: 2px;
-     margin: 80px;
-     position:absolute;
-     top:0;
-     right:0;
-  }
-  
-  .card-title:hover{
-  color:blue;
-    
-  }
-.btn:hover{
-background-color:black;
-}
-
-.im-hv{
-border-radius: 30px;
-}
-
-.im-hv:hover{
- transform: translate(0,-7px);
-}
-
-.btn2{
-  position: absolute;
-	padding: 10px;
-	background-color: white;
-  color: black;
-	border-radius: 16px;
-	bottom: 80%;
-	left: 78%;
-	width: 100px;
-  text-align: center;
-}
-a:hover, a:focus {
-  color: rgb(46, 48, 180);
-  text-decoration: none;
-}
-
-a {
-  color: black;
-  text-decoration: none;
-}
+ }
