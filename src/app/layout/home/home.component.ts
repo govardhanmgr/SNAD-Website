@@ -39,6 +39,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.casestudies();
 
     this.getStaticdata();
+    
   }
 
   casestudies() {
