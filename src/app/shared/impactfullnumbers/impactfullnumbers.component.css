@@ -1,9 +1,57 @@
 .stylen {
-    font-size: 3rem;
-    font-weight: 750;
+  font-size: 3rem;
+  font-weight: 750;
+}
+
+.styles {
+  font-size: 1.4rem;
+  font-weight: 750;
+}
+
+.we {
+  font-size: 2.5rem;
+  font-weight: 65 0;
+}
+
+.impact {
+  color: white;
+}
+.growth {
+  background-color: #2f5acd;
+}
+.num {
+  text-align: center;
+  color: white;
+}
+
+/*  */
+
+.des {
+  position: absolute;
+
+  border-radius: 50%;
+
+  height: 20em;
+
+  width: 20em;
+
+  opacity: 10;
+
+  float: right;
+
+  right: 7%;
+
+  margin-top: -7%;
+
+  animation: rotation 70s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
   }
-  
-  .styles {
-    font-size: 1.2rem;
-    font-weight: 650;
+
+  to {
+    transform: rotate(359deg);
   }
+}

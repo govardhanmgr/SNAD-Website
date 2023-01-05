@@ -1,30 +1,32 @@
-<!-- hero section -->
-<div class="container-fluid op">
-  <div class="future-image-section d-flex flex-column justify-content-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-7 d-flex flex-column justify-content-center p-4">
-          <div class="contact">
-            <div class="smalldasha"></div>
-            <div class="usa">INSPIRIED TO HELP</div>
-          </div>
-          <div class="mb-2 mt-1">
-            <h1 class="herocon">The most transparent & secure bnaking ever</h1>
-          </div>
-          <div>
-            <h4 class="herotx">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Similique, laboriosam sit inventore cumque modi,
-            </h4>
-          </div>
-        </div>
-      </div>
-    </div>
+<section class="header" data-aos="fade-up">
+  <!-- <div class="concept">
+    <img
+      src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4645e4ccfc4_image-home-v3-hero-startup-x-template-p-2000.jpeg"
+      class="img-background"
+    />
   </div>
-</div>
+  <div class="text-content">
+    <div class="contact" data-aos="fade-up">
+      <div class="smalldash"></div>
+
+      <div class="us">INSPIRED TO HELP</div>
+    </div>
+
+    <b>
+      <p class="text" data-aos="fade-up">
+        The most transparent <br />& Secured banking ever
+      </p>
+    </b>
+    <p data-aos="fade-up">
+      Lorem ipsum dolor sit amet consectetur adipiscing elit.<br />
+      Consectetur tortor nunc aliquam consectetur semper augue at
+    </p>
+  </div> -->
+  <app-heroimg [heros]="heroimage"></app-heroimg>
+</section>
 
 <!-- //Perks -->
-<app-servicescards></app-servicescards>
+<app-servicescards [service]="service" ></app-servicescards>
 
 <!-- //imactful numbers -->
 <app-impactfullnumbers></app-impactfullnumbers>
@@ -32,8 +34,8 @@
 <!-- //our clients -->
 <div class="our" data-aos="fade-up">
   <div class="clients">
-    <h3>Our Clients</h3>
-    <h1>Brands that trusts for text needs</h1>
+    <h3>{{client.subtitle}}</h3>
+    <h1>{{client.title}}</h1>
 
     <div class="container">
       <div class="row row-cols-1 row-cols-md-5">
@@ -138,8 +140,8 @@
 </div>
 <div>
   <br />
-  <h6 class="color">CASE STUDIES</h6>
-  <h3 class="center">Success Stories</h3>
+  <h6 class="color">{{case.subtitle}}</h6>
+  <h3 class="center">{{case.title}}</h3>
 </div>
 <!-- slider -->
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -253,7 +255,7 @@
   </button>
 </div>
 
-<app-latestarticles></app-latestarticles>
+
 <!-- Get in touch cta -->
 <div class="growthbackground">
   <div style="text-align:center ;" data-aos="fade-up"><br><br><br>
@@ -280,3 +282,4 @@
 
 
 <app-testimonials></app-testimonials>
+<app-latestarticles></app-latestarticles>

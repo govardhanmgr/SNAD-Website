@@ -1,16 +1,19 @@
 .container-fluid {
   color: white;
 
-  background: linear-gradient(to bottom, #5e6bf5 0%, #5e6bf5 100%) no-repeat;
+  background: linear-gradient(to bottom,#2f5acd 0%, #2f5acd 100%) no-repeat;
   background-size: calc(200%) calc(80%);
   background-position: top;
 }
 
 h1 {
-  padding-top: 100px;
+  padding-top: 10%;
   font-size: 40pt;
 }
-
+.headerimg{
+  width: 64%; 
+  border-radius: 35px;
+}
 
 .card {
   border-radius: 35px;
@@ -86,6 +89,27 @@ a {
   margin-left: 410px;
   border-radius: 35px;
 } 
-/* img{
-  width: 300px !important ;
-}  */
+
+
+@media only screen and (max-width: 600px) {
+  .container-fluid {
+    color: white;
+  
+    background: linear-gradient(to bottom,#2f5acd 0%, #2f5acd 100%) no-repeat;
+    background-size: calc(200%) calc(80%);
+    background-position: top;
+    
+  }
+  .container-fluid h1{
+    font-size: 35px;
+  }
+  .container-fluid h5{
+    font-size: 19px;
+    letter-spacing: 1px;
+  }
+  .headerimg{
+    width: 100%; 
+    border-radius: 35px;
+  }
+  
+}

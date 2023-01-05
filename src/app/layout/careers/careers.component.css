@@ -1,6 +1,6 @@
 /* header image */
 
- .img-background{
+ /* .img-background{
   position: relative;
   height: 600px;
   overflow: hidden;
@@ -40,7 +40,7 @@
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 0.08em;
-}
+} */
 
 /* scroll top button */
 
@@ -120,6 +120,11 @@
    background-color: #2f5acd;
 }
 
+.all-job-open{
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
 
 .all-job-header{
   padding-left: 40px;
@@ -159,10 +164,74 @@
   color: #edf1fd;
 }
 
+.des {
+  position: absolute;
+  border-radius: 50%;
+  height: 20em;
+  width: 20em;
+  opacity: 10;
+  float: right;
+  right: -8%;
+  margin-top: -14%;
+  animation: rotation 70s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  -webkit-box-align: center;
+}
+
+.smalldash {
+  width: 100%;
+  max-width: 60px;
+  min-height: 2px;
+  margin-right: 25px;
+  background-color: #fff;
+}
+
 /* GROWTH */
 
 .growth-div{
   background-color: #edf1fd;
+}
+
+.growth{
+  padding-bottom: 50px;
+}
+
+.grown{
+  padding: 8% 0%;
+}
+
+.grow{
+  position: absolute;
+  border-radius: 50%;
+  height: 18em;
+  width: 18em;
+  opacity: 6;
+  left: -6%;
+  animation: rotation 70s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 

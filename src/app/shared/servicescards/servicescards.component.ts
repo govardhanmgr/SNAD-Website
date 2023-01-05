@@ -1,4 +1,4 @@
-import { Component,OnDestroy, OnInit } from '@angular/core';
+import { Component,Input,OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { WebflowserviceService } from 'src/app/services/webflowservice.service';
@@ -14,6 +14,7 @@ export class ServicescardsComponent implements OnInit {
 
   constructor(private router: Router,
     private webflow: WebflowserviceService) { }
+    @Input() service!:any
 
   ngOnInit(): void {
     this.subServices();
