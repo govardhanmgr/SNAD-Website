@@ -12,12 +12,12 @@ data-aos-duration="500">
 <div class="row row-cols-1 row-cols-md-2 g-4 core">
 
   <!--column-->
-  <div class="col" data-aos="fade-up" *ngFor="let cards of subService ">
+  <div class="col" data-aos="fade-up" *ngFor="let cards of service.subServices ">
     <div class="card mb-3 perk"  >
       <div class="row g-0">
         <!-- image -->
         <div class="col-md-4">
-          <img src="https://uploads-ssl.webflow.com/6375d4747684b438e84ccf70/637b5d778c7bd8e6e5f887d8_6375d4747684b4d2354cd05f_icon-1-home-v3-features-startup-x-template.svg ">
+          <img src="{{cards.imageurl }} ">
            </div>
         <div class="col-md-8">
           <div class="card-body">

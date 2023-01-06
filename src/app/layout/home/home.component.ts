@@ -23,6 +23,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   client = [] as any;
   case = [] as any;
   service = [] as any;
+  subService =[] as any;
 
   constructor(
     private router: Router,
@@ -128,6 +129,8 @@ export class HomeComponent implements OnInit, OnDestroy {
           console.log(this.case);
           let services = data.filter((el: { page: string; sections: string }) => el.page === "4d1d25b65780e9a73fe777f3431ab3e2" && el.sections === "b4fc5b9d84bac72485f37f58000fd549");
           this.service = services[0]
+          this.getSubServices(this.service)
+          
           console.log(this.service);
 
 
@@ -160,6 +163,28 @@ export class HomeComponent implements OnInit, OnDestroy {
         },
       });
 
+
+  }
+
+  getSubServices(obj:any) {
+    this.subscription =this.webflow.getData("allitems/637b427169bf648df141f346").subscribe({
+      next:(response: any) => {
+       
+         
+        let data = response.data
+        data.filter((element:any)=>{
+          element.imageurl=element['icon-image'].url
+        })
+        console.log(data);
+
+        obj.subServices = data
+        
+      },
+      error:(reason: any) => {
+        console.error(reason);
+      }
+
+    });
 
   }
 
