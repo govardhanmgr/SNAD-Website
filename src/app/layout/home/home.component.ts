@@ -132,10 +132,6 @@ export class HomeComponent implements OnInit, OnDestroy {
           this.getSubServices(this.service)
           
           console.log(this.service);
-
-
-
-
           //console.log(data);
 
 
