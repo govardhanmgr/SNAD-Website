@@ -162,6 +162,32 @@ h1 {
   }
 }
 
+.des {
+  position: absolute;
+
+  border-radius: 50%;
+
+  height: 25em;
+
+  width: 42em;
+
+  opacity: 10;
+
+  margin-top: -15%;
+  right: 0px;
+
+  animation: rotation 70s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
 /*  
 
 .future-image-section {

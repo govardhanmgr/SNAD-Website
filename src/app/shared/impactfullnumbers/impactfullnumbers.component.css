@@ -37,8 +37,6 @@
 
   opacity: 10;
 
-  float: right;
-
   right: 7%;
 
   margin-top: -7%;
@@ -53,5 +51,59 @@
 
   to {
     transform: rotate(359deg);
+  }
+}
+
+.circle {
+  background: #0981bd;
+
+  border-radius: 50%;
+
+  height: 10em;
+
+  width: 10em;
+
+  opacity: 10;
+
+  margin-left: -200px;
+
+  margin-top: -100px;
+  position: absolute;
+}
+
+@media screen and (max-width: 912px) {
+  .des {
+    position: absolute;
+
+    border-radius: 50%;
+
+    height: 20em;
+
+    width: 20em;
+
+    opacity: 10;
+
+    margin-right: -15rem;
+
+    margin-top: -10rem;
+
+    animation: rotation 70s infinite linear;
+  }
+
+  .circle {
+    background: #0981bd;
+
+    border-radius: 50%;
+
+    height: 10em;
+
+    width: 10em;
+
+    opacity: 10;
+
+    margin-left: -150px;
+
+    margin-top: -90px;
+    position: absolute;
   }
 }
