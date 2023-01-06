@@ -52,11 +52,11 @@
               letter-spacing: 0.08em;
             "
           >
-           {{contact.subtitle}}
+            {{ contact.subtitle }}
           </div>
         </div>
         <div>
-          <h1>{{contact.title}}</h1>
+          <h1>{{ contact.title }}</h1>
         </div>
         <div>
           <p class="lorem">
@@ -64,12 +64,10 @@
             cupiditate praesentium libero at impedit, nobis architecto aut
             eaque. Nostrum dolorem ex rerum, earum ad maxime omnis distinctio
             beatae hic! -->
-            {{contact['detailed-text']}}
+            {{ contact["detailed-text"] }}
           </p>
         </div>
-        <div class="contact mb-4" *ngFor="let cont of contact.refdata">
-
-          
+        <div class="contact mb-5" *ngFor="let cont of contact.refdata">
           <div
             style="
               color: white;
@@ -78,11 +76,9 @@
               background-color: rgb(91, 86, 86);
               overflow: hidden;
             "
-          ><img src="{{cont.iconimage.url}}" >
+          >
+            <img src="{{ cont.iconimage.url }}" />
 
-         
-
-        
             <!-- <svg
               xmlns="http://www.w3.org/2000/svg"
               width="35"
@@ -99,9 +95,10 @@
               />
             </svg> -->
             <!-- {{contact.iconimage.url}} -->
-
           </div>
-          <div class="ms-4 contactnum"  >{{cont.shorttext }}</div>
+          <div class="ms-4 contactnum">
+            {{ cont.shorttext }}
+          </div>
         </div>
         <!-- <div class="contact mt-4">
           <div
