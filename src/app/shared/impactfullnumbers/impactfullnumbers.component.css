@@ -44,24 +44,6 @@
   animation: rotation 70s infinite linear;
 }
 
-.des1 {
-  position: absolute;
-
-  border-radius: 50%;
-
-  height: 20em;
-
-  width: 20em;
-
-  opacity: 10;
-
-  left: 7%;
-
-  margin-top: -7%;
-
-  animation: rotation 70s infinite linear;
-}
-
 @keyframes rotation {
   from {
     transform: rotate(0deg);
@@ -72,13 +54,56 @@
   }
 }
 
-.circle-lg {
-  transform: translate3d(0px, 0px, 0px) scale3d (1, 1, 1) rotateX(0deg)
-    rotateY(0deg) rotateZ("360deg") skew(0deg, 0deg);
+.circle {
+  background: #0981bd;
 
-  transform-style: preserve-3d;
+  border-radius: 50%;
 
-  opacity: 1;
+  height: 10em;
 
-  will-change: transform;
+  width: 10em;
+
+  opacity: 10;
+
+  margin-left: -200px;
+
+  margin-top: -100px;
+  position: absolute;
+}
+
+@media screen and (max-width: 912px) {
+  .des {
+    position: absolute;
+
+    border-radius: 50%;
+
+    height: 20em;
+
+    width: 20em;
+
+    opacity: 10;
+
+    margin-right: -15rem;
+
+    margin-top: -10rem;
+
+    animation: rotation 70s infinite linear;
+  }
+
+  .circle {
+    background: #0981bd;
+
+    border-radius: 50%;
+
+    height: 10em;
+
+    width: 10em;
+
+    opacity: 10;
+
+    margin-left: -150px;
+
+    margin-top: -90px;
+    position: absolute;
+  }
 }
