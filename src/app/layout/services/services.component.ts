@@ -33,8 +33,10 @@ export class ServicesComponent implements OnInit, OnDestroy {
   getServices() {
        this.subscription = this.webflow.getData("allitems/637b427169bf648df141f346").subscribe({
         next:(response:any)=> {
-          console.log(response)
+          // console.log(response)
           this.services = response.data
+          
+
           this.Service = this.services[0]
           console.log(this.Service);
           console.log(this.services)
