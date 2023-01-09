@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,Input,OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-browsearticles',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./browsearticles.component.css']
 })
 export class BrowsearticlesComponent implements OnInit {
+
+@Input() blog!:any 
 
   constructor() { }
 
