@@ -49,7 +49,8 @@ export class BlogComponent implements OnInit {
 
           this.Blogs.forEach((element: any) => {
             element.imageurl = element['post-main-image'].url;
-            element.date = element['updated-on']
+            element.date = element['updated-on'];
+            element.icon = element['blog-category-icon']
             let catId = element['post-category-2'];
             let itemid = element['post-author']
             console.log(catId);
@@ -78,13 +79,22 @@ export class BlogComponent implements OnInit {
       .subscribe({
         next: (res: any) => {
           console.log(res);
-
+          ref.categoryicon = res.data['blog-category-icon'].url
           ref.category = res.data.name;
+          
           this.Blogcategory.add(res.data.name);
         },
         error: (reason: any) => console.log(reason),
       });
   }
+
+  // blogCategoryIcon(){
+  //   this.subscription = this.webflow
+  //   .getData()
+
+
+
+  // }
 
   blogFilter(element?: string) {
     if (element) {

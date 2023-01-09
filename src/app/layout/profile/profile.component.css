@@ -5,11 +5,10 @@
 
  .card{
   margin-top: -30%;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 15%;
+  margin-right: 15%;
   padding: 8% 8%;
   border-radius: 30px;
- 
  }
 
  .about{
@@ -45,5 +44,214 @@
   margin-right: 1%;
   margin-bottom: 8%;
   border: 1px solid black;
-  
  }
+
+ .profile-image{
+    width: 100%;
+    height: 100%;
+    min-width: auto;
+    min-height: auto;
+ }
+
+ .names{
+    padding-top:6% ;
+ }
+
+ /* new */
+
+ .fa {
+    padding: 10px;
+    font-size: 10px;
+    width: 30px;
+    text-align:center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin-left: 3%;
+    }
+    
+    .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+    .networks{
+       font-size: 8pt;
+       margin-top: 1px;
+       margin-right: 2px;
+       top:0;
+       right:0;
+    }
+
+    
+    @media screen and (max-width:820px){
+
+      .background-div{
+    
+        background-color: blue;
+    
+        height: 50vh;
+    
+      }
+    
+    
+    
+      .card{
+    
+        text-align: center;
+    
+        width: 80%;
+    
+        height: 50%;
+    
+        margin-top: -40%;
+    
+      }
+    
+     
+    
+    }
+    
+    
+    
+    
+    
+    @media screen and (max-width:768px){
+    
+      .background-div{
+    
+        background-color: blue;
+    
+        height: 50vh;
+    
+      }
+    
+    
+    
+      .card{
+    
+        text-align: center;
+    
+        width: 80%;
+    
+        height: 50%;
+    
+        margin-top: -35%;
+    
+      }
+    
+     
+    
+    }
+    
+    
+    
+    
+    
+    @media screen and (max-width:568px){
+    
+      .background-div{
+    
+        background-color: blue;
+    
+        height: 50vh;
+    
+      }
+    
+    
+    
+      .card{
+    
+        text-align: center;
+    
+        width: 80%;
+    
+        height: 50%;
+    
+        margin-top: -35%;
+    
+      }
+    
+     
+    
+    }
+    
+    
+    
+    
+    @media screen and (max-width:412px){
+    
+      .background-div{
+    
+        background-color: blue;
+    
+        height: 50vh;
+    
+      }
+    
+    
+    
+      .card{
+    
+        text-align: center;
+    
+        width: 80%;
+    
+        height: 50%;
+    
+        margin-top: -60%;
+    
+      }
+    
+     
+    
+    }
+    
+    
+    
+    @media screen and (max-width:280px){
+    
+      .background-div{
+    
+        background-color: blue;
+    
+        height: 50vh;
+    
+      }
+    
+    
+    
+      .card{
+    
+        text-align: center;
+    
+        width: 80%;
+    
+        height: 50%;
+    
+        margin-top: -60%;
+    
+      }
+    
+     
+    
+    }
+
+    
+
+
+
+
+    

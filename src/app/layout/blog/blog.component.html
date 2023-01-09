@@ -30,15 +30,12 @@
 
 </div> -->
 
-<section>
-  <div class="container header">
+<section class="latest-articles">
+  <div class="container header " data-aos="fade-up" data-aos-anchor-placement="top-center" (click)="readart(Blogs[0]._id)">
     <div class="right">
       <div class="content">
-        <h1>This is a heading</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
-          assumenda dolore reprehenderit ullam blanditiis ex sapiente pariatur
-          tempore incidunt facilis?
+        <h1 id="title"></h1><br>
+        <p class="card-text" class="text-muted" id="des">
         </p>
         <br />
         <b>
@@ -48,7 +45,13 @@
         </b>
       </div>
     </div>
-    <div class="left"></div>
+    <div class="left">
+      <img src="{{ Blogs[0].imageurl }}" class="card-img-top" alt="..." class="zoom" style="width: 106%;" />
+      <button class="btn" class="butstyli1">
+        <img src="{{Blogs[0].categoryicon}}" style="margin-right: 4px;" alt="">
+        <b>{{Blogs[0].category}}</b>
+      </button>
+    </div>
   </div>
 </section>
 
@@ -58,14 +61,16 @@
       <h1 style="padding-left: 30px"><b>Latest articles</b></h1>
     </div>
     <div class="col-md-6">
-      <div class="card button-card" style="width: fit-content">
+      <div class="card button-card" style="width: fit-content; " >
         <div class="multiple-button">
           <div class="d-flex flex-row flex-wrap">
+            <div>{{Blogs.icon}}</div>
             <button type="button" class="btn buttons all-button1" (click)="blogFilter()">
               <b>All</b>
             </button>
             <div *ngFor="let cat of Blogcategory">
               <button type="button" class="btn buttons all-button" (click)="blogFilter(cat)">
+                <!-- <img src="{{cat.categoryicon}}"  alt="">  -->
                 <b>{{ cat }}</b>
               </button>
             </div>
@@ -85,6 +90,7 @@
       <div class="card latest-articles" (click)="readart(im._id)">
         <img src="{{ im.imageurl }}" class="card-img-top im-hv" alt="..." class="zoom" />
         <button class="btn" class="butstyl">
+          <img src="{{im.categoryicon}}" style="margin-right: 4px;" alt="">
           <b>{{ im.category }}</b>
         </button>
 
@@ -122,34 +128,4 @@
     </div>
   </div>
 </div>
-<!-- 
-<div class="section">
-  <div class="container-fluid header" >
-    <div class="left">
-     
-    </div>
-
-    <div class="right">
-       <img class="sizeimg" src="/assets/b1.jpeg" alt=""> -->
-<!-- <div class="content">
-        <h1>Is it smart to invest in cryptocurrency in 2021? What you need to know</h1>
-        <br>
-        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit eque ipsum odio justo amet urna auctor congue
-          vulputate
-          au
-        </p>
-
-        <br />
-        <b>
-          <p class="card-text" class="text-muted">
-            {{Blogs[0].profileName}} -- {{Blogs[0].date | date}}
-          </p>
-        </b>
-
-      </div>
-
-    </div>
-
-  </div>
-</div> --> -->
 
