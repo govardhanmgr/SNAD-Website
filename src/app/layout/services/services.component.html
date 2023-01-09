@@ -1,13 +1,13 @@
 
 
-<div class="maindiv d-flex">
+<!-- <div class="maindiv d-flex">
   <div class="buttones d-flex">
     <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
       <div *ngFor="let item of services">
 
         <button class="nav-link " id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#business" type="button"
           role="tab" aria-controls="v-pills-home" (click)="postServiceFunction(item)" aria-selected="true">{{item.name}}
-        </button>
+        </button> -->
 
  <app-heroimg [heros]="servimg" >
 
@@ -15,7 +15,9 @@
 
  </app-heroimg>
 
-<div class="maindiv d-flex">
+
+
+ <div class="maindiv d-flex">
     <div class="buttones d-flex">
         <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
             <div *ngFor="let item of services">
@@ -25,17 +27,21 @@
                 </button>
 
 
+
       </div>
 
 
+    </div>
+    <div class="tab-content" id="v-pills-tabContent">
+      <app-subservices [serviceDetails]="Service"></app-subservices>
 
     </div>
   </div>
-
-  <div class="tab-content" id="v-pills-tabContent">
+  <!-- <div class="tab-content" id="v-pills-tabContent">
     <app-subservices [serviceDetails]="Service"></app-subservices>
 
-  </div>
+  </div> -->
+
 </div>
 
 
@@ -44,7 +50,7 @@
 <!-- //imactful numbers -->
 <div class="impact">
 
-  <app-impactfullnumbers></app-impactfullnumbers>
+
 
 <app-impactfullnumbers [numbers]="impact"></app-impactfullnumbers>
 
