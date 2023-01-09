@@ -8,18 +8,18 @@
   background-color: white;
   color: rgb(2, 2, 2);
   font-size: 16px;
-  padding: 12px 32px;
   border: none;
   cursor: pointer;
   border-radius: 20px;
   display: inline-block;
-  width: auto;
+  width: max-content;
+  padding: 12px 20px;
 }
 
 .butstyli1 {
   position: absolute;
-  bottom: 85%;
-  left: 87%;
+  bottom: 80%;
+  left: 85%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   background-color: white;
@@ -29,9 +29,8 @@
   cursor: pointer;
   border-radius: 20px;
   display: inline-block;
-  width: fit-content;
-  height: fit-content;
-  position: absolute;
+  width: max-content;
+  padding: 12px 20px;
   
 }
 
@@ -43,22 +42,19 @@
   border-radius: 25px;
 }
 
-.i11 {
-  margin: auto;
-  width: 65%;
-  padding-bottom: 40px
-}
+
 
 .zoom {
   border-radius: 25px;
-}
+  
+} 
 
 .card {
   border-top: 0;
   border-left: 0;
   border-right: 0;
   border-bottom: 0;
-}
+} 
 
 .get {
   position: absolute;
@@ -134,7 +130,7 @@ input[type="text"] {
 @media only screen and (max-width: 600px) {
   .butstyl {
     padding: 8px 16px;
-    width: fit-content;
+    width: max-content;
   }
 
   .butstyli1 {
@@ -192,16 +188,14 @@ input[type="text"] {
     border-radius: 20px;
   }
 
-  .zoom {
-    border-radius: 15px;
-  }
+  
 }
 
 @media only screen and (max-width: 990px) and (min-width: 601px) {
 
   .butstyl {
-    padding: 6px 12px;
-    width: fit-content;
+    
+    width: max-content;
     bottom: 81%;
     left: 83%;
 
@@ -210,7 +204,7 @@ input[type="text"] {
   }
 
   .butstyli1 {
-    padding: 10px 12px;
+    
     width: fit-content;
     border-radius: 10px;
     font-size: medium;
@@ -245,48 +239,67 @@ section {
 }
 
 .left {
-  width: 65%;
+  width: 66%;
   height: 550px;
-  background: url("/assets/b1.jpeg")
+  background:
   no-repeat center / cover;
-  border-radius: 8px;
+  border-radius: 17px;
   margin-left: -370px;
 }
 
 .right {
   width: 50%;
-  min-height: 400px;
+  min-height: 440px;
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 30px;
-  border-radius: 8px;
   color: black;
   z-index: 1;
   border-style: solid;
   border-width: thin;
-  border-color: black;
+  border-color: rgba(212, 208, 208, 0.904);
+  border-radius: 17px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1080px) and (min-width: 768px) {
 
   .container {
     flex-direction: column;
     flex-direction: column-reverse;
     width: 100%;
-    margin: 0 20px;
   }
 
   .left {
     width: 100%;
-    height: 400px;
+    height: 200px;
     margin: 0;
   }
 
   .right {
     width: 90%;
+    min-height: 200px;
+    margin-top: -100px;
+  }
+}
+
+@media only screen and (max-width: 700px){
+  .container {
+    flex-direction: column;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  .left {
+    width: 100%;
+    height: 200px;
     margin: 0;
+  }
+
+  .right {
+    width: 90%;
+    min-height: 100px;
     margin-top: -100px;
   }
 }
