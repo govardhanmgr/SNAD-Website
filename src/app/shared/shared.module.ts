@@ -11,6 +11,7 @@ import { HeroimgComponent } from './heroimg/heroimg.component';
 import { CASESTUDIESComponent } from './casestudies/casestudies.component';
 import { TESTIMONIALSComponent } from './testimonials/testimonials.component';
 import { LatestarticlesComponent } from './latestarticles/latestarticles.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,12 @@ import { LatestarticlesComponent } from './latestarticles/latestarticles.compone
     TESTIMONIALSComponent,
     LatestarticlesComponent,
   ],
-  imports: [CommonModule, SharedRoutingModule],
+  imports: [
+    CommonModule, 
+    SharedRoutingModule,
+    CarouselModule
+
+  ],
   exports: [
     HeaderComponent,
     FooterComponent,
