@@ -1,14 +1,3 @@
-<!-- <section class="header" >
-  <img
-    src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4645e4ccfc4_image-home-v3-hero-startup-x-template-p-2000.jpeg"
-    class="img-background" data-aos="fade-up">
-  <div class="welcome" data-aos="fade-up">
-    <h5>About</h5>
-    <h2 class="styleh5">The most transparent & secure <br> banking ever</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur <br> tortor nunc aliquam consectetur semper
-      augue at.</p>
-  </div>
-</section> -->
 <app-heroimg [heros]="heroimg"></app-heroimg>
 
 <div class="" data-aos="fade-up">
@@ -29,9 +18,11 @@
   <!-- ourstory -->
 
   <div class="ourstory" #target>
+    
     <div class="row ourstorytext">
+      
       <div class="col-md-6" data-aos="fade-up">
-        <br><br><br>
+        <div class="smalldash1"></div>
         <h6 style="margin-left:10" class="ourstorytext" style="color: blue;">{{static.title}}</h6>
         <h1 class="ourstorytext">{{static.subtitle}}</h1>
         <p class="ourstorytext">{{static['detailed-text']}}</p>
@@ -50,18 +41,29 @@
 
       </div>
       <div class="col-md-6" data-aos="fade-up">
+        <div class="smalldash">
+        <!-- #c
+        style="
+          width: 100%;
+          max-width: 60px;
+          min-height: 2px;
+          margin-right: 25px;
+          background-color:blue;
+        
+        " -->
+      </div>
         <h6 class="ourmissiontext" style="color: blue;">{{ourmissionv.title}}</h6>
-        <h1 class="ourmissiontext">{{ourmissionv.subtitle}}</h1>
-        <p class="ourmissiontext">{{ourmissionv['detailed-text']}}</p>
+        <h1 class="ourmissiontext1">{{ourmissionv.subtitle}}</h1>
+        <p class="ourmissiontext2">{{ourmissionv['detailed-text']}}</p>
       </div>
     </div>
   </div><br><br><br>
 
   <!-- ourteam -->
 
-  <div class="" data-aos="fade-up">
+  <div class="ourteam" data-aos="fade-up">
     <h6 style="text-align:center ;">{{ourteam.title}}</h6>
-    <h1>{{ourteam['detailed-text']}}<b></b></h1>
+    <h1><b>{{ourteam['detailed-text']}}</b></h1>
   </div>
   <br>
 
@@ -81,10 +83,10 @@
   </div>
   <br><br>
   <div class="join-our-team-bt">
-    <button class="join-our-team-button">{{ourteam['cta-name']}}</button>
+    <a  href="/careers" class="join-our-team-button">{{ourteam['cta-name']}}</a>
   </div>
 
-  <br><br><br>
+  
 
   <!-- our values -->
 
@@ -96,6 +98,7 @@
         <div class="col ">
           <div class=" mb-3 ">
             <div class="row g-0 " data-aos="fade-up">
+              <div class="smalldash2"></div>
               <h6>{{ourvalue.title}}</h6>
               <h2 style="text-align:left">{{ourvalue['detailed-text']}}</h2>
             </div>
@@ -233,34 +236,27 @@
   </div>
 </div>
 
-<br><br><br> <br> <br>
+
 
 <!-- impactful -->
 
-
 <app-impactfullnumbers [numbers]="impact"></app-impactfullnumbers>
-
-
-<br> <br> <br> <br>
 
 <!-- get in touch -->
 <div class="growthbackground">
-  <div style="text-align:center ;" data-aos="fade-up">
+  <div style="text-align:center ;" data-aos="fade-up"><br><br><br>
     <h1 style="color: white;">{{getin['detailed-text']}}</h1><br>
-    <!-- <a href="/contactus" type="button" class="btn btn-light light">Get in touch</a>--->
-    <app-getintouch></app-getintouch>
-    <br><br><br>
-    <br>
+    <a href="/contactus" type="button" class="btn btn-light light"><b>Get in touch</b></a>
+    <!-- <app-getintouch></app-getintouch> -->
   </div>
   <!-- <div class="circle crc"></div>  -->
 
-  <div class="circle circle-lg">
+  <!-- <div class="circle circle-lg">
     <img src="https://uploads-ssl.webflow.com/6375d4737684b479bc…b4420c4ccfd3_shape-1-cta-3-startup-x-template.svg"
       class="w-h-100" alt="...">
-  </div>
+  </div> -->
   <!-- <div><img
       src=" https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b443b44ccfb5_shape-2-cta-2-startup-x-template.svg"
       class="des"></div> -->
 
 </div> 
-  <br>
