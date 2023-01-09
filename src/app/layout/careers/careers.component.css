@@ -1,47 +1,3 @@
-/* header image */
-
- /* .img-background{
-  position: relative;
-  height: 600px;
-  overflow: hidden;
-  background: url( https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4645e4ccfc4_image-home-v3-hero-startup-x-template-p-2000.jpeg) no-repeat center;
-  background-size: cover;
-  fill-opacity: 0.5px;
- }
-
-.text-content {
-  color: white;
-  margin-left: 5%;
-  margin-top: 8%;
-}
-
-.text {
-  font-size: 50px;
-}
-
-.contact {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 20px;
-  -webkit-box-align: center;
-}
-
-.smalldash {
-  width: 100%;
-  max-width: 60px;
-  min-height: 2px;
-  margin-right: 25px;
-  background-color: #fff;
-}
-
-.header-text{
-  color: #fff;
-  font-size: 20px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-} */
-
 /* scroll top button */
 
 .scroll-to-top {
@@ -183,6 +139,17 @@
   to {
     transform: rotate(359deg);
   }
+}
+
+.circle {
+  background: #0981BD;
+  border-radius: 50%;
+  height: 16em;
+  width: 16em;
+  opacity: 10;
+  margin-left: -50px;
+  margin-bottom: -150px;
+  animation: rotation 30s infinite linear;
 }
 
 .contact {
