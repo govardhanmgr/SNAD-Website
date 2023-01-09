@@ -111,19 +111,18 @@
         </div>
 
         <!--column-->
-        <div class="col ">
+        <div class="col " *ngFor="let our of ourvalue.refdata">
           <div class="card mb-3 cores" data-aos="fade-up">
             <div class="row g-0 ">
               <div class="col-md-4">
                 <img
-                  src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4bb554cd09e_icon-1-company-perks-startup-x-template.svg"
+                  src="{{our.iconimage.url}}"
                   class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-8 ">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.</p>
+                  <h5 class="card-title">{{our.shorttext}}</h5>
+                  <p class="card-text">{{our.description}}</p>
                 </div>
               </div>
             </div>
@@ -131,7 +130,7 @@
         </div>
 
         <!--c0lumn-->
-        <div class="col ">
+        <!-- <div class="col ">
           <div class="card mb-3 cores" data-aos="fade-up">
             <div class="row g-0">
               <div class="col-md-4">
@@ -148,10 +147,10 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <!--column-->
-        <div class="col ">
+        <!-- <div class="col ">
           <div class="card mb-3 cores" data-aos="fade-up">
             <div class="row g-0">
               <div class="col-md-4">
@@ -168,10 +167,10 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <!--c0lumn-->
-        <div class="col">
+        <!-- <div class="col">
           <div class="card mb-3 cores" data-aos="fade-up">
             <div class="row g-0">
               <div class="col-md-4">
@@ -188,10 +187,10 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <!--column-->
-        <div class="col">
+        <!-- <div class="col">
           <div class="card mb-3 cores" data-aos="fade-up">
             <div class="row g-0">
               <div class="col-md-4">
@@ -208,10 +207,10 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <!--c0lumn-->
-        <div class="col">
+        <!-- <div class="col">
           <div class="card mb-3 cores" data-aos="fade-up">
             <div class="row g-0">
               <div class="col-md-4">
@@ -228,7 +227,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -246,9 +245,8 @@
 
 <!-- get in touch -->
 <div class="growthbackground">
-  <div style="text-align:center ;" data-aos="fade-up"><br><br><br>
-    <h1 style="color: white;">{{getin['cta-name']
-      }}</h1><br>
+  <div style="text-align:center ;" data-aos="fade-up">
+    <h1 style="color: white;">{{getin['detailed-text']}}</h1><br>
     <!-- <a href="/contactus" type="button" class="btn btn-light light">Get in touch</a>--->
     <app-getintouch></app-getintouch>
     <br><br><br>
