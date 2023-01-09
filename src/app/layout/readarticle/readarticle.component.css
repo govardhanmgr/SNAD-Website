@@ -60,41 +60,38 @@ h1 {
      right:0;
 }
 a:hover,
-a:focus {
-  text-decoration: none;
+a:focus,.profilebig:hover,.profilebig:focus{
+  text-decoration:  #454eda;
+  /* color: #454eda; */
+  border-color: #454eda;
 }
-
+h4:hover,h4:focus{
+  text-decoration:  #454eda;
+  color: #454eda; 
+ 
+}
 a {
   color: black;
   text-decoration: none;
 }
 
-.btdes {
-  border-radius: 10px;
-  color:white;
-  border-color: whitesmoke;
-  background-color: #454eda;
-  text-align: center;
-  width: 200px;
-  margin-top: 100px;
-  padding: 20px;
-  margin-left: 410px;
-  border-radius: 35px;
-} 
+
 .profilebig{
   
-  margin-left: 32%;
-  margin-right: 32%;
-  /* padding: 8% 8%; */
+  
+  padding: 9% 9%;
   border-radius: 30px;
+  width: 100%;
+  justify-content: center;
  }
 
 .profile-image{
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   min-width: auto;
   min-height: auto;
-  margin: 20px 20px;
+ 
+  
 }
 .names{
   padding-top:6% ;
