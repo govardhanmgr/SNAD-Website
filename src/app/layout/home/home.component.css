@@ -41,7 +41,7 @@
     width: 90%;
 }
 
-.slide-one {}
+
 
 .carousel-item .row {
     margin: 10% 0;
@@ -59,7 +59,7 @@
     color: #2a2a2a;
 }
 
-.slide-two {}
+
 
 .slide-two h5,
 .slide-two h6 {
@@ -304,6 +304,7 @@ h5 {
     border-color: blue;
     color: blue;
 }
+
 
 
 

@@ -1,14 +1,19 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component,  Input, OnInit } from '@angular/core';
+import { WebflowserviceService } from 'src/app/services/webflowservice.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-testimonials',
   templateUrl: './testimonials.component.html',
   styleUrls: ['./testimonials.component.css'],
 })
-export class TESTIMONIALSComponent implements OnInit {
-  slides: NodeListOf<Element> = document.querySelectorAll('.slide-container');
+export class TESTIMONIALSComponent implements OnInit, AfterViewInit {
+  @Input() testimonial!: any
+  slides!: NodeListOf<Element>
   index: number = 0;
+  subscription!: Subscription;
+ 
 
   next() {
     this.slides[this.index].classList.remove('active');
@@ -23,9 +28,23 @@ export class TESTIMONIALSComponent implements OnInit {
     this.slides[this.index].classList.add('active');
   }
 
-  constructor() {}
-
+  constructor( private webflow: WebflowserviceService) { }
   ngOnInit(): void {
-    // setInterval(this.next(), 7000);
+    setInterval(() => {
+
+      this.next()
+
+    }, 7000);
+    console.log(this.testimonial);
+   
+
   }
+
+  ngAfterViewInit(): void {
+
+    this.slides = document.querySelectorAll('.slide-container');
+  }
+
+
 }
+
