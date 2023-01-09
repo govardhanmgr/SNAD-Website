@@ -27,6 +27,9 @@ import { SharedModule } from '../shared/shared.module';
 import { JobrequirmentComponent } from './jobrequirment/jobrequirment.component';
 import { SubserviceComponent } from './subservice/subservice.component';
 
+
+
+
 @NgModule({
   declarations: [
     HomeComponent,
@@ -48,7 +51,10 @@ import { SubserviceComponent } from './subservice/subservice.component';
     ServiceheroimageComponent,
     SubservicesComponent,
     JobrequirmentComponent,
-    SubserviceComponent
+    SubserviceComponent,
+ 
+  
+    
   ],
   imports: [
     CommonModule,
