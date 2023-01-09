@@ -91,10 +91,14 @@ export class AboutComponent implements OnInit, OnDestroy {
 
     let value= data.filter((el: { page: string; sections:string;}) => el.page === 'b02282ae3855aff3baab318770f8c16f' && el.sections === '7bccae48fc342f81b0faf390282e8c62');
     this.ourvalue=value[0]
+    this.sibService.getReferenceCollections(this.ourvalue)
+    console.log(this.ourvalue);
     
     
-    let touch= data.filter((el: { page: string; sections:string;}) => el.page === 'b02282ae3855aff3baab318770f8c16f' && el.sections === '1af9e7b1f68df63d6d09988bd947b2f8');
+    let touch= data.filter((el: { page: string; sections:string;}) => el.page === 'b02282ae3855aff3baab318770f8c16f' && el.sections === '3fbc50998d0dc0874279c27d99b393e2');
     this.getin=touch[0]
+    console.log(this.getin);
+    
 
     let impactfull= data.filter((el: { page: string; sections:string;}) => el.page === "b02282ae3855aff3baab318770f8c16f" && el.sections === '8808845a39d7b7b5ca84bdd8458f738a');
     this.impact=impactfull[0]

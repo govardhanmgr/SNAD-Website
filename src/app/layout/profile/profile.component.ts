@@ -114,6 +114,7 @@ export class ProfileComponent implements OnInit {
             count++;
             this.Blogs.push(latest[i]);
           }
+          
         }
         console.log(this.Blogs);
         
