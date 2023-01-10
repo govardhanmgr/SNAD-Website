@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-getintouch',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./getintouch.component.css']
 })
 export class GetintouchComponent implements OnInit {
+
+  @Input() getintouch!:any
 
   constructor() { }
 

@@ -1,5 +1,5 @@
 <!-- hero section -->
-<div class="container-fluid">
+<div class="container-fluid himg">
   <img
     src="{{heros['big-image'].url}}"
     alt="Snow"
@@ -33,6 +33,8 @@
               {{heros['detailed-text']}}
             </h4>
           </div>
+          <div *ngIf="heros['cta-name']" [routerLink]="['/contactus']" routerLinkActive="router-link-active" ><button class="btn btn-lg get">{{heros['cta-name']}}</button></div>
+
         </div>
       </div>
     </div>

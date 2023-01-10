@@ -18,6 +18,8 @@ export class ServicesComponent implements OnInit, OnDestroy {
         Service= {} as object
         servimg = {} as any;
         impact = {} as any;
+        subservice = {} as any;
+        started= {} as any;
 
   constructor(
     private webflow: WebflowserviceService,
@@ -31,6 +33,7 @@ export class ServicesComponent implements OnInit, OnDestroy {
     })
       this.getServices();
      this.getStaticData();
+    
 
   }
 
@@ -57,21 +60,22 @@ export class ServicesComponent implements OnInit, OnDestroy {
     let herodata= data.filter((el: { page: string; sections:string;}) => el.page === 'bef1dac0a23768a78a533e40535f9055' && el.sections === '1af9e7b1f68df63d6d09988bd947b2f8');
     this.servimg=herodata[0]
     console.log(this.servimg);
-    let impactfull= data.filter((el: { page: string; sections:string;}) => el.page === "b02282ae3855aff3baab318770f8c16f" && el.sections === '8808845a39d7b7b5ca84bdd8458f738a');
+    let impactfull= data.filter((el: { page: string; sections:string;}) => el.page === "bef1dac0a23768a78a533e40535f9055" && el.sections === '8808845a39d7b7b5ca84bdd8458f738a');
     this.impact=impactfull[0]
     this.sibService.getReferenceCollections(this.impact)
     console.log(this.impact);
+    let get= data.filter((el: { page: string; sections:string;}) => el.page === 'bef1dac0a23768a78a533e40535f9055' && el.sections === '3fbc50998d0dc0874279c27d99b393e2');
+    this.started=get[0]
+    console.log(this.started);
         
 
   }
   postServiceFunction(service:object){
     this.Service = service
-
-
-
   }
 
-
+ 
+  
 
   ngOnDestroy(): void {
     if(this.subscription){
