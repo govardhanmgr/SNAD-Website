@@ -1,25 +1,34 @@
 
-  
-<div class="i2" *ngFor="let blogs of blog">
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-        <div class="col"  >
-          <a href="{{blogs.imageurl}}">
-           <div class="card" >
+  <div class="i2" >
+    <div class="row row-cols-1 row-cols-md-2 g-4" *ngFor="let blogs of blog">
+      <div class="col" *ngIf="blogs;else condition">
+        <a href="{{blogs.imageurl}}">
+          <div class="card" >
             <img src="assets/bt4.jpeg" class="card-img-top" alt="..." class="zoom">
             <button class="btn" class="butstyl"> <b>{{blogs.category}}</b></button>
-    
+
             <div class="card-body">
               <h3 class="card-title">{{blogs.name}}</h3>
-                  <br>
-                  <p class="card-text" class="text-muted">{{blogs.profileName}} -- {{blogs.date | date }}</p>
+              <br>
+              <p class="card-text" class="text-muted">{{blogs.profileName}} -- {{blogs.date | date }}</p>
             </div>
-           </div>
+            
+          </div>
+          
         </a>
-        </div>
-      
-  
-     
-      <!-- <div class="col"   >
+      </div>
+      <br>
+      <ng-template #condition>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card no-articles">No items found.</div>
+            </div>
+          </div>
+        </ng-template>
+    </div>
+
+
+    <!-- <div class="col"   >
         <a href="./readarticle">
         <div class="card" >
           <img src="assets/b1.jpeg" class="card-img-top" alt="..." class="zoom" >
@@ -34,6 +43,3 @@
       </a>
       </div>
    </div>   -->
-
-
-  
