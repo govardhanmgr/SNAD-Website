@@ -173,6 +173,8 @@ p {
   height: 120px;
   line-height: 120px;
   width: 120px;
+  max-width: 120px;
+  max-height: 120px;
   font-size: 2em;
   font-weight: bold;
   border-radius: 100%;
