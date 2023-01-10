@@ -9,9 +9,12 @@ export class BrowsearticlesComponent implements OnInit {
 
 @Input() blog!:any 
 
+ 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.blog);
+    
   }
 
 }

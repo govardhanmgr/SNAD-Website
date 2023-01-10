@@ -85,4 +85,16 @@ a {
   .btclr{
     background-color: rgb(41, 91, 230);
   }
+
+  .no-articles{
+    width:900px;
+    height: 20vh;
+    border: 1px solid;
+    text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 9% 30px;
+    border-radius: 20px;
+font-size: larger;
+  }
   
