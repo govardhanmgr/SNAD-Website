@@ -13,14 +13,17 @@
     </div>
   </div>
 
-  <img src="{{ Readarticles.imageurl }}" alt="" class="rounded mx-auto d-block headerimg" />
+  <div class="container">
+    <img src="{{ Readarticles.imageurl }}" alt="" class="rounded mx-auto d-block headerimg" />
+  </div>
+
 </div>
 
 <br /><br /><br />
 
-<div class="container" style="margin-bottom: 50px">
+<div class="flex-container-fluid" style="margin-bottom: 50px">
   <div class="row justify-content-center">
-    <div class="col-sm-6" style="float: left">
+    <div class="col-sm-3" style="float: left">
       <a href="./profile">
         <div class="card profilealign" style="max-width: 300px">
           <div class="row g-0">
@@ -50,12 +53,18 @@
             width: max-content;
             border-style: solid;
             border-width: 1px;
-            border-color: rgb(43, 40, 40);
-            padding: 10px 30px;
-            border-radius: 35px;
-            margin-top: 10%;
+            border-color: #dadcec;
+            padding: 14px 24px;
+            border-radius: 1000px;
+            color: #494a4d;
+            font-size: 16px;
+            line-height: 1.125em;
+            font-weight: 700;
+            margin-top: 5%;
+            text-decoration: none;
+            float: right;
           ">
-          <b>Business</b>
+          Business
         </button>
       </a>
     </div>
@@ -144,58 +153,37 @@
       <h1 style="float: left; font-weight: bolder">Latest articles</h1>
     </div>
     <div class="col-sm-6">
+     <a href="/blog">
       <button type="button" class="btn btn-lg" style="
-          float: right;
-          background-color: #2f5acd;
-          color: white;
-          padding: 20px 60px;
-          border-radius: 35px;
-          font-weight: bolder;
-        ">
-        Browse all articles
-      </button>
+      float: right;
+      background-color: #2f5acd;
+      color: white;
+      padding: 20px 60px;
+      border-radius: 35px;
+      font-weight: bolder;
+    ">
+    Browse all articles
+  </button>
+     </a>
     </div>
-    <div class="i2" >
-      <div class="row row-cols-1 row-cols-md-2 g-4" >
-        <div class="col"  *ngFor="let blog of Article">
-            <div class="card browsearticles" >
-              <img src="{{blog.imageurl}}">
-              <button class="btn" class="butstyl">
-                <img src="{{blog.categoryicon}}" class="card-img-top" alt="..." class="zoom">
-                 <b>{{blog.category}}</b></button>
-              <div class="card-body">
-                <h3 class="card-title">{{blog.name}}</h3>
-                <p class="card-text" class="text-muted">{{blog.profilename}} -- {{blog.date | date }}</p>
-              </div>
-            </div>
+   
+  </div>
+</div>
+
+<div class="container " style="margin-top: 2%;" >
+  <div class="row row-cols-1 row-cols-md-2 g-4" >
+    <div class="col"  *ngFor="let blog of Article">
+        <div class="card browsearticles" >
+          <img src="{{blog.imageurl}}" class="zoom" style="border-radius: 25px;">
+          <button class="btn" class="butstyl">
+            <img src="{{blog.categoryicon}}" class="card-img-top" alt="..." class="zoom" style="margin-right: 4px;">
+             <b>{{blog.category}}</b></button>
+          <div class="card-body">
+            <h3 class="card-title">{{blog.name}}</h3>
+            <p class="card-text" class="text-muted">{{blog.profilename}} -- {{blog.date | date }}</p>
+          </div>
         </div>
-      </div>
     </div>
   </div>
 </div>
 
-<!-- 
-<section class="latest-articles">
-  <div class="container header " data-aos="fade-up" data-aos-anchor-placement="top-center" (click)="readart(Blogs[0]._id)">
-    <div class="right">
-      <div class="content">
-        <h1 id="title"></h1><br>
-        <p class="card-text" class="text-muted" id="des">
-        </p>
-        <br />
-        <b>
-          <p class="card-text" class="text-muted">
-            {{Blogs[0].profileName}} -- {{Blogs[0].date | date}}
-          </p>
-        </b>
-      </div>
-    </div>
-    <div class="left">
-      <img src="{{ Blogs[0].imageurl }}" class="card-img-top" alt="..." class="zoom" style="width: 106%;" />
-      <button class="btn" class="butstyli1">
-        <img src="{{Blogs[0].categoryicon}}" style="margin-right: 4px;" alt="">
-        <b>{{Blogs[0].category}}</b>
-      </button>
-    </div>
-  </div>
-</section> -->
