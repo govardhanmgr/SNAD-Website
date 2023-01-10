@@ -6,7 +6,7 @@
   background-position: top;
 }
 
-h1 {
+.hero {
   padding-top: 10%;
   font-size: 40pt;
 }
@@ -21,7 +21,7 @@ h1 {
   border-bottom: 0ch;
   border-left: 0ch;
   border-right: 0ch;
-  margin-left: 200px;
+  /* margin-left: 200px; */
   
 }
 .fa {
@@ -120,3 +120,4 @@ a {
   }
   
 }
+
