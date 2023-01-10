@@ -64,68 +64,81 @@
 </div>
 <br /><br /><br />
 
-<div class="container flex-wrap">
-  <div class="row">
-    <div class="col-lg-6">
-      <a href="./profile">
-        <div class="card mb-3" style="width: fit-content">
+
+
+
+<div class="row justify-content-center">
+  <div class="col-md-5 ">
+    <div class="card profilebig">
+      <div class="row">
+        <div class="col-md-12">
           <div class="row">
-            <div class="col-md-4">
-              <img src="{{ Readarticles.profile.imageurlbig }}" alt="..."
-                style="width: 200px; border-radius: 1055px; margin-right: 500px" />
+            <div class="col-md-4" style="justify-content: center;">
+              <img src="{{ Readarticles.profile.imageurlbig }}" alt="profile image"
+                class="rounded-circle profile-image">
             </div>
             <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">
-                  {{ Readarticles.profile.authorname }}
-                </h5>
-                <h5 class="card-title" style="color: rgb(34, 75, 209)">
-                  {{ Readarticles.profile.position }}
-                </h5>
-                <br />
-                <p class="card-text" style="font-family: sans-serif">
-                  {{ Readarticles.profile.teamsummary }}
-                </p>
 
-                <div class="networks">
-                  <meta name="viewport" content="width=device-width, initial-scale=1" />
-                  <link rel="stylesheet"
-                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-                  <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
-                  <a href="https://twitter.com/" class="fa fa-twitter"></a>
-                  <a href="https://www.linkedin.com/" class="fa fa-linkedin"></a>
+
+
+              <div class="row">
+                <div class="col-md-6">
+                  <h4 class="card-title"><b>{{ Readarticles.profile.authorname }}</b></h4>
+                  <h5 class="card-title" style="color:blue"><b> {{ Readarticles.profile.position }}</b></h5>
+                </div>
+                <div class="col-md-6">
+                  <div class="names">
+                    <div class="networks">
+                      <meta name="viewport" content="width=device-width, initial-scale=1">
+                      <link rel="stylesheet"
+                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                      <a href="#" class="fa fa-facebook"></a>
+                      <a href="#" class="fa fa-twitter"></a>
+                      <a href="#" class="fa fa-linkedin"></a>
+                    </div>
+                  </div>
                 </div>
               </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="names">
+                    <p class="card-text" style="font-family: sans-serif; line-break: 1px;">
+                      {{ Readarticles.profile.teamsummary }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
-      </a>
+      </div>
     </div>
   </div>
 </div>
-  <br /><br /><br />
-  <hr />
-  <br />
-  <br />
+<br /><br /><br />
+<hr />
+<br />
+<br />
 
-  <div class="container">
-    <div class="row">
-      <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xxl-6">
-        <h1 class="h1left">Latest articles</h1>
-      </div>
-      <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xxl-6">
-        <div class="bg">
-          <div class="btn-group" role="group" aria-label="Basic radio toggle button group" class="b1">
-            <a [routerLink]="['/blog']" routerLinkActive="router-link-active">
-              <button class="btn btdes" type="button">
-                <b>Browse all articles</b>
-              </button>
-            </a>
-          </div>
-        </div>
-      </div>
+<div class="container">
+  <div class="row">
+    <div class="col-xxl-6">
+      <h1 class="h1left">Latest articles</h1>
     </div>
-    <br />
-
-    <app-browsearticles></app-browsearticles>
+    <div class="col-xxl-6">
+      
+        <div class="btn-group" role="group" aria-label="Basic radio toggle button group" class="b1">
+          <a [routerLink]="['/blog']" routerLinkActive="router-link-active">
+            <button class="btn btdes" type="button">
+              <b>Browse all articles</b>
+            </button>
+          </a>
+        </div>
+    </div>
   </div>
+  <br />
+
+<app-browsearticles></app-browsearticles>
+</div>

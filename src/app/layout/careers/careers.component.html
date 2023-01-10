@@ -1,16 +1,5 @@
 <!--head image-->
 
-<!-- <section class="header">
-  <div class="img-background">
-    <div class="text-content">
-      <div class="contact">
-        <div class="smalldash"></div>
-        <div class="header-text">INSPIRED TO HELP</div>
-      </div>
-      <p data-aos="fade-up" id="app"></p>
-    </div>
-  </div>
-</section> -->
 <app-heroimg [heros]="heroimage"></app-heroimg>
 
 <!--Scroll up button-->
@@ -23,420 +12,192 @@
 </button>
 
 <!--Core Values-->
-
-<div class="container core-value">
-  <h2 data-aos="fade-up" style="text-align: center;"><b>{{corevalues.title}}</b></h2>
-  <br>
-  <h5>
-    <p style="text-align: center;" data-aos="fade-up">{{corevalues['detailed-text']}}</p>
-  </h5>
-
-  <div class="row row-cols-1 row-cols-md-3 g-4 core-value-column" data-aos="fade-up">
-
-    <!--column-->
-    <div class="col" *ngFor="let core of corevalues.refdata ">
+<div class="section core-values">
+  <div class="container core-values-header">
+    <h1>{{corevalues.title}}</h1>
+    <p>{{corevalues['detailed-text']}}</p>
+  </div>
+</div>
+<div class="container core-value-cards-container">
+  <div class="row row-cols-1 row-cols-lg-3 row-cols-md-2 g-4 ">
+    <div class="col core-column" *ngFor="let core of corevalues.refdata">
       <div class="card core-value-card">
-        <img src="{{core.iconimage.url}}" class="card-img-top" alt="...">
-        <div class="card-body core-value-text">
-          <h4 class="card-title"><b>{{core.shorttext}}</b></h4>
-          <p class="card-text">{{core.description}}</p>
+        <img src="{{core.iconimage.url}}" class="card-img-top" alt="core-values image">
+        <div class="card-body core-value-body">
+          <h2 class="core-value-body-header">{{core.shorttext}}</h2>
+          <p>{{core.description}}</p>
         </div>
       </div>
     </div>
+  </div>
+</div>
 
-    <!--column-->
-    <!-- <div class="col">
-      <div class="card core-value-card">
-        <img
-          src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4f2ca4cd117_image-2-services-startup-x-template.svg"
-          class="card-img-top" alt="...">
-        <div class="card-body core-value-text">
-          <h4 class="card-title"><b>Portfolio diversification</b></h4>
-          <p class="card-text">Lorem ipsum dolor sit amet, dol si consectetur adipiscing elit. Sit odio olo erat donec
-            sed non. Lectus eu vel</p>
-        </div>
-      </div> 
-    </div> -->
+<!--Company perks-->
 
-    <!--column-->
-    <!-- <div class="col">
-      <div class="card core-value-card">
-        <img
-          src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b472394cd080_image-3-services-startup-x-template.svg"
-          class="card-img-top" alt="...">
-        <div class="card-body core-value-text">
-          <h4 class="card-title"><b>Investment strategy</b></h4>
-          <p class="card-text">Lorem ipsum dolor sit amet, dol si consectetur adipiscing elit. Sit odio olo erat donec
-            sed non. Lectus eu vel.</p>
-        </div>
-      </div>
-    </div>  -->
-
-    <!--column-->
-    <!-- <div class="col">
-      <div class="card core-value-card">
-        <img
-          src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4cf3b4cd083_image-4-services-startup-x-template.svg"
-          class="card-img-top" alt="...">
-        <div class="card-body core-value-text">
-          <h4 class="card-title"><b>Cash management</b></h4>
-          <p class="card-text">Lorem ipsum dolor sit amet, dol si consectetur adipiscing elit. Sit odio olo erat donec
-            sed non. Lectus eu vel.</p>
-        </div>
-      </div>
-    </div> -->
-
-    <!--column-->
-    <!-- <div class="col">
-      <div class="card core-value-card">
-        <img
-          src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b44e684cd085_image-5-services-startup-x-template.svg"
-          class="card-img-top" alt="...">
-        <div class="card-body core-value-text">
-          <h4 class="card-title"><b>Wealth transfer</b></h4>
-          <p class="card-text">Lorem ipsum dolor sit amet, dol si consectetur adipiscing elit. Sit odio olo erat donec
-            sed non. Lectus eu vel.</p>
-        </div>
-      </div>
-    </div> -->
-
-    <!--column-->
-    <!-- <div class="col ">
-      <div class="card core-value-card">
-        <img
-          src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b46f7a4cd084_image-6-services-startup-x-template.svg"
-          class="card-img-top" alt="...">
-        <div class="card-body core-value-text">
-          <h4 class="card-title"><b>Tax planning</b></h4>
-          <p class="card-text">Lorem ipsum dolor sit amet, dol si consectetur adipiscing elit. Sit odio olo erat donec
-            sed non. Lectus eu vel.</p>
+<div class="container company-perk">
+  <h6 class="title" style="text-align: center;">{{companyperks.title}}</h6>
+  <h2 class="subtitle" style="text-align: center;">{{companyperks['detailed-text']}}</h2>
+  <div class="row row-cols-1 row-cols-lg-2 row-cols-md-2 g-4 ">
+    <div class="col" *ngFor="let company of companyperks.refdata">
+      <div class="card mb-3 company-perk-card core-value-card">
+        <div class="row g-0">
+          <div class="col-md-3">
+            <img src={{company.iconimage.url}} class="img-fluid rounded-start" alt="Company perks image">
+          </div>
+          <div class="col-md-9">
+            <div class="card-body">
+              <h3 class="card-title company-perk-title ">{{company.shorttext}}</h3>
+              <p class="card-text">{{company.description}}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    </div> -->
+  </div>
+  <div style="text-align: center;margin: 5%;">
+    <a (click)="scroll(target)" type="button" class="btn btn-lg open-position-button"
+      data-aos="fade-up">{{companyperks['cta-name']}}</a>
+  </div>
+</div>
+
+
+<!--All Job Openings-->
+
+<div class="all-job-div" style="overflow: hidden;">
+
+  <div style="position: relative">
+    <img
+      src=" https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b443b44ccfb5_shape-2-cta-2-startup-x-template.svg"
+      class="des" />
   </div>
 
-  <!--Company perks-->
-
   <div class="container">
-    <div class="company-perk-header">
-      <b>
-        <h6 data-aos="fade-up" style="text-align: center;color: blue;">{{companyperks.title}}</h6>
-      </b>
-      <br>
-      <h1 data-aos="fade-up" style="text-align: center;"><b>{{companyperks['detailed-text']}}</b></h1>
-    </div>
-    <div class="row row-cols-1 row-cols-md-2 g-4 company-perk-column" data-aos="fade-up">
 
+    <div class="row all-job-row">
+      <!--col-->
+      <div class="col-md-8 left-header">
+        <div class="contact">
+          <div class="smalldash"></div>
+          <h6 class="header-text">{{one.title}}</h6>
+        </div>
+        <h2 data-aos="fade-up">{{one['detailed-text']}}</h2>
+      </div>
+      <!--col-->
+      <div class="col-md-4 right-header">
+        <a type="button" class="btn btn-lg btn-light all-job-opening-button" data-aos="fade-up">{{one['cta-name']}}</a>
+      </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 g-4 all-job-open">
+      <div class="col" *ngFor="let ones of one.refdata">
+        <div class=" mb-3 company-perk-card core-value-card all-job-open-card ">
+          <div class="row g-0">
+            <div class="col-md-3">
+              <div class="card all-job-number">{{ones.role}}</div>
+            </div>
+            <div class="col-md-9">
+              <div class="card-body">
+                <h3 class="card-title company-perk-title " style="color: #fff;">{{ones.shorttext}}</h3>
+                <p class="card-text" style="color: #fff;">{{ones.description}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="position: relative">
+    <div class="circle" data-aos="fade-up"></div>
+  </div>
+
+</div>
+
+<!--Growth-->
+
+<div class="growth-div" style="overflow: hidden;">
+  <div style="position: relative">
+    <img
+      src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4bf0e4ccfd2_shape-1-home-v3-achievements-startup-x-template.svg"
+      class="grow">
+  </div>
+  <div class="container grown">
+    <div style="text-align: center;" class="growth">
+      <h6 style="color: blue;" data-aos="fade-up" class="title">{{growth.title}}</h6>
+      <h1 data-aos="fade-up">{{growth['detailed-text']}}</h1>
+    </div>
+    <div class="row row-cols-1 row-cols-md-4 g-4" data-aos="fade-up">
       <!--column-->
-      <div class="col" *ngFor="let company of companyperks.refdata">
-        <div class="card mb-3 company-perk-card">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img
-                src={{company.iconimage.url}}
-                class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8" >
-              <div class="card-body">
-                <h5 class="card-title">{{company.shorttext}}</h5>
-                <p class="card-text">{{company.description}}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!--c0lumn-->
-      <!-- <div class="col">
-        <div class="card mb-3 company-perk-card">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img
-                src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4545d4cd0a1_icon-2-company-perks-startup-x-template.svg"
-                class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                  additional
-                  content. This content is a little bit longer.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
-      <!--c0lumn-->
-      <!-- <div class="col">
-        <div class="card mb-3 company-perk-card">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img
-                src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4a0e04cd09f_icon-3-company-perks-startup-x-template.svg"
-                class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                  additional
-                  content. This content is a little bit longer.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
-      <!--c0lumn-->
-      <!-- <div class="col">
-        <div class="card mb-3 company-perk-card">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img
-                src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b426ff4cd0a0_icon-4-company-perks-startup-x-template.svg"
-                class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                  additional
-                  content. This content is a little bit longer.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-    <div class="open-position-button">
-      <button (click)="scroll(target)" type="button" class="btn btn-lg open-position" data-aos="fade-up">{{companyperks['cta-name']}}</button>
-    </div>
-
-  </div>
-
-  <!--All Job Openings-->
-
-  <div class="all-job-div" style="overflow: hidden;">
-
-    <div style="position: relative">
-      <img
-        src=" https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b443b44ccfb5_shape-2-cta-2-startup-x-template.svg"
-        class="des" />
-    </div>
-
-    <div class="container">
-
-      <div class="row row-cols-1 row-cols-md-2 g-4 all-job-open">
-
-        <!--column-->
-        <div class="col">
-          <div class=" mb-3 all-job-opening-text">
-            <div class="contact">
-              <div class="smalldash"></div>
-              <h6 class="header-text">{{one.title}}</h6>
-            </div>
-            <h1 data-aos="fade-up all-job-header">{{one['detailed-text']}}</h1>
-          </div>
-        </div>
-
-        <!--c0lumn-->
-        <div class="col">
-          <div class=" mb-3">
-            <button type="button" class="btn btn-lg btn-light all-job-opening-button" data-aos="fade-up">{{one['cta-name']}}</button>
-          </div>
-        </div>
-
-        <!--c0lumn-->
-        <div class="col" data-aos="fade-up" *ngFor="let ones of one.refdata">
-          <div class=" mb-3 ">
-            <div class="row g-0">
-              <div class="col-md-4 all-job-number">
-                <div class="number">{{ones.role}}</div>
-              </div>
-              <div class="col-md-8">
-                <div class="card-body all-job-opening-text">
-                  <h3 class="card-title">{{ones.shorttext}}</h3>
-                  <br>
-                  <p class="card-text">{{ones.description}}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!--c0lumn-->
-        <!-- <div class="col" data-aos="fade-up">
-          <div class="mb-3 ">
-            <div class="row g-0">
-              <div class="col-md-4 all-job-number">
-                <div class=" number">2</div>
-              </div>
-              <div class="col-md-8">
-                <div class="card-body all-job-opening-text">
-                  <h3 class="card-title">Transparency</h3>
-                  <br>
-                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisci elit eque ips odio justo.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
-        <!--c0lumn-->
-        <!-- <div class="col" data-aos="fade-up">
-          <div class=" mb-3 ">
-            <div class="row g-0">
-              <div class="col-md-4 all-job-number">
-                <div class=" number">3</div>
-              </div>
-              <div class="col-md-8">
-                <div class="card-body all-job-opening-text">
-                  <h3 class="card-title">Team Work</h3>
-                  <br>
-                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisci elit eque ips odio justo.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
-        <!--c0lumn-->
-        <!-- <div class="col" data-aos="fade-up">
-          <div class=" mb-3">
-            <div class="row g-0">
-              <div class="col-md-4 all-job-number">
-                <div class=" number">4</div>
-              </div>
-              <div class="col-md-8">
-                <div class="card-body all-job-opening-text">
-                  <h3 class="card-title">Growth</h3>
-                  <br>
-                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisci elit eque ips odio justo.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
-      </div>
-    </div>
-  </div>
-
-  <!--Growth-->
-  <div class="growth-div" style="overflow: hidden;">
-
-    <div style="position: relative">
-      <img
-        src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4bf0e4ccfd2_shape-1-home-v3-achievements-startup-x-template.svg"
-        class="grow">
-    </div>
-
-    <div class="container grown">
-
-      <div style="text-align: center;" class="growth">
-        <h4 style="color: blue;" data-aos="fade-up">{{growth.title}}</h4>
-        <h1 data-aos="fade-up">{{growth['detailed-text']}}</h1>
-      </div>
-
-      <div class="row row-cols-1 row-cols-md-4 g-4" data-aos="fade-up">
-        <!--column-->
-        <div class="col " *ngFor="let impact of growth.refdata">
-          <h1 style="text-align: center;">{{impact.shorttext}}<span style="color: blue">{{impact.role}}</span></h1>
-          <div style="text-align: center;">
-            <h4>{{impact.description}}</h4>
-          </div>
-        </div>
-
-        <!--column-->
-        <!-- <div class="col ">
-          <h1 style="text-align: center;">205<span style="color: blue">M</span></h1>
-          <div style="text-align: center;">
-            <h4>Monthly active users</h4>
-          </div>
-        </div> -->
-
-        <!--column-->
-        <!-- <div class="col ">
-          <h1 style="text-align: center;">100<span style="color: blue">k</span></h1>
-          <div style="text-align: center;">
-            <h4>New users per week</h4>
-          </div>
-        </div> -->
-
-        <!--column-->
-        <!-- <div class="col ">
-          <h1 style="text-align: center;">55<span style="color:blue">%</span></h1>
-          <div style="text-align: center;">
-            <h4>Growth year-over-year </h4>
-          </div>
-        </div> -->
-
-      </div>
-    </div>
-  </div>
-
-  <!-- OPEN POSITIONS -->
-
-  <div #target>
-    <div class="container">
-      <div class="row row-cols-1 row-cols-md-2 g-4 open-position-header">
-
-        <!--column-->
-        <div class="col" data-aos="fade-up">
-          <div class=" mb-3 ">
-            <h1 class="openpos"><b>{{companyperks['cta-name']}}</b></h1>
-          </div>
-        </div>
-
-        <!--c0lumn-->
-        <div class="col">
-          <div class="card button-card " style="width: fit-content;">
-            <div class="multiple-button">
-              <div class="d-flex flex-row flex-wrap " style="gap:10px;">
-                <button type="button" class="btn buttons all-button" (click)="jobFilter()">All</button>
-                <div *ngFor="let cat of Jobcategory ">
-                  <button type="button" class="btn buttons all-button" (click)="jobFilter(cat)">{{cat}}</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="row open-position-div">
-      <div class="col-sm-6 col-md-6 d-flex flex-row  " data-aos="fade-up" *ngFor="let openpos of filteredJobOpening">
-        <div>
-          <div class="card m-2 open-positions-Card filterDiv(openpos.category)" (click)="jobReq(openpos._id)">
-            <div class="card-body open-positions-body">
-              <h4 class="card-title">{{openpos.name}}</h4>
-              <br>
-              <p class="card-text">{{openpos['job-description-excerpt']}}</p>
-              <br>
-              <a type="button" class="btn open-positions-button"><i class="bi bi-briefcase" style="color: green;"></i>
-                {{openpos.category}}</a>
-              <a type="button" class="btn open-positions-button open-position-button-gap"><i class="bi bi-geo-alt"
-                  style="color: green;"></i> {{openpos['job-location']}}</a>
-            </div>
-          </div>
+      <div class="col " *ngFor="let impact of growth.refdata">
+        <h1 style="text-align: center;">{{impact.shorttext}}<span style="color: blue">{{impact.role}}</span></h1>
+        <div style="text-align: center;">
+          <p><b>{{impact.description}}</b></p>
         </div>
       </div>
     </div>
   </div>
+</div>
 
+<!--target-->
 
-  <!--Find the right position-->
+<div #target></div>
+<br><br>
 
-  <div class="get-in-touch" data-aos="fade-up">
-    <h4 style="text-align: center;"><b>{{position.title}}</b></h4>
-    <br>
-    <p style="text-align: center;" class="position">{{position['detailed-text']}}</p>
-    <br>
-    <a href="/contactus" type="button" class="btn btn-lg get-in-touch-button">{{position['cta-name']}}</a>
+<!-- OPEN POSITIONS -->
+
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-2 g-4 open-position-header">
+
+    <!--column-->
+    <div class="col" data-aos="fade-up">
+      <div class=" mb-3 ">
+        <h2 class="openpos"><b>{{companyperks['cta-name']}}</b></h2>
+      </div>
+    </div>
+
+    <!--c0lumn-->
+    <div class="col">
+      <div class="card button-card " style="width: fit-content;">
+        <div class="multiple-button">
+          <div class="d-flex flex-row flex-wrap " style="gap:10px;">
+            <button type="button" class="btn buttons all-button" (click)="jobFilter()">All</button>
+            <div *ngFor="let cat of Jobcategory ">
+              <button type="button" class="btn buttons all-button" (click)="jobFilter(cat)">{{cat}}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
+</div>
+
+
+<div class="container">
+  <div class="row open-position-div">
+    <div class="col-sm-6 col-md-6 d-flex flex-row " data-aos="fade-up" *ngFor="let openpos of filteredJobOpening">
+      <div class="card m-2 core-value-card open-positions-Card filterDiv(openpos.category)"
+        (click)="jobReq(openpos._id)">
+        <div class="card-body open-positions-body ">
+          <h3 class="card-title company-perk-title ">{{openpos.name}}</h3>
+          <p class="card-text">{{openpos['job-description-excerpt']}}</p>
+          <a type="button" class="btn open-positions-button"><i class="bi bi-briefcase" style="color: green;"></i>
+            {{openpos.category}}</a>
+          <a type="button" class="btn open-positions-button open-position-button-gap"><i class="bi bi-geo-alt"
+              style="color: green;"></i> {{openpos['job-location']}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Find the right position -->
+
+<div class="get-in-touch" data-aos="fade-up">
+  <h4 style="text-align: center;"><b>{{position.title}}</b></h4>
+  <br>
+  <p style="text-align: center;" class="position">{{position['detailed-text']}}</p>
+  <br>
+  <a href="/contactus" type="button" class="btn btn-lg get-in-touch-button">{{position['cta-name']}}</a>
+</div>
