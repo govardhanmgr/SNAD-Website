@@ -1,7 +1,7 @@
 <div class="container-fluid primary">
   <div class="row justify-content-center">
     <div class="col-xxl-7">
-      <h1 class="text-center" id="title"></h1>
+      <h1 class="text-center hero" id="title"></h1>
     </div>
   </div>
   <br />
@@ -20,14 +20,14 @@
 
 <div class="container" style="margin-bottom: 50px">
   <div class="row justify-content-center">
-    <div class="col-sm-8">
+    <div class="col-sm-6" style="float: left;">
       <a href="./profile">
-        <div class="card mb-3 profilealign" style="max-width: 300px">
+        <div class="card  profilealign" style="max-width: 300px">
           <div class="row g-0">
-            <div class="col-md-4">
-              <img src="{{ Readarticles.profile.smallimageurl }}" alt="..." style="width: 85px; border-radius: 45px" />
+            <div class="col-4">
+              <img src="{{ Readarticles.profile.smallimageurl }}" alt="..." style="width: 75px; border-radius: 45px" />
             </div>
-            <div class="col-md-8">
+            <div class="col-8">
               <div class="card-body">
                 <h5 class="card-title">
                   {{ Readarticles.profile.authorname }}
@@ -44,11 +44,11 @@
       </a>
     </div>
 
-    <div class="col-sm-4 justify-content-center">
+    <div class="col-sm-2 justify-content-center">
       <a href="/businessarticles">
-        <button type="button" class="btn">
-          <i class="bi bi-briefcase" style="padding-right: 10px"></i><span
-            style="font-family: sans-serif">Business</span>
+        <button type="button" class="btn" style="width: max-content; border-style: solid; border-width: 1px; 
+        border-color: rgb(43, 40, 40); padding: 10px 30px; border-radius: 35px; margin-top: 10%;">
+            <b>Business</b>
         </button>
       </a>
     </div>
@@ -124,18 +124,13 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-xxl-6">
-      <h1 class="h1left">Latest articles</h1>
+    <div class="col-sm-6" >
+      <h1 style="float: left; font-weight: bolder;">Latest articles</h1>
     </div>
-    <div class="col-xxl-6">
+    <div class="col-sm-6 " >
       
-        <div class="btn-group" role="group" aria-label="Basic radio toggle button group" class="b1">
-          <a [routerLink]="['/blog']" routerLinkActive="router-link-active">
-            <button class="btn btdes" type="button">
-              <b>Browse all articles</b>
-            </button>
-          </a>
-        </div>
+      <button type="button" class="btn  btn-lg " style="float: right; background-color: #2f5acd; color: white;
+       padding: 20px 60px; border-radius: 35px; font-weight: bolder;" >Browse all articles</button>
     </div>
     <div class="i2" >
       <div class="row row-cols-1 row-cols-md-2 g-4" >
@@ -154,6 +149,5 @@
       </div>
     </div>
   </div>
+</div>
 
-
-<!-- <app-browsearticles [blog]="Blogs"></app-browsearticles> -->
