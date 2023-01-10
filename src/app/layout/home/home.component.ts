@@ -4,7 +4,7 @@ import { WebflowserviceService } from 'src/app/services/webflowservice.service';
 import { GetintouchComponent } from 'src/app/shared/getintouch/getintouch.component';
 
 import * as Aos from 'aos';
-import { Router } from '@angular/router';
+import { Params, Router } from '@angular/router';
 import { SibComService } from 'src/app/services/sib-com.service';
 
 @Component({
@@ -28,7 +28,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   getintouch = {} as any;
   joinourteam = {} as any;
   testimonials = {} as any;
-  
+  latestarticle=[] as any;
+  route: any;
+  item!: string;
 
   constructor(
     private router: Router,
@@ -43,9 +45,18 @@ export class HomeComponent implements OnInit, OnDestroy {
       duration: 1200,
     });
     this.casestudies();
-
+    this. getblogs();
     this.getStaticdata();
     
+  }
+  getprofilebyid() {
+    this.route.paramMap.subscribe((params: Params) => {
+      console.log(params['params'].itemid);
+      this.item = params['params'].itemid;
+    
+      //   this.webflow.getData().subscribe( data => {
+      // })
+    });
   }
 
   casestudies() {
@@ -60,6 +71,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         },
       });
   }
+    
 
   
   // }
@@ -73,11 +85,6 @@ export class HomeComponent implements OnInit, OnDestroy {
         next: async (response: any) => {
           // console.log(response);
           let data = response.data;
-
-
-
-
-
           console.log(data);
           let hero = data.filter((el: { page: string; sections: string; }) => el.page === "4d1d25b65780e9a73fe777f3431ab3e2" && el.sections === "1af9e7b1f68df63d6d09988bd947b2f8");
           this.heroimage = hero[0]
@@ -160,6 +167,55 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
 
   }
+
+  blogcategory(itemid: string, ref: any) {
+    this.subscription = this.webflow
+      .getData(`blogcategoryitembyid/${itemid}`)
+      .subscribe({
+        next: (res: any) => {
+          console.log(res);
+          ref.category = res.data.name;
+          ref.categoryicon = res.data['blog-category-icon'].url
+          
+        },
+        error: (reason: any) => console.log(reason),
+      });
+  }
+
+  getblogs() {
+    this.subscription = this.webflow.getData("allitems/6375d4747684b45e464ccf77").subscribe({
+      next: (response: any) => {
+        console.log(response);
+        let data = response.data;
+        data.forEach((element:any)=>{
+          element.imageurl =element["post-main-image"].url
+          element.postauthor=element["post-author"] 
+          element.icon = element['blog-category-icon']
+          // let itemid=element['post-author']
+          // this.getAuthorDetails(itemid, element);
+          let id=Object(element)["post-category-2"] as string
+          this.blogcategory(id,element)
+          element.date = element['updated-on']
+        })
+        // let latest=data.filter((el:{postauthor:string; })=>el.postauthor === this.item )
+        //  console.log(latest);
+        let count=0;
+        for(let i=0;i <= data.length;i++){
+          if(count < 3 ){
+            count++;
+            this.latestarticle.push(data[i]);
+          }
+          
+        }
+        console.log(this.latestarticle);
+        
+      },
+      error: (reason: any) => {
+        console.error(reason);
+      }
+    });
+  }
+
 
 
   // async getReferenceData(itemId: string, res?: any) {
