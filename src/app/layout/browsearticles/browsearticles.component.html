@@ -1,21 +1,22 @@
 
   <div class="i2" >
-    <div class="row row-cols-1 row-cols-md-2 g-4" *ngFor="let blogs of blog">
-      <div class="col" *ngIf="blogs;else condition">
-        <a href="{{blogs.imageurl}}">
-          <div class="card" >
-            <img src="assets/bt4.jpeg" class="card-img-top" alt="..." class="zoom">
-            <button class="btn" class="butstyl"> <b>{{blogs.category}}</b></button>
+    <div class="row row-cols-1 row-cols-md-2 g-4" >
+      <div class="col"  *ngFor="let blogs of blog">
+          <div class="card" *ngIf="blogs;else condition">
+            <img src="{{blogs.imageurl}}">
+            <button class="btn" class="butstyl">
+              <img src="{{blogs.categoryicon}}" class="card-img-top" alt="..." class="zoom">
+               <b>{{blogs.category}}</b></button>
 
             <div class="card-body">
               <h3 class="card-title">{{blogs.name}}</h3>
               <br>
               <p class="card-text" class="text-muted">{{blogs.profileName}} -- {{blogs.date | date }}</p>
             </div>
-            
+      
           </div>
           
-        </a>
+      
       </div>
       <br>
       <ng-template #condition>
