@@ -22,11 +22,15 @@ h5 {
   border-radius: 30px;
   background-color: transparent;
   padding: 10px 28px;
+  outline: none;
+  border: 1px solid black;
+  
 }
 
 .readbtn:hover {
   color: #0981BD;
   border-color: #0981BD;
+  transform: translate(0, -8px);
 }
 
 .styleh5 {
@@ -36,8 +40,9 @@ h5 {
 
 /* OURSTORY*/
 .our-story{
-margin-top: 6%;
+margin-top: 10%;
 padding: 0% 10%;
+
 }
 
 h6 {
@@ -47,48 +52,84 @@ h6 {
 .ourstory {
   background-color: #edf1fd;
   height: 20%;
+  margin-top: 8%;
 }
 
 .ourstorytext {
   text-align: left;
   margin-left: 2%;
+  padding-left:1%;
+  margin-top: 8%;
+  margin-bottom: 9%;
+  
 }
+
+  
 
 .ourstoryimg {
   border-radius: 5%;
+  margin-left:12%;
+  margin-top: 10%;
+  margin-bottom: 5%;
+  /* margin-right: 5%; */
 }
 
 .ourmissiontext {
   text-align: left;
   margin-right: 5%;
+  margin-top:15%;
+  
+}
+.ourmissiontext1{
+  text-align: left;
+  margin-right: 5%;
+  
+}
+.ourmissiontext2{
+  text-align: left;
+  margin-right: 5%;
+  
 }
 
 .ourmissionimg {
   border-radius: 5%;
-  margin-left: 5%;
+  margin-left: 6%;
+  margin-bottom: 20%;
+  object-position: left top;
+  margin-top: -50px;
+  
 }
 
 /* OURTEAM */
 
+.ourteam{
+ margin-left: 10%;
+ margin-right:10% ;
+ padding: 0% 22%;
+
+}
+
 .join-our-team-bt {
   display: flex;
   justify-content: center;
-  
+  padding: 3% 3%;
+
 }
 
 .join-our-team-button {
- 
-
    padding: 20px 40px ;
    border-radius: 40px;
    background-color: #2f5acd;
    color: white;
    border-color:transparent;
+   text-decoration: none;
 }
 
 .join-our-team-button:hover {
-  background-color: black;
-  color: blue;
+  background-color:rgb(40, 39, 39);
+   color: blue;
+   transform: translate(0, -8px);
+
 }
 
 .value {
@@ -123,9 +164,11 @@ h6 {
 }
 
 .jointeambtn:hover {
-  background-color: black;
+  background-color:rgb(40, 39, 39);;
   color: blue;
   border-radius: 30px;
+  transform: translate(0, -8px);
+
 }
 
 .cores {
@@ -135,6 +178,7 @@ h6 {
   padding-bottom: 47px;
   border-radius: 30px;
   overflow: hidden;
+  
 }
 
 .cards {
@@ -146,6 +190,8 @@ h6 {
 .ourvalue {
   background-color: #edf1fd;
   height: 10%;
+  margin-top:5% ;
+  margin-bottom: 15%;
 }
 
 .button {
@@ -163,9 +209,12 @@ h6 {
   background-color: #2f5acd;
   height: 8%;
   overflow: hidden;
+  padding: 3% 22%;
+  margin-top: 9%;
+  margin-bottom: 5%;
 }
 
-.circle {
+/* .circle {
   background: #0981BD;
   border-radius: 50%;
   height: 13em;
@@ -173,27 +222,45 @@ h6 {
   opacity: 10;
   margin-left: -100px;
   margin-top: -100px;
-}
+} */
 
 .impact {
   overflow: hidden;
 }
 
-.crc {
-  float: right;
-  margin-right: -0px;
-  transform: translate3d(0px, 0px, 0px) scale3d (1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ('360deg')skew(0deg, 0deg);
-  transform-style: preserve-3d;
-  opacity: 1;
-  will-change: transform;
-}
 
-.circle-lg {
-  transform: translate3d(0px, 0px, 0px) scale3d (1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ('360deg')skew(0deg, 0deg);
-  transform-style: preserve-3d;
-  opacity: 1;
-  will-change: transform;
+  
+.circle {
+
+  background: #0981BD;
+  border-radius: 50%;
+  height: 16em;
+  width: 16em;
+  opacity: 10;
+  margin-left: -60%;
+  margin-bottom: -60px;
+  animation: rotation 30s infinite linear;
+  margin-top: 5%;
+ 
+
 }
+ /* .crc {
+
+  background: #0981BD;
+  border-radius: 50%;
+  height: 16em;
+  width: 16em;
+  opacity: 10;
+  margin-right: -60%;
+  margin-bottom: -80px;
+  animation: rotation 30s infinite linear;
+  margin-top: 5%;
+}  */
+
+
+
+
+
 
 .des {
   position: absolute;
@@ -202,7 +269,55 @@ h6 {
   width: 20em;
   opacity: 10;
   float: right;
-  right: -8%;
+  right: -50%;
+  margin-top: -14%;
+  animation: rotation 70s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.light{
+  padding: 20px 40px ;
+   border-radius: 40px;
+}
+.light:hover{
+  background-color: #0981BD;
+  transform: translate(0, -8px);
+  border-color: #0981BD;
+}
+.contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  -webkit-box-align: center;
+
+}
+.smalldash {
+  width: 100%;
+  max-width: 60px;
+  min-height: 2px;
+  margin-right: 10px;
+  background-color: rgb(59, 62, 244);
+  
+}
+
+.dess {
+  position: absolute;
+  border-radius: 50%;
+  height: 20em;
+  width: 20em;
+  opacity: 10;
+  float: left;
+  left: -60%;
   margin-top: -22%;
   animation: rotation 70s infinite linear;
 }

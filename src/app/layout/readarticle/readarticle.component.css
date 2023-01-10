@@ -15,32 +15,36 @@ h1 {
   border-radius: 35px;
 }
 
-.card {
+.profilealign {
   border-radius: 35px;
   border-top: 0ch;
   border-bottom: 0ch;
   border-left: 0ch;
   border-right: 0ch;
   margin-left: 200px;
+  
 }
-
-a:hover,
-a:focus {
+.fa {
+  padding: 10px;
+  font-size: 10px;
+  width: 30px;
+  text-align:center;
   text-decoration: none;
-}
-
-a {
-  color: black;
-  text-decoration: none;
+  border-radius: 50%;
+  margin-left: 3%;
+  }
+  
+  .fa:hover {
+    opacity: 0.7;
 }
 
 .fa-facebook {
-  background: #3b5998;
+  background: #3B5998;
   color: white;
 }
 
 .fa-twitter {
-  background: #55acee;
+  background: #55ACEE;
   color: white;
 }
 
@@ -48,47 +52,50 @@ a {
   background: #007bb5;
   color: white;
 }
-
-.networks {
-  text-align: right;
-  font-size: 8pt;
-  margin-top: 20px;
-  margin-right: 20px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-bottom: 100px;
+.networks{
+     font-size: 8pt;
+     margin-top: 1px;
+     margin-right: 2px;
+     top:0;
+     right:0;
 }
-
-.fa {
-  padding: 10px;
-  font-size: 10px;
-  width: 30px;
-  text-align: center;
+a:hover,
+a:focus,.profilebig:hover,.profilebig:focus{
+  text-decoration:  #454eda;
+  /* color: #454eda; */
+  border-color: #454eda;
+}
+h4:hover,h4:focus{
+  text-decoration:  #454eda;
+  color: #454eda; 
+ 
+}
+a {
+  color: black;
   text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
-  margin-right: 15px;
-}
-
-.fa:hover {
-  opacity: 0.7;
 }
 
 
+.profilebig{
+  
+  
+  padding: 9% 9%;
+  border-radius: 30px;
+  width: 100%;
+  justify-content: center;
+ }
 
-.btdes {
-  border-radius: 10px;
-  color:white;
-  border-color: whitesmoke;
-  background-color: #454eda;
-  text-align: center;
-  width: 200px;
-  margin-top: 100px;
-  padding: 20px;
-  margin-left: 410px;
-  border-radius: 35px;
-} 
+.profile-image{
+  width: 100%;
+  height: 100%;
+  min-width: auto;
+  min-height: auto;
+ 
+  
+}
+.names{
+  padding-top:6% ;
+}
 
 
 @media only screen and (max-width: 600px) {

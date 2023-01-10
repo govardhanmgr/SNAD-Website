@@ -56,9 +56,9 @@
   margin-bottom: 4px;
 }
 .inputs input {
-  font-size: 14px;
-  height: 40px;
-  border: 1px solid #ced4da;
+  font-size: 12px;
+  height: 70px;
+  border: 1px solid #ced0d2;
 }
 .inputs input:focus {
   box-shadow: none;
@@ -72,9 +72,9 @@
   margin-bottom: 4px;
 }
 .inputs textarea {
-  font-size: 14px;
-  height: 100px;
-  border: 2px solid #ced4da;
+  font-size: 12px;
+  height: 150px;
+  border: 1px solid #ced0d2;
   resize: none;
 }
 
@@ -124,14 +124,14 @@ input,
 input::-webkit-input-placeholder {
   font-size: 1.1rem;
   color: #424040;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 textarea,
 ::-webkit-input-placeholder {
   font-size: 1.1rem;
   color: #424040;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 h1 {
@@ -159,6 +159,10 @@ h1 {
     font-weight: 600;
     margin-top: 1rem;
     margin-bottom: 2rem;
+  }
+
+  .contactnum {
+    font-size: 15px;
   }
 }
 

@@ -1,62 +1,7 @@
-<div class="container1">
-  <div class="slide-container active">
-    <div class="slide">
-      <div class="content">
-        <h3>01.website layout</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, labore.
-          Minus quasi ea repellendus ex quos sint earum atque, reiciendis sequi
-          hic quae quibusdam numquam nihil error accusamus ipsa ad!
-        </p>
-        <a href="#" class="btn">Learn more</a>
-      </div>
-      <div class="image">
-        <img
-          src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4fce84ccff7_image-careers-testimonials-startup-x-template-p-800.jpeg"
-          alt=""
-        />
-      </div>
-    </div>
-  </div>
-  <div class="slide-container">
-    <div class="slide">
-      <div class="content">
-        <h3>02.website design</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, labore.
-          Minus quasi ea repellendus ex quos sint earum atque, reiciendis sequi
-          hic quae quibusdam numquam nihil error accusamus ipsa ad!
-        </p>
-        <a href="#" class="btn">Learn more</a>
-      </div>
-      <div class="image">
-        <img
-          src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4fce84ccff7_image-careers-testimonials-startup-x-template-p-800.jpeg"
-          alt=""
-        />
-      </div>
-    </div>
-  </div>
-  <div class="slide-container">
-    <div class="slide">
-      <div class="content">
-        <h3>03.responsive design</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, labore.
-          Minus quasi ea repellendus ex quos sint earum atque, reiciendis sequi
-          hic quae quibusdam numquam nihil error accusamus ipsa ad!
-        </p>
-        <a href="#" class="btn">Learn more</a>
-      </div>
-      <div class="image">
-        <img
-          src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4fce84ccff7_image-careers-testimonials-startup-x-template-p-800.jpeg"
-          alt=""
-        />
-      </div>
-    </div>
-  </div>
-
-  <div id="prev1" (click)="prev()"><</div>
-  <div id="next1" (click)="next()">></div>
-</div>
+<div>Some tags before</div>
+<owl-carousel-o [options]="customOptions">
+  <ng-template carouselSlide>Slide 1</ng-template>  
+  <ng-template carouselSlide>Slide 2</ng-template>  
+  <ng-template carouselSlide>Slide 3</ng-template>  
+</owl-carousel-o>
+<div>Some tags after</div>

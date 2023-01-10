@@ -84,7 +84,8 @@
 .container1 #prev1,
 .container1 #next1 {
   position: absolute;
-  top: 480%;
+  margin-top: -250px;
+
   transform: translateY(-50%);
   color: #fff;
   background: #333;
