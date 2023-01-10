@@ -1,4 +1,4 @@
-<app-heroimg [heros]="heroimg"></app-heroimg>
+<!-- <app-heroimg [heros]="heroimg"></app-heroimg> -->
 
 <div class="" data-aos="fade-up">
   <div class="our-story">
@@ -13,17 +13,18 @@
   <div style="text-align:center; " data-aos="fade-up">
     <button type="button" (click)="scroll(target)" class="readbtn">{{static['cta-name']}}</button>
   </div>
-  <br><br>
+  
 
   <!-- ourstory -->
 
   <div class="ourstory" #target>
-    
-    <div class="row ourstorytext">
-      
+
+    <div class="row ourstory-text">
       <div class="col-md-6" data-aos="fade-up">
-        <div class="smalldash1"></div>
-        <h6 style="margin-left:10" class="ourstorytext" style="color: blue;">{{static.title}}</h6>
+        <div class="contact">
+          <div class="smalldash"></div>
+          <h6 style="margin-left:10" class="ourstorytext" style="color: blue;">{{static.title}}</h6>
+        </div>
         <h1 class="ourstorytext">{{static.subtitle}}</h1>
         <p class="ourstorytext">{{static['detailed-text']}}</p>
       </div>
@@ -41,18 +42,10 @@
 
       </div>
       <div class="col-md-6" data-aos="fade-up">
-        <div class="smalldash">
-        <!-- #c
-        style="
-          width: 100%;
-          max-width: 60px;
-          min-height: 2px;
-          margin-right: 25px;
-          background-color:blue;
-        
-        " -->
-      </div>
-        <h6 class="ourmissiontext" style="color: blue;">{{ourmissionv.title}}</h6>
+        <div class="contact">
+          <div class="smalldash"></div>
+          <h6 class="ourmissiontext" style="color: blue;">{{ourmissionv.title}}</h6>
+        </div>
         <h1 class="ourmissiontext1">{{ourmissionv.subtitle}}</h1>
         <p class="ourmissiontext2">{{ourmissionv['detailed-text']}}</p>
       </div>
@@ -82,11 +75,9 @@
     </div>
   </div>
   <br><br>
-  <div class="join-our-team-bt">
-    <a  href="/careers" class="join-our-team-button">{{ourteam['cta-name']}}</a>
+  <div class="join-our-team-bt" data-aos="fade-up">
+    <a href="/careers" class="join-our-team-button">{{ourteam['cta-name']}}</a>
   </div>
-
-  
 
   <!-- our values -->
 
@@ -98,14 +89,16 @@
         <div class="col ">
           <div class=" mb-3 ">
             <div class="row g-0 " data-aos="fade-up">
-              <div class="smalldash2"></div>
-              <h6>{{ourvalue.title}}</h6>
+              <div class="contact">
+                <div class="smalldash"></div>
+                <h6>{{ourvalue.title}}</h6>
+              </div>
               <h2 style="text-align:left">{{ourvalue['detailed-text']}}</h2>
             </div>
           </div>
         </div>
-
         <!--column-->
+        <!--join our team button -->
         <div class="col " data-aos="fade-up">
           <div class="mb-3" style="max-width: 650px;">
             <a href="/careers" type="button" class="button jointeambtn "
@@ -114,13 +107,13 @@
         </div>
 
         <!--column-->
+       
         <div class="col " *ngFor="let our of ourvalue.refdata">
           <div class="card mb-3 cores" data-aos="fade-up">
+            
             <div class="row g-0 ">
               <div class="col-md-4">
-                <img
-                  src="{{our.iconimage.url}}"
-                  class="img-fluid rounded-start" alt="...">
+                <img src="{{our.iconimage.url}}" class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-8 ">
                 <div class="card-body">
@@ -131,106 +124,6 @@
             </div>
           </div>
         </div>
-
-        <!--c0lumn-->
-        <!-- <div class="col ">
-          <div class="card mb-3 cores" data-aos="fade-up">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img
-                  src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4545d4cd0a1_icon-2-company-perks-startup-x-template.svg"
-                  class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
-        <!--column-->
-        <!-- <div class="col ">
-          <div class="card mb-3 cores" data-aos="fade-up">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img
-                  src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4a0e04cd09f_icon-3-company-perks-startup-x-template.svg"
-                  class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
-        <!--c0lumn-->
-        <!-- <div class="col">
-          <div class="card mb-3 cores" data-aos="fade-up">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img
-                  src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b426ff4cd0a0_icon-4-company-perks-startup-x-template.svg"
-                  class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
-        <!--column-->
-        <!-- <div class="col">
-          <div class="card mb-3 cores" data-aos="fade-up">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img
-                  src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4bb554cd09e_icon-1-company-perks-startup-x-template.svg"
-                  class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
-        <!--c0lumn-->
-        <!-- <div class="col">
-          <div class="card mb-3 cores" data-aos="fade-up">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img
-                  src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b4545d4cd0a1_icon-2-company-perks-startup-x-template.svg"
-                  class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                    additional content. This content is a little bit longer.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
       </div>
     </div>
   </div>
@@ -240,23 +133,57 @@
 
 <!-- impactful -->
 
-<app-impactfullnumbers [numbers]="impact"></app-impactfullnumbers>
+<!-- <app-impactfullnumbers [numbers]="impact"></app-impactfullnumbers> -->
 
+<div class="row">
+  <div style="text-align: center;">
+       <h1>{{impact.title}}</h1><br>
+  </div>
+            <!-- <div class="col-lg-3 col-md-4 mb-4" *ngFor="let number of impact.refdata">
+             <h1>{{impact.shorttext}}{{impact.role}}</h1>
+                <div style="text-align: center;">
+                  <h4>{{impact.description}}</h4>
+                </div>
+            </div> -->
+  <div class="col-lg-3 col-md-4 mb-4" *ngFor="let imp of impact.refdata">
+      <h1>{{imp.shorttext}}<span style="color: blue">{{imp.role}}</span></h1>
+         <div style="text-align: center;">
+            <h4>{{imp.description}}</h4>
+         </div>
+  </div>
+    <!-- <div class="col-lg-3 col-md-4 mb-4">
+       <h1>100<span style="color: blue">k</span></h1>
+            <div style="text-align: center;">
+                 <h4>New users per week</h4>
+            </div>
+    </div> -->
+     <!-- <div class="col-lg-3 col-md-4 mb-4">
+        <h1>55<span style="color:blue">%</span></h1>
+          <div style="text-align: center;">
+            <h4>Growth year-over-year </h4>
+          </div>
+      </div> -->
+</div>
+
+      
 <!-- get in touch -->
 <div class="growthbackground">
+  <div style="position: relative">
+    <img
+      src=" https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b443b44ccfb5_shape-2-cta-2-startup-x-template.svg"
+      class="dess" />
+  </div>
+  
   <div style="text-align:center ;" data-aos="fade-up"><br><br><br>
     <h1 style="color: white;">{{getin['detailed-text']}}</h1><br>
     <a href="/contactus" type="button" class="btn btn-light light"><b>Get in touch</b></a>
-    <!-- <app-getintouch></app-getintouch> -->
   </div>
-  <!-- <div class="circle crc"></div>  -->
-
-  <!-- <div class="circle circle-lg">
-    <img src="https://uploads-ssl.webflow.com/6375d4737684b479bc…b4420c4ccfd3_shape-1-cta-3-startup-x-template.svg"
-      class="w-h-100" alt="...">
-  </div> -->
-  <!-- <div><img
+  <div style="position: relative">
+    <img
       src=" https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b443b44ccfb5_shape-2-cta-2-startup-x-template.svg"
-      class="des"></div> -->
+      class="des" />
+  </div>
+  <div class="circle "></div>
+  
 
-</div> 
+</div>
