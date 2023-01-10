@@ -11,17 +11,17 @@
 
  <app-heroimg [heros]="servimg" >
 
-        <button class="get-in">get in touch</button>
+        <!-- <button class="get-in">get in touch</button> -->
 
  </app-heroimg>
 
 
 
- <div class="maindiv d-flex">
+ <!-- <div class="maindiv d-flex">
     <div class="buttones d-flex">
         <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
             <div *ngFor="let item of services">
-              <!-- <p>{{item.name}}</p> -->
+              
                 <button class="nav-link " id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#business"
                     type="button" role="tab" aria-controls="v-pills-home" (click)="postServiceFunction(item)" aria-selected="true">{{item.name}}
                 </button>
@@ -36,13 +36,57 @@
       <app-subservices [serviceDetails]="Service"></app-subservices>
 
     </div>
-  </div>
-  <!-- <div class="tab-content" id="v-pills-tabContent">
-    <app-subservices [serviceDetails]="Service"></app-subservices>
-
   </div> -->
+ 
+
+<!-- </div> -->
+
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <div>
+        <h1>Sripathi</h1>
+        <h1>Sripathi</h1>
+        <h1>Sripathi</h1>
+        <h1>Sripathi</h1>
+        <h1>Sripathi</h1>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-12 bgimg" >
+      <h1>Sripathi</h1>
+      <h1>Sripathi</h1>
+      <h1>Sripathi</h1>
+      <h1>Sripathi</h1>
+      <h1>Sripathi</h1>
+    </div>
+  </div>
+</div> -->
+
+
+<section class="sec">
+  <div class="con">
+  <div class="left">
+    <div *ngFor="let item of services " class="m-2 rohini s">
+              
+      <button class="nav-link rohini " id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#business"
+          type="button" role="tab" aria-controls="v-pills-home" (click)="postServiceFunction(item)" aria-selected="true">{{item.name}}
+      </button>
+
+
 
 </div>
+  </div>
+  <div class="right">
+    <div class="tab-content" id="v-pills-tabContent">
+      <app-subservices [serviceDetails]="Service"></app-subservices>
+
+    </div>
+  </div>
+</div>
+</section>
+
+
 
 
 
@@ -55,3 +99,34 @@
 <app-impactfullnumbers [numbers]="impact"></app-impactfullnumbers>
 
 </div>
+
+
+<app-casestudies></app-casestudies>
+
+<div class="flex-container-fluid" data-aos="fade-up" data-aos-anchor-placement="top-center" style="
+    background-color: #2f5acd;
+    text-align: center;
+    color: white;
+    margin-top: 10%;
+    padding: 150px 0;
+  ">
+  <div class="row">
+    <div class="col-6">
+     
+      <h1>
+       {{started.subtitle}}
+      </h1>
+    </div>
+
+    <div class="col-6">
+      <label style="position: relative">
+        
+        <button class="getbtn"><b>{{started['cta-name']}}</b></button>
+      </label>
+    </div>
+  </div>
+</div>
+<app-latestarticles></app-latestarticles>
+
+
+

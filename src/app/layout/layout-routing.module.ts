@@ -49,7 +49,7 @@ const routes: Routes = [
   { path: "positions", component: PositionsComponent },
   {path:"serviceheroimage",component:ServiceheroimageComponent},
   {path:"subservices", component:SubservicesComponent},
-  {path:"subservice",component:SubserviceComponent},
+  {path:"subservice/:itemid",component:SubserviceComponent},
 
 
 

@@ -1,19 +1,23 @@
 <div class="row">
     <div class="col-md-6  image-div" style="background-color: blue;">
         <div class="business">
-            <h1><b>Business Application <br> Development</b></h1>
+            <h1><b>{{serviceDetails.name}}</b></h1>
             <br>
             <p>
-                Our mission at SNAD Developers is to provide innovative, cutting-edge solutions to our clients that help
+                <!-- Our mission at SNAD Developers is to provide innovative, cutting-edge solutions to our clients that help
                 them stay ahead of the competition. We are dedicated to providing the best possible service and customer
-                experience.
+                experience. -->
+                {{serviceDetails.description}}
             </p>
             <br>
             <br>
-            <button type="button" class="btn btn-primary get-in-touch"><b>Get in Touch</b></button>
+            <div [routerLink]="['/contactus']" routerLinkActive="router-link-active">
+                <button type="button" class="btn btn-primary get-in-touch"><b>{{sub['cta-name']}}</b></button>
+            </div>
         </div>
     </div>
     <div class="col-md-6  colour-div">
+        <img src="{{serviceDetails['header-image'].url}}">
     </div>
 </div>
 
@@ -23,25 +27,41 @@
     <div class="row">
         <div class="col-md-8">
             <div class="sub-service header">
-                <h1>We are the next gen banking experience</h1>
+                <h1>{{sub.title}}</h1>
+                <h3>{{sub.subtitle}}</h3>
             </div>
         </div>
-        <div class="col-md-4">
-            <button type="button" class="btn btn-primary get-in-touch" style="float: right;"><b>Get in
-                    Touch</b></button>
+        <div class="col-md-4" [routerLink]="['/contactus']" routerLinkActive="router-link-active">
+            <button type="button" class="btn btn-primary get-in-touch"
+                style="float: right;"><b>{{sub['cta-name']}}</b></button>
         </div>
     </div>
+    <div>
+        <div class="row row-cols-1 row-cols-lg-2 row-cols-md-2 g-4 ">
+            <div class="row g-4" *ngFor="let sub of subServices">
+                <div class="col-md-10">
+                    <div class="card">
+                        <img src="{{sub['icon-image'].url}}" class="card-img-top" alt="...">
 
-    <div class="row g-4">
-        <div class="col-md-6">
+                        <div class="card-body">
+                            <h3>{{sub.name}}</h3>
+                            <p class="card-text">{{sub.description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- <div class="col-md-6">
             <div class="card">
                 <img src="https://uploads-ssl.webflow.com/6375d4747684b438e84ccf70/637b5d778c7bd8e6e5f887d8_6375d4747684b4d2354cd05f_icon-1-home-v3-features-startup-x-template.svg"
                     class="card-img-top" alt="...">
                 <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk card's content.</p>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
             </div>
-        </div>
+       
+
+
 
         <div class="col-md-6">
             <div class="card">
@@ -51,27 +71,15 @@
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
             </div>
-        </div>
-
-
-
-        <div class="col-md-6">
-            <div class="card">
-                <img src="https://uploads-ssl.webflow.com/6375d4747684b438e84ccf70/637b5d778c7bd8e6e5f887d8_6375d4747684b4d2354cd05f_icon-1-home-v3-features-startup-x-template.svg"
-                    class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
+        </div> -->
         </div>
     </div>
-</div>
 
 
 
-<!--impactful numbers-->
+    <!--impactful numbers-->
 
-<!-- <div class="impact-ful">
+    <!-- <div class="impact-ful">
     <br>
     <br>
     <br>
@@ -117,50 +125,42 @@
 </div> -->
 
 
+    <app-impactfullnumbers [numbers]="impact"></app-impactfullnumbers>
 
-<!--case studies-->
 
-<br>
-
-<div class="get-in-touch-cta">
-    <br> <br> <br>
-    <h1 style="color: white;"><b>Get in Touch CTA</b></h1>
     <br>
-    <button type="button" class="btn btn-primary get-in-touch"><b>Get in Touch</b></button>
-    <br><br> <br>
-</div>
-<br>
 
 
-<div class="casestudies">
-    <h6 style="text-align:center">CASE STUDIES</h6>
-    <h2 style="text-align:center">Success stories</h2>
-</div>
+    <br>
 
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active slide-one">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h5>A Fitness Wearable where technical clothing becomes a pragmatic sports buddy</h5>
-                        <p>Engineered a native mobile application for this innovative health and fitness wearable that
-                            focuses on Neuro Muscular Electro Stimulation(NMES). The product is the world's forst fully integrated sports smartwear which pairs the smartkins with a powerful smartphone opening up a whole new world of possibilities</p>
-                        <h3>58</h3>
-                        <h5>centers</h5>
-                    </div>
+    <!--case studies-->
 
-                    <div class="col-md-6">
-                        <div class="img-box"> <img
-                                src="https://media.istockphoto.com/id/1213710695/photo/crowd-from-above-forming-a-growth-graph.jpg?s=612x612&w=is&k=20&c=qMnd4c0bcVskqk5PPq0pUGpVRzRlTrT7PioDovonJn4="
-                                class="pic-one">
+    <div class="casestudies">
+        <h6 style="text-align:center">{{casestatic.title}}</h6>
+        <h2 style="text-align:center">{{casestatic.subtitle}}</h2>
+    </div>
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" *ngFor="let case of casestudies">
+            <div class="carousel-item active slide-one">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>{{case.name}}</h5>
+                            <p>{{case.description }}</p>
+                            <h3>{{case.numbers}}</h3>
+                            <h5>{{case['sub-text-for-number']}}</h5>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="img-box"> <img src={{case.image.url}} class="pic-one">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="carousel-item slide-two">
+            <!-- <div class="carousel-item slide-two">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
@@ -181,24 +181,35 @@
                     </div>
                 </div>
             </div>
+        </div> -->
         </div>
+
+        <button class="carousel-control-prev" type="button" style="color:black"
+            data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+                class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 
-    <button class="carousel-control-prev" type="button" style="color:black" data-bs-target="#carouselExampleControls"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span
-            class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
+
+
+    <!-- get-in-touch -->
+
+
+    <div class="get-in-touch-cta">
+        <br> <br> <br>
+        <h1 style="color: white;"><b>{{getin.title}}</b></h1>
+        <br>
+        <!-- <button type="button" class="btn btn-primary get-in-touch"><b>Get in Touch</b></button> -->
+        <app-getintouch [getintouch]="getin"></app-getintouch>
+        <br><br> <br>
+    </div>
 
 
 
-<app-impactfullnumbers [numbers]="impactfullnumbers"></app-impactfullnumbers>
-
-
-<app-latestarticles></app-latestarticles>
-
+    <app-latestarticles></app-latestarticles>

@@ -9,10 +9,10 @@
 
 
 
-                <div class="card-title "> {{serviceDetails['name']}}
+                <div class="card-title "><h2>{{serviceDetails['name']}}</h2> 
                     <div class="paragraph">{{serviceDetails['description']}}
                     </div>
-                    <a href="/" type="button" class="btn btn-lg get">Learn More</a>
+                    <button  type="button" class="btn btn-lg get" (click)="postServiceRoute(serviceDetails['_id'])">Learn More</button>
 
                 </div>
 
