@@ -77,6 +77,7 @@ export class ProfileComponent implements OnInit {
         next: (res: any) => {
           console.log(res);
           ref.category = res.data.name;
+          ref.categoryicon = res.data['blog-category-icon'].url
           
         },
         error: (reason: any) => console.log(reason),
@@ -100,6 +101,7 @@ export class ProfileComponent implements OnInit {
         data.forEach((element:any)=>{
           element.imageurl =element["post-main-image"].url
           element.postauthor=element["post-author"] 
+          element.icon = element['blog-category-icon']
           let itemid=element['post-author']
           this.getAuthorDetails(itemid, element);
           let id=Object(element)["post-category-2"] as string
@@ -125,9 +127,7 @@ export class ProfileComponent implements OnInit {
     });
   }
 
-  articles(){
-    
-  }
+  
   ngOnDestroy(): void {
     if (this.subscription) {
       this.subscription.unsubscribe();

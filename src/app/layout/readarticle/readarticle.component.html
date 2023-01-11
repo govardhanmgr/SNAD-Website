@@ -1,7 +1,7 @@
 <div class="container-fluid primary">
   <div class="row justify-content-center">
     <div class="col-xxl-7">
-      <h1 class="text-center" id="title"></h1>
+      <h1 class="text-center hero" id="title"></h1>
     </div>
   </div>
   <br />
@@ -13,21 +13,24 @@
     </div>
   </div>
 
-  <img src="{{ Readarticles.imageurl }}" alt="" class="rounded mx-auto d-block headerimg" />
+  <div class="container">
+    <img src="{{ Readarticles.imageurl }}" alt="" class="rounded mx-auto d-block headerimg" />
+  </div>
+
 </div>
 
 <br /><br /><br />
 
-<div class="container" style="margin-bottom: 50px">
+<div class="flex-container-fluid" style="margin-bottom: 50px">
   <div class="row justify-content-center">
-    <div class="col-sm-8">
+    <div class="col-sm-3" style="float: left">
       <a href="./profile">
-        <div class="card mb-3 profilealign" style="max-width: 300px">
+        <div class="card profilealign" style="max-width: 300px">
           <div class="row g-0">
-            <div class="col-md-4">
-              <img src="{{ Readarticles.profile.smallimageurl }}" alt="..." style="width: 85px; border-radius: 45px" />
+            <div class="col-4">
+              <img src="{{ Readarticles.profile.smallimageurl }}" alt="..." style="width: 75px; border-radius: 45px" />
             </div>
-            <div class="col-md-8">
+            <div class="col-8">
               <div class="card-body">
                 <h5 class="card-title">
                   {{ Readarticles.profile.authorname }}
@@ -44,18 +47,37 @@
       </a>
     </div>
 
-    <div class="col-sm-4 justify-content-center">
+    <div class="col-sm-2 justify-content-center">
       <a href="/businessarticles">
-        <button type="button" class="btn">
-          <i class="bi bi-briefcase" style="padding-right: 10px"></i><span
-            style="font-family: sans-serif">Business</span>
+        <button type="button" class="btn" style="
+            width: max-content;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #dadcec;
+            padding: 14px 24px;
+            border-radius: 1000px;
+            color: #494a4d;
+            font-size: 16px;
+            line-height: 1.125em;
+            font-weight: 700;
+            margin-top: 5%;
+            text-decoration: none;
+            float: right;
+          ">
+          Business
         </button>
       </a>
     </div>
   </div>
 </div>
 
-<div class="container">
+<div class="container" style="
+    font-weight: 500;
+    line-height: 1.833em;
+    font-size: 18px;
+    color: #6f7278;
+    font-family: Thicccboi, sans-serif;
+  ">
   <div class="row justify-content-center">
     <div class="col-lg-7">
       <div id="des"></div>
@@ -64,34 +86,32 @@
 </div>
 <br /><br /><br />
 
-
-
-
 <div class="row justify-content-center">
-  <div class="col-md-5 ">
+  <div class="col-md-5">
     <div class="card profilebig">
       <div class="row">
         <div class="col-md-12">
           <div class="row">
-            <div class="col-md-4" style="justify-content: center;">
+            <div class="col-md-4" style="justify-content: center">
               <img src="{{ Readarticles.profile.imageurlbig }}" alt="profile image"
-                class="rounded-circle profile-image">
+                class="rounded-circle profile-image" />
             </div>
             <div class="col-md-8">
-
-
-
               <div class="row">
                 <div class="col-md-6">
-                  <h4 class="card-title"><b>{{ Readarticles.profile.authorname }}</b></h4>
-                  <h5 class="card-title" style="color:blue"><b> {{ Readarticles.profile.position }}</b></h5>
+                  <h4 class="card-title">
+                    <b>{{ Readarticles.profile.authorname }}</b>
+                  </h4>
+                  <h5 class="card-title" style="color: blue">
+                    <b> {{ Readarticles.profile.position }}</b>
+                  </h5>
                 </div>
                 <div class="col-md-6">
                   <div class="names">
                     <div class="networks">
-                      <meta name="viewport" content="width=device-width, initial-scale=1">
+                      <meta name="viewport" content="width=device-width, initial-scale=1" />
                       <link rel="stylesheet"
-                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
                       <a href="#" class="fa fa-facebook"></a>
                       <a href="#" class="fa fa-twitter"></a>
                       <a href="#" class="fa fa-linkedin"></a>
@@ -103,13 +123,18 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="names">
-                    <p class="card-text" style="font-family: sans-serif; line-break: 1px;">
+                    <p class="card-text" style="
+                        font-family: Thicccboi, sans-serif;
+                        color: #6f7278;
+                        font-size: 18px;
+                        line-height: 1.833em;
+                        font-weight: 500;
+                      ">
                       {{ Readarticles.profile.teamsummary }}
                     </p>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -124,21 +149,41 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-xxl-6">
-      <h1 class="h1left">Latest articles</h1>
+    <div class="col-sm-6">
+      <h1 style="float: left; font-weight: bolder">Latest articles</h1>
     </div>
-    <div class="col-xxl-6">
-      
-        <div class="btn-group" role="group" aria-label="Basic radio toggle button group" class="b1">
-          <a [routerLink]="['/blog']" routerLinkActive="router-link-active">
-            <button class="btn btdes" type="button">
-              <b>Browse all articles</b>
-            </button>
-          </a>
+    <div class="col-sm-6">
+     <a href="/blog">
+      <button type="button" class="btn btn-lg" style="
+      float: right;
+      background-color: #2f5acd;
+      color: white;
+      padding: 20px 60px;
+      border-radius: 35px;
+      font-weight: bolder;
+    ">
+    Browse all articles
+  </button>
+     </a>
+    </div>
+   
+  </div>
+</div>
+
+<div class="container " style="margin-top: 2%;" >
+  <div class="row row-cols-1 row-cols-md-2 g-4" >
+    <div class="col"  *ngFor="let blog of Article">
+        <div class="card browsearticles" >
+          <img src="{{blog.imageurl}}" class="zoom" style="border-radius: 25px;">
+          <button class="btn" class="butstyl">
+            <img src="{{blog.categoryicon}}" class="card-img-top" alt="..." class="zoom" style="margin-right: 4px;">
+             <b>{{blog.category}}</b></button>
+          <div class="card-body">
+            <h3 class="card-title">{{blog.name}}</h3>
+            <p class="card-text" class="text-muted">{{blog.profilename}} -- {{blog.date | date }}</p>
+          </div>
         </div>
     </div>
   </div>
-  <br />
-
-<app-browsearticles></app-browsearticles>
 </div>
+

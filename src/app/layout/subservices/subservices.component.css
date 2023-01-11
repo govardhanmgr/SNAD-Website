@@ -1,12 +1,13 @@
 .card {
     background: rgba(41, 44, 50, 0.86) url("https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/63770bc325cdcb0bc742ad5b_pexels-sevenstorm-juhaszimrus-443383.webp");
     background-size: cover;
-    background-blend-mode: darken;
-    height: 300px;
-    width: 50%;
-    border-radius: 10px;
-    overflow: hidden;
-
+  background-blend-mode: darken;
+  width: 100%;
+  height: 460px;
+  border-radius: 10px;
+ 
+  justify-content: center;
+  align-items: center;
 }
 
 .card-title {

@@ -11,6 +11,8 @@ import { WebflowserviceService } from 'src/app/services/webflowservice.service';
 export class ReadarticleComponent implements OnInit {
   subscription!: Subscription;
   Readarticles =  {} as any;
+  Article=[]as any;
+  item!: string;
 
   constructor( private router:Router,
     private webflow:WebflowserviceService,
@@ -22,16 +24,19 @@ export class ReadarticleComponent implements OnInit {
 
   ngOnInit(): void {
    this.getarticle();
+   this.getblogs();
   }
 
   async getarticle() {
     this.route.paramMap.subscribe(async (params: Params) => {
       console.log(params['params'].itemid);
+      this.item = params['params'].itemid;
       this.readarticle(params['params'].itemid);
+      // this.blogcategory(this.item)
     });
   }
 
-  
+
 
   readarticle(itemid: string){
     this.subscription=this.webflow
@@ -78,13 +83,69 @@ export class ReadarticleComponent implements OnInit {
           update.data.authorname=update.data['name']
           update.data.teamsummary=update.data['team-about-summary']
           update.data.date =  update.data['updated-on']
-
-
           ref.profile= update.data
+          ref.profilename=update.data.name
         }
       })
     }
     
+    blogcategory(itemid: string, ref: any) {
+      this.subscription = this.webflow
+        .getData(`blogcategoryitembyid/${itemid}`)
+        .subscribe({
+          next: (res: any) => {
+            console.log(res);
+            ref.categoryicon = res.data['blog-category-icon'].url
+            ref.category = res.data.name;
+            
+            // this.Blogcategory.add(res.data.name);
+          },
+          error: (reason: any) => console.log(reason),
+        });
+    }
+
+  getblogs() {
+    this.subscription = this.webflow.getData("allitems/6375d4747684b45e464ccf77").subscribe({
+      next: (response: any) => {
+        console.log(response);
+        let data = response.data;
+        // data.forEach((element:any)=>{
+        //   element.imageurl =element["post-main-image"].url
+        //   element.postauthor=element["post-author"] 
+        //   // element.icon = element['blog-category-icon']
+        //   // let itemid=element['post-author']
+        //   // this.getAuthorDetails(itemid, element);
+        //   // let id=Object(element)["post-category-2"] as string
+        //   // this.blogcategory(id,element)
+        //   // element.date = element['updated-on']
+        // })
+        data.forEach((element:any)=>{
+          element.imageurl =element["post-main-image"].url
+          element.icon = element['blog-category-icon']
+          let itemid=element['post-author']
+          this.getAuthorDetails(itemid, element);
+          let id = Object(element)["post-category-2"] as string
+          this. blogcategory(id,element);
+          element.date = element['updated-on']
+        });
+        console.log(data);
+        
+        let count=0;
+        for(let i=0;i <= data.length;i++){
+          if(count < 2){
+            count++;
+            this.Article.push(data[i]);
+          }
+          
+        }
+        console.log(this.Article);
+        
+      },
+      error: (reason: any) => {
+        console.error(reason);
+      }
+    });
+  }
   ngOnDestroy(): void {
     if (this.subscription) {
       this.subscription.unsubscribe();

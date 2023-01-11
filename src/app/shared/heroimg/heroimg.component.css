@@ -8,6 +8,11 @@
   height: 75vh;
   background-size: cover;
   background-repeat: no-repeat;
+  background-blend-mode: darken;
+}
+
+.himg{
+  background-blend-mode: darken;
 }
 
 .contact {
@@ -57,4 +62,22 @@
   top: 65%;
   left: 40%;
   transform: translate(-50%, -50%);
+}
+.get {
+  border-radius: 40px;
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 20px;
+  border-color: white;
+  background-color: white;
+  line-height: 18px;
+  font-size: 16px;
+  border-style: solid;
+}
+
+.get:hover {
+  transform: translate(0, -8px);
+  border-color: #3898EC;
+  color: #3898EC;
 }
