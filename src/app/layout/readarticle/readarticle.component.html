@@ -95,7 +95,7 @@
         <div class="col-md-12">
           <div class="row">
             <div class="col-md-4" style="justify-content: center">
-              <img src="{{ Readarticles.profile.imageurlbig }}" alt="profile image"
+              <img src="{{ Readarticles.profile.imageurlbig }}" alt="profile-image"
                 class="rounded-circle profile-image" />
             </div>
             <div class="col-md-8">
@@ -177,9 +177,9 @@
     <div class="col"  *ngFor="let blog of Article">
         <div class="card browsearticles" >
           <img src="{{blog.imageurl}}" class="zoom" style="border-radius: 25px;">
-          <button class="btn" class="butstyl">
+          <div  class="butstyl">
             <img src="{{blog.categoryicon}}" class="card-img-top" alt="..." class="zoom" style="margin-right: 4px;">
-             <b>{{blog.category}}</b></button>
+             <div>{{blog.category}}</div></div>
           <div class="card-body">
             <h3 class="card-title">{{blog.name}}</h3>
             <p class="card-text" class="text-muted">{{blog.profilename}} -- {{blog.date | date }}</p>
