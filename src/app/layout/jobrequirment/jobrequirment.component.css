@@ -1,102 +1,182 @@
-
-.margin{
-    margin-left: 2%;
+.section{
+    padding-top:60px;
+    padding-bottom: 150px;
 }
-.card-body{
-    margin-left: 5%;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    margin-right: 5%;
-   
-}
-
-.card-adj{
-    margin-left: 5%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    margin-right: 5%;
-}
-
-.job{
-    border-radius: 20px;
-    box-shadow: 5cm;
-}
-.req{
-    margin-left: 10%;
-    margin-right: 10%;
-}
-hr{
-    margin-left: 5%;
-    margin-right: 5%;
-}
-.cred{
-    border-radius: 20px;
-    box-shadow: 5px;
+.container{
+    display: block;
+    overflow: visible;
+    max-width: 1248px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 24px;
+    padding-left: 24px;
 }
 
 .back{
-    margin-top: 4%;
-    margin-bottom: 4%;
-    margin-left: 10%;
-}
-.img{
-    margin-top: 10%;
-    margin-left: 8%;
-}
-.but{
-    border-radius: 30px;
-    width: 12rem;
-    margin-bottom: 10%;
-}
-.pop{
-  border-radius: 30px;
-}
-.flt{
-   float:right;
-   border-radius: 30px;
-   background-color: white;
-   padding-left:30px ;
-   padding-right:30px ;
-   padding-top:10px ;
-   padding-bottom: 10px;
+    margin-bottom: 5%;
 }
 
-.ring{
-    background-color:#2f5acd;
-    overflow:hidden ;
-  }
-
-  .open{
-    margin-top: 10%;
-    margin-bottom: 15%;
-  }
-
-  .margin{
-    margin-left: 4%;
-  }
-
-.opening{
-    border-radius: 20px;
-    height: 9cm;
-}
-.matter{
-    margin-top: 6%;
-}
-
-.button{
-    border-radius: 25px;
-  padding:10px 20px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #c9e3e2;
-  box-shadow: 0 10px 10px 0 rgb(41 44 50 / 3%);
-}
-
-.job-requirement{
+.back-button{
     text-decoration: none;
     color: black;
 }
 
-.we-are{
-    padding-left: 30px;
+.back-button:hover{
+  color: #2f5acd;
 }
+
+.card{
+    overflow: hidden;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #dadcec;
+    border-radius: 18px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px 0 rgb(41 44 50 / 3%);
+}
+
+.job-requirement{
+    padding: 64px 70px 84px;
+    margin-bottom: 5%;
+}
+
+.body{
+    font-family: Thicccboi, sans-serif;
+    color: #6f7278;
+    font-size: 18px;
+    line-height: 1.833em;
+    font-weight: 500;
+}
+
+.job-title{
+    font-family: Thicccboi, sans-serif;
+    color: #292c32;
+    font-size: 38px;
+    line-height: 1.316em;
+    font-weight: 550;
+    padding-bottom: 22px;
+}
+
+.button {
+    border-radius: 25px;
+    padding: 10px 20px;
+    border-style: solid;
+    border-width: 1px;
+    background-color: #fff;
+    border-color: #c9e3e2;
+    box-shadow: 0 10px 10px 0 rgb(41 44 50 / 3%);
+    margin-bottom: 5%;
+}
+  
+.margin {
+    margin-left: 2%;
+}
+
+.divider{
+    margin-top: 40px;
+    margin-bottom: 65px;
+    background-color: #dadcec;
+    width: 100%;
+    min-height: 1px;
+}
+
+.job-subtitle{
+    color: #292c32;
+    font-size: 24px;
+    line-height: 1.375em;
+    font-weight: 550;
+    padding-bottom: 10px;
+}
+
+.job-text{
+    padding-bottom: 40px;
+}
+
+.apply-button{
+    padding: 24px 44px;
+    border-radius: 80px;
+    background-color: #2f5acd;
+    color: #fff;
+    line-height: 1.111em;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+}
+
+.apply-now-card{
+    padding: 42px 40px 61px;
+}
+
+.more-job-openings{
+    padding: 180px 0px;
+    background-color: #2f5acd;
+}
+
+.main-header{
+    font-size: 38px;
+    line-height: 1.316em;
+    font-weight: 700;
+    color: #fff;
+}
+
+.openings{
+    display: flex;
+    padding: 40px;
+}
+
+.card-text{
+    padding-bottom: 10px;
+}
+
+.more-job{
+    padding: 30px 0px;
+}
+
+.job-button{
+    background-color: #fff;
+    color: black;
+}
+
+.job-button:hover{
+  background-color: #0981BD;
+}
+
+.apply-column{
+    display: flex;
+    justify-content: end;
+}
+
+.des {
+    position: absolute;
+    border-radius: 50%;
+    height: 16em;
+    width: 16em;
+    opacity: 14;
+    margin-top: -2%;
+    margin-left: -10%;
+    animation: rotation 30s infinite linear;
+}
+  
+@keyframes rotation {
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(359deg);
+    }  
+}
+
+.cir{
+    position: absolute;
+    border-radius: 50%;
+    height: 16em;
+    width: 16em;
+    opacity: 10;
+    float: right;
+    right: -10%;
+    margin-top: -14%;
+    animation: rotation 70s infinite linear;
+}
+
+
+
