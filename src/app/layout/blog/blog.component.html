@@ -21,11 +21,11 @@
       </div>
     </div>
     <div class="left">
-      <img src="{{ Blogs[0].imageurl }}" class="card-img-top" alt="..." class="zoom rounded" style="width: 100%;" />
-      <button class="btn" class="butstyli1">
+      <img src="{{ Blogs[0].imageurl }}" class="card-img-top" alt="..." class="zoom " style="width: 100%; border-radius: 17px;" />
+      <div  class="butstylheader">
         <img src="{{Blogs[0].categoryicon}}" style="margin-right: 4px;" alt="">
-        <b>{{Blogs[0].category}}</b>
-      </button>
+        <div>{{Blogs[0].category}}</div>
+      </div>
     </div>
   </div>
 </section>
@@ -63,11 +63,11 @@
     <div class="col-sm-6 col-md-6 d-flex flex-row" data-aos="fade-up" data-aos-anchor-placement="top-center"
       *ngFor="let im of filteredbycategory">
       <div class="card latest-articles" (click)="readart(im._id)">
-        <img src="{{ im.imageurl }}" class="card-img-top im-hv" alt="..." class="zoom" />
-        <button class="btn" class="butstyl">
+        <img src="{{ im.imageurl }}" class="card-img-top im-hv" alt="..." class="zoom"  style="border-radius: 17px;"/>
+        <div class="butstyl">
           <img src="{{im.categoryicon}}" style="margin-right: 4px;" alt="">
-          <b>{{ im.category }}</b>
-        </button>
+          <div>{{ im.category }}</div>
+        </div>
 
         <div class="card-body">
           <h3 class="card-title">{{ im.name }}</h3>
