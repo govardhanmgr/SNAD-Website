@@ -12,6 +12,7 @@ import { CASESTUDIESComponent } from './casestudies/casestudies.component';
 import { TESTIMONIALSComponent } from './testimonials/testimonials.component';
 import { LatestarticlesComponent } from './latestarticles/latestarticles.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { Header1Component } from './header1/header1.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +25,9 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     CASESTUDIESComponent,
     TESTIMONIALSComponent,
     LatestarticlesComponent,
+    Header1Component,
   ],
-  imports: [
-    CommonModule, 
-    SharedRoutingModule,
-    CarouselModule
-
-  ],
+  imports: [CommonModule, SharedRoutingModule, CarouselModule],
   exports: [
     HeaderComponent,
     FooterComponent,
@@ -41,6 +38,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     CASESTUDIESComponent,
     LatestarticlesComponent,
     TESTIMONIALSComponent,
+    Header1Component,
   ],
 })
 export class SharedModule {}
