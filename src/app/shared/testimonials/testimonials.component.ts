@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { AfterViewInit, Component,  Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import { WebflowserviceService } from 'src/app/services/webflowservice.service';
 import { Subscription } from 'rxjs';
 import { OwlOptions } from 'ngx-owl-carousel-o';
@@ -10,11 +10,10 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./testimonials.component.css'],
 })
 export class TESTIMONIALSComponent implements OnInit, AfterViewInit {
-  @Input() testimonial!: any
-  slides!: NodeListOf<Element>
+  @Input() testimonial!: any;
+  slides!: NodeListOf<Element>;
   index: number = 0;
   subscription!: Subscription;
- 
 
   next() {
     this.slides[this.index].classList.remove('active');
@@ -29,16 +28,12 @@ export class TESTIMONIALSComponent implements OnInit, AfterViewInit {
     this.slides[this.index].classList.add('active');
   }
 
-  constructor( private webflow: WebflowserviceService) { }
+  constructor(private webflow: WebflowserviceService) {}
   ngOnInit(): void {
     setInterval(() => {
-
-      this.next()
-
+      this.next();
     }, 7000);
     console.log(this.testimonial);
-   
-
   }
   customOptions: OwlOptions = {
     loop: true,
@@ -50,27 +45,22 @@ export class TESTIMONIALSComponent implements OnInit, AfterViewInit {
     navText: ['', ''],
     responsive: {
       0: {
-        items: 1
+        items: 1,
       },
       400: {
-        items: 1
+        items: 1,
       },
       740: {
-        items: 1
+        items: 1,
       },
       940: {
-        items: 1
-      }
+        items: 1,
+      },
     },
-    nav: true
-  }
+    nav: true,
+  };
 
   ngAfterViewInit(): void {
-
     this.slides = document.querySelectorAll('.slide-container');
   }
-  
-
-
 }
-

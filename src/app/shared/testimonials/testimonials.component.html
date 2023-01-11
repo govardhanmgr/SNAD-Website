@@ -1,7 +1,45 @@
-<div>Some tags before</div>
-<owl-carousel-o [options]="customOptions">
-  <ng-template carouselSlide>Slide 1</ng-template>  
-  <ng-template carouselSlide>Slide 2</ng-template>  
-  <ng-template carouselSlide>Slide 3</ng-template>  
-</owl-carousel-o>
-<div>Some tags after</div>
+<div class="flex-container-fluid text-center">
+  <div>Some tags before</div>
+
+  <owl-carousel-o [options]="customOptions" class="w">
+    <ng-template
+      carouselSlide
+      *ngFor="let testimonialdata of testimonial.refdata"
+    >
+      <div class="">
+        <div class="con">
+          <div class="left">
+            <h2>{{ testimonialdata.name }}</h2>
+            <br />
+            <p>{{ testimonialdata.description }}</p>
+            <h3>{{ testimonialdata.numbers }}</h3>
+            <h6>{{ testimonialdata.subtextfornumber }}</h6>
+          </div>
+          <div class="right">
+            <img src="{{ testimonialdata.iconimage.url }}" />
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="row">
+      <div class="col-md-6">
+        <div class="img-box">
+          <img src="{{ testimonialdata.iconimage.url }}" class="pic-one" />
+        </div>
+      </div>
+      <div
+        class="col-md-6"
+        style="align-items: center; justify-content: center"
+      >
+        <h2>{{ testimonialdata.name }}</h2>
+        <br />
+        <p>{{ testimonialdata.description }}</p>
+        <h3>{{ testimonialdata.numbers }}</h3>
+        <h6>{{ testimonialdata.subtextfornumber }}</h6>
+      </div>
+    </div> -->
+    </ng-template>
+  </owl-carousel-o>
+
+  <div>Some tags after</div>
+</div>
