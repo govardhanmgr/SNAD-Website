@@ -1,6 +1,16 @@
 *{
   font-family: Thicccboi, sans-serif;
 }
+
+.container{
+  display: block;
+  overflow-x: visible;
+  overflow-y: visible;
+  max-width: 1248px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0px 24px;
+}
 /* scroll top button */
 
 .scroll-to-top {
@@ -105,11 +115,16 @@ p {
   margin-bottom: 5%;
 }
 
+.columned{
+  grid-column-gap: 50px;
+  margin-bottom: 8px;
+}
+
 .company-perk-card{
-    display: flex;
-    padding: 37px 44px 47px;
-    justify-content: space-between;
-    align-items: flex-start;
+  display: flex;
+  padding: 37px 44px 47px;
+  justify-content: space-between;
+  align-items: flex-start;
 }
  
 .company-perk-title{

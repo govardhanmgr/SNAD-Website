@@ -38,7 +38,7 @@
   <h6 class="title" style="text-align: center;">{{companyperks.title}}</h6>
   <h2 class="subtitle" style="text-align: center;">{{companyperks['detailed-text']}}</h2>
   <div class="row row-cols-1 row-cols-lg-2 row-cols-md-2 g-4 ">
-    <div class="col" *ngFor="let company of companyperks.refdata">
+    <div class="col columned" *ngFor="let company of companyperks.refdata">
       <div class="card mb-3 company-perk-card core-value-card">
         <div class="row g-0">
           <div class="col-md-3">
@@ -88,15 +88,15 @@
       </div>
     </div>
 
-    <div class="row row-cols-1 row-cols-md-2 g-4 all-job-open">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 all-job-open">
       <div class="col" *ngFor="let ones of one.refdata">
         <div class=" mb-3 company-perk-card core-value-card all-job-open-card ">
           <div class="row g-0">
-            <div class="col-md-3">
-              <div class="card all-job-number">{{ones.role}}</div>
+            <div class="col-md-3" >
+              <div class="card all-job-number" >{{ones.role}}</div>
             </div>
             <div class="col-md-9">
-              <div class="card-body">
+              <div class="card-body" style="padding-left:15px ;">
                 <h3 class="card-title company-perk-title " style="color: #fff;">{{ones.shorttext}}</h3>
                 <p class="card-text" style="color: #fff;">{{ones.description}}</p>
               </div>
@@ -126,7 +126,7 @@
       <h6 style="color: blue;" data-aos="fade-up" class="title">{{growth.title}}</h6>
       <h1 data-aos="fade-up">{{growth['detailed-text']}}</h1>
     </div>
-    <div class="row row-cols-1 row-cols-md-4 g-4" data-aos="fade-up">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" data-aos="fade-up">
       <!--column-->
       <div class="col " *ngFor="let impact of growth.refdata">
         <h1 style="text-align: center;">{{impact.shorttext}}<span style="color: blue">{{impact.role}}</span></h1>
