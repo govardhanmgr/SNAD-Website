@@ -1,227 +1,27 @@
-<!--job requirement-->
-<div class="back">
-  <a href="./careers" class="job-requirement">
-    <h5>&#x2190; Back to all Jobs</h5>
-  </a>
-</div>
-
-<div class="container">
-
-  <div class="row">
-
-    <div class="col-md-8">
-      <div class="card job" >
-        <div class="row row-cols-1 row-cols-md-1 g-4">
-          <!--column-->
-          <div class="col">
-            <div class="">
-              <div class="card-body">
-                <h2><b>{{jobDescription.name}}</b></h2>
-                <br>
-                <a href="#" class="card-link" type="button" class="btn btn-light button"><i class="bi bi-briefcase" style="color: green;"></i> {{jobDescription.category}}</a>
-                <a href="#" class="card-link" type="button"
-                  class="btn btn-light button margin "> <i class="bi bi-geo-alt" style="color: green;"></i> {{jobDescription['job-location']}}</a>
-              </div>
-            </div>
-            <hr>
-          </div>
-  
-          <!--column-->
-          <div class="col">
-            <div class="">
-              <div class="card-adj">
-                <b>
-                  <h3>Job description</h3>
-                </b>
-                <p class="card-text" id="app">
-                  <br>
-                  <br>
-                  {{jobDescription["job-description-excerpt"]}}
-                </p>
-              </div>
-            </div>
-          </div>
-  
-          <!--column-->
-          <div class="col">
-            <div class="">
-              <div class="card-adj">
-                <b>
-                  <h3>Responsibilities</h3>
-                </b>
-                <br>
-                <p class="card-text" id="des"></p>
-  
-              </div>
-            </div>
-          </div>
-  
-  
-          <!--column-->
-          <div class="col">
-            <div class="">
-              <div class="card-adj">
-                <b>
-                  <h3>Job requirements</h3>
-                </b>
-                <br>
-                <p class="card-text" id="req"></p>
-  
-                <br>
-                <a type="button" class="btn btn-primary btn-lg but">Apply Now</a>
-              </div>
-  
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <div class="card cred" style="width: 22rem;">
-        <img
-          src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b461fd4cd0a2_icon-career-apply-startup-x-template.svg"
-          class="img-fluid rounded-start img" alt="..." width="120" height="120">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <br>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <br>
-          <div class="text-center">
-            <a type="button" class="btn btn-primary btn-lg but">Apply Now</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- <div class="container-fluid req">
-  <div class="row">
-
-    <div class="card job">
-      <div class="row row-cols-1 row-cols-md-1 g-4">
-        <!--column-->
-        <!-- <div class="col">
-          <div class="">
-            <div class="card-body">
-              <h2><b>{{jobDescription.name}}</b></h2>
-              <br>
-              <a href="#" class="card-link" type="button" class="btn btn-light button"><i class="bi bi-briefcase" style="color: green;"></i> {{jobDescription.category}}</a>
-              <a href="#" class="card-link" type="button"
-                class="btn btn-light button margin "> <i class="bi bi-geo-alt" style="color: green;"></i> {{jobDescription['job-location']}}</a>
-            </div>
-          </div>
-          <hr>
-        </div> -->
-
-        <!--column-->
-        <!-- <div class="col">
-          <div class="">
-            <div class="card-adj">
-              <b>
-                <h3>Job description</h3>
-              </b>
-              <p class="card-text" id="app">
-                <br>
-                <br>
-                {{jobDescription["job-description-excerpt"]}}
-              </p>
-            </div>
-          </div>
-        </div> -->
-
-        <!--column-->
-        <!-- <div class="col">
-          <div class="">
-            <div class="card-adj">
-              <b>
-                <h3>Responsibilities</h3>
-              </b>
-              <br>
-              <p class="card-text" id="des"></p>
-
-            </div>
-          </div>
-        </div> -->
-
-
-        <!--column-->
-        <!-- <div class="col">
-          <div class="">
-            <div class="card-adj">
-              <b>
-                <h3>Job requirements</h3>
-              </b>
-              <br>
-              <p class="card-text" id="req"></p>
-
-              <br>
-              <a type="button" class="btn btn-primary btn-lg but">Apply Now</a>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-
-    <!--column-->
-
-    <!-- <div class="col">
-
-      <div class="card cred" style="width: 22rem;">
-        <img
-          src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b461fd4cd0a2_icon-career-apply-startup-x-template.svg"
-          class="img-fluid rounded-start img" alt="..." width="120" height="120">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <br>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <br>
-          <div class="text-center">
-            <a type="button" class="btn btn-primary btn-lg but">Apply Now</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div> --> 
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
 <!--More Job Openings-->
 
-<div class="ring">
+<!-- <div class="ring">
 
   <div class="container allopen">
-    <div class="row row-cols-1 row-cols-md-2 g-5 open">
+    <div class="row row-cols-1 row-cols-md-2 g-5 open"> -->
 
-      <!--column-->
-      
-      <div class="col">
+<!--column-->
+
+<!-- <div class="col">
         <div class=" mb-3 perk txtcl">
           <h1 style="color: white;" data-aos="fade-up">More Job Openings</h1>
         </div>
-      </div>
+      </div> -->
 
-      <!--c0lumn-->
-      <div class="col">
+<!--c0lumn-->
+<!-- <div class="col">
         <div class=" mb-3 perk">
           <a href="/careers" type="button" class="btn btn-lg btn-light flt" data-aos="fade-up">All job opening</a>
         </div>
-      </div>
+      </div> -->
 
-      <!--column-->
-      <div class="col" data-aos="fade-up" data-aos-delay="1300" *ngFor=" let ope of  jobopenings">
+<!--column-->
+<!-- <div class="col" data-aos="fade-up" data-aos-delay="1300" *ngFor=" let ope of  jobopenings">
         <div class="card opening"  >
           <div class="card-body matter" >
             <h4 class="card-title"><b></b>{{ope.name}}</h4>
@@ -236,5 +36,122 @@
 
     </div>
 
+  </div>
+</div> -->
+
+<div class="body">
+  <div class="section">
+    <div class="container">
+      <!--back-->
+      <div class="back">
+        <a href="./careers" class="back-button">
+          <h5>&#x2190; Back to all Jobs</h5>
+        </a>
+      </div>
+      <!--cards-->
+      <div class="row">
+        <!--column-->
+        <div class="col-lg-8 col-md-12">
+          <div class="card job-requirement">
+            <div class="row">
+              <!-- col -->
+              <div class="col-md-12">
+                <h2 class="job-title body">{{jobDescription.name}}</h2>
+                <a href="#" class="card-link" type="button" class="btn btn-light button"><i class="bi bi-briefcase"
+                    style="color: green;"></i> {{jobDescription.category}}</a>
+                <a href="#" class="card-link" type="button" class="btn btn-light button margin "> <i
+                    class="bi bi-geo-alt" style="color: green;"></i> {{jobDescription['job-location']}}</a>
+                <div class="divider"></div>
+              </div>
+              <!-- col -->
+              <div class="col-md-12">
+                <h3 class="job-subtitle">Job description</h3>
+                <p class="card-text job-text" id="app"></p>
+              </div>
+              <!-- col -->
+              <div class="col-md-12">
+                <h3 class="job-subtitle">Responsibilities</h3>
+                <p class="card-text job-text" id="des"></p>
+              </div>
+              <!-- col -->
+              <div class="col-md-12">
+                <h3 class="job-subtitle">Job requirements</h3>
+                <p class="card-text job-text" id="req"></p>
+              </div>
+              <!-- col -->
+              <div>
+                <a href="" type="button" class="apply-button">Apply Now</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!--column-->
+        <div class="col-lg-4 col-md-12">
+          <div class="card apply-now-card">
+            <div class="row">
+              <div class="col-md-12">
+                <img
+                  src="https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b461fd4cd0a2_icon-career-apply-startup-x-template.svg"
+                  alt="">
+              </div>
+              <div class="col-md-12">
+                <h3 class="job-subtitle" style="padding-top: 20px;">Apply Now</h3>
+                <p>Nisl pretium fusce id velit sed felis eget velit aliquet sagittis id consectetur puru.</p>
+              </div>
+              <div class="col-md-12">
+                <div class="apply-button">
+                  <a href="" type="button" style="text-decoration: none;color: white;">Apply Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--More Job Openings-->
+
+
+  <div class="more-job-openings">
+    <div class="container">
+      <div style="position: relative">
+        <img
+          src=" https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b443b44ccfb5_shape-2-cta-2-startup-x-template.svg"
+          class="des" />
+      </div>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 more-job">
+        <div class="col">
+          <h2 class="main-header">More job openings</h2>
+        </div>
+        <div class="col">
+          <div class="apply-column">
+            <a href="./careers" type="button" class="apply-button job-button">Browse all Jobs</a>
+          </div>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 g-5">
+        <!-- column -->
+        <div class="col" *ngFor=" let ope of  jobopenings">
+          <div class="card openings">
+            <div class="card-body">
+              <h3 class="job-subtitle">{{ope.name}}</h3>
+              <p class="card-text">{{ope['job-description-excerpt']}}</p>
+              <a href="#" class="card-link" type="button" class="btn btn-light button"><i class="bi bi-briefcase"
+                  style="color: green;"></i> {{ope.categorybutton}}</a>
+              <a href="#" class="card-link" type="button" class="btn btn-light button margin "> <i class="bi bi-geo-alt"
+                  style="color: green;"></i> {{ope['job-location']}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="position: relative">
+        <img
+          src=" https://uploads-ssl.webflow.com/6375d4737684b479bc4ccde1/6375d4747684b443b44ccfb5_shape-2-cta-2-startup-x-template.svg"
+          class="cir" />
+      </div>
+    </div>
   </div>
 </div>
