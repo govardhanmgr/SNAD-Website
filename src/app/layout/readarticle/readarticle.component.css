@@ -152,6 +152,14 @@ a {
     font-size: 19px;
     letter-spacing: 1px;
   }
- 
+ .col-3,.col-2{
+  width: max-content;
+ }
 }
 
+@media only screen and (max-width: 950px){
+  .col-3,.col-2{
+    width: max-content;
+
+  }
+}
