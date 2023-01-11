@@ -11,7 +11,7 @@
   font-size: 40pt;
 }
 .headerimg{
-  width: 64%; 
+  width: 100%; 
   border-radius: 35px;
 }
 
@@ -118,9 +118,25 @@ a {
   border-top: 0;
   border-left: 0;
   border-right: 0;
+  border-radius: 35px;
+}
+.zoom:hover {
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.075);
+  transform: scale(1.019);
+  overflow: hidden;
+  border-radius: 25px;
+}
+.browsearticles:hover,
+
+.browsearticles:focus {
+  color: rgb(46, 48, 180);
+  text-decoration: none;
 }
 
-@media only screen and (max-width: 600px) {
+
+
+@media only screen and (max-width: 650px) {
   .container-fluid {
     color: white;
   
@@ -136,10 +152,6 @@ a {
     font-size: 19px;
     letter-spacing: 1px;
   }
-  .headerimg{
-    width: 100%; 
-    border-radius: 35px;
-  }
-  
+ 
 }
 
